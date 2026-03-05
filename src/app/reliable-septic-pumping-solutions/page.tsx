@@ -943,9 +943,9 @@ export default function PumpingPage() {
                             {/* Header */}
                             <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
                                 <div className="flex flex-col gap-4">
-                                    <div className="inline-flex items-center gap-2 w-fit px-3 py-1.5 rounded-full bg-success-secondary border border-success-primary/20">
-                                        <span className="size-1.5 rounded-full bg-success-primary" />
-                                        <span className="text-xs font-medium text-success-primary">Our Services</span>
+                                    <div className="inline-flex items-center gap-2 w-fit px-3 py-1.5 rounded-full" style={{ backgroundColor: 'rgba(51, 230, 209, 0.1)', border: '1px solid rgba(51, 230, 209, 0.2)' }}>
+                                        <span className="size-1.5 rounded-full" style={{ backgroundColor: '#33e6d1' }} />
+                                        <span className="text-xs font-medium" style={{ color: '#33e6d1' }}>Our Services</span>
                                     </div>
                                     <h2 className="text-3xl lg:text-4xl font-semibold text-primary tracking-tight max-w-xl">
                                         Comprehensive Septic Pumping Services
@@ -957,9 +957,9 @@ export default function PumpingPage() {
                             </div>
 
                             {/* Services Cards */}
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div className="group/cards grid grid-cols-1 md:grid-cols-3 gap-4">
                                 {/* Card 1 - Residential */}
-                                <div className="group relative p-4 rounded-2xl border transition-all duration-300 overflow-hidden" style={{ background: 'linear-gradient(to bottom right, rgba(51, 230, 209, 0.08), rgba(51, 230, 209, 0.15))', borderColor: 'rgba(51, 230, 209, 0.3)' }}>
+                                <div className="relative p-4 rounded-2xl border transition-all duration-300 overflow-hidden hover:scale-[1.02] group-hover/cards:opacity-50 group-hover/cards:grayscale hover:!opacity-100 hover:!grayscale-0" style={{ background: 'linear-gradient(to bottom right, rgba(51, 230, 209, 0.08), rgba(51, 230, 209, 0.15))', borderColor: 'rgba(51, 230, 209, 0.3)' }}>
                                     <div className="absolute top-0 right-0 w-32 h-32 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2" style={{ backgroundColor: 'rgba(51, 230, 209, 0.2)' }} />
                                     <div className="relative">
                                         <div className="flex items-start justify-between mb-4">
@@ -995,7 +995,7 @@ export default function PumpingPage() {
                                 </div>
 
                                 {/* Card 2 - Commercial */}
-                                <div className="group relative p-4 rounded-2xl border transition-all duration-300 overflow-hidden" style={{ background: 'linear-gradient(to bottom right, rgba(51, 230, 209, 0.08), rgba(51, 230, 209, 0.15))', borderColor: 'rgba(51, 230, 209, 0.3)' }}>
+                                <div className="relative p-4 rounded-2xl border transition-all duration-300 overflow-hidden hover:scale-[1.02] group-hover/cards:opacity-50 group-hover/cards:grayscale hover:!opacity-100 hover:!grayscale-0" style={{ background: 'linear-gradient(to bottom right, rgba(51, 230, 209, 0.08), rgba(51, 230, 209, 0.15))', borderColor: 'rgba(51, 230, 209, 0.3)' }}>
                                     <div className="absolute top-0 right-0 w-32 h-32 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2" style={{ backgroundColor: 'rgba(51, 230, 209, 0.2)' }} />
                                     <div className="relative">
                                         <div className="flex items-start justify-between mb-4">
@@ -1033,7 +1033,7 @@ export default function PumpingPage() {
                                 </div>
 
                                 {/* Card 3 - Emergency */}
-                                <div className="group relative p-4 rounded-2xl border transition-all duration-300 overflow-hidden" style={{ background: 'linear-gradient(to bottom right, rgba(51, 230, 209, 0.08), rgba(51, 230, 209, 0.15))', borderColor: 'rgba(51, 230, 209, 0.3)' }}>
+                                <div className="relative p-4 rounded-2xl border transition-all duration-300 overflow-hidden hover:scale-[1.02] group-hover/cards:opacity-50 group-hover/cards:grayscale hover:!opacity-100 hover:!grayscale-0" style={{ background: 'linear-gradient(to bottom right, rgba(51, 230, 209, 0.08), rgba(51, 230, 209, 0.15))', borderColor: 'rgba(51, 230, 209, 0.3)' }}>
                                     <div className="absolute top-0 right-0 w-32 h-32 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2" style={{ backgroundColor: 'rgba(51, 230, 209, 0.2)' }} />
                                     <div className="relative">
                                         <div className="flex items-start justify-between mb-4">
@@ -1138,7 +1138,7 @@ export default function PumpingPage() {
                                     <span className="text-primary font-semibold">45 min</span>
                                 </div>
                                 <div className="h-3 bg-secondary rounded-full overflow-hidden">
-                                    <div className="h-full bg-gradient-to-r from-success-solid to-success-primary rounded-full" style={{ width: '75%' }} />
+                                    <div className="h-full rounded-full" style={{ width: '75%', background: 'linear-gradient(to right, #2bc4b4, #33e6d1)' }} />
                                 </div>
                                 <div className="grid grid-cols-3 gap-0 mt-6">
                                     <div className="text-center p-4 rounded-xl bg-white/40 backdrop-blur-md border border-tertiary">
