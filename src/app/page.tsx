@@ -377,6 +377,7 @@ export default function Home() {
                                                 <h4>Septic Pumping</h4>
                                                 <p>Professional tank pumping every 3-5 years keeps your system running smoothly</p>
                                             </div>
+                                            <div className="ticker-arrow">→</div>
                                         </Link>
                                         <Link href="/septic-inspection-solutions" className="ticker-card">
                                             <div className="ticker-icon blue">🔍</div>
@@ -384,6 +385,7 @@ export default function Home() {
                                                 <h4>System Inspections</h4>
                                                 <p>NC-certified inspections for real estate and compliance verification</p>
                                             </div>
+                                            <div className="ticker-arrow">→</div>
                                         </Link>
                                         <Link href="/reliable-septic-services" className="ticker-card">
                                             <div className="ticker-icon orange">🔧</div>
@@ -391,6 +393,7 @@ export default function Home() {
                                                 <h4>Septic Repairs</h4>
                                                 <p>Expert repairs for tanks, drain fields, and all system components</p>
                                             </div>
+                                            <div className="ticker-arrow">→</div>
                                         </Link>
                                         <Link href="/reliable-septic-services" className="ticker-card">
                                             <div className="ticker-icon red">⚡</div>
@@ -398,6 +401,7 @@ export default function Home() {
                                                 <h4>Emergency Service</h4>
                                                 <p>24/7 emergency response for urgent septic system problems</p>
                                             </div>
+                                            <div className="ticker-arrow">→</div>
                                         </Link>
                                         <Link href="/reliable-septic-services" className="ticker-card">
                                             <div className="ticker-icon purple">🍳</div>
@@ -405,6 +409,7 @@ export default function Home() {
                                                 <h4>Grease Traps</h4>
                                                 <p>Commercial grease trap cleaning for restaurants and businesses</p>
                                             </div>
+                                            <div className="ticker-arrow">→</div>
                                         </Link>
                                         <Link href="/reliable-septic-services" className="ticker-card">
                                             <div className="ticker-icon green">🌿</div>
@@ -412,6 +417,7 @@ export default function Home() {
                                                 <h4>Drain Fields</h4>
                                                 <p>Installation, repair, and restoration of drain field systems</p>
                                             </div>
+                                            <div className="ticker-arrow">→</div>
                                         </Link>
                                         {/* Duplicate set for infinite scroll effect */}
                                         <Link href="/reliable-septic-pumping-solutions" className="ticker-card">
@@ -420,6 +426,7 @@ export default function Home() {
                                                 <h4>Septic Pumping</h4>
                                                 <p>Professional tank pumping every 3-5 years keeps your system running smoothly</p>
                                             </div>
+                                            <div className="ticker-arrow">→</div>
                                         </Link>
                                         <Link href="/septic-inspection-solutions" className="ticker-card">
                                             <div className="ticker-icon blue">🔍</div>
@@ -427,6 +434,7 @@ export default function Home() {
                                                 <h4>System Inspections</h4>
                                                 <p>NC-certified inspections for real estate and compliance verification</p>
                                             </div>
+                                            <div className="ticker-arrow">→</div>
                                         </Link>
                                         <Link href="/reliable-septic-services" className="ticker-card">
                                             <div className="ticker-icon orange">🔧</div>
@@ -434,6 +442,7 @@ export default function Home() {
                                                 <h4>Septic Repairs</h4>
                                                 <p>Expert repairs for tanks, drain fields, and all system components</p>
                                             </div>
+                                            <div className="ticker-arrow">→</div>
                                         </Link>
                                         <Link href="/reliable-septic-services" className="ticker-card">
                                             <div className="ticker-icon red">⚡</div>
@@ -441,6 +450,7 @@ export default function Home() {
                                                 <h4>Emergency Service</h4>
                                                 <p>24/7 emergency response for urgent septic system problems</p>
                                             </div>
+                                            <div className="ticker-arrow">→</div>
                                         </Link>
                                         <Link href="/reliable-septic-services" className="ticker-card">
                                             <div className="ticker-icon purple">🍳</div>
@@ -448,6 +458,7 @@ export default function Home() {
                                                 <h4>Grease Traps</h4>
                                                 <p>Commercial grease trap cleaning for restaurants and businesses</p>
                                             </div>
+                                            <div className="ticker-arrow">→</div>
                                         </Link>
                                         <Link href="/reliable-septic-services" className="ticker-card">
                                             <div className="ticker-icon green">🌿</div>
@@ -455,6 +466,7 @@ export default function Home() {
                                                 <h4>Drain Fields</h4>
                                                 <p>Installation, repair, and restoration of drain field systems</p>
                                             </div>
+                                            <div className="ticker-arrow">→</div>
                                         </Link>
                                     </div>
                                 </div>
