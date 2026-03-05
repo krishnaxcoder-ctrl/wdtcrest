@@ -292,7 +292,7 @@ export default function Home() {
                                                 </svg>
                                             </div>
                                             <span className="text-secondary text-sm font-semibold">Serving Asheville & Surrounding Areas</span>
-                                            <span className="bg-brand-secondary text-brand-secondary rounded-full border-l border-secondary px-3 py-1 text-xs font-medium">30+ Years</span>
+                                            <span className="bg-success-secondary text-success-primary rounded-full border-l border-success-primary px-3 py-1 text-xs font-medium">30+ Years</span>
                                         </div>
                                     </div>
 
@@ -307,12 +307,12 @@ export default function Home() {
                                     </div>
 
                                     {/* Buttons */}
-                                    <div className="flex flex-wrap gap-4 mt-4">
-                                        <Link href="tel:8282541920" className="inline-flex items-center gap-2 px-6 py-3 bg-brand-solid text-white rounded-lg font-semibold hover:bg-brand-700 transition">
+                                    <div className="button-group">
+                                        <Link href="tel:8282541920" className="button is-primary">
                                             <span>Call Now: (828) 254-1920</span>
-                                            <ArrowIcon />
+                                            <div className="icon-32px"><ArrowIcon /></div>
                                         </Link>
-                                        <Link href="/services" className="inline-flex items-center px-6 py-3 border border-secondary rounded-lg font-semibold text-secondary hover:bg-secondary transition">
+                                        <Link href="/services" className="button is-secondary">
                                             View Services
                                         </Link>
                                     </div>
@@ -321,8 +321,8 @@ export default function Home() {
 
                             {/* Right Column - Image */}
                             <div
-                                className="hidden lg:block min-h-[600px] bg-cover bg-center mr-6 lg:mr-10 rounded-2xl"
-                                style={{ backgroundImage: 'url(/herobg2.jpg)' }}
+                                className="hidden lg:block min-h-[600px] mr-6 lg:mr-10 rounded-2xl"
+                                style={{ backgroundImage: 'url(/herobg.jpg)', backgroundSize: '210%', backgroundPosition: 'left 70% center' }}
                             />
                         </div>
                     </div>
