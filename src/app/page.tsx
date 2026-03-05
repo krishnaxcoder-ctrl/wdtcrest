@@ -970,7 +970,7 @@ export default function Home() {
                 <section className="section-regular-padding">
                     <div className="padding-global">
                         <div className="container-large">
-                            <div className="container-wrapper background-color-dark-green">
+                            <div className="container-wrapper background-color-dark-green" style={{ minHeight: '600px', paddingTop: '5rem', paddingBottom: '5rem' }}>
                                 <div className="grid-2col gap-5rem z-index-1">
                                     <div className="flex-v gap-full">
                                         <div className="flex-v gap-1-25rem">
@@ -1024,6 +1024,18 @@ export default function Home() {
                                                 <div className="benchmark-icon">✓</div>
                                                 <p className="text-size-large text-color-white text-weight-medium">
                                                     Satisfaction guaranteed
+                                                </p>
+                                            </div>
+                                            <div className="benchmark-item">
+                                                <div className="benchmark-icon">✓</div>
+                                                <p className="text-size-large text-color-white text-weight-medium">
+                                                    Licensed & insured professionals
+                                                </p>
+                                            </div>
+                                            <div className="benchmark-item">
+                                                <div className="benchmark-icon">✓</div>
+                                                <p className="text-size-large text-color-white text-weight-medium">
+                                                    30+ years of experience
                                                 </p>
                                             </div>
                                         </div>
