@@ -990,11 +990,11 @@ body {
 .ticker-card {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     gap: 1.25rem;
-    padding: 1.25rem 1.5rem;
+    padding: 1.5rem;
     background: #ffffff;
-    border: 1px solid rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(0, 0, 0, 0.08);
     border-radius: 1rem;
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     text-decoration: none;
@@ -1004,91 +1004,66 @@ body {
     overflow: hidden;
 }
 
-.ticker-card::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 4px;
-    background: var(--color-green);
-    transform: scaleY(0);
-    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .ticker-card:hover {
-    border-color: rgba(22, 179, 100, 0.3);
-    box-shadow: 0 8px 24px rgba(22, 179, 100, 0.12), 0 2px 8px rgba(0, 0, 0, 0.04);
-    transform: translateX(6px);
-    background: linear-gradient(135deg, #ffffff 0%, #f8fdf9 100%);
+    border-color: rgba(22, 179, 100, 0.4);
+    box-shadow: 0 12px 32px rgba(22, 179, 100, 0.15), 0 4px 12px rgba(0, 0, 0, 0.05);
+    transform: translateY(-2px);
+    background: #ffffff;
 }
 
-.ticker-card:hover::before {
-    transform: scaleY(1);
-}
-
-.ticker-card:hover .ticker-icon {
+.ticker-card:hover .icon-flex .ticker-icon {
     transform: scale(1.05);
 }
 
-.ticker-card:hover .ticker-arrow {
-    opacity: 1;
-    transform: translateX(0);
+.icon-flex {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    flex-shrink: 0;
 }
 
-.icon-flex {
-    display: flex;
-    flex-direction: row;
-    gap: 0.5rem;
+.icon-flex.cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.icon-flex.cols-4 {
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .ticker-icon {
-    width: 56px;
-    height: 56px;
+    width: 48px;
+    height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 14px;
-    font-size: 1.75rem;
-    flex-shrink: 0;
+    border-radius: 10px;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
     transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
+    overflow: hidden;
 }
 
-.ticker-icon.green {
-    background: linear-gradient(135deg, rgba(22, 179, 100, 0.15) 0%, rgba(22, 179, 100, 0.08) 100%);
-    box-shadow: 0 2px 8px rgba(22, 179, 100, 0.15);
+.ticker-icon svg {
+    width: 100%;
+    height: 100%;
 }
 
-.ticker-icon.blue {
-    background: linear-gradient(135deg, rgba(57, 129, 255, 0.15) 0%, rgba(57, 129, 255, 0.08) 100%);
-    box-shadow: 0 2px 8px rgba(57, 129, 255, 0.15);
-}
-
-.ticker-icon.orange {
-    background: linear-gradient(135deg, rgba(255, 147, 15, 0.15) 0%, rgba(255, 147, 15, 0.08) 100%);
-    box-shadow: 0 2px 8px rgba(255, 147, 15, 0.15);
-}
-
-.ticker-icon.red {
-    background: linear-gradient(135deg, rgba(220, 38, 38, 0.15) 0%, rgba(220, 38, 38, 0.08) 100%);
-    box-shadow: 0 2px 8px rgba(220, 38, 38, 0.15);
-}
-
-.ticker-icon.purple {
-    background: linear-gradient(135deg, rgba(127, 86, 217, 0.15) 0%, rgba(127, 86, 217, 0.08) 100%);
-    box-shadow: 0 2px 8px rgba(127, 86, 217, 0.15);
+.ticker-icon.emoji {
+    font-size: 1.5rem;
+    background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
 }
 
 .ticker-content {
     display: flex;
     flex-direction: column;
-    gap: 0.375rem;
+    gap: 0.5rem;
     flex: 1;
+    padding-top: 0.25rem;
 }
 
 .ticker-content h4 {
-    font-size: 1rem;
+    font-size: 1.125rem;
     font-weight: 600;
     margin: 0;
     color: var(--color-black);
@@ -1096,23 +1071,10 @@ body {
 }
 
 .ticker-content p {
-    font-size: 0.8125rem;
+    font-size: 0.875rem;
     color: #6b7280;
     margin: 0;
     line-height: 1.5;
-}
-
-.ticker-arrow {
-    width: 24px;
-    height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-green);
-    opacity: 0;
-    transform: translateX(-8px);
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    flex-shrink: 0;
 }
 
 @media screen and (max-width: 991px) {

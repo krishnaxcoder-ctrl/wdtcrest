@@ -372,101 +372,301 @@ export default function Home() {
                                     <div className="ticker-track">
                                         {/* First set of cards */}
                                         <Link href="/reliable-septic-pumping-solutions" className="ticker-card">
-                                            <div className="ticker-icon green">🚛</div>
+                                            <div className="icon-flex">
+                                                <div className="ticker-icon">
+                                                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <rect width="64" height="64" rx="8" fill="white"/>
+                                                        <path d="M16 36h32v8a4 4 0 0 1-4 4H20a4 4 0 0 1-4-4v-8z" fill="#16b364"/>
+                                                        <path d="M20 20h24a4 4 0 0 1 4 4v12H16V24a4 4 0 0 1 4-4z" fill="#0d7a47"/>
+                                                        <circle cx="24" cy="40" r="4" fill="#0d0d0d"/>
+                                                        <circle cx="40" cy="40" r="4" fill="#0d0d0d"/>
+                                                        <path d="M26 28h12v4H26z" fill="white" opacity="0.3"/>
+                                                    </svg>
+                                                </div>
+                                                <div className="ticker-icon">
+                                                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <rect width="64" height="64" rx="8" fill="white"/>
+                                                        <ellipse cx="32" cy="32" rx="16" ry="10" fill="#16b364"/>
+                                                        <ellipse cx="32" cy="28" rx="16" ry="10" fill="#22c55e"/>
+                                                        <path d="M20 28v8c0 5.5 5.4 10 12 10s12-4.5 12-10v-8" stroke="#0d7a47" strokeWidth="2"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
                                             <div className="ticker-content">
                                                 <h4>Septic Pumping</h4>
                                                 <p>Professional tank pumping every 3-5 years keeps your system running smoothly</p>
                                             </div>
-                                            <div className="ticker-arrow">→</div>
                                         </Link>
                                         <Link href="/septic-inspection-solutions" className="ticker-card">
-                                            <div className="ticker-icon blue">🔍</div>
+                                            <div className="icon-flex">
+                                                <div className="ticker-icon">
+                                                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <rect width="64" height="64" rx="8" fill="white"/>
+                                                        <circle cx="28" cy="28" r="12" stroke="#3981FF" strokeWidth="4" fill="none"/>
+                                                        <path d="M37 37l10 10" stroke="#3981FF" strokeWidth="4" strokeLinecap="round"/>
+                                                        <path d="M24 28h8M28 24v8" stroke="#3981FF" strokeWidth="2" strokeLinecap="round"/>
+                                                    </svg>
+                                                </div>
+                                                <div className="ticker-icon">
+                                                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <rect width="64" height="64" rx="8" fill="white"/>
+                                                        <rect x="18" y="16" width="28" height="36" rx="2" fill="#3981FF"/>
+                                                        <rect x="22" y="20" width="20" height="4" rx="1" fill="white"/>
+                                                        <rect x="22" y="28" width="14" height="2" rx="1" fill="white" opacity="0.6"/>
+                                                        <rect x="22" y="34" width="18" height="2" rx="1" fill="white" opacity="0.6"/>
+                                                        <rect x="22" y="40" width="12" height="2" rx="1" fill="white" opacity="0.6"/>
+                                                        <circle cx="40" cy="44" r="6" fill="#22c55e"/>
+                                                        <path d="M37 44l2 2 4-4" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
                                             <div className="ticker-content">
                                                 <h4>System Inspections</h4>
                                                 <p>NC-certified inspections for real estate and compliance verification</p>
                                             </div>
-                                            <div className="ticker-arrow">→</div>
                                         </Link>
                                         <Link href="/reliable-septic-services" className="ticker-card">
-                                            <div className="ticker-icon orange">🔧</div>
+                                            <div className="icon-flex">
+                                                <div className="ticker-icon">
+                                                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <rect width="64" height="64" rx="8" fill="white"/>
+                                                        <path d="M32 16l-4 12h8l-4 12" stroke="#FF930F" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
+                                                        <path d="M24 44h16" stroke="#FF930F" strokeWidth="3" strokeLinecap="round"/>
+                                                        <circle cx="32" cy="32" r="14" stroke="#FF930F" strokeWidth="2" fill="none" opacity="0.3"/>
+                                                    </svg>
+                                                </div>
+                                                <div className="ticker-icon">
+                                                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <rect width="64" height="64" rx="8" fill="white"/>
+                                                        <path d="M32 18v6M20 30h6M38 30h6M24 22l4 4M40 22l-4 4" stroke="#FF930F" strokeWidth="3" strokeLinecap="round"/>
+                                                        <path d="M26 36h12l2 12H24l2-12z" fill="#FF930F"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
                                             <div className="ticker-content">
                                                 <h4>Septic Repairs</h4>
                                                 <p>Expert repairs for tanks, drain fields, and all system components</p>
                                             </div>
-                                            <div className="ticker-arrow">→</div>
                                         </Link>
                                         <Link href="/reliable-septic-services" className="ticker-card">
-                                            <div className="ticker-icon red">⚡</div>
+                                            <div className="icon-flex">
+                                                <div className="ticker-icon">
+                                                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <rect width="64" height="64" rx="8" fill="white"/>
+                                                        <circle cx="32" cy="32" r="16" fill="#dc2626"/>
+                                                        <path d="M32 22v12l6 6" stroke="white" strokeWidth="3" strokeLinecap="round"/>
+                                                    </svg>
+                                                </div>
+                                                <div className="ticker-icon">
+                                                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <rect width="64" height="64" rx="8" fill="white"/>
+                                                        <path d="M20 44h24M26 44V32M38 44V32M22 32h20l-2-12H24l-2 12z" stroke="#dc2626" strokeWidth="3" fill="none"/>
+                                                        <circle cx="44" cy="20" r="6" fill="#dc2626"/>
+                                                        <path d="M44 17v6M44 25v1" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
                                             <div className="ticker-content">
                                                 <h4>Emergency Service</h4>
                                                 <p>24/7 emergency response for urgent septic system problems</p>
                                             </div>
-                                            <div className="ticker-arrow">→</div>
                                         </Link>
                                         <Link href="/reliable-septic-services" className="ticker-card">
-                                            <div className="ticker-icon purple">🍳</div>
+                                            <div className="icon-flex">
+                                                <div className="ticker-icon">
+                                                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <rect width="64" height="64" rx="8" fill="white"/>
+                                                        <rect x="18" y="24" width="28" height="20" rx="2" fill="#7f56d9"/>
+                                                        <rect x="22" y="28" width="20" height="12" rx="1" fill="white" opacity="0.3"/>
+                                                        <path d="M24 20h16v4H24z" fill="#7f56d9"/>
+                                                        <circle cx="32" cy="34" r="3" fill="white"/>
+                                                    </svg>
+                                                </div>
+                                                <div className="ticker-icon">
+                                                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <rect width="64" height="64" rx="8" fill="white"/>
+                                                        <path d="M20 44c0-8 6-12 12-12s12 4 12 12" stroke="#7f56d9" strokeWidth="3" fill="none"/>
+                                                        <circle cx="32" cy="26" r="6" fill="#7f56d9"/>
+                                                        <rect x="38" y="36" width="8" height="12" rx="1" fill="#7f56d9"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
                                             <div className="ticker-content">
                                                 <h4>Grease Traps</h4>
                                                 <p>Commercial grease trap cleaning for restaurants and businesses</p>
                                             </div>
-                                            <div className="ticker-arrow">→</div>
                                         </Link>
                                         <Link href="/reliable-septic-services" className="ticker-card">
-                                            <div className="ticker-icon green">🌿</div>
+                                            <div className="icon-flex">
+                                                <div className="ticker-icon">
+                                                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <rect width="64" height="64" rx="8" fill="white"/>
+                                                        <path d="M16 40h32M20 40v-8l6-8h12l6 8v8" stroke="#16b364" strokeWidth="3" fill="none"/>
+                                                        <path d="M24 44v4M32 44v4M40 44v4" stroke="#16b364" strokeWidth="2" strokeLinecap="round"/>
+                                                    </svg>
+                                                </div>
+                                                <div className="ticker-icon">
+                                                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <rect width="64" height="64" rx="8" fill="white"/>
+                                                        <path d="M20 24c4-4 8-4 12 0s8 4 12 0" stroke="#16b364" strokeWidth="3"/>
+                                                        <path d="M20 32c4-4 8-4 12 0s8 4 12 0" stroke="#16b364" strokeWidth="3"/>
+                                                        <path d="M20 40c4-4 8-4 12 0s8 4 12 0" stroke="#16b364" strokeWidth="3"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
                                             <div className="ticker-content">
                                                 <h4>Drain Fields</h4>
                                                 <p>Installation, repair, and restoration of drain field systems</p>
                                             </div>
-                                            <div className="ticker-arrow">→</div>
                                         </Link>
                                         {/* Duplicate set for infinite scroll effect */}
                                         <Link href="/reliable-septic-pumping-solutions" className="ticker-card">
-                                            <div className="ticker-icon green">🚛</div>
+                                            <div className="icon-flex">
+                                                <div className="ticker-icon">
+                                                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <rect width="64" height="64" rx="8" fill="white"/>
+                                                        <path d="M16 36h32v8a4 4 0 0 1-4 4H20a4 4 0 0 1-4-4v-8z" fill="#16b364"/>
+                                                        <path d="M20 20h24a4 4 0 0 1 4 4v12H16V24a4 4 0 0 1 4-4z" fill="#0d7a47"/>
+                                                        <circle cx="24" cy="40" r="4" fill="#0d0d0d"/>
+                                                        <circle cx="40" cy="40" r="4" fill="#0d0d0d"/>
+                                                        <path d="M26 28h12v4H26z" fill="white" opacity="0.3"/>
+                                                    </svg>
+                                                </div>
+                                                <div className="ticker-icon">
+                                                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <rect width="64" height="64" rx="8" fill="white"/>
+                                                        <ellipse cx="32" cy="32" rx="16" ry="10" fill="#16b364"/>
+                                                        <ellipse cx="32" cy="28" rx="16" ry="10" fill="#22c55e"/>
+                                                        <path d="M20 28v8c0 5.5 5.4 10 12 10s12-4.5 12-10v-8" stroke="#0d7a47" strokeWidth="2"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
                                             <div className="ticker-content">
                                                 <h4>Septic Pumping</h4>
                                                 <p>Professional tank pumping every 3-5 years keeps your system running smoothly</p>
                                             </div>
-                                            <div className="ticker-arrow">→</div>
                                         </Link>
                                         <Link href="/septic-inspection-solutions" className="ticker-card">
-                                            <div className="ticker-icon blue">🔍</div>
+                                            <div className="icon-flex">
+                                                <div className="ticker-icon">
+                                                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <rect width="64" height="64" rx="8" fill="white"/>
+                                                        <circle cx="28" cy="28" r="12" stroke="#3981FF" strokeWidth="4" fill="none"/>
+                                                        <path d="M37 37l10 10" stroke="#3981FF" strokeWidth="4" strokeLinecap="round"/>
+                                                        <path d="M24 28h8M28 24v8" stroke="#3981FF" strokeWidth="2" strokeLinecap="round"/>
+                                                    </svg>
+                                                </div>
+                                                <div className="ticker-icon">
+                                                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <rect width="64" height="64" rx="8" fill="white"/>
+                                                        <rect x="18" y="16" width="28" height="36" rx="2" fill="#3981FF"/>
+                                                        <rect x="22" y="20" width="20" height="4" rx="1" fill="white"/>
+                                                        <rect x="22" y="28" width="14" height="2" rx="1" fill="white" opacity="0.6"/>
+                                                        <rect x="22" y="34" width="18" height="2" rx="1" fill="white" opacity="0.6"/>
+                                                        <rect x="22" y="40" width="12" height="2" rx="1" fill="white" opacity="0.6"/>
+                                                        <circle cx="40" cy="44" r="6" fill="#22c55e"/>
+                                                        <path d="M37 44l2 2 4-4" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
                                             <div className="ticker-content">
                                                 <h4>System Inspections</h4>
                                                 <p>NC-certified inspections for real estate and compliance verification</p>
                                             </div>
-                                            <div className="ticker-arrow">→</div>
                                         </Link>
                                         <Link href="/reliable-septic-services" className="ticker-card">
-                                            <div className="ticker-icon orange">🔧</div>
+                                            <div className="icon-flex">
+                                                <div className="ticker-icon">
+                                                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <rect width="64" height="64" rx="8" fill="white"/>
+                                                        <path d="M32 16l-4 12h8l-4 12" stroke="#FF930F" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
+                                                        <path d="M24 44h16" stroke="#FF930F" strokeWidth="3" strokeLinecap="round"/>
+                                                        <circle cx="32" cy="32" r="14" stroke="#FF930F" strokeWidth="2" fill="none" opacity="0.3"/>
+                                                    </svg>
+                                                </div>
+                                                <div className="ticker-icon">
+                                                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <rect width="64" height="64" rx="8" fill="white"/>
+                                                        <path d="M32 18v6M20 30h6M38 30h6M24 22l4 4M40 22l-4 4" stroke="#FF930F" strokeWidth="3" strokeLinecap="round"/>
+                                                        <path d="M26 36h12l2 12H24l2-12z" fill="#FF930F"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
                                             <div className="ticker-content">
                                                 <h4>Septic Repairs</h4>
                                                 <p>Expert repairs for tanks, drain fields, and all system components</p>
                                             </div>
-                                            <div className="ticker-arrow">→</div>
                                         </Link>
                                         <Link href="/reliable-septic-services" className="ticker-card">
-                                            <div className="ticker-icon red">⚡</div>
+                                            <div className="icon-flex">
+                                                <div className="ticker-icon">
+                                                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <rect width="64" height="64" rx="8" fill="white"/>
+                                                        <circle cx="32" cy="32" r="16" fill="#dc2626"/>
+                                                        <path d="M32 22v12l6 6" stroke="white" strokeWidth="3" strokeLinecap="round"/>
+                                                    </svg>
+                                                </div>
+                                                <div className="ticker-icon">
+                                                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <rect width="64" height="64" rx="8" fill="white"/>
+                                                        <path d="M20 44h24M26 44V32M38 44V32M22 32h20l-2-12H24l-2 12z" stroke="#dc2626" strokeWidth="3" fill="none"/>
+                                                        <circle cx="44" cy="20" r="6" fill="#dc2626"/>
+                                                        <path d="M44 17v6M44 25v1" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
                                             <div className="ticker-content">
                                                 <h4>Emergency Service</h4>
                                                 <p>24/7 emergency response for urgent septic system problems</p>
                                             </div>
-                                            <div className="ticker-arrow">→</div>
                                         </Link>
                                         <Link href="/reliable-septic-services" className="ticker-card">
-                                            <div className="ticker-icon purple">🍳</div>
+                                            <div className="icon-flex">
+                                                <div className="ticker-icon">
+                                                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <rect width="64" height="64" rx="8" fill="white"/>
+                                                        <rect x="18" y="24" width="28" height="20" rx="2" fill="#7f56d9"/>
+                                                        <rect x="22" y="28" width="20" height="12" rx="1" fill="white" opacity="0.3"/>
+                                                        <path d="M24 20h16v4H24z" fill="#7f56d9"/>
+                                                        <circle cx="32" cy="34" r="3" fill="white"/>
+                                                    </svg>
+                                                </div>
+                                                <div className="ticker-icon">
+                                                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <rect width="64" height="64" rx="8" fill="white"/>
+                                                        <path d="M20 44c0-8 6-12 12-12s12 4 12 12" stroke="#7f56d9" strokeWidth="3" fill="none"/>
+                                                        <circle cx="32" cy="26" r="6" fill="#7f56d9"/>
+                                                        <rect x="38" y="36" width="8" height="12" rx="1" fill="#7f56d9"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
                                             <div className="ticker-content">
                                                 <h4>Grease Traps</h4>
                                                 <p>Commercial grease trap cleaning for restaurants and businesses</p>
                                             </div>
-                                            <div className="ticker-arrow">→</div>
                                         </Link>
                                         <Link href="/reliable-septic-services" className="ticker-card">
-                                            <div className="ticker-icon green">🌿</div>
+                                            <div className="icon-flex">
+                                                <div className="ticker-icon">
+                                                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <rect width="64" height="64" rx="8" fill="white"/>
+                                                        <path d="M16 40h32M20 40v-8l6-8h12l6 8v8" stroke="#16b364" strokeWidth="3" fill="none"/>
+                                                        <path d="M24 44v4M32 44v4M40 44v4" stroke="#16b364" strokeWidth="2" strokeLinecap="round"/>
+                                                    </svg>
+                                                </div>
+                                                <div className="ticker-icon">
+                                                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <rect width="64" height="64" rx="8" fill="white"/>
+                                                        <path d="M20 24c4-4 8-4 12 0s8 4 12 0" stroke="#16b364" strokeWidth="3"/>
+                                                        <path d="M20 32c4-4 8-4 12 0s8 4 12 0" stroke="#16b364" strokeWidth="3"/>
+                                                        <path d="M20 40c4-4 8-4 12 0s8 4 12 0" stroke="#16b364" strokeWidth="3"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
                                             <div className="ticker-content">
                                                 <h4>Drain Fields</h4>
                                                 <p>Installation, repair, and restoration of drain field systems</p>
                                             </div>
-                                            <div className="ticker-arrow">→</div>
                                         </Link>
                                     </div>
                                 </div>
