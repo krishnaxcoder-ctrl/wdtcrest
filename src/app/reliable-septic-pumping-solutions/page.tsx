@@ -151,7 +151,7 @@ export default function PumpingPage() {
                 {/* Bottom Header Section */}
                 <section className="px-6 lg:px-10 bg-primary-solid">
                     <div className="max-w-7xl mx-auto border-t border-2 border-r border-gray-700/70 h-[17.5rem] sm:h-[22rem] relative overflow-hidden">
-                        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url(/Untitled design (1).png)' }} />
+                        <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: 'url(/header-pattern.png)' }} />
                         <div className="relative z-10 h-full px-5 sm:px-10 flex flex-col justify-center gap-6 text-center items-center">
                             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-white">
                                 Everything you need in one tool
