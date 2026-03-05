@@ -310,7 +310,7 @@ export default function PumpingPage() {
                         {/* Left Column - Content */}
                         <div className="px-5 py-6 md:p-10 flex flex-col justify-between gap-15">
                             <div className="flex flex-col gap-5">
-                                <span className="text-tertiary text-xs font-mono uppercase tracking-wide">Emergency Response</span>
+                                <span className="text-white/60 text-xs font-mono uppercase tracking-wide">Emergency Response</span>
                                 <h4 className="text-white text-2xl font-semibold">24/7 Emergency Services</h4>
                                 <p className="text-white/70 text-base max-w-[25rem] text-pretty">
                                     Septic emergencies don't wait for business hours. Our team is ready around the clock to handle urgent situations and prevent property damage.
@@ -363,7 +363,7 @@ export default function PumpingPage() {
                         {/* Left Column - Content */}
                         <div className="px-5 py-6 md:p-10 flex flex-col justify-between gap-15">
                             <div className="flex flex-col gap-5">
-                                <span className="text-tertiary text-xs font-mono uppercase tracking-wide">System Health</span>
+                                <span className="text-white/60 text-xs font-mono uppercase tracking-wide">System Health</span>
                                 <h4 className="text-white text-2xl font-semibold">Thorough Inspections</h4>
                                 <p className="text-white/70 text-base max-w-[25rem] text-pretty">
                                     Protect your investment with comprehensive septic inspections. We identify potential issues before they become costly repairs.
@@ -415,7 +415,7 @@ export default function PumpingPage() {
                         {/* Left Column - Content */}
                         <div className="px-5 py-6 md:p-10 flex flex-col justify-between gap-15">
                             <div className="flex flex-col gap-5">
-                                <span className="text-tertiary text-xs font-mono uppercase tracking-wide">Preventive Care</span>
+                                <span className="text-white/60 text-xs font-mono uppercase tracking-wide">Preventive Care</span>
                                 <h4 className="text-white text-2xl font-semibold">Maintenance Programs</h4>
                                 <p className="text-white/70 text-base max-w-[25rem] text-pretty">
                                     Keep your septic system running smoothly with our scheduled maintenance plans. Save money and avoid unexpected breakdowns.
