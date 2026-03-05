@@ -954,6 +954,153 @@ export default function PumpingPage() {
                     </div>
                 </section>
 
+                {/* Stats Grid Section */}
+                <section className="px-6 lg:px-10">
+                    <div className="max-w-7xl mx-auto border border-tertiary grid lg:grid-cols-2 divide-x divide-y divide-tertiary">
+                        {/* Cell 1 - Trusted Service Stats */}
+                        <div className="p-5 sm:p-10 flex flex-col gap-3">
+                            <h5 className="text-xl sm:text-2xl font-semibold text-primary text-balance sm:text-pretty">
+                                A trusted team you can count on
+                            </h5>
+                            <p className="sm:max-w-[28rem] text-tertiary text-pretty mb-12 sm:mb-16">
+                                Able Septic has been serving Asheville and Western NC for decades, building a reputation for reliability and excellence.
+                            </p>
+                            <div className="flex flex-col divide-y divide-tertiary">
+                                {/* Stat Row 1 */}
+                                <div className="flex items-center gap-6 py-5 first:pt-0">
+                                    <div className="w-20 h-12 flex-shrink-0 flex items-center justify-center rounded-lg bg-success-secondary">
+                                        <span className="text-2xl">🏆</span>
+                                    </div>
+                                    <div className="flex flex-1 items-center gap-6">
+                                        <div className="flex flex-col flex-1 pl-6 border-l border-tertiary">
+                                            <p className="text-primary font-medium text-lg sm:text-xl">25+</p>
+                                            <p className="leading-tight text-sm text-tertiary">Years of experience</p>
+                                        </div>
+                                        <div className="flex flex-col flex-1 pl-6 border-l border-tertiary">
+                                            <p className="text-primary font-medium text-lg sm:text-xl">A+</p>
+                                            <p className="leading-tight text-sm text-tertiary">BBB Rating</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                {/* Stat Row 2 */}
+                                <div className="flex items-center gap-6 py-5">
+                                    <div className="w-20 h-12 flex-shrink-0 flex items-center justify-center rounded-lg bg-success-secondary">
+                                        <span className="text-2xl">🚚</span>
+                                    </div>
+                                    <div className="flex flex-1 items-center gap-6">
+                                        <div className="flex flex-col flex-1 pl-6 border-l border-tertiary">
+                                            <p className="text-primary font-medium text-lg sm:text-xl">50,000+</p>
+                                            <p className="leading-tight text-sm text-tertiary">Tanks pumped</p>
+                                        </div>
+                                        <div className="flex flex-col flex-1 pl-6 border-l border-tertiary">
+                                            <p className="text-primary font-medium text-lg sm:text-xl">4.9★</p>
+                                            <p className="leading-tight text-sm text-tertiary">Google rating</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Cell 2 - Fast Response */}
+                        <div className="p-5 sm:p-10 flex flex-col gap-3">
+                            <h5 className="text-xl sm:text-2xl font-semibold text-primary">Fast response, every time</h5>
+                            <p className="max-w-[26rem] text-tertiary text-pretty">
+                                When you need septic service, you need it fast. Our fleet is strategically located across Western NC for <span className="text-primary font-medium">under 60-minute response</span> times and <span className="text-primary font-medium">same-day service</span> availability.
+                            </p>
+                            {/* Response Time Visual */}
+                            <div className="mt-8 space-y-4">
+                                <div className="flex items-center justify-between text-sm">
+                                    <span className="text-tertiary">Average response time</span>
+                                    <span className="text-primary font-semibold">45 min</span>
+                                </div>
+                                <div className="h-3 bg-secondary rounded-full overflow-hidden">
+                                    <div className="h-full bg-gradient-to-r from-success-solid to-success-primary rounded-full" style={{ width: '75%' }} />
+                                </div>
+                                <div className="grid grid-cols-3 gap-0 mt-6">
+                                    <div className="text-center p-4 rounded-xl bg-white/40 backdrop-blur-md border border-tertiary">
+                                        <p className="text-2xl font-bold text-primary">98%</p>
+                                        <p className="text-xs text-tertiary mt-1">Same-day service</p>
+                                    </div>
+                                    <div className="text-center p-4 rounded-xl bg-white/40 backdrop-blur-md border border-tertiary">
+                                        <p className="text-2xl font-bold text-primary">&lt;1hr</p>
+                                        <p className="text-xs text-tertiary mt-1">Emergency arrival</p>
+                                    </div>
+                                    <div className="text-center p-4 rounded-xl bg-white/40 backdrop-blur-md border border-tertiary">
+                                        <p className="text-2xl font-bold text-primary">15+</p>
+                                        <p className="text-xs text-tertiary mt-1">Service trucks</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Cell 3 - Why Choose Us */}
+                        <div className="p-5 sm:p-10 flex flex-col gap-3">
+                            <h5 className="text-xl sm:text-2xl font-semibold text-primary">Why homeowners choose us</h5>
+                            <ul className="list-disc pl-4 flex flex-col gap-3 marker:text-success-primary mt-2">
+                                <li className="leading-tight text-tertiary">Transparent, upfront pricing with no hidden fees</li>
+                                <li className="leading-tight text-tertiary">Licensed, insured, and certified technicians</li>
+                                <li className="leading-tight text-tertiary">Environmentally responsible waste disposal</li>
+                                <li className="leading-tight text-tertiary">Detailed service reports and recommendations</li>
+                                <li className="leading-tight text-tertiary">Flexible scheduling including weekends</li>
+                            </ul>
+                            {/* Trust Badges */}
+                            <div className="flex flex-wrap gap-3 mt-6">
+                                <div className="flex items-center gap-2 px-3 py-2 bg-secondary rounded-lg">
+                                    <span className="text-lg">✓</span>
+                                    <span className="text-sm text-primary font-medium">Licensed</span>
+                                </div>
+                                <div className="flex items-center gap-2 px-3 py-2 bg-secondary rounded-lg">
+                                    <span className="text-lg">✓</span>
+                                    <span className="text-sm text-primary font-medium">Insured</span>
+                                </div>
+                                <div className="flex items-center gap-2 px-3 py-2 bg-secondary rounded-lg">
+                                    <span className="text-lg">✓</span>
+                                    <span className="text-sm text-primary font-medium">Bonded</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Cell 4 - Certifications */}
+                        <div className="p-5 sm:p-10 flex flex-col gap-3">
+                            <h5 className="text-xl sm:text-2xl font-semibold text-primary">Certified & compliant</h5>
+                            <p className="max-w-[20rem] text-tertiary text-pretty">
+                                We maintain all required certifications and follow strict NC DEQ guidelines for septic service and waste disposal.
+                            </p>
+                            {/* Certification Grid */}
+                            <div className="grid grid-cols-2 gap-4 mt-6">
+                                <div className="p-4 border border-tertiary rounded-xl text-center">
+                                    <div className="size-12 mx-auto mb-2 bg-success-secondary rounded-full flex items-center justify-center">
+                                        <ShieldCheck className="size-6 text-success-primary" />
+                                    </div>
+                                    <p className="text-sm font-medium text-primary">NC Licensed</p>
+                                    <p className="text-xs text-tertiary">Septic Contractor</p>
+                                </div>
+                                <div className="p-4 border border-tertiary rounded-xl text-center">
+                                    <div className="size-12 mx-auto mb-2 bg-success-secondary rounded-full flex items-center justify-center">
+                                        <ShieldCheck className="size-6 text-success-primary" />
+                                    </div>
+                                    <p className="text-sm font-medium text-primary">EPA Compliant</p>
+                                    <p className="text-xs text-tertiary">Waste Disposal</p>
+                                </div>
+                                <div className="p-4 border border-tertiary rounded-xl text-center">
+                                    <div className="size-12 mx-auto mb-2 bg-success-secondary rounded-full flex items-center justify-center">
+                                        <ShieldCheck className="size-6 text-success-primary" />
+                                    </div>
+                                    <p className="text-sm font-medium text-primary">NAWT Member</p>
+                                    <p className="text-xs text-tertiary">Industry Association</p>
+                                </div>
+                                <div className="p-4 border border-tertiary rounded-xl text-center">
+                                    <div className="size-12 mx-auto mb-2 bg-success-secondary rounded-full flex items-center justify-center">
+                                        <ShieldCheck className="size-6 text-success-primary" />
+                                    </div>
+                                    <p className="text-sm font-medium text-primary">BBB Accredited</p>
+                                    <p className="text-xs text-tertiary">A+ Rating</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 {/* Benefits Section */}
                 <section className="py-16 md:py-20 bg-secondary">
                     <div className="px-6 lg:px-10">
