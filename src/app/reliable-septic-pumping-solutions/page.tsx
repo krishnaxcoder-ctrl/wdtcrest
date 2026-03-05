@@ -288,6 +288,77 @@ export default function PumpingPage() {
                         </div>
                     </div>
                 </section>
+
+                {/* Bottom Header Section */}
+                <section className="px-6 lg:px-10">
+                    <div className="max-w-7xl mx-auto border-t border-l border-r border-secondary bg-primary-solid px-5 sm:px-10 h-[17.5rem] sm:h-[22rem] flex flex-col justify-center gap-6 text-center items-center">
+                        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-white">
+                            Everything you need in one tool
+                        </h2>
+                        <p className="max-w-md text-white/70 text-balance sm:text-pretty">
+                            Vite+ unifies your entire web development workflow into a single, powerful command-line interface.
+                        </p>
+                    </div>
+                </section>
+
+                {/* Feature Section */}
+                <section className="px-6 lg:px-10">
+                    <div className="max-w-7xl mx-auto border-t border-l border-r border-secondary grid md:grid-cols-[60%_40%] divide-x divide-secondary">
+                        {/* Left Column - Content */}
+                        <div className="px-5 py-6 md:p-10 flex flex-col justify-between gap-15 bg-primary-solid">
+                            <div className="flex flex-col gap-5">
+                                <span className="text-tertiary text-xs font-mono uppercase tracking-wide">Professional Service</span>
+                                <h4 className="text-white text-2xl font-semibold">Fast &amp; Reliable Pumping</h4>
+                                <p className="text-white/70 text-base max-w-[25rem] text-pretty">
+                                    Get your septic system serviced quickly and efficiently. Our experienced team ensures thorough pumping with minimal disruption to your day.
+                                </p>
+                                <ul className="flex flex-col gap-3 mt-2">
+                                    <li className="flex items-start gap-2 text-white/90 text-sm">
+                                        <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                        </svg>
+                                        <span>Same-day service <code className="mx-1 px-1.5 py-0.5 bg-white/10 rounded text-brand-400 text-xs">Available 24/7</code></span>
+                                    </li>
+                                    <li className="flex items-start gap-2 text-white/90 text-sm">
+                                        <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                        </svg>
+                                        <span>Complete tank cleaning in under 2 hours</span>
+                                    </li>
+                                    <li className="flex items-start gap-2 text-white/90 text-sm">
+                                        <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                        </svg>
+                                        <span>Free inspection with every service</span>
+                                    </li>
+                                    <li className="flex items-start gap-2 text-white/90 text-sm">
+                                        <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                        </svg>
+                                        <span>Serving all of Western North Carolina</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="px-3 py-1.5 bg-white/5 rounded w-fit flex gap-3 items-center">
+                                <span className="text-white text-sm hidden md:inline">Certified by</span>
+                                <div className="flex items-center gap-1.5">
+                                    <span className="size-6 rounded-full bg-success-solid flex items-center justify-center text-white text-xs font-bold">NC</span>
+                                    <span className="text-white text-sm">NC Licensed</span>
+                                </div>
+                                <span className="text-tertiary text-sm">&amp;</span>
+                                <div className="flex items-center gap-1.5">
+                                    <span className="size-6 rounded-full bg-brand-600 flex items-center justify-center text-white text-xs font-bold">✓</span>
+                                    <span className="text-white text-sm">Fully Insured</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Right Column - Image */}
+                        <div className="flex flex-col min-h-[22rem] sm:min-h-[30rem]">
+                            <div className="bg-primary-solid bg-cover bg-top h-full" style={{ backgroundImage: 'url(https://curat.modeltheme.com/wp-content/uploads/2026/02/why-choose-us-.jpg)' }} />
+                        </div>
+                    </div>
+                </section>
             </main>
 
             <Footer />
