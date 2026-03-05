@@ -1,6 +1,6 @@
 "use client";
 
-import { Phone, Star01, Quote, ThumbsUp, MessageSquare02 } from "@untitledui/icons";
+import { Phone, Star01, MessageSquare02 } from "@untitledui/icons";
 import { Button } from "@/components/base/buttons/button";
 import { FeaturedIcon } from "@/components/foundations/featured-icon/featured-icon";
 import { Avatar } from "@/components/base/avatar/avatar";
