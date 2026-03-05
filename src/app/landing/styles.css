@@ -198,20 +198,22 @@ body {
 
 .nav_brand_link {
     text-decoration: none;
-}
-
-.nav_brand {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
 }
 
-.green-logo {
-    transition: transform 500ms ease;
+.brand-logo {
+    height: 36px;
+    width: auto;
+    transition: opacity 200ms ease;
 }
 
-.nav_brand:hover .green-logo {
-    transform: rotate(360deg);
+.nav_brand_link:hover .brand-logo {
+    opacity: 0.8;
+}
+
+.footer-logo .brand-logo {
+    height: 32px;
 }
 
 .nav_menu {
@@ -1121,6 +1123,23 @@ body {
 
     .benchmark-grid {
         grid-template-columns: 1fr;
+    }
+
+    .grid-3col.tablet-2col {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-item.is-illustration {
+        border-right: 1px solid var(--color-border) !important;
+        border-bottom: 1px solid var(--color-border) !important;
+    }
+
+    .side-3rem {
+        padding: 0 1.5rem;
+    }
+
+    .button-wrapper._100 {
+        padding: 0 1.5rem;
     }
 }
 
