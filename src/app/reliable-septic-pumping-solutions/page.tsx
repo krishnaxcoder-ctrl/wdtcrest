@@ -4,6 +4,19 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Header, Footer } from "@/components/layout";
 
+// Shield Check Icon
+const ShieldCheck = ({ className, style }: { className?: string; style?: React.CSSProperties }) => (
+    <svg className={className} style={style} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+            d="M9 11.4999L11 13.4999L15.5 8.99987M20 11.9999C20 16.9083 14.646 20.4783 12.698 21.6147C12.4766 21.7439 12.3659 21.8085 12.2097 21.842C12.0884 21.868 11.9116 21.868 11.7903 21.842C11.6341 21.8085 11.5234 21.7439 11.302 21.6147C9.35396 20.4783 4 16.9083 4 11.9999V7.21747C4 6.41796 4 6.0182 4.13076 5.67457C4.24627 5.37101 4.43398 5.10015 4.67766 4.8854C4.9535 4.64231 5.3278 4.50195 6.0764 4.22122L11.4382 2.21054C11.6461 2.13258 11.75 2.0936 11.857 2.07815C11.9518 2.06444 12.0482 2.06444 12.143 2.07815C12.25 2.0936 12.3539 2.13258 12.5618 2.21054L17.9236 4.22122C18.6722 4.50195 19.0465 4.64231 19.3223 4.8854C19.566 5.10015 19.7537 5.37101 19.8692 5.67457C20 6.0182 20 6.41796 20 7.21747V11.9999Z"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+    </svg>
+);
+
 // Arrow Icon
 const ArrowIcon = () => (
     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -292,27 +305,19 @@ export default function PumpingPage() {
                                 </p>
                                 <ul className="flex flex-col gap-3 mt-2">
                                     <li className="flex items-start gap-2 text-white/90 text-sm">
-                                        <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                                        </svg>
+                                        <ShieldCheck className="size-5 shrink-0 mt-0.5" style={{ color: '#33e6d1' }} />
                                         <span>Same-day service <code className="mx-1 px-1.5 py-0.5 bg-white/10 rounded text-xs" style={{ color: '#33e6d1' }}>Available 24/7</code></span>
                                     </li>
                                     <li className="flex items-start gap-2 text-white/90 text-sm">
-                                        <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                                        </svg>
+                                        <ShieldCheck className="size-5 shrink-0 mt-0.5" style={{ color: '#33e6d1' }} />
                                         <span>Complete tank cleaning in under 2 hours</span>
                                     </li>
                                     <li className="flex items-start gap-2 text-white/90 text-sm">
-                                        <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                                        </svg>
+                                        <ShieldCheck className="size-5 shrink-0 mt-0.5" style={{ color: '#33e6d1' }} />
                                         <span>Free inspection with every service</span>
                                     </li>
                                     <li className="flex items-start gap-2 text-white/90 text-sm">
-                                        <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                                        </svg>
+                                        <ShieldCheck className="size-5 shrink-0 mt-0.5" style={{ color: '#33e6d1' }} />
                                         <span>Serving all of Western North Carolina</span>
                                     </li>
                                 </ul>
@@ -436,27 +441,19 @@ export default function PumpingPage() {
                                 </p>
                                 <ul className="flex flex-col gap-3 mt-2">
                                     <li className="flex items-start gap-2 text-white/90 text-sm">
-                                        <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                                        </svg>
+                                        <ShieldCheck className="size-5 shrink-0 mt-0.5" style={{ color: '#33e6d1' }} />
                                         <span>Rapid response <code className="mx-1 px-1.5 py-0.5 bg-white/10 rounded text-xs" style={{ color: '#33e6d1' }}>Under 60 minutes</code></span>
                                     </li>
                                     <li className="flex items-start gap-2 text-white/90 text-sm">
-                                        <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                                        </svg>
+                                        <ShieldCheck className="size-5 shrink-0 mt-0.5" style={{ color: '#33e6d1' }} />
                                         <span>Overflow and backup resolution</span>
                                     </li>
                                     <li className="flex items-start gap-2 text-white/90 text-sm">
-                                        <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                                        </svg>
+                                        <ShieldCheck className="size-5 shrink-0 mt-0.5" style={{ color: '#33e6d1' }} />
                                         <span>Weekend and holiday availability</span>
                                     </li>
                                     <li className="flex items-start gap-2 text-white/90 text-sm">
-                                        <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                                        </svg>
+                                        <ShieldCheck className="size-5 shrink-0 mt-0.5" style={{ color: '#33e6d1' }} />
                                         <span>No extra charge for after-hours calls</span>
                                     </li>
                                 </ul>
@@ -570,27 +567,19 @@ export default function PumpingPage() {
                                 </p>
                                 <ul className="flex flex-col gap-3 mt-2">
                                     <li className="flex items-start gap-2 text-white/90 text-sm">
-                                        <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                                        </svg>
+                                        <ShieldCheck className="size-5 shrink-0 mt-0.5" style={{ color: '#33e6d1' }} />
                                         <span>Full system evaluation <code className="mx-1 px-1.5 py-0.5 bg-white/10 rounded text-xs" style={{ color: '#33e6d1' }}>Tank to Drain Field</code></span>
                                     </li>
                                     <li className="flex items-start gap-2 text-white/90 text-sm">
-                                        <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                                        </svg>
+                                        <ShieldCheck className="size-5 shrink-0 mt-0.5" style={{ color: '#33e6d1' }} />
                                         <span>Real estate transaction inspections</span>
                                     </li>
                                     <li className="flex items-start gap-2 text-white/90 text-sm">
-                                        <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                                        </svg>
+                                        <ShieldCheck className="size-5 shrink-0 mt-0.5" style={{ color: '#33e6d1' }} />
                                         <span>Detailed written reports provided</span>
                                     </li>
                                     <li className="flex items-start gap-2 text-white/90 text-sm">
-                                        <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                                        </svg>
+                                        <ShieldCheck className="size-5 shrink-0 mt-0.5" style={{ color: '#33e6d1' }} />
                                         <span>Camera inspection available</span>
                                     </li>
                                 </ul>
@@ -703,27 +692,19 @@ export default function PumpingPage() {
                                 </p>
                                 <ul className="flex flex-col gap-3 mt-2">
                                     <li className="flex items-start gap-2 text-white/90 text-sm">
-                                        <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                                        </svg>
+                                        <ShieldCheck className="size-5 shrink-0 mt-0.5" style={{ color: '#33e6d1' }} />
                                         <span>Scheduled pumping reminders <code className="mx-1 px-1.5 py-0.5 bg-white/10 rounded text-xs" style={{ color: '#33e6d1' }}>Every 3-5 Years</code></span>
                                     </li>
                                     <li className="flex items-start gap-2 text-white/90 text-sm">
-                                        <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                                        </svg>
+                                        <ShieldCheck className="size-5 shrink-0 mt-0.5" style={{ color: '#33e6d1' }} />
                                         <span>Priority scheduling for members</span>
                                     </li>
                                     <li className="flex items-start gap-2 text-white/90 text-sm">
-                                        <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                                        </svg>
+                                        <ShieldCheck className="size-5 shrink-0 mt-0.5" style={{ color: '#33e6d1' }} />
                                         <span>10% discount on all services</span>
                                     </li>
                                     <li className="flex items-start gap-2 text-white/90 text-sm">
-                                        <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                                        </svg>
+                                        <ShieldCheck className="size-5 shrink-0 mt-0.5" style={{ color: '#33e6d1' }} />
                                         <span>Annual system health check included</span>
                                     </li>
                                 </ul>
@@ -836,27 +817,19 @@ export default function PumpingPage() {
                                 </p>
                                 <ul className="flex flex-col gap-3 mt-2">
                                     <li className="flex items-start gap-2 text-white/90 text-sm">
-                                        <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                                        </svg>
+                                        <ShieldCheck className="size-5 shrink-0 mt-0.5" style={{ color: '#33e6d1' }} />
                                         <span>Fast diagnosis <code className="mx-1 px-1.5 py-0.5 bg-white/10 rounded text-xs" style={{ color: '#33e6d1' }}>Same Day</code></span>
                                     </li>
                                     <li className="flex items-start gap-2 text-white/90 text-sm">
-                                        <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                                        </svg>
+                                        <ShieldCheck className="size-5 shrink-0 mt-0.5" style={{ color: '#33e6d1' }} />
                                         <span>Tank and lid repairs</span>
                                     </li>
                                     <li className="flex items-start gap-2 text-white/90 text-sm">
-                                        <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                                        </svg>
+                                        <ShieldCheck className="size-5 shrink-0 mt-0.5" style={{ color: '#33e6d1' }} />
                                         <span>Drain field restoration</span>
                                     </li>
                                     <li className="flex items-start gap-2 text-white/90 text-sm">
-                                        <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                                        </svg>
+                                        <ShieldCheck className="size-5 shrink-0 mt-0.5" style={{ color: '#33e6d1' }} />
                                         <span>Pump and motor replacement</span>
                                     </li>
                                 </ul>
