@@ -468,9 +468,7 @@ export default function PumpingPage() {
 
                         {/* Right Column - Image */}
                         <div className="flex flex-col min-h-[22rem] sm:min-h-[30rem] relative">
-                            <div className="bg-cover bg-center h-full relative" style={{ backgroundImage: 'url(/feature-dev-background-nostats.jpg)' }}>
-                                <div className="absolute inset-0 bg-red-900/30 mix-blend-multiply" />
-                            </div>
+                            <div className="bg-cover bg-center h-full relative" style={{ backgroundImage: 'url(/orange.png)' }} />
 
                             {/* Floating Card */}
                             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%-3rem)] overflow-hidden rounded-2xl border border-secondary bg-white/95 shadow-2xl backdrop-blur-md">
@@ -593,9 +591,7 @@ export default function PumpingPage() {
 
                         {/* Right Column - Image */}
                         <div className="flex flex-col min-h-[22rem] sm:min-h-[30rem] relative">
-                            <div className="bg-cover bg-center h-full relative" style={{ backgroundImage: 'url(/feature-dev-background-nostats.jpg)' }}>
-                                <div className="absolute inset-0 bg-blue-900/30 mix-blend-multiply" />
-                            </div>
+                            <div className="bg-cover bg-center h-full relative" style={{ backgroundImage: 'url(/blue.png)' }} />
 
                             {/* Floating Card */}
                             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%-3rem)] overflow-hidden rounded-2xl border border-secondary bg-white/95 shadow-2xl backdrop-blur-md">
@@ -718,9 +714,7 @@ export default function PumpingPage() {
 
                         {/* Right Column - Image */}
                         <div className="flex flex-col min-h-[22rem] sm:min-h-[30rem] relative">
-                            <div className="bg-cover bg-center h-full relative" style={{ backgroundImage: 'url(/feature-dev-background-nostats.jpg)' }}>
-                                <div className="absolute inset-0 bg-green-900/30 mix-blend-multiply" />
-                            </div>
+                            <div className="bg-cover bg-center h-full relative" style={{ backgroundImage: 'url(/green.png)' }} />
 
                             {/* Floating Card */}
                             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%-3rem)] overflow-hidden rounded-2xl border border-secondary bg-white/95 shadow-2xl backdrop-blur-md">
