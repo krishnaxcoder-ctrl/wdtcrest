@@ -198,13 +198,14 @@ export default function PumpingPage() {
                                     </div>
                                 </div>
                             </div>
-                            <StatsSection />
+                           
                         </div>
                         
                     </div>
                     
                 </section>
-
+                
+                <StatsSection />
                 <DecorativeDivider />
                
 
@@ -1268,51 +1269,6 @@ export default function PumpingPage() {
                                         <p className="text-sm font-medium text-primary">BBB Accredited</p>
                                         <p className="text-xs text-tertiary">A+ Rating</p>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <DecorativeDivider />
-
-                {/* Benefits Section */}
-                <section className="py-16 md:py-20 bg-secondary">
-                    <div className="px-6 lg:px-10">
-                        <div className="max-w-7xl mx-auto border-l border-r border-tertiary">
-                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 p-8 lg:p-12">
-                                <div className="flex flex-col gap-6">
-                                    <div className="inline-flex items-center gap-3">
-                                        <span className="size-2 rounded-full bg-success-solid" />
-                                        <span className="text-sm text-tertiary">Why Pump Your Septic</span>
-                                    </div>
-                                    <h2 className="text-3xl lg:text-4xl font-semibold text-primary tracking-tight">
-                                        Benefits of Regular Septic Pumping
-                                    </h2>
-                                    <p className="text-lg text-tertiary">
-                                        Regular septic tank pumping is essential for maintaining a healthy and efficient system.
-                                    </p>
-                                    <div className="flex flex-col gap-4 mt-4">
-                                        {benefits.map((benefit) => (
-                                            <div key={benefit} className="flex items-center gap-4">
-                                                <span className="text-success-primary text-xl">✓</span>
-                                                <span className="text-primary">{benefit}</span>
-                                            </div>
-                                        ))}
-                                    </div>
-                                    <Link href="tel:8282541920" className="inline-flex items-center gap-2 px-6 py-4 text-sm font-medium bg-success-solid text-white transition-all hover:bg-success-primary w-fit group mt-4">
-                                        <span>Schedule Pumping Today</span>
-                                        <div className="size-8 flex items-center justify-center transition-transform group-hover:-rotate-90">
-                                            <ArrowIcon />
-                                        </div>
-                                    </Link>
-                                </div>
-                                <div className="flex items-center">
-                                    <img
-                                        src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80"
-                                        alt="Septic pumping truck"
-                                        className="w-full h-auto rounded-2xl object-cover"
-                                    />
                                 </div>
                             </div>
                         </div>
