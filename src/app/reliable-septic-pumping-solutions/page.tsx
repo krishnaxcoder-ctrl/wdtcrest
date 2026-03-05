@@ -247,7 +247,7 @@ export default function PumpingPage() {
                                         <path d="M7.92847 12.592C7.92847 13.0013 8.22693 13.333 8.59513 13.333H9.2618C9.63 13.333 9.92847 13.0013 9.92847 12.592V2.21921C9.92847 1.81001 9.63 1.47827 9.2618 1.47827H8.59513C8.22693 1.47827 7.92847 1.81 7.92847 2.21921V12.592Z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="square" />
                                         <path d="M12.5952 12.6654C12.5952 13.0336 12.8937 13.332 13.2619 13.332H13.9285C14.2967 13.332 14.5952 13.0336 14.5952 12.6654V7.9987C14.5952 7.63056 14.2967 7.33203 13.9285 7.33203H13.2619C12.8937 7.33203 12.5952 7.63056 12.5952 7.9987V12.6654Z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="square" />
                                     </svg>
-                                    <span>pumping</span>
+                                    <span style={{ fontFamily: 'Datashake, sans-serif' }}>Pumping</span>
                                 </a>
                             </li>
                             <li className="flex-shrink-0">
@@ -257,7 +257,7 @@ export default function PumpingPage() {
                                         <path d="M5.6189 1.33325H10.9522" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
                                         <path d="M5.28564 7.70432C5.95231 6.93539 7.01858 7.48965 8.28564 8.21225C9.95231 9.16272 10.9523 8.43345 11.2856 7.74359" stroke="currentColor" strokeLinecap="round" />
                                     </svg>
-                                    <span>emergency</span>
+                                    <span style={{ fontFamily: 'Datashake, sans-serif' }}>Emergency</span>
                                 </a>
                             </li>
                             <li className="flex-shrink-0">
@@ -266,7 +266,7 @@ export default function PumpingPage() {
                                         <path d="M10.1427 1.33325L10.5019 2.92763C10.8065 4.28002 11.8626 5.33613 13.215 5.64077L14.8094 5.99992L13.215 6.35907C11.8626 6.66371 10.8065 7.71979 10.5019 9.07219L10.1427 10.6666L9.78361 9.07219C9.47894 7.71979 8.42287 6.66371 7.07047 6.35907L5.47607 5.99992L7.07047 5.64077C8.42281 5.33613 9.47894 4.28002 9.78361 2.92764L10.1427 1.33325Z" stroke="currentColor" strokeWidth="1.2" strokeLinejoin="round" />
                                         <path d="M4.80941 8L5.06595 9.13887C5.28355 10.1048 6.03791 10.8592 7.00387 11.0768L8.14274 11.3333L7.00387 11.5899C6.03791 11.8075 5.28355 12.5618 5.06595 13.5278L4.80941 14.6667L4.55287 13.5278C4.33527 12.5618 3.58091 11.8075 2.61492 11.5899L1.47607 11.3333L2.61492 11.0768C3.58091 10.8592 4.33527 10.1049 4.55287 9.13887L4.80941 8Z" stroke="currentColor" strokeWidth="1.2" strokeLinejoin="round" />
                                     </svg>
-                                    <span>inspection</span>
+                                    <span style={{ fontFamily: 'Datashake, sans-serif' }}>Inspection</span>
                                 </a>
                             </li>
                             <li className="flex-shrink-0">
@@ -275,7 +275,7 @@ export default function PumpingPage() {
                                         <path d="M7.16634 2.66659C7.16634 1.93021 7.76327 1.33325 8.49967 1.33325H9.16634C9.90274 1.33325 10.4997 1.93021 10.4997 2.66659V4.36883C10.4997 5.24394 11.0686 6.01743 11.904 6.27807L12.4287 6.44177C13.2641 6.70239 13.833 7.47592 13.833 8.35099V9.33325C13.833 9.70145 13.5345 9.99992 13.1663 9.99992H4.49967C4.13149 9.99992 3.83301 9.70145 3.83301 9.33325V8.35099C3.83301 7.47592 4.40193 6.70239 5.23733 6.44177L5.76202 6.27807C6.59741 6.01743 7.16634 5.24394 7.16634 4.36883V2.66659Z" stroke="currentColor" strokeWidth="1.2" />
                                         <path d="M4.50128 10C4.60515 10.8721 4.16364 13.0088 3.1665 14.5786C3.1665 14.5786 10.0281 15.3729 10.9566 11.9623V13.2475C10.9566 13.875 10.9566 14.1887 11.152 14.3837C11.5279 14.7585 13.2926 14.7687 13.669 14.3681C13.8668 14.1575 13.847 13.8546 13.8072 13.2487C13.7418 12.2497 13.562 10.9705 13.068 10" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
-                                    <span>maintenance</span>
+                                    <span style={{ fontFamily: 'Datashake, sans-serif' }}>Maintenance</span>
                                 </a>
                             </li>
                             <li className="flex-shrink-0">
@@ -285,7 +285,7 @@ export default function PumpingPage() {
                                         <path d="M13.2379 5.33325C13.2379 5.02263 13.2379 4.86731 13.1871 4.7448C13.1195 4.58145 12.9897 4.45166 12.8263 4.384C12.7038 4.33325 12.5485 4.33325 12.2379 4.33325H4.90454C4.59391 4.33325 4.4386 4.33325 4.31609 4.384C4.15273 4.45166 4.02295 4.58145 3.95529 4.7448C3.90454 4.86731 3.90454 5.02263 3.90454 5.33325" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
                                         <path d="M11.5713 2.66675C11.5713 2.35612 11.5713 2.20081 11.5206 2.07829C11.4529 1.91494 11.3231 1.78515 11.1598 1.71749C11.0372 1.66675 10.8819 1.66675 10.5713 1.66675H6.57129C6.26066 1.66675 6.10535 1.66675 5.98284 1.71749C5.81948 1.78515 5.6897 1.91494 5.62204 2.07829C5.57129 2.20081 5.57129 2.35612 5.57129 2.66675" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
-                                    <span>repairs</span>
+                                    <span style={{ fontFamily: 'Datashake, sans-serif' }}>Repairs</span>
                                 </a>
                             </li>
                         </ul>
