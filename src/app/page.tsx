@@ -66,7 +66,7 @@ const RotatingText = () => {
                 Professional septic tank services for
             </h1>
             <div className="relative mt-2">
-                <div className="text-4xl lg:text-5xl font-semibold text-brand-600 leading-tight">{words[currentIndex]}</div>
+                <div className="text-4xl lg:text-5xl font-semibold leading-tight" style={{ color: '#3fe844' }}>{words[currentIndex]}</div>
             </div>
         </div>
     );
