@@ -748,7 +748,7 @@
     --color-bg-warning-solid: var(--color-warning-600);
     --color-bg-success-primary: var(--color-success-50);
     --color-bg-success-secondary: var(--color-success-100);
-    --color-bg-success-solid: var(--color-success-600);
+    --color-bg-success-solid: #5fec63;
     --color-bg-disabled: var(--color-gray-100);
     --color-bg-disabled_subtle: var(--color-gray-50);
     --color-bg-active: var(--color-gray-50);
