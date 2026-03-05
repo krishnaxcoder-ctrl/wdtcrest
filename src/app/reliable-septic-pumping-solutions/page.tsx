@@ -41,34 +41,106 @@ export default function PumpingPage() {
             <main>
                 {/* Hero Section */}
                 <section
-                    className="py-20 md:py-16 bg-secondary"
+                    className="py-16 md:py-20 bg-secondary"
                     style={{ backgroundImage: 'url(/bg.avif)', backgroundSize: '150%', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}
                 >
                     <div className="px-6 lg:px-10">
-                        <div className="max-w-7xl mx-auto border-l border-r border-tertiary bg-primary">
-                            <div className="p-8 py-16 lg:p-12 lg:py-24">
-                                <div className="flex flex-col gap-6 max-w-2xl">
-                                    <div className="inline-flex items-center gap-3">
-                                        <span className="size-2 rounded-full bg-success-solid" />
-                                        <span className="text-sm text-success-primary font-medium">Professional Pumping Services</span>
+                        <div className="relative overflow-hidden max-w-7xl mx-auto border-l border-r border-b border-secondary bg-secondary">
+                            {/* Decorative gradient circles */}
+                            <div className="absolute -left-[15%] -top-[50%] h-[300px] w-[300px] rounded-full opacity-20 blur-[80px] sm:h-[500px] sm:w-[500px] sm:blur-[120px]" style={{ background: 'radial-gradient(circle, #16b364 0%, transparent 70%)' }} />
+                            <div className="absolute -right-[10%] -bottom-[40%] h-[250px] w-[250px] rounded-full opacity-15 blur-[60px] sm:h-[400px] sm:w-[400px] sm:blur-[100px]" style={{ background: 'radial-gradient(circle, #22c55e 0%, transparent 70%)' }} />
+                            <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
+
+                            <div className="relative grid items-center lg:grid-cols-5">
+                                {/* Left Column - Main Content */}
+                                <div className="p-5 sm:p-10 md:p-14 lg:col-span-3 lg:p-20">
+                                    <div className="flex items-center gap-2">
+                                        <span className="relative flex size-2">
+                                            <span className="absolute inline-flex size-full animate-ping rounded-full bg-success-primary opacity-75" />
+                                            <span className="relative inline-flex size-2 rounded-full bg-success-solid" />
+                                        </span>
+                                        <span className="text-[10px] font-semibold uppercase text-success-primary sm:text-xs">Professional Pumping Services</span>
                                     </div>
-                                    <h1 className="text-4xl lg:text-5xl font-semibold text-primary tracking-tight">
+                                    <h1 className="mt-4 text-2xl font-semibold text-primary sm:mt-5 sm:text-3xl md:text-4xl">
                                         Reliable Septic Pumping Solutions
                                     </h1>
-                                    <p className="text-lg text-tertiary leading-relaxed">
+                                    <p className="mt-3 max-w-lg text-sm leading-relaxed text-tertiary sm:mt-4 sm:text-base">
                                         Keep your septic system running smoothly with our professional pumping services.
                                         Serving Asheville and Western North Carolina for over 30 years.
                                     </p>
-                                    <div className="flex flex-wrap gap-3 mt-2">
-                                        <Link href="tel:8282541920" className="inline-flex items-center gap-2 px-6 py-4 text-sm font-medium bg-success-solid text-white transition-all hover:bg-success-primary group">
-                                            <span>Call (828) 254-1920</span>
-                                            <div className="size-8 flex items-center justify-center transition-transform group-hover:-rotate-90">
-                                                <ArrowIcon />
+                                    <div className="mt-6 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-4">
+                                        <Link href="tel:8282541920" className="group relative flex items-center justify-center gap-2 rounded-xl px-5 py-3 transition-all duration-300 sm:justify-start sm:gap-3 sm:px-7 sm:py-4">
+                                            <span className="absolute inset-0 rounded-xl bg-gradient-to-br from-green-600 via-success-solid to-green-600 opacity-40 blur-md transition-all duration-300 group-hover:opacity-60 group-hover:blur-lg" />
+                                            <span className="absolute inset-0 rounded-xl bg-gradient-to-br from-white/20 via-white/10 to-white/20 p-[1px]">
+                                                <span className="flex h-full w-full items-center justify-center rounded-xl bg-gradient-to-br from-green-600 via-success-solid to-green-500 transition-all duration-300 group-hover:from-green-500 group-hover:via-success-primary group-hover:to-green-400" />
+                                            </span>
+                                            <div className="relative z-10">
+                                                <p className="text-left text-xs font-medium text-white sm:text-sm">Call (828) 254-1920</p>
+                                                <p className="hidden text-left text-[10px] text-white/70 sm:block sm:text-xs">Available 24/7 for emergencies</p>
                                             </div>
+                                            <span className="relative z-10 hidden h-8 w-px bg-white/20 sm:block" />
+                                            <svg className="relative z-10 size-4 sm:size-5 text-white transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24">
+                                                <path d="M6 18L18 6M18 6H10M18 6V14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                            </svg>
                                         </Link>
-                                        <Link href="/contact" className="inline-flex items-center px-6 py-4 text-sm text-tertiary border border-dashed border-tertiary transition-colors hover:text-primary hover:border-primary">
-                                            Get Free Quote
+                                        <Link href="/contact" className="group flex items-center justify-center gap-2 rounded-xl border border-secondary bg-primary px-5 py-3 shadow-sm transition-all hover:border-success-primary hover:bg-success-secondary sm:justify-start sm:gap-3 sm:px-7 sm:py-4">
+                                            <div>
+                                                <p className="text-left text-xs font-medium text-primary sm:text-sm">Get Free Quote</p>
+                                                <p className="hidden text-left text-[10px] text-tertiary sm:block sm:text-xs">No obligation estimate</p>
+                                            </div>
+                                            <span className="hidden h-8 w-px bg-secondary sm:block" />
+                                            <svg className="size-4 text-tertiary transition-transform group-hover:translate-x-0.5 sm:size-5" fill="none" viewBox="0 0 24 24">
+                                                <path d="M6 18L18 6M18 6H10M18 6V14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                            </svg>
                                         </Link>
+                                    </div>
+                                    <div className="mt-6 flex flex-wrap items-center gap-4 sm:mt-10 sm:gap-6">
+                                        <div className="flex items-center gap-1.5 sm:gap-2">
+                                            <svg className="size-3.5 text-success-primary sm:size-4" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                            </svg>
+                                            <span className="text-[10px] text-tertiary sm:text-xs">Licensed & Insured</span>
+                                        </div>
+                                        <div className="flex items-center gap-1.5 sm:gap-2">
+                                            <svg className="size-3.5 text-success-primary sm:size-4" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                            </svg>
+                                            <span className="text-[10px] text-tertiary sm:text-xs">30+ Years Experience</span>
+                                        </div>
+                                        <div className="flex items-center gap-1.5 sm:gap-2">
+                                            <svg className="size-3.5 text-success-primary sm:size-4" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                            </svg>
+                                            <span className="text-[10px] text-tertiary sm:text-xs">NC Certified</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Right Column - Features */}
+                                <div className="border-t border-secondary p-5 sm:p-10 md:p-14 lg:col-span-2 lg:border-l lg:border-t-0 lg:p-14">
+                                    <div className="text-left">
+                                        <p className="text-[10px] font-semibold uppercase tracking-wider text-success-primary sm:text-xs">Why Choose Our Pumping Services</p>
+                                        <ul className="mt-5 space-y-3 sm:mt-8 sm:space-y-4">
+                                            {[
+                                                "Complete tank pumping & cleaning",
+                                                "Inspection during every service",
+                                                "Flexible scheduling options",
+                                                "Residential & commercial service",
+                                                "Emergency pumping available 24/7",
+                                            ].map((item) => (
+                                                <li key={item} className="flex items-start gap-2 text-left sm:gap-3">
+                                                    <svg className="size-4 sm:size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                                    </svg>
+                                                    <span className="text-xs text-secondary sm:text-sm">{item}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                        <div className="mt-6 h-px w-16 bg-secondary sm:mt-8" />
+                                        <div className="mt-6 rounded-xl border border-success-primary/30 bg-success-secondary p-3 sm:mt-8 sm:p-4">
+                                            <p className="text-xs font-medium text-success-primary sm:text-sm">Free Estimates</p>
+                                            <p className="mt-1 text-[10px] text-tertiary sm:text-xs">Call today for a no-obligation quote on your pumping service</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
