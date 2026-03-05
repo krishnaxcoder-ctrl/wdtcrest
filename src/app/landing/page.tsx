@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { TrustBadges } from "@/components/marketing/trust-badges";
 import "./styles.css";
 
 // Clandestine Logo Component
@@ -347,6 +348,9 @@ export default function LandingPage() {
                         </div>
                     </div>
                 </section>
+
+                {/* Trust Badges Section */}
+                <TrustBadges />
 
                 {/* Divider */}
                 <div className="divider-section">
