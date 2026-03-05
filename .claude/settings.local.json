@@ -6,7 +6,9 @@
       "WebFetch(domain:www.ableseptictankservice.com)",
       "WebSearch",
       "Bash(npm uninstall:*)",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Bash(copy:*)",
+      "Bash(ls:*)"
     ]
   }
 }
