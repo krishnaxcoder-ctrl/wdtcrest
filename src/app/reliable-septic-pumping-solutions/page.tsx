@@ -42,13 +42,13 @@ export default function PumpingPage() {
                 {/* Hero Section */}
                 <section
                     className="py-16 md:py-20 bg-secondary"
-                    style={{ backgroundImage: 'url(/bg.avif)', backgroundSize: '150%', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}
+                    style={{ backgroundImage: 'url(/bg1.png)', backgroundSize: '150%', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}
                 >
                     <div className="px-6 lg:px-10">
                         <div className="relative overflow-hidden max-w-7xl mx-auto border-l border-r border-b border-secondary bg-secondary">
                             {/* Decorative gradient circles */}
-                            <div className="absolute -left-[15%] -top-[50%] h-[300px] w-[300px] rounded-full opacity-20 blur-[80px] sm:h-[500px] sm:w-[500px] sm:blur-[120px]" style={{ background: 'radial-gradient(circle, #16b364 0%, transparent 70%)' }} />
-                            <div className="absolute -right-[10%] -bottom-[40%] h-[250px] w-[250px] rounded-full opacity-15 blur-[60px] sm:h-[400px] sm:w-[400px] sm:blur-[100px]" style={{ background: 'radial-gradient(circle, #22c55e 0%, transparent 70%)' }} />
+                            <div className="absolute -left-[15%] -top-[50%] h-[300px] w-[300px] rounded-full opacity-20 blur-[80px] sm:h-[500px] sm:w-[500px] sm:blur-[120px]" style={{ background: 'radial-gradient(circle, #33e3cb 0%, transparent 70%)' }} />
+                            <div className="absolute -right-[10%] -bottom-[40%] h-[250px] w-[250px] rounded-full opacity-15 blur-[60px] sm:h-[400px] sm:w-[400px] sm:blur-[100px]" style={{ background: 'radial-gradient(circle, #33e3cb 0%, transparent 70%)' }} />
                             <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
 
                             <div className="relative grid items-center lg:grid-cols-5">
@@ -56,10 +56,10 @@ export default function PumpingPage() {
                                 <div className="p-5 sm:p-10 md:p-14 lg:col-span-3 lg:p-20">
                                     <div className="flex items-center gap-2">
                                         <span className="relative flex size-2">
-                                            <span className="absolute inline-flex size-full animate-ping rounded-full bg-success-primary opacity-75" />
-                                            <span className="relative inline-flex size-2 rounded-full bg-success-solid" />
+                                            <span className="absolute inline-flex size-full animate-ping rounded-full opacity-75" style={{ backgroundColor: '#33e3cb' }} />
+                                            <span className="relative inline-flex size-2 rounded-full" style={{ backgroundColor: '#33e3cb' }} />
                                         </span>
-                                        <span className="text-[10px] font-semibold uppercase text-success-primary sm:text-xs">Professional Pumping Services</span>
+                                        <span className="text-[10px] font-semibold uppercase sm:text-xs" style={{ color: '#33e3cb' }}>Professional Pumping Services</span>
                                     </div>
                                     <h1 className="mt-4 text-2xl font-semibold text-primary sm:mt-5 sm:text-3xl md:text-4xl">
                                         Reliable Septic Pumping Solutions
@@ -70,9 +70,9 @@ export default function PumpingPage() {
                                     </p>
                                     <div className="mt-6 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-4">
                                         <Link href="tel:8282541920" className="group relative flex items-center justify-center gap-2 rounded-xl px-5 py-3 transition-all duration-300 sm:justify-start sm:gap-3 sm:px-7 sm:py-4">
-                                            <span className="absolute inset-0 rounded-xl bg-gradient-to-br from-green-600 via-success-solid to-green-600 opacity-40 blur-md transition-all duration-300 group-hover:opacity-60 group-hover:blur-lg" />
+                                            <span className="absolute inset-0 rounded-xl opacity-40 blur-md transition-all duration-300 group-hover:opacity-60 group-hover:blur-lg" style={{ background: 'linear-gradient(to bottom right, #2dd4bf, #33e3cb, #2dd4bf)' }} />
                                             <span className="absolute inset-0 rounded-xl bg-gradient-to-br from-white/20 via-white/10 to-white/20 p-[1px]">
-                                                <span className="flex h-full w-full items-center justify-center rounded-xl bg-gradient-to-br from-green-600 via-success-solid to-green-500 transition-all duration-300 group-hover:from-green-500 group-hover:via-success-primary group-hover:to-green-400" />
+                                                <span className="flex h-full w-full items-center justify-center rounded-xl transition-all duration-300" style={{ background: 'linear-gradient(to bottom right, #2dd4bf, #33e3cb, #14b8a6)' }} />
                                             </span>
                                             <div className="relative z-10">
                                                 <p className="text-left text-xs font-medium text-white sm:text-sm">Call (828) 254-1920</p>
@@ -83,7 +83,7 @@ export default function PumpingPage() {
                                                 <path d="M6 18L18 6M18 6H10M18 6V14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                             </svg>
                                         </Link>
-                                        <Link href="/contact" className="group flex items-center justify-center gap-2 rounded-xl border border-secondary bg-primary px-5 py-3 shadow-sm transition-all hover:border-success-primary hover:bg-success-secondary sm:justify-start sm:gap-3 sm:px-7 sm:py-4">
+                                        <Link href="/contact" className="group flex items-center justify-center gap-2 rounded-xl border border-secondary bg-primary px-5 py-3 shadow-sm transition-all hover:shadow-md sm:justify-start sm:gap-3 sm:px-7 sm:py-4" style={{ ['--hover-border' as string]: '#33e3cb' }} onMouseEnter={(e) => e.currentTarget.style.borderColor = '#33e3cb'} onMouseLeave={(e) => e.currentTarget.style.borderColor = ''}
                                             <div>
                                                 <p className="text-left text-xs font-medium text-primary sm:text-sm">Get Free Quote</p>
                                                 <p className="hidden text-left text-[10px] text-tertiary sm:block sm:text-xs">No obligation estimate</p>

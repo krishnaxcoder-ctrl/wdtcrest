@@ -81,7 +81,7 @@ export const Header = () => {
                             <a href="mailto:info@ableseptic.com" className="hover:text-success-primary transition-colors">
                                 info@ableseptic.com
                             </a>
-                            <a href="tel:8282541920" className="flex items-center gap-2 font-semibold hover:text-success-primary transition-colors">
+                            <a href="tel:8282541920" className="flex items-center gap-2 text-xs font-semibold hover:text-success-primary transition-colors">
                                 <PhoneIcon />
                                 (828) 254-1920
                             </a>
