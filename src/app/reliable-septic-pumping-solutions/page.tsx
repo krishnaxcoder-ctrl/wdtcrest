@@ -24,6 +24,20 @@ const ArrowIcon = () => (
     </svg>
 );
 
+// Award Icon
+const AwardIcon = ({ className }: { className?: string }) => (
+    <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.96667 14.7219L7 22L12 19L17 22L16.0333 14.7125M19 9C19 12.866 15.866 16 12 16C8.13401 16 5 12.866 5 9C5 5.13401 8.13401 2 12 2C15.866 2 19 5.13401 19 9Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+);
+
+// Truck Icon
+const TruckIcon = ({ className }: { className?: string }) => (
+    <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14 7H16.3373C16.5818 7 16.7041 7 16.8192 7.02763C16.9213 7.05213 17.0188 7.09253 17.1083 7.14736C17.2092 7.2092 17.2957 7.29568 17.4686 7.46863L21.5314 11.5314C21.7043 11.7043 21.7908 11.7908 21.8526 11.8917C21.9075 11.9812 21.9479 12.0787 21.9724 12.1808C22 12.2959 22 12.4182 22 12.6627V15.5C22 15.9659 22 16.1989 21.9239 16.3827C21.8224 16.6277 21.6277 16.8224 21.3827 16.9239C21.1989 17 20.9659 17 20.5 17M15.5 17H14M14 17V6.2C14 5.0799 14 4.51984 13.782 4.09202C13.5903 3.71569 13.2843 3.40973 12.908 3.21799C12.4802 3 11.9201 3 10.8 3H5.2C4.0799 3 3.51984 3 3.09202 3.21799C2.71569 3.40973 2.40973 3.71569 2.21799 4.09202C2 4.51984 2 5.0799 2 6.2V15C2 16.1046 2.89543 17 4 17M14 17H10M10 17C10 18.6569 8.65685 20 7 20C5.34315 20 4 18.6569 4 17M10 17C10 15.3431 8.65685 14 7 14C5.34315 14 4 15.3431 4 17M20.5 17.5C20.5 18.8807 19.3807 20 18 20C16.6193 20 15.5 18.8807 15.5 17.5C15.5 16.1193 16.6193 15 18 15C19.3807 15 20.5 16.1193 20.5 17.5Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+);
+
 const pumpingServices = [
     { icon: "💧", title: "Residential Septic Pumping", description: "Complete septic tank pumping for homes of all sizes. We recommend pumping every 3-5 years." },
     { icon: "🚛", title: "Commercial Septic Pumping", description: "High-capacity pumping for businesses, restaurants, and commercial properties." },
@@ -968,8 +982,8 @@ export default function PumpingPage() {
                             <div className="flex flex-col divide-y divide-tertiary">
                                 {/* Stat Row 1 */}
                                 <div className="flex items-center gap-6 py-5 first:pt-0">
-                                    <div className="w-20 h-12 flex-shrink-0 flex items-center justify-center rounded-lg bg-success-secondary">
-                                        <span className="text-2xl">🏆</span>
+                                    <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-lg bg-success-secondary">
+                                        <AwardIcon className="size-6 text-success-primary" />
                                     </div>
                                     <div className="flex flex-1 items-center gap-6">
                                         <div className="flex flex-col flex-1 pl-6 border-l border-tertiary">
@@ -984,8 +998,8 @@ export default function PumpingPage() {
                                 </div>
                                 {/* Stat Row 2 */}
                                 <div className="flex items-center gap-6 py-5">
-                                    <div className="w-20 h-12 flex-shrink-0 flex items-center justify-center rounded-lg bg-success-secondary">
-                                        <span className="text-2xl">🚚</span>
+                                    <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-lg bg-success-secondary">
+                                        <TruckIcon className="size-6 text-success-primary" />
                                     </div>
                                     <div className="flex flex-1 items-center gap-6">
                                         <div className="flex flex-col flex-1 pl-6 border-l border-tertiary">
@@ -1034,28 +1048,88 @@ export default function PumpingPage() {
                         </div>
 
                         {/* Cell 3 - Why Choose Us */}
-                        <div className="p-5 sm:p-10 flex flex-col gap-3">
-                            <h5 className="text-xl sm:text-2xl font-semibold text-primary">Why homeowners choose us</h5>
-                            <ul className="list-disc pl-4 flex flex-col gap-3 marker:text-success-primary mt-2">
-                                <li className="leading-tight text-tertiary">Transparent, upfront pricing with no hidden fees</li>
-                                <li className="leading-tight text-tertiary">Licensed, insured, and certified technicians</li>
-                                <li className="leading-tight text-tertiary">Environmentally responsible waste disposal</li>
-                                <li className="leading-tight text-tertiary">Detailed service reports and recommendations</li>
-                                <li className="leading-tight text-tertiary">Flexible scheduling including weekends</li>
-                            </ul>
+                        <div className="p-5 sm:p-10 flex flex-col gap-4">
+                            <div>
+                                <h5 className="text-xl sm:text-2xl font-semibold text-primary">Why homeowners choose us</h5>
+                                <p className="text-tertiary text-sm mt-1">Trusted by thousands of families across Western NC</p>
+                            </div>
+
+                            {/* Feature List with Icons */}
+                            <div className="flex flex-col gap-4 mt-2">
+                                <div className="flex items-start gap-3">
+                                    <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-lg bg-success-secondary">
+                                        <svg className="size-4 text-success-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p className="text-sm font-medium text-primary">Transparent pricing</p>
+                                        <p className="text-xs text-tertiary">Upfront quotes with no hidden fees or surprises</p>
+                                    </div>
+                                </div>
+                                <div className="flex items-start gap-3">
+                                    <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-lg bg-success-secondary">
+                                        <svg className="size-4 text-success-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                                            <circle cx="9" cy="7" r="4" />
+                                            <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p className="text-sm font-medium text-primary">Expert technicians</p>
+                                        <p className="text-xs text-tertiary">Licensed, certified, and background-checked pros</p>
+                                    </div>
+                                </div>
+                                <div className="flex items-start gap-3">
+                                    <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-lg bg-success-secondary">
+                                        <svg className="size-4 text-success-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
+                                            <path d="m9 12 2 2 4-4" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p className="text-sm font-medium text-primary">Eco-friendly disposal</p>
+                                        <p className="text-xs text-tertiary">EPA-compliant waste handling and recycling</p>
+                                    </div>
+                                </div>
+                                <div className="flex items-start gap-3">
+                                    <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-lg bg-success-secondary">
+                                        <svg className="size-4 text-success-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                            <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                                            <line x1="16" x2="16" y1="2" y2="6" />
+                                            <line x1="8" x2="8" y1="2" y2="6" />
+                                            <line x1="3" x2="21" y1="10" y2="10" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p className="text-sm font-medium text-primary">Flexible scheduling</p>
+                                        <p className="text-xs text-tertiary">Weekends, evenings, and same-day available</p>
+                                    </div>
+                                </div>
+                            </div>
+
                             {/* Trust Badges */}
-                            <div className="flex flex-wrap gap-3 mt-6">
-                                <div className="flex items-center gap-2 px-3 py-2 bg-secondary rounded-lg">
-                                    <span className="text-lg">✓</span>
-                                    <span className="text-sm text-primary font-medium">Licensed</span>
+                            <div className="grid grid-cols-3 gap-2 mt-4 pt-4 border-t border-tertiary">
+                                <div className="flex flex-col items-center gap-1.5 p-3 bg-success-secondary/50 rounded-xl">
+                                    <div className="w-8 h-8 flex items-center justify-center rounded-full bg-success-primary">
+                                        <ShieldCheck className="size-4 text-white" />
+                                    </div>
+                                    <span className="text-xs font-semibold text-primary">Licensed</span>
+                                    <span className="text-[10px] text-tertiary text-center">NC State</span>
                                 </div>
-                                <div className="flex items-center gap-2 px-3 py-2 bg-secondary rounded-lg">
-                                    <span className="text-lg">✓</span>
-                                    <span className="text-sm text-primary font-medium">Insured</span>
+                                <div className="flex flex-col items-center gap-1.5 p-3 bg-success-secondary/50 rounded-xl">
+                                    <div className="w-8 h-8 flex items-center justify-center rounded-full bg-success-primary">
+                                        <ShieldCheck className="size-4 text-white" />
+                                    </div>
+                                    <span className="text-xs font-semibold text-primary">Insured</span>
+                                    <span className="text-[10px] text-tertiary text-center">$2M Coverage</span>
                                 </div>
-                                <div className="flex items-center gap-2 px-3 py-2 bg-secondary rounded-lg">
-                                    <span className="text-lg">✓</span>
-                                    <span className="text-sm text-primary font-medium">Bonded</span>
+                                <div className="flex flex-col items-center gap-1.5 p-3 bg-success-secondary/50 rounded-xl">
+                                    <div className="w-8 h-8 flex items-center justify-center rounded-full bg-success-primary">
+                                        <ShieldCheck className="size-4 text-white" />
+                                    </div>
+                                    <span className="text-xs font-semibold text-primary">Bonded</span>
+                                    <span className="text-[10px] text-tertiary text-center">100% Protected</span>
                                 </div>
                             </div>
                         </div>
