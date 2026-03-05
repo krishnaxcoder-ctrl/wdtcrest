@@ -46,18 +46,51 @@ export function Footer() {
                             Serving Western North Carolina with professional septic services
                             for over 30 years.
                         </p>
-                        <div className="mt-6 space-y-3">
-                            <div className="flex items-center gap-3 text-tertiary">
-                                <Phone className="size-5 text-fg-tertiary" />
-                                <span>(828) 254-1920</span>
+                        <div className="mt-6 flex flex-col gap-3">
+                            <a
+                                href="tel:8282541920"
+                                className="group flex items-center gap-3 rounded-xl border border-secondary bg-primary px-4 py-3 transition-all hover:border-success-primary hover:shadow-sm"
+                            >
+                                <span className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-success-secondary text-success-primary transition-colors group-hover:bg-success-primary group-hover:text-white">
+                                    <Phone className="size-4" />
+                                </span>
+                                <div>
+                                    <p className="text-xs text-tertiary">Call us</p>
+                                    <p className="text-sm font-medium text-secondary">(828) 254-1920</p>
+                                </div>
+                            </a>
+                            <a
+                                href="mailto:info@ableseptic.com"
+                                className="group flex items-center gap-3 rounded-xl border border-secondary bg-primary px-4 py-3 transition-all hover:border-success-primary hover:shadow-sm"
+                            >
+                                <span className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-success-secondary text-success-primary transition-colors group-hover:bg-success-primary group-hover:text-white">
+                                    <Mail01 className="size-4" />
+                                </span>
+                                <div>
+                                    <p className="text-xs text-tertiary">Email us</p>
+                                    <p className="text-sm font-medium text-secondary">info@ableseptic.com</p>
+                                </div>
+                            </a>
+                            <div className="group flex items-center gap-3 rounded-xl border border-secondary bg-primary px-4 py-3">
+                                <span className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-success-secondary text-success-primary">
+                                    <MarkerPin01 className="size-4" />
+                                </span>
+                                <div>
+                                    <p className="text-xs text-tertiary">Location</p>
+                                    <p className="text-sm font-medium text-secondary">Asheville, NC</p>
+                                </div>
                             </div>
-                            <div className="flex items-center gap-3 text-tertiary">
-                                <Mail01 className="size-5 text-fg-tertiary" />
-                                <span>info@ableseptic.com</span>
-                            </div>
-                            <div className="flex items-center gap-3 text-tertiary">
-                                <MarkerPin01 className="size-5 text-fg-tertiary" />
-                                <span>Asheville, NC 28801</span>
+                            <div className="group flex items-center gap-3 rounded-xl border border-secondary bg-primary px-4 py-3">
+                                <span className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-success-secondary text-success-primary">
+                                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" className="size-4">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <polyline points="12 6 12 12 16 14" />
+                                    </svg>
+                                </span>
+                                <div>
+                                    <p className="text-xs text-tertiary">Hours</p>
+                                    <p className="text-sm font-medium text-secondary">Mon-Fri: 8AM-5PM</p>
+                                </div>
                             </div>
                         </div>
                     </div>

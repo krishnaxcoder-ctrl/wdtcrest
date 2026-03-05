@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { BackgroundPattern } from "@/components/shared-assets/background-patterns";
 import { Header, Footer } from "@/components/layout";
+import { FinalCta } from "@/components/marketing/final-cta";
 
 // Arrow Icon
 const ArrowIcon = () => (
@@ -356,7 +357,7 @@ export default function Home() {
                 {/* Home Channel Section */}
                 <section className="py-24 bg-gradient-to-b from-secondary to-primary">
                     <div className="px-6 lg:px-10">
-                        <div className="max-w-[1440px] mx-auto">
+                        <div className="max-w-7xl mx-auto border-l border-r border-tertiary">
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                                 <div className="flex flex-col gap-6">
                                     <h2 className="text-4xl font-semibold tracking-tight text-primary">Every Property. Every System. Serviced.</h2>
@@ -392,7 +393,7 @@ export default function Home() {
                 {/* Problem Section */}
                 <section className="py-16">
                     <div className="px-6 lg:px-10">
-                        <div className="max-w-[1440px] mx-auto">
+                        <div className="max-w-7xl mx-auto border-l border-r border-tertiary">
                             <div className="p-8 lg:p-12">
                                 <div className="flex flex-col gap-6">
                                     <div className="inline-flex items-center gap-3">
@@ -420,7 +421,7 @@ export default function Home() {
                 {/* Solution Section */}
                 <section className="py-16">
                     <div className="px-6 lg:px-10">
-                        <div className="max-w-[1440px] mx-auto">
+                        <div className="max-w-7xl mx-auto border-l border-r border-tertiary">
                             <div className="p-8 lg:p-12">
                                 <div className="flex flex-col gap-6">
                                     <div className="inline-flex items-center gap-3">
@@ -644,36 +645,7 @@ export default function Home() {
                 </section>
 
                 {/* Final CTA */}
-                <section className="py-16">
-                    <div className="px-6 lg:px-10">
-                        <div className="max-w-[1440px] mx-auto border-l border-r border-tertiary">
-                            <div className="bg-success-solid min-h-[550px] flex flex-col items-center justify-center relative p-8">
-                                <div className="max-w-xl flex flex-col gap-5 items-center relative z-10">
-                                    <h2 className="text-4xl font-semibold tracking-tight text-center text-primary">
-                                        Ready to schedule your septic service?
-                                    </h2>
-                                    <div className="text-base text-center font-medium">
-                                        Call now for fast, reliable service from the septic experts
-                                    </div>
-                                    <div className="text-base text-tertiary text-center">
-                                        Trusted by over 5,000 homeowners in Western North Carolina
-                                    </div>
-                                    <div className="mt-6">
-                                        <Link href="tel:8282541920" className="inline-flex items-center gap-2 px-6 py-4 text-sm font-medium bg-primary-solid text-white transition-all hover:bg-gray-800 group">
-                                            <span>Call (828) 254-1920</span>
-                                            <div className="size-8 flex items-center justify-center transition-transform group-hover:-rotate-90 group-hover:bg-success-solid rounded">
-                                                <ArrowIcon />
-                                            </div>
-                                        </Link>
-                                    </div>
-                                </div>
-                                <div className="absolute inset-0 overflow-hidden">
-                                    <img src="https://cdn.prod.website-files.com/69385e16d68663814109c132/695442158ff7e237e5f5e875_CTA-Background.webp" loading="lazy" alt="" className="w-full h-full object-cover" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                <FinalCta />
             </main>
 
             {/* Footer */}
