@@ -266,7 +266,7 @@ export default function Home() {
 
             <main>
                 {/* Hero Section */}
-                <section className="py-8">
+                <section className="">
                     <div className="w-full max-w-7xl mx-auto border-l border-r border-tertiary lg:pl-10 relative overflow-hidden">
                         <BackgroundPattern pattern="grid-check" size="md" className="absolute inset-0 w-full h-full" />
                         <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[600px] overflow-hidden relative z-10">
