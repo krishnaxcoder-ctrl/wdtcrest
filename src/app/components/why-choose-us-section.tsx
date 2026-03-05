@@ -1,6 +1,6 @@
 "use client";
 
-import { Star01, Quote } from "@untitledui/icons";
+import { Star01 } from "@untitledui/icons";
 import { Avatar } from "@/components/base/avatar/avatar";
 
 const testimonials = [
