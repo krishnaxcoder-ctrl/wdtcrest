@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir /b \"C:\\\\Users\\\\Krishna\\\\Desktop\\\\New folder\\\\untitled-ui\\\\src\")",
+      "Bash(npm run dev:*)",
+      "WebFetch(domain:www.ableseptictankservice.com)",
+      "WebSearch"
+    ]
+  }
+}
