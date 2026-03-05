@@ -68,10 +68,10 @@ export const Header = () => {
             {/* Top Bar */}
             <div className="hidden lg:block bg-primary-solid text-white">
                 <div className="max-w-[1440px] mx-auto px-6 lg:px-10">
-                    <div className="flex items-center justify-between py-2 text-sm">
+                    <div className="flex items-center justify-between py-2 text-xs">
                         <div className="flex items-center gap-6">
                             <div className="flex items-center gap-2">
-                                <span className="size-2 rounded-full bg-success-solid animate-pulse" />
+                                <span className="size-2 rounded-full animate-pulse" style={{ backgroundColor: '#33e6d1' }} />
                                 <span>24/7 Emergency Service Available</span>
                             </div>
                             <span className="text-white/40">|</span>
@@ -81,7 +81,7 @@ export const Header = () => {
                             <a href="mailto:info@ableseptic.com" className="hover:text-success-primary transition-colors">
                                 info@ableseptic.com
                             </a>
-                            <a href="tel:8282541920" className="flex items-center gap-2 text-xs font-semibold hover:text-success-primary transition-colors">
+                            <a href="tel:8282541920" className="flex items-center gap-2 font-semibold transition-colors hover:text-[#33e6d1]">
                                 <PhoneIcon />
                                 (828) 254-1920
                             </a>

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Header, Footer } from "@/components/layout";
+import { DecorativeDivider } from "@/components/base/decorative-divider";
 
 // Shield Check Icon
 const ShieldCheck = ({ className, style }: { className?: string; style?: React.CSSProperties }) => (
@@ -199,6 +200,8 @@ export default function PumpingPage() {
                         </div>
                     </div>
                 </section>
+
+                <DecorativeDivider />
 
                 {/* Bottom Header Section */}
                 <section className="px-6 lg:px-10 bg-primary-solid">
