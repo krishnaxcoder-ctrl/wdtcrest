@@ -278,7 +278,7 @@ export default function Home() {
             <main className="main-wrapper">
                 {/* Hero Section */}
                 <section className="py-8">
-                    <div className="!w-full !max-w-7xl !mx-auto border-l border-r lg:!pl-10" style={{ borderColor: '#d9d9d9' }}>
+                    <div className="!w-full !max-w-7xl !mx-auto border-l border-r lg:!pl-10" style={{ borderColor: '#d9d9d9', backgroundImage: 'radial-gradient(#d9d9d9 1px, transparent 1px)', backgroundSize: '20px 20px' }}>
                         <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[600px] overflow-hidden">
                             {/* Left Column - Content */}
                             <div className="flex flex-col justify-center px-8 py-16 lg:px-12 lg:py-20">
