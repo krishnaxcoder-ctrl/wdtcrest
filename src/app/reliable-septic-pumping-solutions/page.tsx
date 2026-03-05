@@ -148,6 +148,234 @@ export default function PumpingPage() {
                     </div>
                 </section>
 
+                {/* Bottom Header Section */}
+                <section className="px-6 lg:px-10">
+                    <div className="max-w-7xl mx-auto border-t border-l border-r border-secondary bg-primary-solid px-5 sm:px-10 h-[17.5rem] sm:h-[22rem] flex flex-col justify-center gap-6 text-center items-center">
+                        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-white">
+                            Everything you need in one tool
+                        </h2>
+                        <p className="max-w-md text-white/70 text-balance sm:text-pretty">
+                            Vite+ unifies your entire web development workflow into a single, powerful command-line interface.
+                        </p>
+                    </div>
+                </section>
+
+                {/* Feature Section */}
+                <section className="px-6 lg:px-10">
+                    <div className="max-w-7xl mx-auto border-t border-l border-r border-secondary grid md:grid-cols-[55%_45%] divide-x divide-secondary">
+                        {/* Left Column - Content */}
+                        <div className="px-5 py-6 md:p-10 flex flex-col justify-between gap-15 bg-primary-solid">
+                            <div className="flex flex-col gap-5">
+                                <span className="text-tertiary text-xs font-mono uppercase tracking-wide">Professional Service</span>
+                                <h4 className="text-white text-2xl font-semibold">Fast &amp; Reliable Pumping</h4>
+                                <p className="text-white/70 text-base max-w-[25rem] text-pretty">
+                                    Get your septic system serviced quickly and efficiently. Our experienced team ensures thorough pumping with minimal disruption to your day.
+                                </p>
+                                <ul className="flex flex-col gap-3 mt-2">
+                                    <li className="flex items-start gap-2 text-white/90 text-sm">
+                                        <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                        </svg>
+                                        <span>Same-day service <code className="mx-1 px-1.5 py-0.5 bg-white/10 rounded text-brand-400 text-xs">Available 24/7</code></span>
+                                    </li>
+                                    <li className="flex items-start gap-2 text-white/90 text-sm">
+                                        <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                        </svg>
+                                        <span>Complete tank cleaning in under 2 hours</span>
+                                    </li>
+                                    <li className="flex items-start gap-2 text-white/90 text-sm">
+                                        <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                        </svg>
+                                        <span>Free inspection with every service</span>
+                                    </li>
+                                    <li className="flex items-start gap-2 text-white/90 text-sm">
+                                        <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                        </svg>
+                                        <span>Serving all of Western North Carolina</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="px-3 py-1.5 bg-white/5 rounded w-fit flex gap-3 items-center">
+                                <span className="text-white text-sm hidden md:inline">Certified by</span>
+                                <div className="flex items-center gap-1.5">
+                                    <span className="size-6 rounded-full bg-success-solid flex items-center justify-center text-white text-xs font-bold">NC</span>
+                                    <span className="text-white text-sm">NC Licensed</span>
+                                </div>
+                                <span className="text-tertiary text-sm">&amp;</span>
+                                <div className="flex items-center gap-1.5">
+                                    <span className="size-6 rounded-full bg-brand-600 flex items-center justify-center text-white text-xs font-bold">✓</span>
+                                    <span className="text-white text-sm">Fully Insured</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Right Column - Image */}
+                        <div className="flex flex-col min-h-[22rem] sm:min-h-[30rem]">
+                            <div className="bg-primary-solid bg-cover bg-top h-full" style={{ backgroundImage: 'url(https://curat.modeltheme.com/wp-content/uploads/2026/02/why-choose-us-.jpg)' }} />
+                        </div>
+                    </div>
+                </section>
+
+                {/* Feature Section 2 - Emergency Services */}
+                <section className="px-6 lg:px-10">
+                    <div className="max-w-7xl mx-auto border-t border-l border-r border-secondary grid md:grid-cols-[55%_45%] divide-x divide-secondary">
+                        {/* Left Column - Content */}
+                        <div className="px-5 py-6 md:p-10 flex flex-col justify-between gap-15 bg-primary-solid">
+                            <div className="flex flex-col gap-5">
+                                <span className="text-tertiary text-xs font-mono uppercase tracking-wide">Emergency Response</span>
+                                <h4 className="text-white text-2xl font-semibold">24/7 Emergency Services</h4>
+                                <p className="text-white/70 text-base max-w-[25rem] text-pretty">
+                                    Septic emergencies don't wait for business hours. Our team is ready around the clock to handle urgent situations and prevent property damage.
+                                </p>
+                                <ul className="flex flex-col gap-3 mt-2">
+                                    <li className="flex items-start gap-2 text-white/90 text-sm">
+                                        <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                        </svg>
+                                        <span>Rapid response <code className="mx-1 px-1.5 py-0.5 bg-white/10 rounded text-brand-400 text-xs">Under 60 minutes</code></span>
+                                    </li>
+                                    <li className="flex items-start gap-2 text-white/90 text-sm">
+                                        <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                        </svg>
+                                        <span>Overflow and backup resolution</span>
+                                    </li>
+                                    <li className="flex items-start gap-2 text-white/90 text-sm">
+                                        <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                        </svg>
+                                        <span>Weekend and holiday availability</span>
+                                    </li>
+                                    <li className="flex items-start gap-2 text-white/90 text-sm">
+                                        <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                        </svg>
+                                        <span>No extra charge for after-hours calls</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="px-3 py-1.5 bg-white/5 rounded w-fit flex gap-3 items-center">
+                                <span className="text-white text-sm hidden md:inline">Call Now</span>
+                                <a href="tel:8282541920" className="flex items-center gap-1.5 text-success-primary hover:text-success-secondary transition-colors">
+                                    <span className="text-sm font-semibold">(828) 254-1920</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        {/* Right Column - Image */}
+                        <div className="flex flex-col min-h-[22rem] sm:min-h-[30rem]">
+                            <div className="bg-primary-solid bg-cover bg-center h-full" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80)' }} />
+                        </div>
+                    </div>
+                </section>
+
+                {/* Feature Section 3 - Inspections */}
+                <section className="px-6 lg:px-10">
+                    <div className="max-w-7xl mx-auto border-t border-l border-r border-secondary grid md:grid-cols-[55%_45%] divide-x divide-secondary">
+                        {/* Left Column - Content */}
+                        <div className="px-5 py-6 md:p-10 flex flex-col justify-between gap-15 bg-primary-solid">
+                            <div className="flex flex-col gap-5">
+                                <span className="text-tertiary text-xs font-mono uppercase tracking-wide">System Health</span>
+                                <h4 className="text-white text-2xl font-semibold">Thorough Inspections</h4>
+                                <p className="text-white/70 text-base max-w-[25rem] text-pretty">
+                                    Protect your investment with comprehensive septic inspections. We identify potential issues before they become costly repairs.
+                                </p>
+                                <ul className="flex flex-col gap-3 mt-2">
+                                    <li className="flex items-start gap-2 text-white/90 text-sm">
+                                        <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                        </svg>
+                                        <span>Full system evaluation <code className="mx-1 px-1.5 py-0.5 bg-white/10 rounded text-brand-400 text-xs">Tank to Drain Field</code></span>
+                                    </li>
+                                    <li className="flex items-start gap-2 text-white/90 text-sm">
+                                        <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                        </svg>
+                                        <span>Real estate transaction inspections</span>
+                                    </li>
+                                    <li className="flex items-start gap-2 text-white/90 text-sm">
+                                        <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                        </svg>
+                                        <span>Detailed written reports provided</span>
+                                    </li>
+                                    <li className="flex items-start gap-2 text-white/90 text-sm">
+                                        <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                        </svg>
+                                        <span>Camera inspection available</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="px-3 py-1.5 bg-white/5 rounded w-fit flex gap-3 items-center">
+                                <span className="text-white text-sm hidden md:inline">Starting at</span>
+                                <span className="text-success-primary text-sm font-semibold">$150</span>
+                                <span className="text-white/50 text-sm">for basic inspection</span>
+                            </div>
+                        </div>
+
+                        {/* Right Column - Image */}
+                        <div className="flex flex-col min-h-[22rem] sm:min-h-[30rem]">
+                            <div className="bg-primary-solid bg-cover bg-center h-full" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80)' }} />
+                        </div>
+                    </div>
+                </section>
+
+                {/* Feature Section 4 - Maintenance */}
+                <section className="px-6 lg:px-10">
+                    <div className="max-w-7xl mx-auto border-t border-l border-r border-secondary grid md:grid-cols-[55%_45%] divide-x divide-secondary">
+                        {/* Left Column - Content */}
+                        <div className="px-5 py-6 md:p-10 flex flex-col justify-between gap-15 bg-primary-solid">
+                            <div className="flex flex-col gap-5">
+                                <span className="text-tertiary text-xs font-mono uppercase tracking-wide">Preventive Care</span>
+                                <h4 className="text-white text-2xl font-semibold">Maintenance Programs</h4>
+                                <p className="text-white/70 text-base max-w-[25rem] text-pretty">
+                                    Keep your septic system running smoothly with our scheduled maintenance plans. Save money and avoid unexpected breakdowns.
+                                </p>
+                                <ul className="flex flex-col gap-3 mt-2">
+                                    <li className="flex items-start gap-2 text-white/90 text-sm">
+                                        <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                        </svg>
+                                        <span>Scheduled pumping reminders <code className="mx-1 px-1.5 py-0.5 bg-white/10 rounded text-brand-400 text-xs">Every 3-5 Years</code></span>
+                                    </li>
+                                    <li className="flex items-start gap-2 text-white/90 text-sm">
+                                        <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                        </svg>
+                                        <span>Priority scheduling for members</span>
+                                    </li>
+                                    <li className="flex items-start gap-2 text-white/90 text-sm">
+                                        <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                        </svg>
+                                        <span>10% discount on all services</span>
+                                    </li>
+                                    <li className="flex items-start gap-2 text-white/90 text-sm">
+                                        <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                        </svg>
+                                        <span>Annual system health check included</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="px-3 py-1.5 bg-white/5 rounded w-fit flex gap-3 items-center">
+                                <span className="text-white text-sm hidden md:inline">Join</span>
+                                <span className="text-success-primary text-sm font-semibold">5,000+ homeowners</span>
+                                <span className="text-white/50 text-sm">in our program</span>
+                            </div>
+                        </div>
+
+                        {/* Right Column - Image */}
+                        <div className="flex flex-col min-h-[22rem] sm:min-h-[30rem]">
+                            <div className="bg-primary-solid bg-cover bg-center h-full" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&q=80)' }} />
+                        </div>
+                    </div>
+                </section>
+
                 {/* Services Grid */}
                 <section className="py-16 md:py-20">
                     <div className="px-6 lg:px-10">
