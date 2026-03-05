@@ -214,7 +214,7 @@ export default function PumpingPage() {
 
                         {/* Right Column - Image */}
                         <div className="flex flex-col min-h-[22rem] sm:min-h-[30rem] relative">
-                            <div className="bg-cover bg-top h-full" style={{ backgroundImage: 'url(https://curat.modeltheme.com/wp-content/uploads/2026/02/why-choose-us-.jpg)' }} />
+                            <div className="bg-cover bg-top h-full" style={{ backgroundImage: 'url(/feature-dev-background-nostats.jpg)' }} />
 
                             {/* Floating Card */}
                             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%-3rem)] overflow-hidden rounded-2xl border border-secondary bg-white/95 shadow-2xl backdrop-blur-md">
