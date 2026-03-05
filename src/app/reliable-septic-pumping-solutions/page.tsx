@@ -939,29 +939,142 @@ export default function PumpingPage() {
                 {/* Services Grid */}
                 <section className="py-16 md:py-20">
                     <div className="px-6 lg:px-10">
-                        <div className="max-w-7xl mx-auto border-l border-r border-tertiary">
-                            <div className="p-8 lg:p-12">
-                                <div className="flex flex-col gap-6 items-center text-center mb-12">
-                                    <div className="inline-flex items-center gap-3">
-                                        <span className="size-2 rounded-full bg-success-solid" />
-                                        <span className="text-sm text-tertiary">Our Services</span>
-                                        <span className="size-2 rounded-full bg-success-solid" />
+                        <div className="max-w-7xl mx-auto">
+                            {/* Header */}
+                            <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
+                                <div className="flex flex-col gap-4">
+                                    <div className="inline-flex items-center gap-2 w-fit px-3 py-1.5 rounded-full bg-success-secondary border border-success-primary/20">
+                                        <span className="size-1.5 rounded-full bg-success-primary" />
+                                        <span className="text-xs font-medium text-success-primary">Our Services</span>
                                     </div>
-                                    <h2 className="text-3xl lg:text-4xl font-semibold text-primary tracking-tight">
+                                    <h2 className="text-3xl lg:text-4xl font-semibold text-primary tracking-tight max-w-xl">
                                         Comprehensive Septic Pumping Services
                                     </h2>
-                                    <p className="text-lg text-tertiary max-w-2xl">
-                                        From routine maintenance to emergency situations, we handle all your septic pumping needs.
-                                    </p>
                                 </div>
-                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                                    {pumpingServices.map((service) => (
-                                        <div key={service.title} className="p-6 border border-tertiary rounded-2xl bg-primary hover:border-success-primary transition-colors">
-                                            <div className="text-4xl mb-4">{service.icon}</div>
-                                            <h3 className="text-lg font-semibold text-primary mb-2">{service.title}</h3>
-                                            <p className="text-sm text-tertiary">{service.description}</p>
+                                <p className="text-base text-tertiary max-w-md lg:text-right">
+                                    From routine maintenance to emergency situations, we handle all your septic pumping needs with expertise.
+                                </p>
+                            </div>
+
+                            {/* Services Cards */}
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                {/* Card 1 - Residential */}
+                                <div className="group relative p-6 bg-gradient-to-br from-blue-50 to-blue-100/50 rounded-2xl border border-blue-200/50 hover:border-blue-300 transition-all duration-300 overflow-hidden">
+                                    <div className="absolute top-0 right-0 w-32 h-32 bg-blue-200/30 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2" />
+                                    <div className="relative">
+                                        <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-blue-500 text-white mb-4">
+                                            <svg className="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                                                <polyline points="9 22 9 12 15 12 15 22" />
+                                            </svg>
                                         </div>
-                                    ))}
+                                        <h3 className="text-xl font-semibold text-primary mb-2">Residential Septic Pumping</h3>
+                                        <p className="text-sm text-tertiary mb-4">Complete septic tank pumping for homes of all sizes. We recommend pumping every 3-5 years for optimal performance.</p>
+                                        <div className="flex items-center justify-between pt-4 border-t border-blue-200/50">
+                                            <div className="flex items-center gap-4">
+                                                <div className="flex items-center gap-1.5 text-xs text-tertiary">
+                                                    <ShieldCheck className="size-4 text-blue-500" />
+                                                    <span>All tank sizes</span>
+                                                </div>
+                                                <div className="flex items-center gap-1.5 text-xs text-tertiary">
+                                                    <ShieldCheck className="size-4 text-blue-500" />
+                                                    <span>Same-day available</span>
+                                                </div>
+                                            </div>
+                                            <span className="px-2.5 py-1 text-xs font-medium bg-blue-500/10 text-blue-700 rounded-full">Most Popular</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Card 2 - Commercial */}
+                                <div className="group relative p-6 bg-gradient-to-br from-purple-50 to-purple-100/50 rounded-2xl border border-purple-200/50 hover:border-purple-300 transition-all duration-300 overflow-hidden">
+                                    <div className="absolute top-0 right-0 w-32 h-32 bg-purple-200/30 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2" />
+                                    <div className="relative">
+                                        <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-purple-500 text-white mb-4">
+                                            <svg className="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                <rect x="1" y="3" width="15" height="13" />
+                                                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+                                                <circle cx="5.5" cy="18.5" r="2.5" />
+                                                <circle cx="18.5" cy="18.5" r="2.5" />
+                                            </svg>
+                                        </div>
+                                        <h3 className="text-xl font-semibold text-primary mb-2">Commercial Septic Pumping</h3>
+                                        <p className="text-sm text-tertiary mb-4">High-capacity pumping for businesses, restaurants, and commercial properties with heavy usage demands.</p>
+                                        <div className="flex items-center justify-between pt-4 border-t border-purple-200/50">
+                                            <div className="flex items-center gap-4">
+                                                <div className="flex items-center gap-1.5 text-xs text-tertiary">
+                                                    <ShieldCheck className="size-4 text-purple-500" />
+                                                    <span>Large tanks</span>
+                                                </div>
+                                                <div className="flex items-center gap-1.5 text-xs text-tertiary">
+                                                    <ShieldCheck className="size-4 text-purple-500" />
+                                                    <span>Flexible scheduling</span>
+                                                </div>
+                                            </div>
+                                            <span className="px-2.5 py-1 text-xs font-medium bg-purple-500/10 text-purple-700 rounded-full">High Capacity</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Card 3 - Emergency */}
+                                <div className="group relative p-6 bg-gradient-to-br from-red-50 to-orange-100/50 rounded-2xl border border-red-200/50 hover:border-red-300 transition-all duration-300 overflow-hidden">
+                                    <div className="absolute top-0 right-0 w-32 h-32 bg-red-200/30 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2" />
+                                    <div className="relative">
+                                        <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-red-500 text-white mb-4">
+                                            <svg className="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                <circle cx="12" cy="12" r="10" />
+                                                <polyline points="12 6 12 12 16 14" />
+                                            </svg>
+                                        </div>
+                                        <h3 className="text-xl font-semibold text-primary mb-2">Emergency Pumping</h3>
+                                        <p className="text-sm text-tertiary mb-4">24/7 emergency septic pumping when you need immediate assistance. Fast response, day or night.</p>
+                                        <div className="flex items-center justify-between pt-4 border-t border-red-200/50">
+                                            <div className="flex items-center gap-4">
+                                                <div className="flex items-center gap-1.5 text-xs text-tertiary">
+                                                    <ShieldCheck className="size-4 text-red-500" />
+                                                    <span>&lt;60 min response</span>
+                                                </div>
+                                                <div className="flex items-center gap-1.5 text-xs text-tertiary">
+                                                    <ShieldCheck className="size-4 text-red-500" />
+                                                    <span>No extra fees</span>
+                                                </div>
+                                            </div>
+                                            <div className="flex items-center gap-1.5 px-2.5 py-1 bg-red-500/10 rounded-full">
+                                                <span className="relative flex size-2">
+                                                    <span className="absolute inline-flex size-full animate-ping rounded-full bg-red-500 opacity-75" />
+                                                    <span className="relative inline-flex size-2 rounded-full bg-red-500" />
+                                                </span>
+                                                <span className="text-xs font-medium text-red-700">24/7 Available</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Card 4 - Grease Trap */}
+                                <div className="group relative p-6 bg-gradient-to-br from-amber-50 to-yellow-100/50 rounded-2xl border border-amber-200/50 hover:border-amber-300 transition-all duration-300 overflow-hidden">
+                                    <div className="absolute top-0 right-0 w-32 h-32 bg-amber-200/30 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2" />
+                                    <div className="relative">
+                                        <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-amber-500 text-white mb-4">
+                                            <svg className="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
+                                            </svg>
+                                        </div>
+                                        <h3 className="text-xl font-semibold text-primary mb-2">Grease Trap Pumping</h3>
+                                        <p className="text-sm text-tertiary mb-4">Professional grease trap cleaning for restaurants and food service businesses. Stay compliant with health codes.</p>
+                                        <div className="flex items-center justify-between pt-4 border-t border-amber-200/50">
+                                            <div className="flex items-center gap-4">
+                                                <div className="flex items-center gap-1.5 text-xs text-tertiary">
+                                                    <ShieldCheck className="size-4 text-amber-500" />
+                                                    <span>Code compliant</span>
+                                                </div>
+                                                <div className="flex items-center gap-1.5 text-xs text-tertiary">
+                                                    <ShieldCheck className="size-4 text-amber-500" />
+                                                    <span>Documentation</span>
+                                                </div>
+                                            </div>
+                                            <span className="px-2.5 py-1 text-xs font-medium bg-amber-500/10 text-amber-700 rounded-full">Restaurants</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
