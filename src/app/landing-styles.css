@@ -345,6 +345,7 @@ body {
 .hero-section .grid-2col {
     align-items: center;
     min-height: 600px;
+    padding-top: 3rem;
 }
 
 .eyebrow-main {

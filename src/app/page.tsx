@@ -281,7 +281,7 @@ export default function Home() {
                         <div className="container-large side-border">
                             <div className="grid-2col">
                                 <div className="text-wrapper padding-3rem">
-                                    <div className="flex-v gap-full">
+                                    <div className="flex-v gap-10">
                                         <div className="flex-v">
                                             <div className="eyebrow-main">
                                                 <span className="text-size-small text-color-grey">Serving Asheville & Surrounding Areas</span>
