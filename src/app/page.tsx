@@ -727,7 +727,6 @@ export default function Home() {
                                 <p className="text-size-large text-color-grey">
                                     With over 30 years of experience, we provide comprehensive septic services for residential and commercial properties. From routine pumping to emergency repairs, we&apos;re here when you need us.
                                 </p>
-                                <div className="spacer-medium" />
                                 <Link href="tel:8282541920" className="button is-primary">
                                     <span>Schedule Service Today</span>
                                     <div className="icon-32px"><ArrowIcon /></div>
