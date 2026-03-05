@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import "./landing-styles.css";
+import { BadgeWithDot } from "@/components/base/badges/badges";
 
 // Clandestine Logo Component
 const ClandestineLogo = () => (
@@ -283,9 +284,9 @@ export default function Home() {
                                 <div className="text-wrapper padding-3rem">
                                     <div className="flex-v gap-10">
                                         <div className="flex-v">
-                                            <div className="eyebrow-main">
-                                                <span className="text-size-small text-color-grey">Serving Asheville & Surrounding Areas</span>
-                                            </div>
+                                            <BadgeWithDot color="success" size="md" type="pill-color">
+                                                Serving Asheville & Surrounding Areas
+                                            </BadgeWithDot>
                                             <RotatingText />
                                         </div>
                                         <div className="flex-v gap-2rem">
