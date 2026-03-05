@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import "./landing-styles.css";
 import { BadgeWithDot } from "@/components/base/badges/badges";
+import { BackgroundPattern } from "@/components/shared-assets/background-patterns";
 
 // Clandestine Logo Component
 const ClandestineLogo = () => (
@@ -278,8 +279,9 @@ export default function Home() {
             <main className="main-wrapper">
                 {/* Hero Section */}
                 <section className="py-8">
-                    <div className="!w-full !max-w-7xl !mx-auto border-l border-r lg:!pl-10" style={{ borderColor: '#d9d9d9', backgroundImage: 'radial-gradient(#d9d9d9 1px, transparent 1px)', backgroundSize: '20px 20px' }}>
-                        <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[600px] overflow-hidden">
+                    <div className="!w-full !max-w-7xl !mx-auto border-l border-r lg:!pl-10 relative overflow-hidden" style={{ borderColor: '#d9d9d9' }}>
+                        <BackgroundPattern pattern="grid-check" size="md" className="absolute inset-0 w-full h-full" />
+                        <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[600px] overflow-hidden relative z-10">
                             {/* Left Column - Content */}
                             <div className="flex flex-col justify-center px-8 py-16 lg:px-12 lg:py-20">
                                 <div className="flex flex-col gap-6">
