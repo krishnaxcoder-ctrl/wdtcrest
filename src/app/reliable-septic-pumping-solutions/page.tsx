@@ -1108,30 +1108,6 @@ export default function PumpingPage() {
                                 </div>
                             </div>
 
-                            {/* Trust Badges */}
-                            <div className="grid grid-cols-3 gap-2 mt-4 pt-4 border-t border-tertiary">
-                                <div className="flex flex-col items-center gap-1.5 p-3 bg-success-secondary/50 rounded-xl">
-                                    <div className="w-8 h-8 flex items-center justify-center rounded-full bg-success-primary">
-                                        <ShieldCheck className="size-4 text-white" />
-                                    </div>
-                                    <span className="text-xs font-semibold text-primary">Licensed</span>
-                                    <span className="text-[10px] text-tertiary text-center">NC State</span>
-                                </div>
-                                <div className="flex flex-col items-center gap-1.5 p-3 bg-success-secondary/50 rounded-xl">
-                                    <div className="w-8 h-8 flex items-center justify-center rounded-full bg-success-primary">
-                                        <ShieldCheck className="size-4 text-white" />
-                                    </div>
-                                    <span className="text-xs font-semibold text-primary">Insured</span>
-                                    <span className="text-[10px] text-tertiary text-center">$2M Coverage</span>
-                                </div>
-                                <div className="flex flex-col items-center gap-1.5 p-3 bg-success-secondary/50 rounded-xl">
-                                    <div className="w-8 h-8 flex items-center justify-center rounded-full bg-success-primary">
-                                        <ShieldCheck className="size-4 text-white" />
-                                    </div>
-                                    <span className="text-xs font-semibold text-primary">Bonded</span>
-                                    <span className="text-[10px] text-tertiary text-center">100% Protected</span>
-                                </div>
-                            </div>
                         </div>
 
                         {/* Cell 4 - Certifications */}
@@ -1140,35 +1116,43 @@ export default function PumpingPage() {
                             <p className="max-w-[20rem] text-tertiary text-pretty">
                                 We maintain all required certifications and follow strict NC DEQ guidelines for septic service and waste disposal.
                             </p>
-                            {/* Certification Grid */}
+                            {/* Certification List */}
                             <div className="grid grid-cols-2 gap-4 mt-6">
-                                <div className="p-4 border border-tertiary rounded-xl text-center">
-                                    <div className="size-12 mx-auto mb-2 bg-success-secondary rounded-full flex items-center justify-center">
-                                        <ShieldCheck className="size-6 text-success-primary" />
+                                <div className="flex items-start gap-3 p-3 border border-tertiary rounded-xl">
+                                    <div className="size-10 flex-shrink-0 bg-success-secondary rounded-lg flex items-center justify-center">
+                                        <ShieldCheck className="size-5 text-success-primary" />
                                     </div>
-                                    <p className="text-sm font-medium text-primary">NC Licensed</p>
-                                    <p className="text-xs text-tertiary">Septic Contractor</p>
+                                    <div>
+                                        <p className="text-sm font-medium text-primary">NC Licensed</p>
+                                        <p className="text-xs text-tertiary">Septic Contractor</p>
+                                    </div>
                                 </div>
-                                <div className="p-4 border border-tertiary rounded-xl text-center">
-                                    <div className="size-12 mx-auto mb-2 bg-success-secondary rounded-full flex items-center justify-center">
-                                        <ShieldCheck className="size-6 text-success-primary" />
+                                <div className="flex items-start gap-3 p-3 border border-tertiary rounded-xl">
+                                    <div className="size-10 flex-shrink-0 bg-success-secondary rounded-lg flex items-center justify-center">
+                                        <ShieldCheck className="size-5 text-success-primary" />
                                     </div>
-                                    <p className="text-sm font-medium text-primary">EPA Compliant</p>
-                                    <p className="text-xs text-tertiary">Waste Disposal</p>
+                                    <div>
+                                        <p className="text-sm font-medium text-primary">EPA Compliant</p>
+                                        <p className="text-xs text-tertiary">Waste Disposal</p>
+                                    </div>
                                 </div>
-                                <div className="p-4 border border-tertiary rounded-xl text-center">
-                                    <div className="size-12 mx-auto mb-2 bg-success-secondary rounded-full flex items-center justify-center">
-                                        <ShieldCheck className="size-6 text-success-primary" />
+                                <div className="flex items-start gap-3 p-3 border border-tertiary rounded-xl">
+                                    <div className="size-10 flex-shrink-0 bg-success-secondary rounded-lg flex items-center justify-center">
+                                        <ShieldCheck className="size-5 text-success-primary" />
                                     </div>
-                                    <p className="text-sm font-medium text-primary">NAWT Member</p>
-                                    <p className="text-xs text-tertiary">Industry Association</p>
+                                    <div>
+                                        <p className="text-sm font-medium text-primary">NAWT Member</p>
+                                        <p className="text-xs text-tertiary">Industry Association</p>
+                                    </div>
                                 </div>
-                                <div className="p-4 border border-tertiary rounded-xl text-center">
-                                    <div className="size-12 mx-auto mb-2 bg-success-secondary rounded-full flex items-center justify-center">
-                                        <ShieldCheck className="size-6 text-success-primary" />
+                                <div className="flex items-start gap-3 p-3 border border-tertiary rounded-xl">
+                                    <div className="size-10 flex-shrink-0 bg-success-secondary rounded-lg flex items-center justify-center">
+                                        <ShieldCheck className="size-5 text-success-primary" />
                                     </div>
-                                    <p className="text-sm font-medium text-primary">BBB Accredited</p>
-                                    <p className="text-xs text-tertiary">A+ Rating</p>
+                                    <div>
+                                        <p className="text-sm font-medium text-primary">BBB Accredited</p>
+                                        <p className="text-xs text-tertiary">A+ Rating</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
