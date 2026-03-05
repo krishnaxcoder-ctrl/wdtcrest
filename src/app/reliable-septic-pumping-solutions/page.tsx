@@ -178,26 +178,35 @@ export default function PumpingPage() {
                     <div className="max-w-7xl mx-auto border-t border-2 border-r border-gray-700/70 relative overflow-hidden">
                         {/* Background Effects */}
                         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
-                        <div className="absolute -top-40 -right-40 w-80 h-80 bg-brand-500/10 rounded-full blur-3xl" />
-                        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-brand-600/10 rounded-full blur-3xl" />
+                        <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full blur-3xl" style={{ backgroundColor: 'rgba(51, 230, 209, 0.1)' }} />
+                        <div className="absolute -bottom-40 -left-40 w-80 h-80 rounded-full blur-3xl" style={{ backgroundColor: 'rgba(51, 230, 209, 0.1)' }} />
 
-                        <div className="relative z-10 flex flex-col items-center justify-center text-center py-12 sm:py-16 px-6 sm:px-10">
-                            <div className="inline-flex items-center gap-2 w-fit px-3 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/20">
+                        <div className="relative z-10 flex flex-col items-start justify-center py-12 sm:py-16 px-6 sm:px-10">
+                            <div className="inline-flex items-center gap-2 w-fit px-3 py-1.5 rounded-full border" style={{ backgroundColor: 'rgba(51, 230, 209, 0.1)', borderColor: 'rgba(51, 230, 209, 0.2)' }}>
                                 <span className="relative flex size-2">
-                                    <span className="absolute inline-flex size-full animate-ping rounded-full bg-brand-400 opacity-75" />
-                                    <span className="relative inline-flex size-2 rounded-full bg-brand-500" />
+                                    <span className="absolute inline-flex size-full animate-ping rounded-full opacity-75" style={{ backgroundColor: '#33e6d1' }} />
+                                    <span className="relative inline-flex size-2 rounded-full" style={{ backgroundColor: '#33e6d1' }} />
                                 </span>
-                                <span className="text-brand-400 text-xs font-medium">Trusted Local Service</span>
+                                <span className="text-xs font-medium" style={{ color: '#33e6d1' }}>Trusted Local Service</span>
                             </div>
                             <h2 className="mt-5 text-3xl sm:text-4xl lg:text-5xl font-semibold text-white leading-tight">
-                                Everything you need<br /><span className="text-brand-400">in one team</span>
+                                Everything you need<br /><span style={{ color: '#33e6d1' }}>in one team</span>
                             </h2>
                             <p className="mt-5 max-w-2xl text-white/60 text-base sm:text-lg">
                                 Complete septic services from pumping to repairs — all from one trusted local team with 30+ years experience.
                             </p>
+                            {/* Available Badge */}
+                            <div className="flex items-center gap-2 mt-6">
+                                <div className="relative flex size-2">
+                                    <span className="absolute inline-flex size-full animate-ping rounded-full opacity-75" style={{ backgroundColor: '#33e6d1' }} />
+                                    <span className="relative inline-flex size-2 rounded-full" style={{ backgroundColor: '#33e6d1' }} />
+                                </div>
+                                <span className="text-sm font-medium" style={{ color: '#33e6d1' }}>Available 24/7 · Under 60 minutes · Tank to Drain Field</span>
+                            </div>
+
                             {/* Buttons */}
-                            <div className="flex flex-wrap items-center justify-center gap-3 mt-8">
-                                <Link href="tel:8282541920" className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-brand-600 text-white text-sm font-medium hover:bg-brand-500 transition-all shadow-lg shadow-brand-600/25">
+                            <div className="flex flex-wrap items-center gap-3 mt-6">
+                                <Link href="tel:8282541920" className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-gray-900 text-sm font-medium transition-all hover:opacity-90" style={{ backgroundColor: '#33e6d1', boxShadow: '0 10px 15px -3px rgba(51, 230, 209, 0.25)' }}>
                                     <span>Call (828) 254-1920</span>
                                     <svg className="size-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
