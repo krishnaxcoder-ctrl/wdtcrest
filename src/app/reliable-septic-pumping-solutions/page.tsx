@@ -192,7 +192,7 @@ export default function PumpingPage() {
                                     We make septic pumping simple and stress-free with our proven process.
                                 </p>
                             </div>
-                            <div className="services-grid" style={{ gridTemplateColumns: "repeat(4, 1fr)" }}>
+                            <div className="services-grid cols-4">
                                 {process.map((item) => (
                                     <div key={item.step} className="service-card" style={{ textAlign: "center" }}>
                                         <div className="step-number">{item.step}</div>

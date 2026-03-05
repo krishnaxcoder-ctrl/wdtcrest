@@ -107,7 +107,7 @@ export default function ServicesPage() {
                 <section className="section-regular-padding">
                     <div className="padding-global">
                         <div className="container-large side-border">
-                            <div className="services-grid" style={{ gridTemplateColumns: "repeat(4, 1fr)" }}>
+                            <div className="services-grid cols-4">
                                 {contactInfo.map((item) => (
                                     <div key={item.title} className="service-card">
                                         <div className="service-icon">{item.icon}</div>
