@@ -295,7 +295,7 @@ export default function PumpingPage() {
                                         <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
                                             <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
                                         </svg>
-                                        <span>Same-day service <code className="mx-1 px-1.5 py-0.5 bg-white/10 rounded text-brand-400 text-xs">Available 24/7</code></span>
+                                        <span>Same-day service <code className="mx-1 px-1.5 py-0.5 bg-white/10 rounded text-xs" style={{ color: '#33e6d1' }}>Available 24/7</code></span>
                                     </li>
                                     <li className="flex items-start gap-2 text-white/90 text-sm">
                                         <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
@@ -439,7 +439,7 @@ export default function PumpingPage() {
                                         <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
                                             <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
                                         </svg>
-                                        <span>Rapid response <code className="mx-1 px-1.5 py-0.5 bg-white/10 rounded text-brand-400 text-xs">Under 60 minutes</code></span>
+                                        <span>Rapid response <code className="mx-1 px-1.5 py-0.5 bg-white/10 rounded text-xs" style={{ color: '#33e6d1' }}>Under 60 minutes</code></span>
                                     </li>
                                     <li className="flex items-start gap-2 text-white/90 text-sm">
                                         <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
@@ -573,7 +573,7 @@ export default function PumpingPage() {
                                         <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
                                             <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
                                         </svg>
-                                        <span>Full system evaluation <code className="mx-1 px-1.5 py-0.5 bg-white/10 rounded text-brand-400 text-xs">Tank to Drain Field</code></span>
+                                        <span>Full system evaluation <code className="mx-1 px-1.5 py-0.5 bg-white/10 rounded text-xs" style={{ color: '#33e6d1' }}>Tank to Drain Field</code></span>
                                     </li>
                                     <li className="flex items-start gap-2 text-white/90 text-sm">
                                         <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
@@ -706,7 +706,7 @@ export default function PumpingPage() {
                                         <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
                                             <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
                                         </svg>
-                                        <span>Scheduled pumping reminders <code className="mx-1 px-1.5 py-0.5 bg-white/10 rounded text-brand-400 text-xs">Every 3-5 Years</code></span>
+                                        <span>Scheduled pumping reminders <code className="mx-1 px-1.5 py-0.5 bg-white/10 rounded text-xs" style={{ color: '#33e6d1' }}>Every 3-5 Years</code></span>
                                     </li>
                                     <li className="flex items-start gap-2 text-white/90 text-sm">
                                         <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
@@ -839,7 +839,7 @@ export default function PumpingPage() {
                                         <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
                                             <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
                                         </svg>
-                                        <span>Fast diagnosis <code className="mx-1 px-1.5 py-0.5 bg-white/10 rounded text-brand-400 text-xs">Same Day</code></span>
+                                        <span>Fast diagnosis <code className="mx-1 px-1.5 py-0.5 bg-white/10 rounded text-xs" style={{ color: '#33e6d1' }}>Same Day</code></span>
                                     </li>
                                     <li className="flex items-start gap-2 text-white/90 text-sm">
                                         <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
