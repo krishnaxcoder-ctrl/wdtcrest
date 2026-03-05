@@ -259,18 +259,12 @@ export default function Home() {
                     </Link>
                     <div className="nav_menu">
                         <div className="flex-h is-menu">
-                            <div className="dropdown">
-                                <div className="dropdown-toggle">Services</div>
-                            </div>
-                            <div className="dropdown">
-                                <div className="dropdown-toggle">About Us</div>
-                            </div>
-                            <div className="dropdown">
-                                <div className="dropdown-toggle">Service Areas</div>
-                            </div>
-                            <div className="dropdown">
-                                <div className="dropdown-toggle">Contact</div>
-                            </div>
+                            <Link href="/reliable-septic-services" className="nav-link">Services</Link>
+                            <Link href="/reliable-septic-pumping-solutions" className="nav-link">Pumping</Link>
+                            <Link href="/septic-inspection-solutions" className="nav-link">Inspections</Link>
+                            <Link href="/trustable-septic-products" className="nav-link">Products</Link>
+                            <Link href="/our-septic-pumping-legacy" className="nav-link">Our Legacy</Link>
+                            <Link href="/reviews-on-septic-services" className="nav-link">Reviews</Link>
                         </div>
                         <div className="button-group">
                             <Link href="tel:8282541920" className="button is-secondary">(828) 254-1920</Link>
