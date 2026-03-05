@@ -347,9 +347,15 @@ body {
     min-height: 600px;
 }
 
+.hero-bg-wrapper {
+    min-height: 600px;
+    position: relative;
+}
+
 .hero-section .grid-2col > .text-wrapper {
     padding-top: 8rem;
     padding-bottom: 5rem;
+    background: rgba(255, 255, 255, 0.9);
 }
 
 .eyebrow-main {
