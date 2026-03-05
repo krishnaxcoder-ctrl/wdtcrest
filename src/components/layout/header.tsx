@@ -64,7 +64,7 @@ export const Header = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     return (
-        <header className="sticky top-0 z-50 bg-primary border-b border-tertiary">
+        <header className="bg-primary border-b border-tertiary">
             {/* Top Bar */}
             <div className="hidden lg:block bg-primary-solid text-white">
                 <div className="max-w-[1440px] mx-auto px-6 lg:px-10">

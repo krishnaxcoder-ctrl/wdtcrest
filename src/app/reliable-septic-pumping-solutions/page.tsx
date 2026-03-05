@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useState, useEffect } from "react";
 import { Header, Footer } from "@/components/layout";
 
 // Arrow Icon
@@ -33,7 +34,31 @@ const process = [
     { step: "4", title: "Inspection & Report", description: "We inspect the tank condition and provide recommendations." },
 ];
 
+const featureTabs = ["pumping", "emergency", "inspection", "maintenance", "repairs"] as const;
+
 export default function PumpingPage() {
+    const [activeTab, setActiveTab] = useState<string>("pumping");
+
+    useEffect(() => {
+        const sections = featureTabs.map(tab => document.getElementById(`feature-${tab}`)).filter(Boolean);
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.id.replace("feature-", "");
+                        setActiveTab(id);
+                    }
+                });
+            },
+            { rootMargin: "-50% 0px -50% 0px", threshold: 0 }
+        );
+
+        sections.forEach((section) => section && observer.observe(section));
+
+        return () => observer.disconnect();
+    }, []);
+
     return (
         <div className="w-full min-h-screen">
             <Header />
@@ -150,21 +175,103 @@ export default function PumpingPage() {
 
                 {/* Bottom Header Section */}
                 <section className="px-6 lg:px-10 bg-primary-solid">
-                    <div className="max-w-7xl mx-auto border-t border-2 border-r border-gray-700/70 h-[17.5rem] sm:h-[22rem] relative overflow-hidden">
-                        <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: 'url(/header-pattern.png)' }} />
-                        <div className="relative z-10 h-full px-5 sm:px-10 flex flex-col justify-center gap-6 text-center items-center">
-                            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-white">
-                                Everything you need in one tool
+                    <div className="max-w-7xl mx-auto border-t border-2 border-r border-gray-700/70 relative overflow-hidden">
+                        {/* Background Effects */}
+                        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
+                        <div className="absolute -top-40 -right-40 w-80 h-80 bg-brand-500/10 rounded-full blur-3xl" />
+                        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-brand-600/10 rounded-full blur-3xl" />
+
+                        <div className="relative z-10 flex flex-col items-center justify-center text-center py-12 sm:py-16 px-6 sm:px-10">
+                            <div className="inline-flex items-center gap-2 w-fit px-3 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/20">
+                                <span className="relative flex size-2">
+                                    <span className="absolute inline-flex size-full animate-ping rounded-full bg-brand-400 opacity-75" />
+                                    <span className="relative inline-flex size-2 rounded-full bg-brand-500" />
+                                </span>
+                                <span className="text-brand-400 text-xs font-medium">Trusted Local Service</span>
+                            </div>
+                            <h2 className="mt-5 text-3xl sm:text-4xl lg:text-5xl font-semibold text-white leading-tight">
+                                Everything you need<br /><span className="text-brand-400">in one team</span>
                             </h2>
-                            <p className="max-w-md text-white/70 text-balance sm:text-pretty">
-                                Vite+ unifies your entire web development workflow into a single, powerful command-line interface.
+                            <p className="mt-5 max-w-2xl text-white/60 text-base sm:text-lg">
+                                Complete septic services from pumping to repairs — all from one trusted local team with 30+ years experience.
                             </p>
+                            {/* Buttons */}
+                            <div className="flex flex-wrap items-center justify-center gap-3 mt-8">
+                                <Link href="tel:8282541920" className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-brand-600 text-white text-sm font-medium hover:bg-brand-500 transition-all shadow-lg shadow-brand-600/25">
+                                    <span>Call (828) 254-1920</span>
+                                    <svg className="size-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                                    </svg>
+                                </Link>
+                                <Link href="/contact" className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-xl border border-white/10 bg-white/5 text-white text-sm font-medium hover:bg-white/10 hover:border-white/20 transition-all backdrop-blur-sm">
+                                    <span>Get Free Quote</span>
+                                    <svg className="size-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                                    </svg>
+                                </Link>
+                            </div>
                         </div>
                     </div>
                 </section>
 
-                {/* Feature Section */}
-                <section className="px-6 lg:px-10 bg-primary-solid">
+                {/* Feature Navigation Tabs - Sticky */}
+                <section className="sticky top-0 z-50 px-6 lg:px-10 bg-primary-solid/95 backdrop-blur-md">
+                    <div className="max-w-7xl mx-auto border-2 border-r border-gray-700/70">
+                        <ul className="w-full sm:grid sm:grid-cols-5 flex items-center divide-x divide-gray-700/70 relative overflow-x-auto scrollbar-hide">
+                            <li className="flex-shrink-0">
+                                <a href="#feature-pumping" className={`h-full text-sm font-mono tracking-tight py-4 px-6 sm:px-0 flex justify-center gap-2 transition-colors duration-200 whitespace-nowrap ${activeTab === "pumping" ? "text-white bg-white/5" : "text-white/50 hover:text-white"}`}>
+                                    <svg className="w-4" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.26172 12.6653C3.26172 13.0335 3.5602 13.332 3.92839 13.332H4.59505C4.96324 13.332 5.26172 13.0335 5.26172 12.6653V5.9987C5.26172 5.6305 4.96324 5.33203 4.59505 5.33203H3.92839C3.5602 5.33203 3.26172 5.6305 3.26172 5.9987V12.6653Z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="square" />
+                                        <path d="M7.92847 12.592C7.92847 13.0013 8.22693 13.333 8.59513 13.333H9.2618C9.63 13.333 9.92847 13.0013 9.92847 12.592V2.21921C9.92847 1.81001 9.63 1.47827 9.2618 1.47827H8.59513C8.22693 1.47827 7.92847 1.81 7.92847 2.21921V12.592Z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="square" />
+                                        <path d="M12.5952 12.6654C12.5952 13.0336 12.8937 13.332 13.2619 13.332H13.9285C14.2967 13.332 14.5952 13.0336 14.5952 12.6654V7.9987C14.5952 7.63056 14.2967 7.33203 13.9285 7.33203H13.2619C12.8937 7.33203 12.5952 7.63056 12.5952 7.9987V12.6654Z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="square" />
+                                    </svg>
+                                    <span>pumping</span>
+                                </a>
+                            </li>
+                            <li className="flex-shrink-0">
+                                <a href="#feature-emergency" className={`h-full text-sm font-mono tracking-tight py-4 px-6 sm:px-0 flex justify-center gap-2 transition-colors duration-200 whitespace-nowrap ${activeTab === "emergency" ? "text-white bg-white/5" : "text-white/50 hover:text-white"}`}>
+                                    <svg className="w-4" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.97939 1.33325V2.99073C9.97939 4.15603 9.97939 4.73868 10.1221 5.29802C10.2647 5.85736 10.5443 6.37094 11.1035 7.39812L11.8613 8.79005C13.2863 11.4076 13.9988 12.7164 13.4143 13.6866L13.4052 13.7014C12.8121 14.6666 11.3033 14.6666 8.28572 14.6666C5.2681 14.6666 3.7593 14.6666 3.16626 13.7014L3.15722 13.6866C2.57269 12.7164 3.28518 11.4076 4.71016 8.79005L5.46792 7.39812C6.02712 6.37094 6.30672 5.85736 6.44938 5.29802C6.59204 4.73868 6.59204 4.15603 6.59204 2.99073V1.33325" stroke="currentColor" />
+                                        <path d="M5.6189 1.33325H10.9522" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
+                                        <path d="M5.28564 7.70432C5.95231 6.93539 7.01858 7.48965 8.28564 8.21225C9.95231 9.16272 10.9523 8.43345 11.2856 7.74359" stroke="currentColor" strokeLinecap="round" />
+                                    </svg>
+                                    <span>emergency</span>
+                                </a>
+                            </li>
+                            <li className="flex-shrink-0">
+                                <a href="#feature-inspection" className={`h-full text-sm font-mono tracking-tight py-4 px-6 sm:px-0 flex justify-center gap-2 transition-colors duration-200 whitespace-nowrap ${activeTab === "inspection" ? "text-white bg-white/5" : "text-white/50 hover:text-white"}`}>
+                                    <svg className="w-4" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.1427 1.33325L10.5019 2.92763C10.8065 4.28002 11.8626 5.33613 13.215 5.64077L14.8094 5.99992L13.215 6.35907C11.8626 6.66371 10.8065 7.71979 10.5019 9.07219L10.1427 10.6666L9.78361 9.07219C9.47894 7.71979 8.42287 6.66371 7.07047 6.35907L5.47607 5.99992L7.07047 5.64077C8.42281 5.33613 9.47894 4.28002 9.78361 2.92764L10.1427 1.33325Z" stroke="currentColor" strokeWidth="1.2" strokeLinejoin="round" />
+                                        <path d="M4.80941 8L5.06595 9.13887C5.28355 10.1048 6.03791 10.8592 7.00387 11.0768L8.14274 11.3333L7.00387 11.5899C6.03791 11.8075 5.28355 12.5618 5.06595 13.5278L4.80941 14.6667L4.55287 13.5278C4.33527 12.5618 3.58091 11.8075 2.61492 11.5899L1.47607 11.3333L2.61492 11.0768C3.58091 10.8592 4.33527 10.1049 4.55287 9.13887L4.80941 8Z" stroke="currentColor" strokeWidth="1.2" strokeLinejoin="round" />
+                                    </svg>
+                                    <span>inspection</span>
+                                </a>
+                            </li>
+                            <li className="flex-shrink-0">
+                                <a href="#feature-maintenance" className={`h-full text-sm font-mono tracking-tight py-4 px-6 sm:px-0 flex justify-center gap-2 transition-colors duration-200 whitespace-nowrap ${activeTab === "maintenance" ? "text-white bg-white/5" : "text-white/50 hover:text-white"}`}>
+                                    <svg className="w-4" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.16634 2.66659C7.16634 1.93021 7.76327 1.33325 8.49967 1.33325H9.16634C9.90274 1.33325 10.4997 1.93021 10.4997 2.66659V4.36883C10.4997 5.24394 11.0686 6.01743 11.904 6.27807L12.4287 6.44177C13.2641 6.70239 13.833 7.47592 13.833 8.35099V9.33325C13.833 9.70145 13.5345 9.99992 13.1663 9.99992H4.49967C4.13149 9.99992 3.83301 9.70145 3.83301 9.33325V8.35099C3.83301 7.47592 4.40193 6.70239 5.23733 6.44177L5.76202 6.27807C6.59741 6.01743 7.16634 5.24394 7.16634 4.36883V2.66659Z" stroke="currentColor" strokeWidth="1.2" />
+                                        <path d="M4.50128 10C4.60515 10.8721 4.16364 13.0088 3.1665 14.5786C3.1665 14.5786 10.0281 15.3729 10.9566 11.9623V13.2475C10.9566 13.875 10.9566 14.1887 11.152 14.3837C11.5279 14.7585 13.2926 14.7687 13.669 14.3681C13.8668 14.1575 13.847 13.8546 13.8072 13.2487C13.7418 12.2497 13.562 10.9705 13.068 10" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                    <span>maintenance</span>
+                                </a>
+                            </li>
+                            <li className="flex-shrink-0">
+                                <a href="#feature-repairs" className={`h-full text-sm font-mono tracking-tight py-4 px-6 sm:px-0 flex justify-center gap-2 transition-colors duration-200 whitespace-nowrap ${activeTab === "repairs" ? "text-white bg-white/5" : "text-white/50 hover:text-white"}`}>
+                                    <svg className="w-4" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.4131 7H5.72946C4.00843 7 3.14792 7 2.75224 7.5684C2.35658 8.1368 2.65065 8.95053 3.2388 10.578L3.96159 12.578C4.26826 13.4265 4.42159 13.8509 4.76389 14.0921C5.10619 14.3333 5.55488 14.3333 6.45224 14.3333H10.6904C11.5877 14.3333 12.0364 14.3333 12.3787 14.0921C12.721 13.8509 12.8743 13.4265 13.181 12.578L13.9038 10.578C14.492 8.95053 14.786 8.1368 14.3904 7.5684C13.9947 7 13.1342 7 11.4131 7Z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="square" />
+                                        <path d="M13.2379 5.33325C13.2379 5.02263 13.2379 4.86731 13.1871 4.7448C13.1195 4.58145 12.9897 4.45166 12.8263 4.384C12.7038 4.33325 12.5485 4.33325 12.2379 4.33325H4.90454C4.59391 4.33325 4.4386 4.33325 4.31609 4.384C4.15273 4.45166 4.02295 4.58145 3.95529 4.7448C3.90454 4.86731 3.90454 5.02263 3.90454 5.33325" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                                        <path d="M11.5713 2.66675C11.5713 2.35612 11.5713 2.20081 11.5206 2.07829C11.4529 1.91494 11.3231 1.78515 11.1598 1.71749C11.0372 1.66675 10.8819 1.66675 10.5713 1.66675H6.57129C6.26066 1.66675 6.10535 1.66675 5.98284 1.71749C5.81948 1.78515 5.6897 1.91494 5.62204 2.07829C5.57129 2.20081 5.57129 2.35612 5.57129 2.66675" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                    <span>repairs</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                {/* Feature Section - Pumping */}
+                <section id="feature-pumping" className="px-6 lg:px-10 bg-primary-solid scroll-mt-16">
                     <div className="max-w-7xl mx-auto border-2 border-r border-gray-700/70 grid md:grid-cols-[55%_45%] divide-x divide-gray-700/70">
                         {/* Left Column - Content */}
                         <div className="px-5 py-6 md:p-10 flex flex-col justify-between gap-15">
@@ -308,7 +415,7 @@ export default function PumpingPage() {
                 </section>
 
                 {/* Feature Section 2 - Emergency Services */}
-                <section className="px-6 lg:px-10 bg-primary-solid">
+                <section id="feature-emergency" className="px-6 lg:px-10 bg-primary-solid scroll-mt-16">
                     <div className="max-w-7xl mx-auto border-2 border-r border-gray-700/70 grid md:grid-cols-[55%_45%] divide-x divide-gray-700/70">
                         {/* Left Column - Content */}
                         <div className="px-5 py-6 md:p-10 flex flex-col justify-between gap-15">
@@ -442,7 +549,7 @@ export default function PumpingPage() {
                 </section>
 
                 {/* Feature Section 3 - Inspections */}
-                <section className="px-6 lg:px-10 bg-primary-solid">
+                <section id="feature-inspection" className="px-6 lg:px-10 bg-primary-solid scroll-mt-16">
                     <div className="max-w-7xl mx-auto border-2 border-r border-gray-700/70 grid md:grid-cols-[55%_45%] divide-x divide-gray-700/70">
                         {/* Left Column - Content */}
                         <div className="px-5 py-6 md:p-10 flex flex-col justify-between gap-15">
@@ -575,7 +682,7 @@ export default function PumpingPage() {
                 </section>
 
                 {/* Feature Section 4 - Maintenance */}
-                <section className="px-6 lg:px-10 bg-primary-solid">
+                <section id="feature-maintenance" className="px-6 lg:px-10 bg-primary-solid scroll-mt-16">
                     <div className="max-w-7xl mx-auto border-2 border-r border-gray-700/70 grid md:grid-cols-[55%_45%] divide-x divide-gray-700/70">
                         {/* Left Column - Content */}
                         <div className="px-5 py-6 md:p-10 flex flex-col justify-between gap-15">
@@ -700,6 +807,138 @@ export default function PumpingPage() {
                                             <span className="relative inline-flex size-2 rounded-full bg-success-primary" />
                                         </div>
                                         <span className="text-xs font-medium text-success-primary">Join Now</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Feature Section 5 - Repairs */}
+                <section id="feature-repairs" className="px-6 lg:px-10 bg-primary-solid scroll-mt-16">
+                    <div className="max-w-7xl mx-auto border-2 border-r border-gray-700/70 grid md:grid-cols-[55%_45%] divide-x divide-gray-700/70">
+                        {/* Left Column - Content */}
+                        <div className="px-5 py-6 md:p-10 flex flex-col justify-between gap-15">
+                            <div className="flex flex-col gap-5">
+                                <span className="text-white/60 text-xs font-mono uppercase tracking-wide">Expert Repairs</span>
+                                <h4 className="text-white text-2xl font-semibold">Septic System Repairs</h4>
+                                <p className="text-white/70 text-base max-w-[25rem] text-pretty">
+                                    From minor fixes to major repairs, our experienced team can diagnose and resolve any septic system issue quickly and affordably.
+                                </p>
+                                <ul className="flex flex-col gap-3 mt-2">
+                                    <li className="flex items-start gap-2 text-white/90 text-sm">
+                                        <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                        </svg>
+                                        <span>Fast diagnosis <code className="mx-1 px-1.5 py-0.5 bg-white/10 rounded text-brand-400 text-xs">Same Day</code></span>
+                                    </li>
+                                    <li className="flex items-start gap-2 text-white/90 text-sm">
+                                        <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                        </svg>
+                                        <span>Tank and lid repairs</span>
+                                    </li>
+                                    <li className="flex items-start gap-2 text-white/90 text-sm">
+                                        <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                        </svg>
+                                        <span>Drain field restoration</span>
+                                    </li>
+                                    <li className="flex items-start gap-2 text-white/90 text-sm">
+                                        <svg className="size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                        </svg>
+                                        <span>Pump and motor replacement</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="px-3 py-1.5 bg-white/5 rounded w-fit flex gap-3 items-center">
+                                <span className="text-white text-sm hidden md:inline">Quality repairs</span>
+                                <span className="text-success-primary text-sm font-semibold">Guaranteed workmanship</span>
+                            </div>
+                        </div>
+
+                        {/* Right Column - Image */}
+                        <div className="flex flex-col min-h-[22rem] sm:min-h-[30rem] relative">
+                            <div className="bg-cover bg-center h-full relative" style={{ backgroundImage: 'url(/feature-dev-background-nostats.jpg)' }}>
+                                <div className="absolute inset-0 bg-orange-900/30 mix-blend-multiply" />
+                            </div>
+
+                            {/* Floating Card */}
+                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%-3rem)] overflow-hidden rounded-2xl border border-secondary bg-white/95 shadow-2xl backdrop-blur-md">
+                                <div className="p-4">
+                                    <div className="flex items-center justify-between">
+                                        <h3 className="text-base font-semibold text-primary">Repair Services</h3>
+                                        <span className="rounded-full bg-orange-50 px-3 py-1 text-xs font-semibold text-orange-700 ring-1 ring-orange-200">Expert</span>
+                                    </div>
+                                    <div className="mt-5 grid grid-cols-2 gap-x-8">
+                                        <div className="flex items-center gap-3 py-3 border-b border-secondary">
+                                            <div className="flex size-6 shrink-0 items-center justify-center rounded-md bg-orange-50">
+                                                <svg className="size-3.5 text-orange-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                    <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                                                    <path d="m9 11 3 3L22 4" />
+                                                </svg>
+                                            </div>
+                                            <span className="text-sm text-secondary">Tank repairs</span>
+                                        </div>
+                                        <div className="flex items-center gap-3 py-3 border-b border-secondary">
+                                            <div className="flex size-6 shrink-0 items-center justify-center rounded-md bg-orange-50">
+                                                <svg className="size-3.5 text-orange-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                    <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                                                    <path d="m9 11 3 3L22 4" />
+                                                </svg>
+                                            </div>
+                                            <span className="text-sm text-secondary">Pipe replacement</span>
+                                        </div>
+                                        <div className="flex items-center gap-3 py-3 border-b border-secondary">
+                                            <div className="flex size-6 shrink-0 items-center justify-center rounded-md bg-orange-50">
+                                                <svg className="size-3.5 text-orange-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                    <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                                                    <path d="m9 11 3 3L22 4" />
+                                                </svg>
+                                            </div>
+                                            <span className="text-sm text-secondary">Drain field fix</span>
+                                        </div>
+                                        <div className="flex items-center gap-3 py-3 border-b border-secondary">
+                                            <div className="flex size-6 shrink-0 items-center justify-center rounded-md bg-orange-50">
+                                                <svg className="size-3.5 text-orange-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                    <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                                                    <path d="m9 11 3 3L22 4" />
+                                                </svg>
+                                            </div>
+                                            <span className="text-sm text-secondary">Pump service</span>
+                                        </div>
+                                        <div className="flex items-center gap-3 py-3">
+                                            <div className="flex size-6 shrink-0 items-center justify-center rounded-md bg-orange-50">
+                                                <svg className="size-3.5 text-orange-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                    <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                                                    <path d="m9 11 3 3L22 4" />
+                                                </svg>
+                                            </div>
+                                            <span className="text-sm text-secondary">Lid replacement</span>
+                                        </div>
+                                        <div className="flex items-center gap-3 py-3">
+                                            <div className="flex size-6 shrink-0 items-center justify-center rounded-md bg-orange-50">
+                                                <svg className="size-3.5 text-orange-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                    <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                                                    <path d="m9 11 3 3L22 4" />
+                                                </svg>
+                                            </div>
+                                            <span className="text-sm text-secondary">Full restoration</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="flex items-center justify-between border-t border-secondary bg-secondary/30 px-4 py-3">
+                                    <div className="flex items-center gap-2">
+                                        <span className="text-xs font-medium text-tertiary">Warranty on</span>
+                                        <span className="text-sm font-bold text-primary">All repairs</span>
+                                    </div>
+                                    <div className="flex items-center gap-1.5">
+                                        <div className="relative flex size-2">
+                                            <span className="absolute inline-flex size-full animate-ping rounded-full bg-orange-500 opacity-75" />
+                                            <span className="relative inline-flex size-2 rounded-full bg-orange-500" />
+                                        </div>
+                                        <span className="text-xs font-medium text-orange-600">Get Quote</span>
                                     </div>
                                 </div>
                             </div>
