@@ -448,13 +448,19 @@ export default function Home() {
                                 </Link>
                             </div>
                             <div className="h-20" />
-                            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 border-t border-tertiary">
+                            <div className="max-w-7xl mx-auto border-l border-t border-tertiary">
+                            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5">
                                 {[
                                     { title: "Licensed & Insured", desc: "Fully licensed and insured for your protection and peace of mind" },
                                     { title: "24/7 Emergency", desc: "Available around the clock for urgent septic emergencies" },
                                     { title: "30+ Years", desc: "Decades of expertise in septic system services" },
                                     { title: "Family Owned", desc: "Local family business serving our community with care" },
                                     { title: "NC Certified", desc: "Certified for septic inspections and compliance verification" },
+                                    { title: "Free Estimates", desc: "No-obligation quotes for all septic services and installations" },
+                                    { title: "5,000+ Customers", desc: "Trusted by thousands of satisfied homeowners across the region" },
+                                    { title: "Eco-Friendly", desc: "Environmentally responsible solutions for sustainable septic care" },
+                                    { title: "Satisfaction ", desc: "We stand behind our work with a 100% satisfaction guarantee" },
+                                    { title: "Local Experts", desc: "Serving Western North Carolina communities with pride" },
                                 ].map((feature, i) => (
                                     <div key={i} className="p-6 border-r border-b border-tertiary last:border-r-0">
                                         <div className="text-2xl text-success-primary mb-4">✦</div>
@@ -462,6 +468,7 @@ export default function Home() {
                                         <p className="text-sm text-tertiary">{feature.desc}</p>
                                     </div>
                                 ))}
+                            </div>
                             </div>
                         </div>
                     </div>

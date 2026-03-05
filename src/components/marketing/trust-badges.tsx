@@ -39,14 +39,14 @@ const TrustBadgeCard = ({ title, description, className }: TrustBadgeCardProps) 
     return (
         <div
             className={cx(
-                "group relative flex flex-col items-center gap-6 rounded-3xl border border-secondary bg-primary p-10 text-center shadow-xs transition duration-100 ease-linear hover:border-brand hover:shadow-lg md:p-14 lg:p-16",
+                "group relative flex flex-col items-center gap-5 rounded-2xl border border-secondary bg-primary p-8 text-center shadow-xs transition duration-200 ease-linear hover:border-success-primary hover:shadow-lg md:p-10",
                 className,
             )}
         >
             {/* Decorative sparkle icon */}
-            <div className="flex size-16 items-center justify-center rounded-2xl bg-brand-secondary md:size-20">
+            <div className="flex size-14 items-center justify-center rounded-xl bg-success-secondary md:size-16">
                 <svg
-                    className="size-8 text-fg-brand-primary md:size-10"
+                    className="size-7 text-success-primary md:size-8"
                     viewBox="0 0 24 24"
                     fill="currentColor"
                     aria-hidden="true"
@@ -55,9 +55,9 @@ const TrustBadgeCard = ({ title, description, className }: TrustBadgeCardProps) 
                 </svg>
             </div>
 
-            <div className="flex flex-col gap-4">
-                <h3 className="text-2xl font-semibold text-primary md:text-3xl">{title}</h3>
-                <p className="text-base leading-relaxed text-tertiary md:text-lg">{description}</p>
+            <div className="flex flex-col gap-3">
+                <h3 className="text-xl font-semibold text-primary md:text-2xl">{title}</h3>
+                <p className="text-sm leading-relaxed text-tertiary md:text-base">{description}</p>
             </div>
         </div>
     );
@@ -75,14 +75,14 @@ export const TrustBadges = ({
     className,
 }: TrustBadgesProps) => {
     return (
-        <section className={cx("w-full py-20 md:py-28", className)}>
-            <div className="mx-auto max-w-container px-4 md:px-8">
-                <div className="flex flex-col gap-12 md:gap-16">
+        <section className={cx("w-full py-16 md:py-20", className)}>
+            <div className="mx-auto max-w-7xl px-6 lg:px-10">
+                <div className="flex flex-col gap-10 md:gap-12">
                     {title && (
-                        <p className="mx-auto max-w-3xl text-center text-xl text-tertiary md:text-2xl">{title}</p>
+                        <p className="mx-auto max-w-2xl text-center text-lg text-tertiary md:text-xl">{title}</p>
                     )}
 
-                    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8 lg:grid-cols-3 xl:gap-10">
+                    <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:grid-cols-5">
                         {badges.map((badge) => (
                             <TrustBadgeCard key={badge.title} title={badge.title} description={badge.description} />
                         ))}
