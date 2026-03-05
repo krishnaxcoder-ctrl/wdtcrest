@@ -69,7 +69,7 @@ export const Footer = () => {
             <div className="px-6 lg:px-10">
                 <div className="max-w-[1440px] mx-auto border-l border-r border-tertiary">
                     {/* Footer Grid */}
-                    <div className="grid grid-cols-1 lg:grid-cols-[0.35fr_0.65fr]">
+                    <div className="grid grid-cols-1 lg:grid-cols-[0.3fr_0.7fr]">
                         {/* Left Column - Logo, Social, CTA */}
                         <div className="p-8 lg:p-12 flex flex-col gap-8 border-b lg:border-b-0 lg:border-r border-tertiary">
                             <Link href="/" className="transition-opacity hover:opacity-80">
@@ -159,25 +159,59 @@ export const Footer = () => {
                             {/* Contact */}
                             <div className="flex flex-col gap-6">
                                 <h4 className="text-base font-medium text-primary">Contact</h4>
-                                <div className="flex flex-col gap-4">
-                                    {footerLinks.contact.map((item) => (
-                                        item.isLink ? (
-                                            <a
-                                                key={item.label}
-                                                href={item.href}
-                                                className="text-sm text-tertiary transition-colors hover:text-primary"
-                                            >
-                                                {item.label}
-                                            </a>
-                                        ) : (
-                                            <span
-                                                key={item.label}
-                                                className="text-sm text-tertiary"
-                                            >
-                                                {item.label}
-                                            </span>
-                                        )
-                                    ))}
+                                <div className="flex flex-col gap-3">
+                                    <a
+                                        href="tel:8282541920"
+                                        className="group flex items-center gap-3 rounded-xl border border-secondary bg-primary px-4 py-3 transition-all hover:border-success-primary hover:shadow-sm"
+                                    >
+                                        <span className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-success-secondary text-success-primary transition-colors group-hover:bg-success-primary group-hover:text-white">
+                                            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" className="size-4">
+                                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                                            </svg>
+                                        </span>
+                                        <div>
+                                            <p className="text-xs text-tertiary">Call us</p>
+                                            <p className="text-sm font-medium text-secondary">(828) 254-1920</p>
+                                        </div>
+                                    </a>
+                                    <a
+                                        href="mailto:info@ableseptic.com"
+                                        className="group flex items-center gap-3 rounded-xl border border-secondary bg-primary px-4 py-3 transition-all hover:border-success-primary hover:shadow-sm"
+                                    >
+                                        <span className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-success-secondary text-success-primary transition-colors group-hover:bg-success-primary group-hover:text-white">
+                                            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" className="size-4">
+                                                <path d="m2 7 8.165 5.715c.661.463.992.695 1.351.784a2 2 0 0 0 .968 0c.36-.09.69-.32 1.351-.784L22 7M6.8 20h10.4c1.68 0 2.52 0 3.162-.327a3 3 0 0 0 1.311-1.311C22 17.72 22 16.88 22 15.2V8.8c0-1.68 0-2.52-.327-3.162a3 3 0 0 0-1.311-1.311C19.72 4 18.88 4 17.2 4H6.8c-1.68 0-2.52 0-3.162.327a3 3 0 0 0-1.311 1.311C2 6.28 2 7.12 2 8.8v6.4c0 1.68 0 2.52.327 3.162a3 3 0 0 0 1.311 1.311C4.28 20 5.12 20 6.8 20Z" />
+                                            </svg>
+                                        </span>
+                                        <div>
+                                            <p className="text-xs text-tertiary">Email us</p>
+                                            <p className="text-sm font-medium text-secondary">info@ableseptic.com</p>
+                                        </div>
+                                    </a>
+                                    <div className="flex items-center gap-3 rounded-xl border border-secondary bg-primary px-4 py-3">
+                                        <span className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-success-secondary text-success-primary">
+                                            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" className="size-4">
+                                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                                                <circle cx="12" cy="10" r="3" />
+                                            </svg>
+                                        </span>
+                                        <div>
+                                            <p className="text-xs text-tertiary">Location</p>
+                                            <p className="text-sm font-medium text-secondary">Asheville, NC</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex items-center gap-3 rounded-xl border border-secondary bg-primary px-4 py-3">
+                                        <span className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-success-secondary text-success-primary">
+                                            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" className="size-4">
+                                                <circle cx="12" cy="12" r="10" />
+                                                <polyline points="12 6 12 12 16 14" />
+                                            </svg>
+                                        </span>
+                                        <div>
+                                            <p className="text-xs text-tertiary">Hours</p>
+                                            <p className="text-sm font-medium text-secondary">Mon-Fri: 8AM-5PM</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

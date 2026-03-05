@@ -81,16 +81,16 @@ export default function PumpingPage() {
 
             <main className="main-wrapper">
                 {/* Hero Section */}
-                <section className="hero-section background-color-dark">
+                <section className="hero-section background-color-light">
                     <div className="padding-global">
                         <div className="container-large side-border">
                             <div className="spacer-large" />
                             <div className="text-wrapper padding-3rem">
-                                <div className="flex-v gap-full">
+                                <div className="flex-v gap-1-5rem">
                                     <div className="eyebrow-main">
                                         <span className="text-size-small" style={{ color: "#16b364" }}>Professional Pumping Services</span>
                                     </div>
-                                    <h1 className="heading-style-h1 text-color-white">Reliable Septic Pumping Solutions</h1>
+                                    <h1 className="heading-style-h1">Reliable Septic Pumping Solutions</h1>
                                     <p className="text-size-large text-color-grey" style={{ maxWidth: "600px" }}>
                                         Keep your septic system running smoothly with our professional pumping services.
                                         Serving Asheville and Western North Carolina for over 30 years.
