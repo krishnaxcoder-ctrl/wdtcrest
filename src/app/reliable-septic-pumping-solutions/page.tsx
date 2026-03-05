@@ -166,7 +166,7 @@ export default function PumpingPage() {
                         {/* Left Column - Content */}
                         <div className="px-5 py-6 md:p-10 flex flex-col justify-between gap-15">
                             <div className="flex flex-col gap-5">
-                                <span className="text-tertiary text-xs font-mono uppercase tracking-wide">Professional Service</span>
+                                <span className="text-white/60 text-xs font-mono uppercase tracking-wide">Professional Service</span>
                                 <h4 className="text-white text-2xl font-semibold">Fast &amp; Reliable Pumping</h4>
                                 <p className="text-white/70 text-base max-w-[25rem] text-pretty">
                                     Get your septic system serviced quickly and efficiently. Our experienced team ensures thorough pumping with minimal disruption to your day.
@@ -213,8 +213,93 @@ export default function PumpingPage() {
                         </div>
 
                         {/* Right Column - Image */}
-                        <div className="flex flex-col min-h-[22rem] sm:min-h-[30rem]">
+                        <div className="flex flex-col min-h-[22rem] sm:min-h-[30rem] relative">
                             <div className="bg-cover bg-top h-full" style={{ backgroundImage: 'url(https://curat.modeltheme.com/wp-content/uploads/2026/02/why-choose-us-.jpg)' }} />
+
+                            {/* Floating Card */}
+                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%-3rem)] overflow-hidden rounded-2xl border border-secondary bg-white/95 shadow-2xl backdrop-blur-md">
+                                <div className="p-4">
+                                    <div className="flex items-center justify-between">
+                                        <h3 className="text-base font-semibold text-primary">What's included</h3>
+                                        <span className="rounded-full bg-brand-50 px-3 py-1 text-xs font-semibold text-brand-700 ring-1 ring-brand-200">6 services</span>
+                                    </div>
+                                    <div className="mt-5 grid grid-cols-2 gap-x-8">
+                                        <div className="flex items-center gap-3 py-3 border-b border-secondary">
+                                            <div className="flex size-6 shrink-0 items-center justify-center rounded-md bg-brand-50">
+                                                <svg className="size-3.5 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                    <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                                                    <path d="m9 11 3 3L22 4" />
+                                                </svg>
+                                            </div>
+                                            <span className="text-sm text-secondary">Septic tank pumping</span>
+                                        </div>
+                                        <div className="flex items-center gap-3 py-3 border-b border-secondary">
+                                            <div className="flex size-6 shrink-0 items-center justify-center rounded-md bg-brand-50">
+                                                <svg className="size-3.5 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                    <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                                                    <path d="m9 11 3 3L22 4" />
+                                                </svg>
+                                            </div>
+                                            <span className="text-sm text-secondary">System inspection</span>
+                                        </div>
+                                        <div className="flex items-center gap-3 py-3 border-b border-secondary">
+                                            <div className="flex size-6 shrink-0 items-center justify-center rounded-md bg-brand-50">
+                                                <svg className="size-3.5 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                    <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                                                    <path d="m9 11 3 3L22 4" />
+                                                </svg>
+                                            </div>
+                                            <span className="text-sm text-secondary">Drainfield locating</span>
+                                        </div>
+                                        <div className="flex items-center gap-3 py-3 border-b border-secondary">
+                                            <div className="flex size-6 shrink-0 items-center justify-center rounded-md bg-brand-50">
+                                                <svg className="size-3.5 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                    <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                                                    <path d="m9 11 3 3L22 4" />
+                                                </svg>
+                                            </div>
+                                            <span className="text-sm text-secondary">Filter cleaning</span>
+                                        </div>
+                                        <div className="flex items-center gap-3 py-3">
+                                            <div className="flex size-6 shrink-0 items-center justify-center rounded-md bg-brand-50">
+                                                <svg className="size-3.5 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                    <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                                                    <path d="m9 11 3 3L22 4" />
+                                                </svg>
+                                            </div>
+                                            <span className="text-sm text-secondary">Grease trap service</span>
+                                        </div>
+                                        <div className="flex items-center gap-3 py-3">
+                                            <div className="flex size-6 shrink-0 items-center justify-center rounded-md bg-brand-50">
+                                                <svg className="size-3.5 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                    <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                                                    <path d="m9 11 3 3L22 4" />
+                                                </svg>
+                                            </div>
+                                            <span className="text-sm text-secondary">Emergency repairs</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="flex items-center justify-between border-t border-secondary bg-secondary/30 px-4 py-3">
+                                    <div className="flex items-center gap-2">
+                                        <div className="flex gap-0.5">
+                                            {[...Array(5)].map((_, i) => (
+                                                <svg key={i} className="size-3 fill-amber-400 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                    <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+                                                </svg>
+                                            ))}
+                                        </div>
+                                        <span className="text-xs font-medium text-tertiary">4.9 (500+ reviews)</span>
+                                    </div>
+                                    <div className="flex items-center gap-1.5">
+                                        <div className="relative flex size-2">
+                                            <span className="absolute inline-flex size-full animate-ping rounded-full bg-brand-500 opacity-75" />
+                                            <span className="relative inline-flex size-2 rounded-full bg-brand-500" />
+                                        </div>
+                                        <span className="text-xs font-medium text-brand-600">Available Now</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
