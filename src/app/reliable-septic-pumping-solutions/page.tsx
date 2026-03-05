@@ -241,7 +241,7 @@ export default function PumpingPage() {
                     <div className="max-w-7xl mx-auto border-2 border-r border-gray-700/70">
                         <ul className="w-full sm:grid sm:grid-cols-5 flex items-center divide-x divide-gray-700/70 relative overflow-x-auto scrollbar-hide">
                             <li className="flex-shrink-0">
-                                <a href="#feature-pumping" className={`h-full text-sm font-mono tracking-tight py-4 px-6 sm:px-0 flex justify-center gap-2 transition-colors duration-200 whitespace-nowrap ${activeTab === "pumping" ? "text-white bg-white/5" : "text-white/50 hover:text-white"}`}>
+                                <a href="#feature-pumping" className={`h-full text-sm tracking-tight py-4 px-6 sm:px-0 flex justify-center gap-2 transition-colors duration-200 whitespace-nowrap ${activeTab === "pumping" ? "text-white bg-white/5" : "text-white/50 hover:text-white"}`}>
                                     <svg className="w-4" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M3.26172 12.6653C3.26172 13.0335 3.5602 13.332 3.92839 13.332H4.59505C4.96324 13.332 5.26172 13.0335 5.26172 12.6653V5.9987C5.26172 5.6305 4.96324 5.33203 4.59505 5.33203H3.92839C3.5602 5.33203 3.26172 5.6305 3.26172 5.9987V12.6653Z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="square" />
                                         <path d="M7.92847 12.592C7.92847 13.0013 8.22693 13.333 8.59513 13.333H9.2618C9.63 13.333 9.92847 13.0013 9.92847 12.592V2.21921C9.92847 1.81001 9.63 1.47827 9.2618 1.47827H8.59513C8.22693 1.47827 7.92847 1.81 7.92847 2.21921V12.592Z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="square" />
@@ -251,7 +251,7 @@ export default function PumpingPage() {
                                 </a>
                             </li>
                             <li className="flex-shrink-0">
-                                <a href="#feature-emergency" className={`h-full text-sm font-mono tracking-tight py-4 px-6 sm:px-0 flex justify-center gap-2 transition-colors duration-200 whitespace-nowrap ${activeTab === "emergency" ? "text-white bg-white/5" : "text-white/50 hover:text-white"}`}>
+                                <a href="#feature-emergency" className={`h-full text-sm tracking-tight py-4 px-6 sm:px-0 flex justify-center gap-2 transition-colors duration-200 whitespace-nowrap ${activeTab === "emergency" ? "text-white bg-white/5" : "text-white/50 hover:text-white"}`}>
                                     <svg className="w-4" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M9.97939 1.33325V2.99073C9.97939 4.15603 9.97939 4.73868 10.1221 5.29802C10.2647 5.85736 10.5443 6.37094 11.1035 7.39812L11.8613 8.79005C13.2863 11.4076 13.9988 12.7164 13.4143 13.6866L13.4052 13.7014C12.8121 14.6666 11.3033 14.6666 8.28572 14.6666C5.2681 14.6666 3.7593 14.6666 3.16626 13.7014L3.15722 13.6866C2.57269 12.7164 3.28518 11.4076 4.71016 8.79005L5.46792 7.39812C6.02712 6.37094 6.30672 5.85736 6.44938 5.29802C6.59204 4.73868 6.59204 4.15603 6.59204 2.99073V1.33325" stroke="currentColor" />
                                         <path d="M5.6189 1.33325H10.9522" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
@@ -261,7 +261,7 @@ export default function PumpingPage() {
                                 </a>
                             </li>
                             <li className="flex-shrink-0">
-                                <a href="#feature-inspection" className={`h-full text-sm font-mono tracking-tight py-4 px-6 sm:px-0 flex justify-center gap-2 transition-colors duration-200 whitespace-nowrap ${activeTab === "inspection" ? "text-white bg-white/5" : "text-white/50 hover:text-white"}`}>
+                                <a href="#feature-inspection" className={`h-full text-sm tracking-tight py-4 px-6 sm:px-0 flex justify-center gap-2 transition-colors duration-200 whitespace-nowrap ${activeTab === "inspection" ? "text-white bg-white/5" : "text-white/50 hover:text-white"}`}>
                                     <svg className="w-4" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M10.1427 1.33325L10.5019 2.92763C10.8065 4.28002 11.8626 5.33613 13.215 5.64077L14.8094 5.99992L13.215 6.35907C11.8626 6.66371 10.8065 7.71979 10.5019 9.07219L10.1427 10.6666L9.78361 9.07219C9.47894 7.71979 8.42287 6.66371 7.07047 6.35907L5.47607 5.99992L7.07047 5.64077C8.42281 5.33613 9.47894 4.28002 9.78361 2.92764L10.1427 1.33325Z" stroke="currentColor" strokeWidth="1.2" strokeLinejoin="round" />
                                         <path d="M4.80941 8L5.06595 9.13887C5.28355 10.1048 6.03791 10.8592 7.00387 11.0768L8.14274 11.3333L7.00387 11.5899C6.03791 11.8075 5.28355 12.5618 5.06595 13.5278L4.80941 14.6667L4.55287 13.5278C4.33527 12.5618 3.58091 11.8075 2.61492 11.5899L1.47607 11.3333L2.61492 11.0768C3.58091 10.8592 4.33527 10.1049 4.55287 9.13887L4.80941 8Z" stroke="currentColor" strokeWidth="1.2" strokeLinejoin="round" />
@@ -270,7 +270,7 @@ export default function PumpingPage() {
                                 </a>
                             </li>
                             <li className="flex-shrink-0">
-                                <a href="#feature-maintenance" className={`h-full text-sm font-mono tracking-tight py-4 px-6 sm:px-0 flex justify-center gap-2 transition-colors duration-200 whitespace-nowrap ${activeTab === "maintenance" ? "text-white bg-white/5" : "text-white/50 hover:text-white"}`}>
+                                <a href="#feature-maintenance" className={`h-full text-sm tracking-tight py-4 px-6 sm:px-0 flex justify-center gap-2 transition-colors duration-200 whitespace-nowrap ${activeTab === "maintenance" ? "text-white bg-white/5" : "text-white/50 hover:text-white"}`}>
                                     <svg className="w-4" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M7.16634 2.66659C7.16634 1.93021 7.76327 1.33325 8.49967 1.33325H9.16634C9.90274 1.33325 10.4997 1.93021 10.4997 2.66659V4.36883C10.4997 5.24394 11.0686 6.01743 11.904 6.27807L12.4287 6.44177C13.2641 6.70239 13.833 7.47592 13.833 8.35099V9.33325C13.833 9.70145 13.5345 9.99992 13.1663 9.99992H4.49967C4.13149 9.99992 3.83301 9.70145 3.83301 9.33325V8.35099C3.83301 7.47592 4.40193 6.70239 5.23733 6.44177L5.76202 6.27807C6.59741 6.01743 7.16634 5.24394 7.16634 4.36883V2.66659Z" stroke="currentColor" strokeWidth="1.2" />
                                         <path d="M4.50128 10C4.60515 10.8721 4.16364 13.0088 3.1665 14.5786C3.1665 14.5786 10.0281 15.3729 10.9566 11.9623V13.2475C10.9566 13.875 10.9566 14.1887 11.152 14.3837C11.5279 14.7585 13.2926 14.7687 13.669 14.3681C13.8668 14.1575 13.847 13.8546 13.8072 13.2487C13.7418 12.2497 13.562 10.9705 13.068 10" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
@@ -279,7 +279,7 @@ export default function PumpingPage() {
                                 </a>
                             </li>
                             <li className="flex-shrink-0">
-                                <a href="#feature-repairs" className={`h-full text-sm font-mono tracking-tight py-4 px-6 sm:px-0 flex justify-center gap-2 transition-colors duration-200 whitespace-nowrap ${activeTab === "repairs" ? "text-white bg-white/5" : "text-white/50 hover:text-white"}`}>
+                                <a href="#feature-repairs" className={`h-full text-sm tracking-tight py-4 px-6 sm:px-0 flex justify-center gap-2 transition-colors duration-200 whitespace-nowrap ${activeTab === "repairs" ? "text-white bg-white/5" : "text-white/50 hover:text-white"}`}>
                                     <svg className="w-4" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M11.4131 7H5.72946C4.00843 7 3.14792 7 2.75224 7.5684C2.35658 8.1368 2.65065 8.95053 3.2388 10.578L3.96159 12.578C4.26826 13.4265 4.42159 13.8509 4.76389 14.0921C5.10619 14.3333 5.55488 14.3333 6.45224 14.3333H10.6904C11.5877 14.3333 12.0364 14.3333 12.3787 14.0921C12.721 13.8509 12.8743 13.4265 13.181 12.578L13.9038 10.578C14.492 8.95053 14.786 8.1368 14.3904 7.5684C13.9947 7 13.1342 7 11.4131 7Z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="square" />
                                         <path d="M13.2379 5.33325C13.2379 5.02263 13.2379 4.86731 13.1871 4.7448C13.1195 4.58145 12.9897 4.45166 12.8263 4.384C12.7038 4.33325 12.5485 4.33325 12.2379 4.33325H4.90454C4.59391 4.33325 4.4386 4.33325 4.31609 4.384C4.15273 4.45166 4.02295 4.58145 3.95529 4.7448C3.90454 4.86731 3.90454 5.02263 3.90454 5.33325" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
