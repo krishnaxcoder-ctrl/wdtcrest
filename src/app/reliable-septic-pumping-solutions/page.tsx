@@ -171,7 +171,7 @@ export default function PumpingPage() {
                                 {/* Right Column - Features */}
                                 <div className="border-t border-secondary p-5 sm:p-10 md:p-14 lg:col-span-2 lg:border-l lg:border-t-0 lg:p-14">
                                     <div className="text-left">
-                                        <p className="text-[10px] font-semibold uppercase tracking-wider text-success-primary sm:text-xs">Why Choose Our Pumping Services</p>
+                                        <p className="text-[10px] font-semibold uppercase tracking-wider sm:text-xs" style={{ color: '#33e6d1' }}>Why Choose Our Pumping Services</p>
                                         <ul className="mt-5 space-y-3 sm:mt-8 sm:space-y-4">
                                             {[
                                                 "Complete tank pumping & cleaning",
@@ -181,7 +181,7 @@ export default function PumpingPage() {
                                                 "Emergency pumping available 24/7",
                                             ].map((item) => (
                                                 <li key={item} className="flex items-start gap-2 text-left sm:gap-3">
-                                                    <svg className="size-4 sm:size-5 shrink-0 text-success-primary mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                                                    <svg className="size-4 sm:size-5 shrink-0 mt-0.5" style={{ color: '#33e6d1' }} fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
                                                         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                                                     </svg>
                                                     <span className="text-xs text-secondary sm:text-sm">{item}</span>
@@ -189,8 +189,8 @@ export default function PumpingPage() {
                                             ))}
                                         </ul>
                                         <div className="mt-6 h-px w-16 bg-secondary sm:mt-8" />
-                                        <div className="mt-6 rounded-xl border border-success-primary/30 bg-success-secondary p-3 sm:mt-8 sm:p-4">
-                                            <p className="text-xs font-medium text-success-primary sm:text-sm">Free Estimates</p>
+                                        <div className="mt-6 rounded-xl border p-3 sm:mt-8 sm:p-4" style={{ borderColor: 'rgba(51, 230, 209, 0.3)', backgroundColor: 'rgba(51, 230, 209, 0.15)' }}>
+                                            <p className="text-xs font-medium sm:text-sm text-primary">Free Estimates</p>
                                             <p className="mt-1 text-[10px] text-tertiary sm:text-xs">Call today for a no-obligation quote on your pumping service</p>
                                         </div>
                                     </div>
@@ -1165,7 +1165,7 @@ export default function PumpingPage() {
                             </div>
 
                             {/* Feature List with Icons */}
-                            <div className="flex flex-col gap-4 mt-2">
+                            <div className="flex flex-col gap-6 mt-2">
                                 <div className="flex items-start gap-3">
                                     <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-lg bg-success-secondary">
                                         <svg className="size-4 text-success-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -1200,20 +1200,6 @@ export default function PumpingPage() {
                                     <div>
                                         <p className="text-sm font-medium text-primary">Eco-friendly disposal</p>
                                         <p className="text-xs text-tertiary">EPA-compliant waste handling and recycling</p>
-                                    </div>
-                                </div>
-                                <div className="flex items-start gap-3">
-                                    <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-lg bg-success-secondary">
-                                        <svg className="size-4 text-success-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                            <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
-                                            <line x1="16" x2="16" y1="2" y2="6" />
-                                            <line x1="8" x2="8" y1="2" y2="6" />
-                                            <line x1="3" x2="21" y1="10" y2="10" />
-                                        </svg>
-                                    </div>
-                                    <div>
-                                        <p className="text-sm font-medium text-primary">Flexible scheduling</p>
-                                        <p className="text-xs text-tertiary">Weekends, evenings, and same-day available</p>
                                     </div>
                                 </div>
                             </div>
