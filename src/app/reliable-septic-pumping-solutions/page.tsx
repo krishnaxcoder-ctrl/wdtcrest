@@ -464,7 +464,7 @@ export default function PumpingPage() {
                             <div className="px-3 py-1.5 bg-white/5 rounded w-fit flex gap-3 items-center">
                                 <span className="text-white text-sm hidden md:inline">Call Now</span>
                                 <a href="tel:8282541920" className="flex items-center gap-1.5 text-success-primary hover:text-success-secondary transition-colors">
-                                    <span className="text-sm font-semibold">(828) 254-1920</span>
+                                    <span className="text-sm font-semibold" style={{ color: '#33e6d1' }}>(828) 254-1920</span>
                                 </a>
                             </div>
                         </div>
@@ -542,7 +542,7 @@ export default function PumpingPage() {
                                 <div className="flex items-center justify-between border-t border-secondary bg-secondary/30 px-4 py-3">
                                     <div className="flex items-center gap-2">
                                         <span className="text-xs font-medium text-tertiary">Call now:</span>
-                                        <span className="text-xs font-semibold text-primary">(828) 254-1920</span>
+                                        <span className="text-xs font-semibold" style={{ color: '#33e6d1' }}>(828) 254-1920</span>
                                     </div>
                                     <div className="flex items-center gap-1.5">
                                         <div className="relative flex size-2">
@@ -597,7 +597,7 @@ export default function PumpingPage() {
                             </div>
                             <div className="px-3 py-1.5 bg-white/5 rounded w-fit flex gap-3 items-center">
                                 <span className="text-white text-sm hidden md:inline">Starting at</span>
-                                <span className="text-success-primary text-sm font-semibold">$150</span>
+                                <span className="text-sm font-semibold" style={{ color: '#33e6d1' }}>$150</span>
                                 <span className="text-white/50 text-sm">for basic inspection</span>
                             </div>
                         </div>
@@ -730,7 +730,7 @@ export default function PumpingPage() {
                             </div>
                             <div className="px-3 py-1.5 bg-white/5 rounded w-fit flex gap-3 items-center">
                                 <span className="text-white text-sm hidden md:inline">Join</span>
-                                <span className="text-success-primary text-sm font-semibold">5,000+ homeowners</span>
+                                <span className="text-sm font-semibold" style={{ color: '#33e6d1' }}>5,000+ homeowners</span>
                                 <span className="text-white/50 text-sm">in our program</span>
                             </div>
                         </div>
@@ -863,7 +863,7 @@ export default function PumpingPage() {
                             </div>
                             <div className="px-3 py-1.5 bg-white/5 rounded w-fit flex gap-3 items-center">
                                 <span className="text-white text-sm hidden md:inline">Quality repairs</span>
-                                <span className="text-success-primary text-sm font-semibold">Guaranteed workmanship</span>
+                                <span className="text-sm font-semibold" style={{ color: '#33e6d1' }}>Guaranteed workmanship</span>
                             </div>
                         </div>
 
