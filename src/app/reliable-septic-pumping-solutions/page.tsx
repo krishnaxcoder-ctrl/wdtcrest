@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Header, Footer } from "@/components/layout";
 import { DecorativeDivider } from "@/components/base/decorative-divider";
+import { StatsSection } from "@/components/base/stats-section";
 
 // Shield Check Icon
 const ShieldCheck = ({ className, style }: { className?: string; style?: React.CSSProperties }) => (
@@ -197,11 +198,15 @@ export default function PumpingPage() {
                                     </div>
                                 </div>
                             </div>
+                            <StatsSection />
                         </div>
+                        
                     </div>
+                    
                 </section>
 
                 <DecorativeDivider />
+               
 
                 {/* Bottom Header Section */}
                 <section className="px-6 lg:px-10 bg-primary-solid">
@@ -252,6 +257,7 @@ export default function PumpingPage() {
                         </div>
                     </div>
                 </section>
+                
 
                 {/* Feature Navigation Tabs - Sticky */}
                 <section className="sticky top-0 z-50 px-6 lg:px-10 bg-primary-solid/95 backdrop-blur-md">
@@ -308,6 +314,7 @@ export default function PumpingPage() {
                         </ul>
                     </div>
                 </section>
+                
 
                 {/* Feature Section - Pumping */}
                 <section id="feature-pumping" className="px-6 lg:px-10 bg-primary-solid scroll-mt-16">
@@ -444,7 +451,7 @@ export default function PumpingPage() {
                         </div>
                     </div>
                 </section>
-
+                                                
                 {/* Feature Section 2 - Emergency Services */}
                 <section id="feature-emergency" className="px-6 lg:px-10 bg-primary-solid scroll-mt-16">
                     <div className="max-w-7xl mx-auto border-2 border-r border-gray-700/70 grid md:grid-cols-[55%_45%] divide-x divide-gray-700/70">
@@ -728,6 +735,7 @@ export default function PumpingPage() {
                                 <span className="text-white/50 text-sm">in our program</span>
                             </div>
                         </div>
+                        
 
                         {/* Right Column - Image */}
                         <div className="flex flex-col min-h-[22rem] sm:min-h-[30rem] relative">
@@ -939,6 +947,8 @@ export default function PumpingPage() {
                     </div>
                 </section>
 
+                <DecorativeDivider />
+
                 {/* Services Grid */}
                 <section className="py-16 md:py-20">
                     <div className="px-6 lg:px-10">
@@ -1081,6 +1091,8 @@ export default function PumpingPage() {
                     </div>
                 </section>
 
+                <DecorativeDivider />
+
                 {/* Stats Grid Section */}
                 <section className="px-6 lg:px-10">
                     <div className="max-w-7xl mx-auto border border-tertiary grid lg:grid-cols-2 divide-x divide-y divide-tertiary">
@@ -1128,6 +1140,8 @@ export default function PumpingPage() {
                             </div>
                         </div>
 
+                        
+
                         {/* Cell 2 - Fast Response */}
                         <div className="p-5 sm:p-10 flex flex-col gap-3">
                             <h5 className="text-xl sm:text-2xl font-semibold text-primary">Fast response, every time</h5>
@@ -1159,6 +1173,8 @@ export default function PumpingPage() {
                                 </div>
                             </div>
                         </div>
+
+                        
 
                         {/* Cell 3 - Why Choose Us */}
                         <div className="p-5 sm:p-10 flex flex-col gap-4">
@@ -1257,6 +1273,8 @@ export default function PumpingPage() {
                         </div>
                     </div>
                 </section>
+
+                <DecorativeDivider />
 
                 {/* Benefits Section */}
                 <section className="py-16 md:py-20 bg-secondary">
