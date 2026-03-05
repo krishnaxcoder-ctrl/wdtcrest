@@ -351,8 +351,89 @@ export default function PumpingPage() {
                         </div>
 
                         {/* Right Column - Image */}
-                        <div className="flex flex-col min-h-[22rem] sm:min-h-[30rem]">
-                            <div className="bg-cover bg-center h-full" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80)' }} />
+                        <div className="flex flex-col min-h-[22rem] sm:min-h-[30rem] relative">
+                            <div className="bg-cover bg-center h-full relative" style={{ backgroundImage: 'url(/feature-dev-background-nostats.jpg)' }}>
+                                <div className="absolute inset-0 bg-red-900/30 mix-blend-multiply" />
+                            </div>
+
+                            {/* Floating Card */}
+                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%-3rem)] overflow-hidden rounded-2xl border border-secondary bg-white/95 shadow-2xl backdrop-blur-md">
+                                <div className="p-4">
+                                    <div className="flex items-center justify-between">
+                                        <h3 className="text-base font-semibold text-primary">Emergency Response</h3>
+                                        <span className="rounded-full bg-error-secondary px-3 py-1 text-xs font-semibold text-error-primary ring-1 ring-error-primary/20">24/7</span>
+                                    </div>
+                                    <div className="mt-5 grid grid-cols-2 gap-x-8">
+                                        <div className="flex items-center gap-3 py-3 border-b border-secondary">
+                                            <div className="flex size-6 shrink-0 items-center justify-center rounded-md bg-error-secondary">
+                                                <svg className="size-3.5 text-error-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                    <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                                                    <path d="m9 11 3 3L22 4" />
+                                                </svg>
+                                            </div>
+                                            <span className="text-sm text-secondary">60 min response</span>
+                                        </div>
+                                        <div className="flex items-center gap-3 py-3 border-b border-secondary">
+                                            <div className="flex size-6 shrink-0 items-center justify-center rounded-md bg-error-secondary">
+                                                <svg className="size-3.5 text-error-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                    <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                                                    <path d="m9 11 3 3L22 4" />
+                                                </svg>
+                                            </div>
+                                            <span className="text-sm text-secondary">Overflow repair</span>
+                                        </div>
+                                        <div className="flex items-center gap-3 py-3 border-b border-secondary">
+                                            <div className="flex size-6 shrink-0 items-center justify-center rounded-md bg-error-secondary">
+                                                <svg className="size-3.5 text-error-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                    <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                                                    <path d="m9 11 3 3L22 4" />
+                                                </svg>
+                                            </div>
+                                            <span className="text-sm text-secondary">Backup clearing</span>
+                                        </div>
+                                        <div className="flex items-center gap-3 py-3 border-b border-secondary">
+                                            <div className="flex size-6 shrink-0 items-center justify-center rounded-md bg-error-secondary">
+                                                <svg className="size-3.5 text-error-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                    <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                                                    <path d="m9 11 3 3L22 4" />
+                                                </svg>
+                                            </div>
+                                            <span className="text-sm text-secondary">Weekend service</span>
+                                        </div>
+                                        <div className="flex items-center gap-3 py-3">
+                                            <div className="flex size-6 shrink-0 items-center justify-center rounded-md bg-error-secondary">
+                                                <svg className="size-3.5 text-error-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                    <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                                                    <path d="m9 11 3 3L22 4" />
+                                                </svg>
+                                            </div>
+                                            <span className="text-sm text-secondary">Holiday coverage</span>
+                                        </div>
+                                        <div className="flex items-center gap-3 py-3">
+                                            <div className="flex size-6 shrink-0 items-center justify-center rounded-md bg-error-secondary">
+                                                <svg className="size-3.5 text-error-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                    <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                                                    <path d="m9 11 3 3L22 4" />
+                                                </svg>
+                                            </div>
+                                            <span className="text-sm text-secondary">No extra fees</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="flex items-center justify-between border-t border-secondary bg-secondary/30 px-4 py-3">
+                                    <div className="flex items-center gap-2">
+                                        <span className="text-xs font-medium text-tertiary">Call now:</span>
+                                        <span className="text-xs font-semibold text-primary">(828) 254-1920</span>
+                                    </div>
+                                    <div className="flex items-center gap-1.5">
+                                        <div className="relative flex size-2">
+                                            <span className="absolute inline-flex size-full animate-ping rounded-full bg-error-primary opacity-75" />
+                                            <span className="relative inline-flex size-2 rounded-full bg-error-primary" />
+                                        </div>
+                                        <span className="text-xs font-medium text-error-primary">On Call Now</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -403,8 +484,89 @@ export default function PumpingPage() {
                         </div>
 
                         {/* Right Column - Image */}
-                        <div className="flex flex-col min-h-[22rem] sm:min-h-[30rem]">
-                            <div className="bg-cover bg-center h-full" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80)' }} />
+                        <div className="flex flex-col min-h-[22rem] sm:min-h-[30rem] relative">
+                            <div className="bg-cover bg-center h-full relative" style={{ backgroundImage: 'url(/feature-dev-background-nostats.jpg)' }}>
+                                <div className="absolute inset-0 bg-blue-900/30 mix-blend-multiply" />
+                            </div>
+
+                            {/* Floating Card */}
+                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%-3rem)] overflow-hidden rounded-2xl border border-secondary bg-white/95 shadow-2xl backdrop-blur-md">
+                                <div className="p-4">
+                                    <div className="flex items-center justify-between">
+                                        <h3 className="text-base font-semibold text-primary">Inspection Report</h3>
+                                        <span className="rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700 ring-1 ring-blue-200">NC Certified</span>
+                                    </div>
+                                    <div className="mt-5 grid grid-cols-2 gap-x-8">
+                                        <div className="flex items-center gap-3 py-3 border-b border-secondary">
+                                            <div className="flex size-6 shrink-0 items-center justify-center rounded-md bg-blue-50">
+                                                <svg className="size-3.5 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                    <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                                                    <path d="m9 11 3 3L22 4" />
+                                                </svg>
+                                            </div>
+                                            <span className="text-sm text-secondary">Tank condition</span>
+                                        </div>
+                                        <div className="flex items-center gap-3 py-3 border-b border-secondary">
+                                            <div className="flex size-6 shrink-0 items-center justify-center rounded-md bg-blue-50">
+                                                <svg className="size-3.5 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                    <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                                                    <path d="m9 11 3 3L22 4" />
+                                                </svg>
+                                            </div>
+                                            <span className="text-sm text-secondary">Drain field check</span>
+                                        </div>
+                                        <div className="flex items-center gap-3 py-3 border-b border-secondary">
+                                            <div className="flex size-6 shrink-0 items-center justify-center rounded-md bg-blue-50">
+                                                <svg className="size-3.5 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                    <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                                                    <path d="m9 11 3 3L22 4" />
+                                                </svg>
+                                            </div>
+                                            <span className="text-sm text-secondary">Sludge levels</span>
+                                        </div>
+                                        <div className="flex items-center gap-3 py-3 border-b border-secondary">
+                                            <div className="flex size-6 shrink-0 items-center justify-center rounded-md bg-blue-50">
+                                                <svg className="size-3.5 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                    <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                                                    <path d="m9 11 3 3L22 4" />
+                                                </svg>
+                                            </div>
+                                            <span className="text-sm text-secondary">Baffle integrity</span>
+                                        </div>
+                                        <div className="flex items-center gap-3 py-3">
+                                            <div className="flex size-6 shrink-0 items-center justify-center rounded-md bg-blue-50">
+                                                <svg className="size-3.5 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                    <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                                                    <path d="m9 11 3 3L22 4" />
+                                                </svg>
+                                            </div>
+                                            <span className="text-sm text-secondary">Camera inspection</span>
+                                        </div>
+                                        <div className="flex items-center gap-3 py-3">
+                                            <div className="flex size-6 shrink-0 items-center justify-center rounded-md bg-blue-50">
+                                                <svg className="size-3.5 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                    <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                                                    <path d="m9 11 3 3L22 4" />
+                                                </svg>
+                                            </div>
+                                            <span className="text-sm text-secondary">Written report</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="flex items-center justify-between border-t border-secondary bg-secondary/30 px-4 py-3">
+                                    <div className="flex items-center gap-2">
+                                        <span className="text-xs font-medium text-tertiary">Starting at</span>
+                                        <span className="text-sm font-bold text-primary">$150</span>
+                                    </div>
+                                    <div className="flex items-center gap-1.5">
+                                        <div className="relative flex size-2">
+                                            <span className="absolute inline-flex size-full animate-ping rounded-full bg-blue-500 opacity-75" />
+                                            <span className="relative inline-flex size-2 rounded-full bg-blue-500" />
+                                        </div>
+                                        <span className="text-xs font-medium text-blue-600">Book Today</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -455,8 +617,89 @@ export default function PumpingPage() {
                         </div>
 
                         {/* Right Column - Image */}
-                        <div className="flex flex-col min-h-[22rem] sm:min-h-[30rem]">
-                            <div className="bg-cover bg-center h-full" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&q=80)' }} />
+                        <div className="flex flex-col min-h-[22rem] sm:min-h-[30rem] relative">
+                            <div className="bg-cover bg-center h-full relative" style={{ backgroundImage: 'url(/feature-dev-background-nostats.jpg)' }}>
+                                <div className="absolute inset-0 bg-green-900/30 mix-blend-multiply" />
+                            </div>
+
+                            {/* Floating Card */}
+                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%-3rem)] overflow-hidden rounded-2xl border border-secondary bg-white/95 shadow-2xl backdrop-blur-md">
+                                <div className="p-4">
+                                    <div className="flex items-center justify-between">
+                                        <h3 className="text-base font-semibold text-primary">Maintenance Plan</h3>
+                                        <span className="rounded-full bg-success-secondary px-3 py-1 text-xs font-semibold text-success-primary ring-1 ring-success-primary/20">Save 10%</span>
+                                    </div>
+                                    <div className="mt-5 grid grid-cols-2 gap-x-8">
+                                        <div className="flex items-center gap-3 py-3 border-b border-secondary">
+                                            <div className="flex size-6 shrink-0 items-center justify-center rounded-md bg-success-secondary">
+                                                <svg className="size-3.5 text-success-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                    <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                                                    <path d="m9 11 3 3L22 4" />
+                                                </svg>
+                                            </div>
+                                            <span className="text-sm text-secondary">Auto reminders</span>
+                                        </div>
+                                        <div className="flex items-center gap-3 py-3 border-b border-secondary">
+                                            <div className="flex size-6 shrink-0 items-center justify-center rounded-md bg-success-secondary">
+                                                <svg className="size-3.5 text-success-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                    <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                                                    <path d="m9 11 3 3L22 4" />
+                                                </svg>
+                                            </div>
+                                            <span className="text-sm text-secondary">Priority booking</span>
+                                        </div>
+                                        <div className="flex items-center gap-3 py-3 border-b border-secondary">
+                                            <div className="flex size-6 shrink-0 items-center justify-center rounded-md bg-success-secondary">
+                                                <svg className="size-3.5 text-success-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                    <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                                                    <path d="m9 11 3 3L22 4" />
+                                                </svg>
+                                            </div>
+                                            <span className="text-sm text-secondary">Discounted rates</span>
+                                        </div>
+                                        <div className="flex items-center gap-3 py-3 border-b border-secondary">
+                                            <div className="flex size-6 shrink-0 items-center justify-center rounded-md bg-success-secondary">
+                                                <svg className="size-3.5 text-success-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                    <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                                                    <path d="m9 11 3 3L22 4" />
+                                                </svg>
+                                            </div>
+                                            <span className="text-sm text-secondary">Annual checkup</span>
+                                        </div>
+                                        <div className="flex items-center gap-3 py-3">
+                                            <div className="flex size-6 shrink-0 items-center justify-center rounded-md bg-success-secondary">
+                                                <svg className="size-3.5 text-success-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                    <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                                                    <path d="m9 11 3 3L22 4" />
+                                                </svg>
+                                            </div>
+                                            <span className="text-sm text-secondary">Service records</span>
+                                        </div>
+                                        <div className="flex items-center gap-3 py-3">
+                                            <div className="flex size-6 shrink-0 items-center justify-center rounded-md bg-success-secondary">
+                                                <svg className="size-3.5 text-success-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                    <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                                                    <path d="m9 11 3 3L22 4" />
+                                                </svg>
+                                            </div>
+                                            <span className="text-sm text-secondary">Free estimates</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="flex items-center justify-between border-t border-secondary bg-secondary/30 px-4 py-3">
+                                    <div className="flex items-center gap-2">
+                                        <span className="text-xs font-medium text-tertiary">Trusted by</span>
+                                        <span className="text-sm font-bold text-primary">5,000+ homeowners</span>
+                                    </div>
+                                    <div className="flex items-center gap-1.5">
+                                        <div className="relative flex size-2">
+                                            <span className="absolute inline-flex size-full animate-ping rounded-full bg-success-primary opacity-75" />
+                                            <span className="relative inline-flex size-2 rounded-full bg-success-primary" />
+                                        </div>
+                                        <span className="text-xs font-medium text-success-primary">Join Now</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
