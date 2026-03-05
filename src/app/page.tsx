@@ -279,7 +279,6 @@ export default function Home() {
                 <section className="hero-section">
                     <div className="padding-global">
                         <div className="container-large side-border">
-                            <div className="spacer-medium" />
                             <div className="grid-2col">
                                 <div className="text-wrapper padding-3rem">
                                     <div className="flex-v gap-full">
@@ -309,7 +308,7 @@ export default function Home() {
                                 </div>
                                 <div className="image-wrapper border-left">
                                     <img
-                                        src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80"
+                                        src="/images/septic-service-bg.jpg"
                                         alt="Septic service truck"
                                         className="hero-image"
                                     />
