@@ -283,10 +283,12 @@ export default function Home() {
                             <div className="grid-2col">
                                 <div className="text-wrapper padding-3rem">
                                     <div className="flex-v gap-10">
-                                        <div className="flex-v">
-                                            <BadgeWithDot color="success" size="md" type="pill-color">
-                                                Serving Asheville & Surrounding Areas
-                                            </BadgeWithDot>
+                                        <div className="flex-v gap-1-5rem">
+                                            <div>
+                                                <BadgeWithDot color="success" size="md" type="pill-color">
+                                                    Serving Asheville & Surrounding Areas
+                                                </BadgeWithDot>
+                                            </div>
                                             <RotatingText />
                                         </div>
                                         <div className="flex-v gap-2rem">
