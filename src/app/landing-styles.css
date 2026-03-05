@@ -347,6 +347,11 @@ body {
     min-height: 600px;
 }
 
+.hero-section .grid-2col > .text-wrapper {
+    padding-top: 8rem;
+    padding-bottom: 5rem;
+}
+
 .eyebrow-main {
     display: inline-flex;
     padding: 0.5rem 1rem;
