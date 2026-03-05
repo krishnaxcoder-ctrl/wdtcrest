@@ -957,19 +957,27 @@ export default function PumpingPage() {
                             </div>
 
                             {/* Services Cards */}
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                                 {/* Card 1 - Residential */}
-                                <div className="group relative p-6 bg-gradient-to-br from-blue-50 to-blue-100/50 rounded-2xl border border-blue-200/50 hover:border-blue-300 transition-all duration-300 overflow-hidden">
+                                <div className="group relative p-4 bg-gradient-to-br from-blue-50 to-blue-100/50 rounded-2xl border border-blue-200/50 hover:border-blue-300 transition-all duration-300 overflow-hidden">
                                     <div className="absolute top-0 right-0 w-32 h-32 bg-blue-200/30 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2" />
                                     <div className="relative">
-                                        <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-blue-500 text-white mb-4">
-                                            <svg className="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                                                <polyline points="9 22 9 12 15 12 15 22" />
-                                            </svg>
+                                        <div className="flex items-start justify-between mb-4">
+                                            <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-blue-500 text-white">
+                                                <svg className="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                                                    <polyline points="9 22 9 12 15 12 15 22" />
+                                                </svg>
+                                            </div>
+                                            <div className="flex items-center gap-2">
+                                                <span className="text-3xl font-bold text-blue-200/70">01</span>
+                                                <svg className="size-5 text-blue-400 -rotate-45" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                                    <path d="M5 12h14M12 5l7 7-7 7" />
+                                                </svg>
+                                            </div>
                                         </div>
                                         <h3 className="text-xl font-semibold text-primary mb-2">Residential Septic Pumping</h3>
-                                        <p className="text-sm text-tertiary mb-4">Complete septic tank pumping for homes of all sizes. We recommend pumping every 3-5 years for optimal performance.</p>
+                                        <p className="text-sm text-tertiary mb-4">Complete septic tank pumping for homes of all sizes. We recommend pumping  for optimal performance.</p>
                                         <div className="flex items-center justify-between pt-4 border-t border-blue-200/50">
                                             <div className="flex items-center gap-4">
                                                 <div className="flex items-center gap-1.5 text-xs text-tertiary">
@@ -987,16 +995,24 @@ export default function PumpingPage() {
                                 </div>
 
                                 {/* Card 2 - Commercial */}
-                                <div className="group relative p-6 bg-gradient-to-br from-purple-50 to-purple-100/50 rounded-2xl border border-purple-200/50 hover:border-purple-300 transition-all duration-300 overflow-hidden">
+                                <div className="group relative p-4 bg-gradient-to-br from-purple-50 to-purple-100/50 rounded-2xl border border-purple-200/50 hover:border-purple-300 transition-all duration-300 overflow-hidden">
                                     <div className="absolute top-0 right-0 w-32 h-32 bg-purple-200/30 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2" />
                                     <div className="relative">
-                                        <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-purple-500 text-white mb-4">
-                                            <svg className="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                                <rect x="1" y="3" width="15" height="13" />
-                                                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
-                                                <circle cx="5.5" cy="18.5" r="2.5" />
-                                                <circle cx="18.5" cy="18.5" r="2.5" />
-                                            </svg>
+                                        <div className="flex items-start justify-between mb-4">
+                                            <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-purple-500 text-white">
+                                                <svg className="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                    <rect x="1" y="3" width="15" height="13" />
+                                                    <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+                                                    <circle cx="5.5" cy="18.5" r="2.5" />
+                                                    <circle cx="18.5" cy="18.5" r="2.5" />
+                                                </svg>
+                                            </div>
+                                            <div className="flex items-center gap-2">
+                                                <span className="text-3xl font-bold text-purple-200/70">02</span>
+                                                <svg className="size-5 text-purple-400 -rotate-45" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                                    <path d="M5 12h14M12 5l7 7-7 7" />
+                                                </svg>
+                                            </div>
                                         </div>
                                         <h3 className="text-xl font-semibold text-primary mb-2">Commercial Septic Pumping</h3>
                                         <p className="text-sm text-tertiary mb-4">High-capacity pumping for businesses, restaurants, and commercial properties with heavy usage demands.</p>
@@ -1017,14 +1033,22 @@ export default function PumpingPage() {
                                 </div>
 
                                 {/* Card 3 - Emergency */}
-                                <div className="group relative p-6 bg-gradient-to-br from-red-50 to-orange-100/50 rounded-2xl border border-red-200/50 hover:border-red-300 transition-all duration-300 overflow-hidden">
+                                <div className="group relative p-4 bg-gradient-to-br from-red-50 to-orange-100/50 rounded-2xl border border-red-200/50 hover:border-red-300 transition-all duration-300 overflow-hidden">
                                     <div className="absolute top-0 right-0 w-32 h-32 bg-red-200/30 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2" />
                                     <div className="relative">
-                                        <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-red-500 text-white mb-4">
-                                            <svg className="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                                <circle cx="12" cy="12" r="10" />
-                                                <polyline points="12 6 12 12 16 14" />
-                                            </svg>
+                                        <div className="flex items-start justify-between mb-4">
+                                            <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-red-500 text-white">
+                                                <svg className="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                    <circle cx="12" cy="12" r="10" />
+                                                    <polyline points="12 6 12 12 16 14" />
+                                                </svg>
+                                            </div>
+                                            <div className="flex items-center gap-2">
+                                                <span className="text-3xl font-bold text-red-200/70">03</span>
+                                                <svg className="size-5 text-red-400 -rotate-45" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                                    <path d="M5 12h14M12 5l7 7-7 7" />
+                                                </svg>
+                                            </div>
                                         </div>
                                         <h3 className="text-xl font-semibold text-primary mb-2">Emergency Pumping</h3>
                                         <p className="text-sm text-tertiary mb-4">24/7 emergency septic pumping when you need immediate assistance. Fast response, day or night.</p>
@@ -1046,33 +1070,6 @@ export default function PumpingPage() {
                                                 </span>
                                                 <span className="text-xs font-medium text-red-700">24/7 Available</span>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                {/* Card 4 - Grease Trap */}
-                                <div className="group relative p-6 bg-gradient-to-br from-amber-50 to-yellow-100/50 rounded-2xl border border-amber-200/50 hover:border-amber-300 transition-all duration-300 overflow-hidden">
-                                    <div className="absolute top-0 right-0 w-32 h-32 bg-amber-200/30 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2" />
-                                    <div className="relative">
-                                        <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-amber-500 text-white mb-4">
-                                            <svg className="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
-                                            </svg>
-                                        </div>
-                                        <h3 className="text-xl font-semibold text-primary mb-2">Grease Trap Pumping</h3>
-                                        <p className="text-sm text-tertiary mb-4">Professional grease trap cleaning for restaurants and food service businesses. Stay compliant with health codes.</p>
-                                        <div className="flex items-center justify-between pt-4 border-t border-amber-200/50">
-                                            <div className="flex items-center gap-4">
-                                                <div className="flex items-center gap-1.5 text-xs text-tertiary">
-                                                    <ShieldCheck className="size-4 text-amber-500" />
-                                                    <span>Code compliant</span>
-                                                </div>
-                                                <div className="flex items-center gap-1.5 text-xs text-tertiary">
-                                                    <ShieldCheck className="size-4 text-amber-500" />
-                                                    <span>Documentation</span>
-                                                </div>
-                                            </div>
-                                            <span className="px-2.5 py-1 text-xs font-medium bg-amber-500/10 text-amber-700 rounded-full">Restaurants</span>
                                         </div>
                                     </div>
                                 </div>
