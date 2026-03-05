@@ -471,6 +471,183 @@ export default function LandingPage() {
                     </div>
                 </section>
 
+                {/* Power Your Data Section */}
+                <div className="section-regular-padding">
+                    <div className="padding-global">
+                        <div className="container-large border-top-no">
+                            <div className="text-wrapper padding-3rem">
+                                <div className="grid-2col">
+                                    <div className="flex-v gap-1-5rem">
+                                        <div className="eyebrow">
+                                            <img
+                                                src="https://cdn.prod.website-files.com/69385e16d68663814109c132/6939491eb3d2b172910b35cc_Eyebrow-Icon.svg"
+                                                loading="lazy"
+                                                alt=""
+                                                className="icon-14px"
+                                            />
+                                            <div className="text-size-regular text-color-grey">Power Your Data</div>
+                                            <img
+                                                src="https://cdn.prod.website-files.com/69385e16d68663814109c132/693949364cde9b1d0482c0ed_Eyebrow-Icon-2.svg"
+                                                loading="lazy"
+                                                alt=""
+                                                className="icon-14px"
+                                            />
+                                        </div>
+                                        <div className="text-wrapper size-550px">
+                                            <h2 className="heading-style-h2">What global companies use Datashake for</h2>
+                                        </div>
+                                    </div>
+                                    <div className="text-align-left position-bottom">
+                                        <div className="text-size-medium text-color-grey">
+                                            From trend detection and crisis monitoring to competitive intelligence and risk assessment — we support all your use cases with the most comprehensive data coverage available.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="grid-3col side-3rem">
+                                <div className="grid-3col tablet-2col">
+                                    <div className="grid-item is-illustration">
+                                        <div className="image-wrapper grid-image">
+                                            <img
+                                                src="https://cdn.prod.website-files.com/69385e16d68663814109c132/693b2752e7826c75201aa9c2_Crisis-Illustration.svg"
+                                                loading="lazy"
+                                                alt="illustration depicting crises and risk monitoring from social platforms"
+                                                className="image-full"
+                                            />
+                                        </div>
+                                        <div className="flex-v gap-12px padding-1-5rem">
+                                            <div className="text-size-large is-24px text-weight-medium">Crisis Monitoring &amp; Risk Detection</div>
+                                            <div className="text-size-regular text-color-grey">Detect potential crises before they escalate. Monitor reputation threats, product issues, and negative sentiment spikes in real-time across all channels.</div>
+                                        </div>
+                                    </div>
+                                    <div className="grid-item is-illustration">
+                                        <div className="image-wrapper grid-image">
+                                            <img
+                                                src="https://cdn.prod.website-files.com/69385e16d68663814109c132/693aaa22543d41b64af90bdb_Benefit-Illustration.svg"
+                                                loading="lazy"
+                                                alt="illustration depicting predicted data volumes"
+                                                className="image-full"
+                                            />
+                                        </div>
+                                        <div className="flex-v gap-12px padding-1-5rem">
+                                            <div className="text-size-large is-24px text-weight-medium">Trend Detection</div>
+                                            <div className="text-size-regular text-color-grey">Identify emerging trends before they become mainstream. Track conversation volume and topic evolution across any source you need.</div>
+                                        </div>
+                                    </div>
+                                    <div className="grid-item is-illustration">
+                                        <div className="image-wrapper grid-image">
+                                            <img
+                                                src="https://cdn.prod.website-files.com/69385e16d68663814109c132/696a45da0f1229f20a28f1e4_RPFS-Illustration.webp"
+                                                loading="lazy"
+                                                alt="Diagram listing review sites and social media platforms with related content types"
+                                                className="image-full"
+                                            />
+                                        </div>
+                                        <div className="flex-v gap-12px padding-1-5rem">
+                                            <div className="text-size-large is-24px text-weight-medium">Win Competitive RFPs</div>
+                                            <div className="text-size-regular text-color-grey">Win enterprise contracts with deep coverage from 150+ sources that becomes the deciding factor in RFP evaluations.</div>
+                                        </div>
+                                    </div>
+                                    <div className="grid-item is-illustration">
+                                        <div className="image-wrapper grid-image">
+                                            <img
+                                                src="https://cdn.prod.website-files.com/69385e16d68663814109c132/693b280abb79699bcdc60aed_Deals-Illustration.svg"
+                                                loading="lazy"
+                                                alt="illustration showing deal closure increases with Datashake API"
+                                                className="image-full"
+                                            />
+                                        </div>
+                                        <div className="flex-v gap-12px padding-1-5rem">
+                                            <div className="text-size-large is-24px text-weight-medium">Close More Deals</div>
+                                            <div className="text-size-regular text-color-grey">Close more deals when you integrate Datashake data. Get access to coverage that becomes undeniable competitive differentiation</div>
+                                        </div>
+                                    </div>
+                                    <div className="grid-item is-illustration">
+                                        <div className="image-wrapper grid-image">
+                                            <img
+                                                src="https://cdn.prod.website-files.com/69385e16d68663814109c132/693b283e2069033d2ea99e8f_Competitive-Illustration.svg"
+                                                loading="lazy"
+                                                alt="illustration showing competitive analysis of data streams"
+                                                className="image-full"
+                                            />
+                                        </div>
+                                        <div className="flex-v gap-12px padding-1-5rem">
+                                            <div className="text-size-large is-24px text-weight-medium">Competitive Analysis</div>
+                                            <div className="text-size-regular text-color-grey">Track competitive activity across all channels simultaneously. Monitor pricing, promotions, product launches, and more to compete smarter.</div>
+                                        </div>
+                                    </div>
+                                    <div className="grid-item is-illustration">
+                                        <div className="image-wrapper grid-image">
+                                            <img
+                                                src="https://cdn.prod.website-files.com/69385e16d68663814109c132/695441357de4841a1da03c74_Retain-Illustration.webp"
+                                                loading="lazy"
+                                                alt="Map of North America with orange rectangular markers indicating locations"
+                                                className="image-full"
+                                            />
+                                        </div>
+                                        <div className="flex-v gap-12px padding-1-5rem">
+                                            <div className="text-size-large is-24px text-weight-medium">Retain Enterprise Customers</div>
+                                            <div className="text-size-regular text-color-grey">Retains your most valuable enterprise customers by delivering the comprehensive data your clients need across global markets.</div>
+                                        </div>
+                                    </div>
+                                    <div className="grid-item is-illustration">
+                                        <div className="image-wrapper grid-image">
+                                            <img
+                                                src="https://cdn.prod.website-files.com/69385e16d68663814109c132/69544152ed6bbdf3beee0095_Due-Illustration.webp"
+                                                loading="lazy"
+                                                alt="Task labeled Hire 2 software engineers to improve face ID marked as approved"
+                                                className="image-full"
+                                            />
+                                        </div>
+                                        <div className="flex-v gap-12px padding-1-5rem">
+                                            <div className="text-size-large is-24px text-weight-medium">Due Diligence &amp; KYC</div>
+                                            <div className="text-size-regular text-color-grey">Finance teams strengthen KYC processes and risk assessment with comprehensive social and review data.</div>
+                                        </div>
+                                    </div>
+                                    <div className="grid-item is-illustration">
+                                        <div className="image-wrapper grid-image">
+                                            <img
+                                                src="https://cdn.prod.website-files.com/69385e16d68663814109c132/693b2866ae8a9eeb03279bd4_Compliance-Illustration.svg"
+                                                loading="lazy"
+                                                alt="illustration depicting abstract data streams being scanned"
+                                                className="image-full"
+                                            />
+                                        </div>
+                                        <div className="flex-v gap-12px padding-1-5rem">
+                                            <div className="text-size-large is-24px text-weight-medium">Regulatory Compliance</div>
+                                            <div className="text-size-regular text-color-grey">Pharmaceutical companies monitor adverse events and post-market surveillance through complete coverage that manual monitoring can&apos;t match.</div>
+                                        </div>
+                                    </div>
+                                    <div className="grid-item is-illustration">
+                                        <div className="image-wrapper grid-image">
+                                            <img
+                                                src="https://cdn.prod.website-files.com/69385e16d68663814109c132/695441741c57ad046429eddb_Client-Illustration.webp"
+                                                loading="lazy"
+                                                alt="Report highlighting great customer response to new features with 11,234 mentions"
+                                                className="image-full"
+                                            />
+                                        </div>
+                                        <div className="flex-v gap-12px padding-1-5rem">
+                                            <div className="text-size-large is-24px text-weight-medium">Client Reporting</div>
+                                            <div className="text-size-regular text-color-grey">Agencies deliver stronger client insights with comprehensive data coverage, flexible access, and predictable pricing.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="button-wrapper _100">
+                                <Link href="/demo" className="button full-width-btn w-inline-block">
+                                    <div>Book a demo</div>
+                                    <div className="icon-32px w-embed">
+                                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7 8H8.5V18.5H22.4395L19.1895 15.25L20.25 14.1895L25.3105 19.25L20.25 24.3105L19.1895 23.25L22.4395 20H7V8Z" fill="currentcolor" />
+                                        </svg>
+                                    </div>
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 {/* Free Benchmark Trial Section */}
                 <section className="section-regular-padding">
                     <div className="padding-global">
