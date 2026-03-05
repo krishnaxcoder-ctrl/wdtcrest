@@ -350,6 +350,119 @@ export default function Home() {
                     </div>
                 </div>
 
+                {/* Home Channel Section */}
+                <section className="section_home-channel">
+                    <div className="padding-global">
+                        <div className="container-large">
+                            <div className="home-channel-wrapper">
+                                <div className="home-channel-content">
+                                    <h2 className="heading-style-h2">Every Property. Every System. Serviced.</h2>
+                                    <div className="spacer-tiny" />
+                                    <p className="text-size-large text-color-grey">
+                                        Your entire septic system handled by trusted professionals. From routine pumping to emergency repairs, we keep your property safe and compliant.
+                                    </p>
+                                    <div className="spacer-small" />
+                                    <div className="button-group">
+                                        <Link href="/reliable-septic-pumping-solutions" className="button is-secondary">Pumping</Link>
+                                        <Link href="/septic-inspection-solutions" className="button is-secondary">Inspections</Link>
+                                        <Link href="/reliable-septic-services" className="button is-secondary">All Services</Link>
+                                    </div>
+                                </div>
+                                <div className="ticker-clip">
+                                    <div className="ticker-track">
+                                        {/* First set of cards */}
+                                        <Link href="/reliable-septic-pumping-solutions" className="ticker-card">
+                                            <div className="ticker-icon green">🚛</div>
+                                            <div className="ticker-content">
+                                                <h4>Septic Pumping</h4>
+                                                <p>Professional tank pumping every 3-5 years keeps your system running smoothly</p>
+                                            </div>
+                                        </Link>
+                                        <Link href="/septic-inspection-solutions" className="ticker-card">
+                                            <div className="ticker-icon blue">🔍</div>
+                                            <div className="ticker-content">
+                                                <h4>System Inspections</h4>
+                                                <p>NC-certified inspections for real estate and compliance verification</p>
+                                            </div>
+                                        </Link>
+                                        <Link href="/reliable-septic-services" className="ticker-card">
+                                            <div className="ticker-icon orange">🔧</div>
+                                            <div className="ticker-content">
+                                                <h4>Septic Repairs</h4>
+                                                <p>Expert repairs for tanks, drain fields, and all system components</p>
+                                            </div>
+                                        </Link>
+                                        <Link href="/reliable-septic-services" className="ticker-card">
+                                            <div className="ticker-icon red">⚡</div>
+                                            <div className="ticker-content">
+                                                <h4>Emergency Service</h4>
+                                                <p>24/7 emergency response for urgent septic system problems</p>
+                                            </div>
+                                        </Link>
+                                        <Link href="/reliable-septic-services" className="ticker-card">
+                                            <div className="ticker-icon purple">🍳</div>
+                                            <div className="ticker-content">
+                                                <h4>Grease Traps</h4>
+                                                <p>Commercial grease trap cleaning for restaurants and businesses</p>
+                                            </div>
+                                        </Link>
+                                        <Link href="/reliable-septic-services" className="ticker-card">
+                                            <div className="ticker-icon green">🌿</div>
+                                            <div className="ticker-content">
+                                                <h4>Drain Fields</h4>
+                                                <p>Installation, repair, and restoration of drain field systems</p>
+                                            </div>
+                                        </Link>
+                                        {/* Duplicate set for infinite scroll effect */}
+                                        <Link href="/reliable-septic-pumping-solutions" className="ticker-card">
+                                            <div className="ticker-icon green">🚛</div>
+                                            <div className="ticker-content">
+                                                <h4>Septic Pumping</h4>
+                                                <p>Professional tank pumping every 3-5 years keeps your system running smoothly</p>
+                                            </div>
+                                        </Link>
+                                        <Link href="/septic-inspection-solutions" className="ticker-card">
+                                            <div className="ticker-icon blue">🔍</div>
+                                            <div className="ticker-content">
+                                                <h4>System Inspections</h4>
+                                                <p>NC-certified inspections for real estate and compliance verification</p>
+                                            </div>
+                                        </Link>
+                                        <Link href="/reliable-septic-services" className="ticker-card">
+                                            <div className="ticker-icon orange">🔧</div>
+                                            <div className="ticker-content">
+                                                <h4>Septic Repairs</h4>
+                                                <p>Expert repairs for tanks, drain fields, and all system components</p>
+                                            </div>
+                                        </Link>
+                                        <Link href="/reliable-septic-services" className="ticker-card">
+                                            <div className="ticker-icon red">⚡</div>
+                                            <div className="ticker-content">
+                                                <h4>Emergency Service</h4>
+                                                <p>24/7 emergency response for urgent septic system problems</p>
+                                            </div>
+                                        </Link>
+                                        <Link href="/reliable-septic-services" className="ticker-card">
+                                            <div className="ticker-icon purple">🍳</div>
+                                            <div className="ticker-content">
+                                                <h4>Grease Traps</h4>
+                                                <p>Commercial grease trap cleaning for restaurants and businesses</p>
+                                            </div>
+                                        </Link>
+                                        <Link href="/reliable-septic-services" className="ticker-card">
+                                            <div className="ticker-icon green">🌿</div>
+                                            <div className="ticker-content">
+                                                <h4>Drain Fields</h4>
+                                                <p>Installation, repair, and restoration of drain field systems</p>
+                                            </div>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 {/* Problem Section */}
                 <section className="section-regular-padding">
                     <div className="padding-global">
