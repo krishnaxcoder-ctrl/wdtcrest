@@ -22,7 +22,7 @@ export function HeroSection() {
                         </div>
 
                         {/* Heading */}
-                        <h1 className="text-4xl font-semibold tracking-tight text-primary lg:text-5xl xl:text-6xl">
+                        <h1 className="text-4xl font-semibold tracking-tight text-primary lg:text-5xl xl:text-5xl">
                             Professional Septic Services You Can Trust
                         </h1>
 
@@ -71,7 +71,7 @@ export function HeroSection() {
                 {/* Right Image */}
                 <div className="relative min-h-[400px] lg:min-h-screen">
                     <img
-                        src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80"
+                        src="/heroimage1.avif"
                         alt="Professional septic service truck"
                         className="h-full w-full object-cover"
                     />
