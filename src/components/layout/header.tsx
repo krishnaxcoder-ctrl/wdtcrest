@@ -84,12 +84,6 @@ const megaMenuData = {
                 ],
             },
         ],
-        featured: {
-            title: "24/7 Emergency Service",
-            description: "Septic emergencies can't wait. Our team is available around the clock for urgent situations.",
-            href: "/emergency",
-            cta: "Call Now",
-        },
     },
     solutions: {
         label: "Solutions",
@@ -178,19 +172,19 @@ const MegaMenuDropdown = ({
                             <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-tertiary">
                                 {group.title}
                             </h3>
-                            <ul className="space-y-1">
+                            <ul className="-ml-2">
                                 {group.items.map((item, itemIndex) => (
                                     <li key={itemIndex}>
                                         <Link
                                             href={item.href}
-                                            className="group flex flex-col rounded-lg p-3 transition-colors hover:bg-secondary"
+                                            className="group flex flex-col rounded-lg py-2 px-2 transition-colors hover:bg-secondary"
                                             onClick={onClose}
                                         >
                                             <span className="flex items-center gap-2 text-sm font-medium text-primary">
                                                 {item.label}
                                                 <ArrowRightIcon />
                                             </span>
-                                            <span className="mt-1 text-sm text-tertiary">
+                                            <span className="mt-0.5 text-sm text-tertiary">
                                                 {item.description}
                                             </span>
                                         </Link>
@@ -200,25 +194,6 @@ const MegaMenuDropdown = ({
                         </div>
                     ))}
 
-                    {/* Featured Section (for services menu) */}
-                    {"featured" in menu && menu.featured && (
-                        <div className="rounded-xl bg-brand-50 p-6">
-                            <h3 className="text-lg font-semibold text-brand-900">
-                                {menu.featured.title}
-                            </h3>
-                            <p className="mt-2 text-sm text-brand-700">
-                                {menu.featured.description}
-                            </p>
-                            <Link
-                                href={menu.featured.href}
-                                className="mt-4 inline-flex items-center gap-2 rounded-lg bg-brand-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-brand-700"
-                                onClick={onClose}
-                            >
-                                {menu.featured.cta}
-                                <ArrowRightIcon />
-                            </Link>
-                        </div>
-                    )}
                 </div>
             </div>
         </div>
