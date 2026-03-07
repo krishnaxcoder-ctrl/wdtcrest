@@ -21,9 +21,9 @@ const stats = [
 
 export function StatsNew() {
     return (
-        <section className="border border-secondary bg-white mt-6">
-            <div className="mx-auto max-w-7xl border-x border-secondary">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+        <section className="border border-secondary bg-white ">
+            <div className="mx-auto max-w-7xl border-x border-secondary ">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 ">
                     {stats.map((stat, index) => (
                         <div
                             key={index}

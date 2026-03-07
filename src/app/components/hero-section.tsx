@@ -17,7 +17,7 @@ const DiagonalArrowIcon = () => (
 export function HeroSection() {
     return (
         <section className="mx-auto max-w-7xl border-x border-secondary">
-            <div className="grid h-[700px] grid-cols-1 lg:grid-cols-2">
+            <div className="grid h-[700px] grid-cols-1 lg:grid-cols-2 py-6">
                 {/* Left Content */}
                 <div className="relative flex flex-col justify-end px-6 pb-12 lg:px-12 lg:pb-16">
                     {/* Background image with hue filter */}
