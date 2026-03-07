@@ -13,8 +13,12 @@ export function HeroSection() {
         <section className="mx-auto max-w-7xl border-x border-secondary">
             <div className="grid h-[700px] grid-cols-1 lg:grid-cols-2">
                 {/* Left Content */}
-                <div className="flex flex-col justify-end px-6 pb-12 lg:px-12 lg:pb-16">
-                    <div className="max-w-xl">
+                <div className="relative flex flex-col justify-end px-6 pb-12 lg:px-12 lg:pb-16">
+                    {/* Background image with hue filter */}
+                    <div className="absolute inset-0" style={{ backgroundImage: "url('/eligibility-bg.jpg')", backgroundSize: "cover", backgroundPosition: "center", filter: "hue-rotate(90deg)" }}></div>
+                    {/* Overlay for opacity */}
+                    <div className="absolute inset-0 bg-white/70"></div>
+                    <div className="relative z-10 max-w-xl">
                         {/* Badge */}
                         <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-brand-200 bg-brand-50 px-4 py-1.5">
                             <span className="size-2 rounded-full bg-brand-600"></span>
