@@ -38,9 +38,9 @@ const features = [
 export function WhatsIncluded() {
     return (
         <section className="border-b border-secondary bg-white">
-            <div className="mx-auto max-w-7xl border-x border-secondary px-6 py-16 lg:px-12 lg:py-24">
+            <div className="mx-auto max-w-7xl border-x border-secondary py-16 lg:py-24">
                 {/* Header */}
-                <div className="mb-12 lg:mb-16">
+                <div className="mb-12 ml-4 lg:mb-16">
                     <p className="text-sm font-medium text-brand-600 mb-3">
                         What&apos;s included
                     </p>
@@ -65,7 +65,7 @@ export function WhatsIncluded() {
                                 index === 2 ? "sm:border-r border-secondary" : ""
                             }`}
                         >
-                            <h3 className="border-l border-brand pl-4 text-xl mt-4 font-semibold tracking-tight text-brand-600 lg:text-2xl">
+                            <h3 className="border-l border-brand pl-4 text-xl mt-4 font-semibold tracking-tight text-brand-600 lg:text-1xl">
                                 {feature.title}
                             </h3>
                             <ul className="flex flex-col gap-1 m-4 mt-0">

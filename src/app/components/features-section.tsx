@@ -59,10 +59,10 @@ const MarqueeRow = ({ items, direction = "left" }: { items: string[]; direction?
 
 const FeatureBlock = ({ feature }: { feature: typeof features[0] }) => (
     <div className="border-b border-secondary bg-white">
-        <div className="mx-auto max-w-7xl border-x border-secondary pl-6 py-0 lg:pl-12">
-            <div className={`grid items-center lg:grid-cols-2 ${feature.reverse ? "" : ""}`}>
+        <div className={`mx-auto max-w-7xl border-x border-secondary py-0 ${feature.reverse ? "pr-6 lg:pr-12" : "pl-6 lg:pl-12"}`}>
+            <div className={`grid items-center lg:grid-cols-2`}>
                 {/* Content */}
-                <div className={`flex flex-col justify-center py-16 pr-12 ${feature.reverse ? "lg:order-2 lg:pl-12 lg:pr-0" : ""}`}>
+                <div className={`flex flex-col justify-center py-16 ${feature.reverse ? "lg:order-2 pl-12" : "pr-12"}`}>
                     <h3 className="text-3xl font-semibold tracking-tight text-primary lg:text-4xl">
                         <span className="text-brand-600">{feature.titleHighlight}</span> {feature.heading.replace(feature.titleHighlight, "").trim()}
                     </h3>
