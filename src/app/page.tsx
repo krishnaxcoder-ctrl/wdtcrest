@@ -10,6 +10,7 @@ import { HeroSection } from "./components/hero-section";
 import { FeaturesSection } from "./components/features-section";
 import { StatsNew } from "./components/stats-new";
 import { WhatsIncluded } from "./components/whats-included";
+import { DecorativeDivider } from "./components/decorative-divider";
 
 // Arrow Icon
 const ArrowIcon = () => (
@@ -270,8 +271,14 @@ export default function Home() {
                 {/* Features Section */}
                 <FeaturesSection />
 
+                {/* Decorative Divider */}
+                <DecorativeDivider />
+
                 {/* What's Included Section */}
                 <WhatsIncluded />
+
+                {/* Decorative Divider */}
+                <DecorativeDivider />
 
                 {/* Business Sizes Section */}
                 <BusinessSizesSection />

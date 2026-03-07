@@ -1,14 +1,5 @@
 "use client";
 
-const CheckIcon = () => (
-    <svg width="16" height="16" viewBox="0 0 16 16">
-        <g fill="currentColor" fillRule="evenodd">
-            <circle opacity=".15" cx="8" cy="8" r="8" />
-            <path d="M11.41 4.93L6.64 9.54 5.38 8.18a.7.7 0 0 0-.87-.04.61.61 0 0 0-.18.8l1.5 2.45c.15.22.41.36.69.36.28 0 .53-.14.68-.36.24-.31 4.82-5.78 4.82-5.78.6-.6-.13-1.15-.6-.68z" />
-        </g>
-    </svg>
-);
-
 const features = [
     {
         title: "Pumping Services",
@@ -46,7 +37,7 @@ const features = [
 
 export function WhatsIncluded() {
     return (
-        <section className="border-b border-secondary bg-brand-50">
+        <section className="border-b border-secondary bg-white">
             <div className="mx-auto max-w-7xl border-x border-secondary px-6 py-16 lg:px-12 lg:py-24">
                 {/* Header */}
                 <div className="mb-12 lg:mb-16">
@@ -68,18 +59,13 @@ export function WhatsIncluded() {
                             <h3 className="text-lg font-semibold text-primary">
                                 {feature.title}
                             </h3>
-                            <ul className="flex flex-col gap-3">
+                            <ul className="flex flex-col gap-2">
                                 {feature.items.map((item, itemIndex) => (
                                     <li
                                         key={itemIndex}
-                                        className="flex items-start gap-3"
+                                        className="text-sm text-tertiary"
                                     >
-                                        <span className="text-brand-600 mt-0.5 shrink-0">
-                                            <CheckIcon />
-                                        </span>
-                                        <span className="text-sm text-tertiary">
-                                            {item}
-                                        </span>
+                                        {item}
                                     </li>
                                 ))}
                             </ul>
