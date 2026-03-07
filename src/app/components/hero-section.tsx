@@ -119,12 +119,14 @@ export function HeroSection() {
                             </div>
 
                             {/* Services Grid */}
-                            <div className="grid grid-cols-2 gap-px bg-gray-100 p-px">
+                            <div className="grid grid-cols-3 gap-px bg-gray-100 p-px">
                                 {[
                                     { icon: "M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z", label: "Pumping", desc: "Septic & grease trap" },
                                     { icon: "M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11", label: "Inspections", desc: "NC-certified checks" },
                                     { icon: "M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6", label: "Installation", desc: "New septic systems" },
                                     { icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z", label: "Emergency", desc: "24/7 rapid response" },
+                                    { icon: "M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z", label: "Repairs", desc: "Fast & reliable fixes" },
+                                    { icon: "M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0016.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 002 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z", label: "Maintenance", desc: "Regular care plans" },
                                 ].map((service, i) => (
                                     <div key={i} className="flex items-start gap-3 bg-white p-4 transition-colors hover:bg-gray-50">
                                         <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-brand-50 ring-1 ring-brand-100">
@@ -144,10 +146,12 @@ export function HeroSection() {
                             <div className="flex items-center justify-between bg-gradient-to-r from-gray-50 to-gray-100/50 px-5 py-3">
                                 <div className="flex items-center gap-3">
                                     <div className="flex -space-x-2">
-                                        {[...Array(3)].map((_, i) => (
-                                            <div key={i} className="flex size-7 items-center justify-center rounded-full bg-gradient-to-br from-brand-400 to-brand-600 text-[10px] font-bold text-white ring-2 ring-white">
-                                                {['JD', 'MK', 'RS'][i]}
-                                            </div>
+                                        {[
+                                            'https://www.untitledui.com/images/avatars/alec-whitten?w=144&h=144&q=75&fm=webp',
+                                            'https://www.untitledui.com/images/avatars/olivia-rhye?w=144&h=144&q=75&fm=webp',
+                                            'https://www.untitledui.com/images/avatars/phoenix-baker?w=144&h=144&q=75&fm=webp'
+                                        ].map((avatar, i) => (
+                                            <img key={i} src={avatar} alt="Customer" className="size-7 rounded-full object-cover ring-2 ring-white" />
                                         ))}
                                     </div>
                                     <div className="flex items-center gap-1">

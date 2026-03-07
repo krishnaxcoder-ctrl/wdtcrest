@@ -14,7 +14,8 @@
       "mcp__chrome-devtools__navigate_page",
       "mcp__chrome-devtools__take_screenshot",
       "Bash(curl:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "WebFetch(domain:www.untitledui.com)"
     ]
   }
 }
