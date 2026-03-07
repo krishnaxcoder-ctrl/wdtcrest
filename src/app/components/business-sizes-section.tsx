@@ -308,7 +308,7 @@ export const BusinessSizesSection = () => {
                                         </div>
                                         <div>
                                             <Link
-                                                className="group inline-flex items-center gap-1.5 text-[15px] font-medium text-sky-600 hover:text-sky-700 transition-colors duration-150"
+                                                className="group inline-flex items-center gap-1.5 text-[15px] font-medium text-red-600 hover:text-red-700 transition-colors duration-150"
                                                 href={feature.link.href}
                                             >
                                                 {feature.link.text}
