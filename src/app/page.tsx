@@ -274,11 +274,11 @@ export default function Home() {
                 {/* Hero Section */}
                 <HeroSection />
 
-                {/* Features Section */}
-                <FeaturesSection />
-
                 {/* Stats Section */}
                 <StatsNew />
+
+                {/* Features Section */}
+                <FeaturesSection />
 
                 {/* Logo Section - Full Width */}
                 <section className="w-full py-12 bg-secondary">
