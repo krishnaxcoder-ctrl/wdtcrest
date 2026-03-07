@@ -31,9 +31,10 @@ const enterpriseCustomers = [
     {
         id: "residential",
         logo: (
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none">
-                <rect width="40" height="40" fill="#16b364" rx="4" />
-                <path fill="#fff" d="M20 10l8 6v12H12V16l8-6zm-5 16h10v-8l-5-3.75L15 18v8z" />
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 40 40">
+                <rect width="40" height="40" fill="#16b364" rx="6" />
+                <path fill="#fff" d="M20 11l9 7v11a1 1 0 01-1 1h-5v-6h-6v6h-5a1 1 0 01-1-1V18l9-7z" />
+                <path fill="#16b364" d="M17 24h6v6h-6z" />
             </svg>
         ),
         title: "Smith family protects their home with regular septic maintenance.",
@@ -48,9 +49,10 @@ const enterpriseCustomers = [
     {
         id: "commercial",
         logo: (
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none">
-                <rect width="40" height="40" fill="#3981FF" rx="4" />
-                <path fill="#fff" d="M10 30V14h8v16h-8zm12-20v20h8V10h-8z" />
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 40 40">
+                <rect width="40" height="40" fill="#3981FF" rx="6" />
+                <path fill="#fff" d="M12 14h16v2H12v-2zm-1 4h18v12H11V18zm3 3v2h4v-2h-4zm6 0v2h4v-2h-4zm-6 4v2h4v-2h-4zm6 0v2h4v-2h-4z" />
+                <circle cx="20" cy="11" r="2" fill="#fff" />
             </svg>
         ),
         title: "Mountain View Restaurant relies on WDT Crest for grease trap service.",
@@ -65,9 +67,9 @@ const enterpriseCustomers = [
     {
         id: "construction",
         logo: (
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none">
-                <rect width="40" height="40" fill="#FF930F" rx="4" />
-                <path fill="#fff" d="M20 8l10 8v14H10V16l10-8zm0 4l-6 4.8V26h12V16.8L20 12z" />
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 40 40">
+                <rect width="40" height="40" fill="#FF930F" rx="6" />
+                <path fill="#fff" d="M15 12h10l2 4H13l2-4zm-3 6h16v2H12v-2zm2 4h12v8H14v-8zm2 2v4h3v-4h-3zm5 0v4h3v-4h-3z" />
             </svg>
         ),
         title: "Henderson Builders partners with WDT Crest on new construction.",
@@ -82,9 +84,10 @@ const enterpriseCustomers = [
     {
         id: "property-mgmt",
         logo: (
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none">
-                <rect width="40" height="40" fill="#7f56d9" rx="4" />
-                <path fill="#fff" d="M8 32V12h10v20H8zm14-24v24h10V8H22z" />
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 40 40">
+                <rect width="40" height="40" fill="#7f56d9" rx="6" />
+                <path fill="#fff" d="M10 16h8v14h-8V16zm1.5 2v2h2v-2h-2zm3 0v2h2v-2h-2zm-3 4v2h2v-2h-2zm3 0v2h2v-2h-2zm-3 4v2h2v-2h-2zm3 0v2h2v-2h-2z" />
+                <path fill="#fff" d="M22 12h8v18h-8V12zm1.5 2v2h2v-2h-2zm3 0v2h2v-2h-2zm-3 4v2h2v-2h-2zm3 0v2h2v-2h-2zm-3 4v2h2v-2h-2zm3 0v2h2v-2h-2zm-3 4v2h2v-2h-2zm3 0v2h2v-2h-2z" />
             </svg>
         ),
         title: "Blue Ridge HOA manages 200+ units with our maintenance plans.",
