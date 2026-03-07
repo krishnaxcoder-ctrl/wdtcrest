@@ -104,9 +104,9 @@ export function HeroSection() {
                             {/* Services Grid */}
                             <div className="grid grid-cols-2 gap-px bg-gray-100 p-px">
                                 {[
-                                    { icon: "M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z", label: "Pumping", desc: "Tank cleaning service" },
+                                    { icon: "M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z", label: "Pumping", desc: "Septic & grease trap" },
                                     { icon: "M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11", label: "Inspections", desc: "NC-certified checks" },
-                                    { icon: "M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z", label: "Repairs", desc: "Fast & reliable fixes" },
+                                    { icon: "M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6", label: "Installation", desc: "New septic systems" },
                                     { icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z", label: "Emergency", desc: "24/7 rapid response" },
                                 ].map((service, i) => (
                                     <div key={i} className="flex items-start gap-3 bg-white p-4 transition-colors hover:bg-gray-50">
