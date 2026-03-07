@@ -5,6 +5,8 @@ import Link from "next/link";
 import { BackgroundPattern } from "@/components/shared-assets/background-patterns";
 import { Header, Footer } from "@/components/layout";
 import { FinalCta } from "@/components/marketing/final-cta";
+import { ProcessSection } from "./components/process-section";
+import { BusinessSizesSection } from "./components/business-sizes-section";
 
 // Arrow Icon
 const ArrowIcon = () => (
@@ -475,6 +477,9 @@ export default function Home() {
                     </div>
                 </section>
 
+                {/* Business Sizes Section */}
+                <BusinessSizesSection />
+
                 {/* CTA Section */}
                 <section className="py-16">
                     <div className="px-6 lg:px-10">
@@ -549,6 +554,9 @@ export default function Home() {
                         </div>
                     </div>
                 </section>
+
+                {/* Process Section */}
+                <ProcessSection />
 
                 {/* Free Estimate Section */}
                 <section className="py-16">
