@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { BackgroundPattern } from "@/components/shared-assets/background-patterns";
-import { Header, Footer } from "@/components/layout";
+import { Header, Footer, CookieModal } from "@/components/layout";
 import { FinalCta } from "@/components/marketing/final-cta";
 import { ProcessSection } from "./components/process-section";
 import { BusinessSizesSection } from "./components/business-sizes-section";
@@ -607,6 +607,9 @@ export default function Home() {
 
             {/* Footer */}
             <Footer />
+
+            {/* Cookie Modal */}
+            <CookieModal />
 
             {/* Tailwind Animations - Add to globals.css */}
             <style jsx global>{`
