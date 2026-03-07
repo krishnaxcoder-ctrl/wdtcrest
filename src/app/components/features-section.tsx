@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import { DecorativeDivider } from "./decorative-divider";
+import { DotGridDivider as DotGridDividerComponent } from "./dot-grid-divider";
 
 const features = [
     {
@@ -133,6 +135,9 @@ const DotGridDivider = () => (
 export function FeaturesSection() {
     return (
         <section>
+            {/* Decorative Divider */}
+            <DecorativeDivider />
+
             {/* Section Header */}
             <div className="border-b border-secondary bg-white">
                 <div className="mx-auto max-w-7xl border-x border-secondary px-6 py-16 text-center lg:px-12 lg:py-24">
@@ -149,6 +154,9 @@ export function FeaturesSection() {
                     {index < features.length - 1 && <DotGridDivider />}
                 </div>
             ))}
+
+            {/* Dot Grid Divider */}
+            <DotGridDividerComponent />
         </section>
     );
 }
