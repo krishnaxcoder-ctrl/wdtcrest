@@ -98,7 +98,7 @@ export const Header = () => {
                             </Link>
                             <Link
                                 href="/contact"
-                                className="px-5 py-2.5 text-sm font-medium bg-brand-600 text-white rounded-lg transition-all hover:bg-brand-700"
+                                className="px-5 py-2.5 text-sm font-medium bg-brand-600 text-white rounded transition-all hover:bg-brand-700"
                             >
                                 Contact sales
                             </Link>
