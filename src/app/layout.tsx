@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import { RouteProvider } from "@/providers/router-provider";
+import { CookieModal } from "@/components/layout";
 import "@/styles/globals.css";
 import { cx } from "@/utils/cx";
 
@@ -29,6 +30,7 @@ export default function RootLayout({
         <html lang="en" suppressHydrationWarning>
             <body className={cx(inter.variable, "bg-primary antialiased")}>
                 <RouteProvider>{children}</RouteProvider>
+                <CookieModal />
             </body>
         </html>
     );
