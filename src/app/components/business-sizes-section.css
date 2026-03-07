@@ -20,6 +20,8 @@
 .business-sizes-section {
     background: #fff;
     padding: 80px 0;
+    border-left: 2px solid #d4dee9;
+    border-right: 2px solid #d4dee9;
 }
 
 @media (min-width: 640px) {
