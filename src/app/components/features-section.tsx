@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { DecorativeDivider } from "./decorative-divider";
-import { DotGridDivider as DotGridDividerComponent } from "./dot-grid-divider";
 
 const features = [
     {
@@ -148,7 +147,17 @@ export function FeaturesSection() {
             </div>
 
             {/* Dot Grid Divider */}
-            <DotGridDividerComponent />
+            <div className="bg-gray-50">
+                <div className="mx-auto max-w-7xl border-x border-secondary">
+                    <div
+                        className="h-12 w-full opacity-60"
+                        style={{
+                            backgroundImage: "radial-gradient(circle, #9ca3af 1px, transparent 1px)",
+                            backgroundSize: "16px 16px",
+                        }}
+                    />
+                </div>
+            </div>
 
             {/* Feature Blocks */}
             {features.map((feature, index) => (
