@@ -160,15 +160,15 @@ const MegaMenuDropdown = ({
 
     return (
         <div
-            className="absolute left-0 right-0 top-full z-50 border-b border-secondary bg-primary shadow-lg overflow-hidden"
+            className="absolute left-0 right-0 top-full z-50 bg-primary overflow-hidden"
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
         >
-            <div className={`mx-auto max-w-7xl px-6 py-8 lg:px-10 ${slideClass}`}>
-                <div className="grid gap-8 lg:grid-cols-4">
+            <div className={`mx-auto max-w-7xl border-x border-b border-secondary py-8 ${slideClass}`}>
+                <div className="grid lg:grid-cols-4">
                     {/* Menu Groups */}
                     {menu.groups.map((group, groupIndex) => (
-                        <div key={groupIndex}>
+                        <div key={groupIndex} className={`py-2 px-6 ${groupIndex < menu.groups.length - 1 ? "border-r border-secondary" : ""}`}>
                             <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-tertiary">
                                 {group.title}
                             </h3>
