@@ -27,7 +27,7 @@ export function StatsNew() {
                     {stats.map((stat, index) => (
                         <div
                             key={index}
-                            className={`flex flex-col gap-4 p-8 lg:p-10 ${
+                            className={`flex flex-col justify-center gap-4 p-8 lg:p-10 ${
                                 index < stats.length - 1 ? "border-b sm:border-b-0 sm:border-r border-secondary" : ""
                             } ${index === 1 ? "sm:border-r-0 lg:border-r" : ""} ${index === 2 ? "sm:border-r border-secondary" : ""}`}
                         >
