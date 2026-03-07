@@ -183,7 +183,9 @@ const MegaMenuDropdown = ({
                                         >
                                             <span className="flex items-center gap-2 text-sm font-medium text-primary">
                                                 {item.label}
-                                                <ArrowRightIcon />
+                                                <span className="opacity-0 transition-opacity duration-200 group-hover:opacity-100">
+                                                    <ArrowRightIcon />
+                                                </span>
                                             </span>
                                             <span className="mt-0.5 text-sm text-tertiary">
                                                 {item.description}
