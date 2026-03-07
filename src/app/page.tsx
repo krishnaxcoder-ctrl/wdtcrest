@@ -5,7 +5,6 @@ import Link from "next/link";
 import { BackgroundPattern } from "@/components/shared-assets/background-patterns";
 import { Header, Footer, CookieModal } from "@/components/layout";
 import { FinalCta } from "@/components/marketing/final-cta";
-import { ProcessSection } from "./components/process-section";
 import { BusinessSizesSection } from "./components/business-sizes-section";
 import { HeroSection } from "./components/hero-section";
 import { FeaturesSection } from "./components/features-section";
@@ -233,16 +232,6 @@ const TabsSection = () => {
     );
 };
 
-// Ticker Card Data
-const tickerCards = [
-    { href: "/reliable-septic-pumping-solutions", title: "Septic Pumping", desc: "Professional tank pumping every 3-5 years keeps your system running smoothly", color: "#16b364" },
-    { href: "/septic-inspection-solutions", title: "System Inspections", desc: "NC-certified inspections for real estate and compliance verification", color: "#3981FF" },
-    { href: "/reliable-septic-services", title: "Septic Repairs", desc: "Expert repairs for tanks, drain fields, and all system components", color: "#FF930F" },
-    { href: "/reliable-septic-services", title: "Emergency Service", desc: "24/7 emergency response for urgent septic system problems", color: "#dc2626" },
-    { href: "/reliable-septic-services", title: "Grease Traps", desc: "Commercial grease trap cleaning for restaurants and businesses", color: "#7f56d9" },
-    { href: "/reliable-septic-services", title: "Drain Fields", desc: "Installation, repair, and restoration of drain field systems", color: "#16b364" },
-];
-
 // Main Home Page Component
 export default function Home() {
     const faqs = [
@@ -283,160 +272,6 @@ export default function Home() {
 
                 {/* What's Included Section */}
                 <WhatsIncluded />
-
-                {/* Logo Section - Full Width */}
-                <section className="w-full py-12 bg-secondary">
-                    <div className="w-full px-6">
-                        <div className="text-center mb-8">
-                            <p className="text-secondary text-base">
-                                Trusted by homeowners and businesses throughout Western North Carolina
-                            </p>
-                        </div>
-                        <div className="grid grid-cols-3 md:grid-cols-6 gap-4 w-full">
-                            {[
-                                { value: "30+", label: "Years Experience" },
-                                { value: "5,000+", label: "Happy Customers" },
-                                { value: "24/7", label: "Emergency Service" },
-                                { value: "100%", label: "Licensed & Insured" },
-                                { value: "NC", label: "State Certified" },
-                                { value: "Family", label: "Owned & Operated" },
-                            ].map((item, i) => (
-                                <div key={i} className="flex flex-col items-center justify-center gap-1 rounded-xl border border-tertiary bg-primary px-4 py-5 text-center transition-all duration-200 hover:border-success-primary hover:shadow-md">
-                                    <span className="text-2xl font-bold text-primary">{item.value}</span>
-                                    <span className="text-xs text-tertiary font-medium">{item.label}</span>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
-
-                {/* Divider */}
-                <div className="py-2 px-6 lg:px-10">
-                    <div className="max-w-[1440px] mx-auto">
-                        <div className="h-px bg-gradient-to-r from-transparent via-tertiary to-transparent" />
-                    </div>
-                </div>
-
-                {/* Home Channel Section */}
-                <section className="py-24 bg-gradient-to-b from-secondary to-primary">
-                    <div className="px-6 lg:px-10">
-                        <div className="max-w-7xl mx-auto border-l border-r border-tertiary">
-                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                                <div className="flex flex-col gap-6">
-                                    <h2 className="text-4xl font-semibold tracking-tight text-primary">Every Property. Every System. Serviced.</h2>
-                                    <p className="text-lg text-tertiary leading-relaxed">
-                                        Your entire septic system handled by trusted professionals. From routine pumping to emergency repairs, we keep your property safe and compliant.
-                                    </p>
-                                    <div className="flex flex-wrap gap-3 mt-2">
-                                        <Link href="/reliable-septic-pumping-solutions" className="inline-flex items-center px-5 py-3 text-sm text-tertiary border border-dashed border-tertiary transition-colors hover:text-primary">Pumping</Link>
-                                        <Link href="/septic-inspection-solutions" className="inline-flex items-center px-5 py-3 text-sm text-tertiary border border-dashed border-tertiary transition-colors hover:text-primary">Inspections</Link>
-                                        <Link href="/reliable-septic-services" className="inline-flex items-center px-5 py-3 text-sm text-tertiary border border-dashed border-tertiary transition-colors hover:text-primary">All Services</Link>
-                                    </div>
-                                </div>
-                                <div className="h-[500px] overflow-hidden relative" style={{ maskImage: 'linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%)' }}>
-                                    <div className="flex flex-col gap-4 animate-ticker">
-                                        {[...tickerCards, ...tickerCards].map((card, i) => (
-                                            <Link key={i} href={card.href} className="flex items-start gap-5 p-5 bg-primary border border-tertiary rounded-2xl transition-all duration-200 hover:border-success-primary hover:shadow-lg hover:-translate-y-0.5">
-                                                <div className="size-12 shrink-0 rounded-xl flex items-center justify-center text-white text-xl" style={{ backgroundColor: card.color }}>
-                                                    ●
-                                                </div>
-                                                <div className="flex flex-col gap-2">
-                                                    <h4 className="text-lg font-semibold text-primary">{card.title}</h4>
-                                                    <p className="text-sm text-tertiary">{card.desc}</p>
-                                                </div>
-                                            </Link>
-                                        ))}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* Problem Section */}
-                <section className="py-16">
-                    <div className="px-6 lg:px-10">
-                        <div className="max-w-7xl mx-auto border-l border-r border-tertiary">
-                            <div className="p-8 lg:p-12">
-                                <div className="flex flex-col gap-6">
-                                    <div className="inline-flex items-center gap-3">
-                                        <span className="size-2 rounded-full bg-error-solid" />
-                                        <span className="text-sm text-tertiary">The Problem</span>
-                                        <span className="size-2 rounded-full bg-error-solid" />
-                                    </div>
-                                    <div className="max-w-2xl">
-                                        <h2 className="text-4xl font-semibold tracking-tight text-primary">Neglected septic systems lead to costly problems</h2>
-                                        <p className="text-lg text-tertiary mt-4 leading-relaxed">
-                                            Most homeowners don&apos;t think about their septic system until something goes wrong - and by then, it&apos;s often an expensive emergency.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="p-8 lg:p-12 max-w-3xl">
-                                <p className="text-lg text-tertiary leading-relaxed">
-                                    Sewage backups, drain field failures, and system replacements can cost thousands of dollars. Regular maintenance and inspections prevent these issues and extend the life of your system by decades.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* Solution Section */}
-                <section className="py-16">
-                    <div className="px-6 lg:px-10">
-                        <div className="max-w-7xl mx-auto border-l border-r border-tertiary">
-                            <div className="p-8 lg:p-12">
-                                <div className="flex flex-col gap-6">
-                                    <div className="inline-flex items-center gap-3">
-                                        <span className="size-2 rounded-full bg-success-solid" />
-                                        <span className="text-sm text-tertiary">The Solution</span>
-                                        <span className="size-2 rounded-full bg-success-solid" />
-                                    </div>
-                                    <div className="max-w-2xl">
-                                        <h2 className="text-4xl font-semibold tracking-tight text-primary">Trust the septic system professionals</h2>
-                                        <p className="text-lg text-primary mt-4 leading-relaxed">
-                                            Our knowledgeable team provides eco-friendly septic solutions to protect your property and extend system life.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="p-8 lg:p-12 max-w-3xl flex flex-col gap-6">
-                                <p className="text-lg text-tertiary leading-relaxed">
-                                    With over 30 years of experience, we provide comprehensive septic services for residential and commercial properties. From routine pumping to emergency repairs, we&apos;re here when you need us.
-                                </p>
-                                <Link href="tel:8282541920" className="inline-flex items-center gap-2 px-6 py-4 text-sm font-medium bg-success-solid text-primary-solid transition-all hover:bg-success-primary w-fit group">
-                                    <span>Schedule Service Today</span>
-                                    <div className="size-8 flex items-center justify-center transition-transform group-hover:-rotate-90 group-hover:bg-success-primary rounded">
-                                        <ArrowIcon />
-                                    </div>
-                                </Link>
-                            </div>
-                            <div className="h-20" />
-                            <div className="max-w-7xl mx-auto border-l border-t border-tertiary">
-                            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5">
-                                {[
-                                    { title: "Licensed & Insured", desc: "Fully licensed and insured for your protection and peace of mind" },
-                                    { title: "24/7 Emergency", desc: "Available around the clock for urgent septic emergencies" },
-                                    { title: "30+ Years", desc: "Decades of expertise in septic system services" },
-                                    { title: "Family Owned", desc: "Local family business serving our community with care" },
-                                    { title: "NC Certified", desc: "Certified for septic inspections and compliance verification" },
-                                    { title: "Free Estimates", desc: "No-obligation quotes for all septic services and installations" },
-                                    { title: "5,000+ Customers", desc: "Trusted by thousands of satisfied homeowners across the region" },
-                                    { title: "Eco-Friendly", desc: "Environmentally responsible solutions for sustainable septic care" },
-                                    { title: "Satisfaction ", desc: "We stand behind our work with a 100% satisfaction guarantee" },
-                                    { title: "Local Experts", desc: "Serving Western North Carolina communities with pride" },
-                                ].map((feature, i) => (
-                                    <div key={i} className="p-6 border-r border-b border-tertiary last:border-r-0">
-                                        <div className="text-2xl text-success-primary mb-4">✦</div>
-                                        <h4 className="text-lg font-medium mb-2 text-primary">{feature.title}</h4>
-                                        <p className="text-sm text-tertiary">{feature.desc}</p>
-                                    </div>
-                                ))}
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
 
                 {/* Business Sizes Section */}
                 <BusinessSizesSection />
@@ -515,9 +350,6 @@ export default function Home() {
                         </div>
                     </div>
                 </section>
-
-                {/* Process Section */}
-                <ProcessSection />
 
                 {/* Free Estimate Section */}
                 <section className="py-16">
