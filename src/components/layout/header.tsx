@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 
 // Logo Component
@@ -24,12 +24,6 @@ const Logo = () => (
 );
 
 // Icons
-const PhoneIcon = () => (
-    <svg className="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-    </svg>
-);
-
 const MenuIcon = () => (
     <svg className="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <line x1="3" y1="12" x2="21" y2="12"/>
@@ -45,24 +39,256 @@ const CloseIcon = () => (
     </svg>
 );
 
-const ChevronDownIcon = () => (
-    <svg className="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+const ChevronDownIcon = ({ className = "size-4" }: { className?: string }) => (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <polyline points="6 9 12 15 18 9"/>
     </svg>
 );
 
-const navLinks = [
-    { label: "Services", href: "/reliable-septic-services" },
-    { label: "Pumping", href: "/reliable-septic-pumping-solutions" },
-    { label: "Inspections", href: "/septic-inspection-solutions" },
-    { label: "Products", href: "/trustable-septic-products" },
-];
+const ArrowRightIcon = () => (
+    <svg className="size-4 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <line x1="5" y1="12" x2="19" y2="12"/>
+        <polyline points="12 5 19 12 12 19"/>
+    </svg>
+);
+
+// Menu Data
+const megaMenuData = {
+    services: {
+        label: "Services",
+        groups: [
+            {
+                title: "Pumping Services",
+                items: [
+                    { label: "Septic Tank Pumping", description: "Complete tank pumping & cleaning", href: "/services/pumping" },
+                    { label: "Grease Trap Cleaning", description: "Commercial grease trap services", href: "/services/grease-trap" },
+                    { label: "Emergency Pumping", description: "24/7 emergency services", href: "/services/emergency" },
+                    { label: "Scheduled Maintenance", description: "Regular maintenance plans", href: "/services/maintenance" },
+                ],
+            },
+            {
+                title: "Inspections",
+                items: [
+                    { label: "NC-Certified Inspections", description: "State-certified septic inspections", href: "/services/inspections" },
+                    { label: "Real Estate Inspections", description: "Pre-sale property inspections", href: "/services/real-estate" },
+                    { label: "Compliance Verification", description: "Regulatory compliance checks", href: "/services/compliance" },
+                ],
+            },
+            {
+                title: "Repairs & Installation",
+                items: [
+                    { label: "Tank Repairs", description: "Tank and lid repairs", href: "/services/tank-repairs" },
+                    { label: "Drain Field Services", description: "Installation & restoration", href: "/services/drain-field" },
+                    { label: "Distribution Box", description: "Replacement & repairs", href: "/services/distribution-box" },
+                    { label: "System Installation", description: "New septic system installation", href: "/services/installation" },
+                ],
+            },
+        ],
+        featured: {
+            title: "24/7 Emergency Service",
+            description: "Septic emergencies can't wait. Our team is available around the clock for urgent situations.",
+            href: "/emergency",
+            cta: "Call Now",
+        },
+    },
+    solutions: {
+        label: "Solutions",
+        groups: [
+            {
+                title: "By Property Type",
+                items: [
+                    { label: "Residential", description: "Home septic solutions", href: "/solutions/residential" },
+                    { label: "Commercial", description: "Business & commercial properties", href: "/solutions/commercial" },
+                    { label: "Multi-Family", description: "Apartments & condos", href: "/solutions/multi-family" },
+                    { label: "New Construction", description: "New build septic systems", href: "/solutions/new-construction" },
+                ],
+            },
+            {
+                title: "By Need",
+                items: [
+                    { label: "First-Time Homeowners", description: "Septic basics & maintenance", href: "/solutions/first-time" },
+                    { label: "Property Managers", description: "Multi-property management", href: "/solutions/property-managers" },
+                    { label: "Real Estate Agents", description: "Transaction support", href: "/solutions/real-estate" },
+                    { label: "Builders & Contractors", description: "New installation services", href: "/solutions/builders" },
+                ],
+            },
+        ],
+    },
+    resources: {
+        label: "Resources",
+        groups: [
+            {
+                title: "Learn",
+                items: [
+                    { label: "Septic 101", description: "Understanding your system", href: "/resources/septic-101" },
+                    { label: "Maintenance Tips", description: "Keep your system healthy", href: "/resources/maintenance-tips" },
+                    { label: "FAQ", description: "Common questions answered", href: "/resources/faq" },
+                    { label: "Blog", description: "Latest news & insights", href: "/blog" },
+                ],
+            },
+            {
+                title: "Support",
+                items: [
+                    { label: "Contact Us", description: "Get in touch with our team", href: "/contact" },
+                    { label: "Service Areas", description: "Where we operate", href: "/service-areas" },
+                    { label: "Request Quote", description: "Free estimates", href: "/quote" },
+                ],
+            },
+        ],
+    },
+};
+
+// Mega Menu Dropdown Component
+const MegaMenuDropdown = ({
+    menuKey,
+    isOpen,
+    onMouseEnter,
+    onMouseLeave,
+    onClose
+}: {
+    menuKey: keyof typeof megaMenuData;
+    isOpen: boolean;
+    onMouseEnter: () => void;
+    onMouseLeave: () => void;
+    onClose: () => void;
+}) => {
+    const menu = megaMenuData[menuKey];
+
+    if (!isOpen) return null;
+
+    return (
+        <div
+            className="absolute left-0 right-0 top-full z-50 border-b border-secondary bg-primary shadow-lg"
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+        >
+            <div className="mx-auto max-w-7xl px-6 py-8 lg:px-10">
+                <div className="grid gap-8 lg:grid-cols-4">
+                    {/* Menu Groups */}
+                    {menu.groups.map((group, groupIndex) => (
+                        <div key={groupIndex}>
+                            <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-tertiary">
+                                {group.title}
+                            </h3>
+                            <ul className="space-y-1">
+                                {group.items.map((item, itemIndex) => (
+                                    <li key={itemIndex}>
+                                        <Link
+                                            href={item.href}
+                                            className="group flex flex-col rounded-lg p-3 transition-colors hover:bg-secondary"
+                                            onClick={onClose}
+                                        >
+                                            <span className="flex items-center gap-2 text-sm font-medium text-primary">
+                                                {item.label}
+                                                <ArrowRightIcon />
+                                            </span>
+                                            <span className="mt-1 text-sm text-tertiary">
+                                                {item.description}
+                                            </span>
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
+
+                    {/* Featured Section (for services menu) */}
+                    {"featured" in menu && menu.featured && (
+                        <div className="rounded-xl bg-brand-50 p-6">
+                            <h3 className="text-lg font-semibold text-brand-900">
+                                {menu.featured.title}
+                            </h3>
+                            <p className="mt-2 text-sm text-brand-700">
+                                {menu.featured.description}
+                            </p>
+                            <Link
+                                href={menu.featured.href}
+                                className="mt-4 inline-flex items-center gap-2 rounded-lg bg-brand-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-brand-700"
+                                onClick={onClose}
+                            >
+                                {menu.featured.cta}
+                                <ArrowRightIcon />
+                            </Link>
+                        </div>
+                    )}
+                </div>
+            </div>
+        </div>
+    );
+};
+
+// Nav Item with Dropdown
+const NavItemWithDropdown = ({
+    menuKey,
+    activeMenu,
+    onMouseEnter,
+}: {
+    menuKey: keyof typeof megaMenuData;
+    activeMenu: string | null;
+    onMouseEnter: (key: string) => void;
+}) => {
+    const menu = megaMenuData[menuKey];
+    const isOpen = activeMenu === menuKey;
+
+    return (
+        <div
+            className="relative"
+            onMouseEnter={() => onMouseEnter(menuKey)}
+        >
+            <button
+                className={`flex items-center gap-1 px-3 py-2 text-sm font-medium tracking-[-0.01em] antialiased transition-colors ${
+                    isOpen ? "text-brand-600" : "text-secondary hover:text-brand-600"
+                }`}
+            >
+                {menu.label}
+                <ChevronDownIcon className={`size-4 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`} />
+            </button>
+        </div>
+    );
+};
 
 export const Header = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [activeMenu, setActiveMenu] = useState<string | null>(null);
+    const [mobileSubmenu, setMobileSubmenu] = useState<string | null>(null);
+    const headerRef = useRef<HTMLElement>(null);
+    const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+    const handleMenuEnter = (key: string) => {
+        if (timeoutRef.current) {
+            clearTimeout(timeoutRef.current);
+            timeoutRef.current = null;
+        }
+        setActiveMenu(key);
+    };
+
+    const handleMenuLeave = () => {
+        timeoutRef.current = setTimeout(() => {
+            setActiveMenu(null);
+        }, 150);
+    };
+
+    const handleDropdownEnter = () => {
+        if (timeoutRef.current) {
+            clearTimeout(timeoutRef.current);
+            timeoutRef.current = null;
+        }
+    };
+
+    // Close menu when clicking outside
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (headerRef.current && !headerRef.current.contains(event.target as Node)) {
+                setActiveMenu(null);
+            }
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => document.removeEventListener("mousedown", handleClickOutside);
+    }, []);
 
     return (
-        <header className="bg-primary border-b border-secondary">
+        <header ref={headerRef} className="relative bg-primary border-b border-secondary">
             {/* Main Navigation */}
             <nav className="bg-primary">
                 <div className="max-w-7xl mx-auto px-6 lg:px-10">
@@ -74,17 +300,22 @@ export const Header = () => {
                             </Link>
 
                             {/* Desktop Navigation */}
-                            <div className="hidden lg:flex items-center">
-                                {navLinks.map((link) => (
-                                    <Link
-                                        key={link.label}
-                                        href={link.href}
-                                        className="flex items-center gap-1 px-3 py-2 text-sm font-medium tracking-[-0.01em] text-secondary antialiased transition-colors hover:text-brand-600"
-                                    >
-                                        {link.label}
-                                        <ChevronDownIcon />
-                                    </Link>
+                            <div className="hidden lg:flex items-center" onMouseLeave={handleMenuLeave}>
+                                {(Object.keys(megaMenuData) as Array<keyof typeof megaMenuData>).map((menuKey) => (
+                                    <NavItemWithDropdown
+                                        key={menuKey}
+                                        menuKey={menuKey}
+                                        activeMenu={activeMenu}
+                                        onMouseEnter={handleMenuEnter}
+                                    />
                                 ))}
+                                <Link
+                                    href="/pricing"
+                                    className="flex items-center gap-1 px-3 py-2 text-sm font-medium tracking-[-0.01em] text-secondary antialiased transition-colors hover:text-brand-600"
+                                    onMouseEnter={() => setActiveMenu(null)}
+                                >
+                                    Pricing
+                                </Link>
                             </div>
                         </div>
 
@@ -114,36 +345,100 @@ export const Header = () => {
                     </div>
                 </div>
 
+                {/* Desktop Mega Menu Dropdowns */}
+                {(Object.keys(megaMenuData) as Array<keyof typeof megaMenuData>).map((menuKey) => (
+                    <MegaMenuDropdown
+                        key={menuKey}
+                        menuKey={menuKey}
+                        isOpen={activeMenu === menuKey}
+                        onMouseEnter={handleDropdownEnter}
+                        onMouseLeave={handleMenuLeave}
+                        onClose={() => setActiveMenu(null)}
+                    />
+                ))}
+
                 {/* Mobile Menu */}
                 {mobileMenuOpen && (
                     <div className="lg:hidden border-t border-tertiary bg-primary">
-                        <div className="px-6 py-4 space-y-1">
-                            {navLinks.map((link) => (
-                                <Link
-                                    key={link.label}
-                                    href={link.href}
-                                    className="block px-4 py-3 text-base font-medium text-primary rounded-lg transition-colors hover:bg-secondary"
-                                    onClick={() => setMobileMenuOpen(false)}
-                                >
-                                    {link.label}
-                                </Link>
-                            ))}
-                            <div className="pt-4 space-y-3">
-                                <Link
-                                    href="/sign-in"
-                                    className="block w-full px-4 py-3 text-base font-medium text-center text-primary border border-tertiary rounded-lg"
-                                    onClick={() => setMobileMenuOpen(false)}
-                                >
-                                    Sign in
-                                </Link>
-                                <Link
-                                    href="/contact"
-                                    className="block w-full px-4 py-3 text-base font-medium text-center bg-brand-600 text-white rounded-lg"
-                                    onClick={() => setMobileMenuOpen(false)}
-                                >
-                                    Contact sales
-                                </Link>
-                            </div>
+                        <div className="px-6 py-4">
+                            {mobileSubmenu === null ? (
+                                // Main mobile menu
+                                <div className="space-y-1">
+                                    {(Object.keys(megaMenuData) as Array<keyof typeof megaMenuData>).map((menuKey) => (
+                                        <button
+                                            key={menuKey}
+                                            onClick={() => setMobileSubmenu(menuKey)}
+                                            className="flex w-full items-center justify-between px-4 py-3 text-base font-medium text-primary rounded-lg transition-colors hover:bg-secondary"
+                                        >
+                                            {megaMenuData[menuKey].label}
+                                            <ChevronDownIcon className="size-5 -rotate-90" />
+                                        </button>
+                                    ))}
+                                    <Link
+                                        href="/pricing"
+                                        className="block px-4 py-3 text-base font-medium text-primary rounded-lg transition-colors hover:bg-secondary"
+                                        onClick={() => setMobileMenuOpen(false)}
+                                    >
+                                        Pricing
+                                    </Link>
+                                    <div className="pt-4 space-y-3">
+                                        <Link
+                                            href="/sign-in"
+                                            className="block w-full px-4 py-3 text-base font-medium text-center text-primary border border-tertiary rounded-lg"
+                                            onClick={() => setMobileMenuOpen(false)}
+                                        >
+                                            Sign in
+                                        </Link>
+                                        <Link
+                                            href="/contact"
+                                            className="block w-full px-4 py-3 text-base font-medium text-center bg-brand-600 text-white rounded-lg"
+                                            onClick={() => setMobileMenuOpen(false)}
+                                        >
+                                            Contact sales
+                                        </Link>
+                                    </div>
+                                </div>
+                            ) : (
+                                // Mobile submenu
+                                <div>
+                                    <button
+                                        onClick={() => setMobileSubmenu(null)}
+                                        className="flex items-center gap-2 px-4 py-3 text-sm font-medium text-tertiary mb-2"
+                                    >
+                                        <ChevronDownIcon className="size-4 rotate-90" />
+                                        Back
+                                    </button>
+                                    <div className="space-y-6">
+                                        {megaMenuData[mobileSubmenu as keyof typeof megaMenuData].groups.map((group, groupIndex) => (
+                                            <div key={groupIndex}>
+                                                <h3 className="px-4 mb-2 text-xs font-semibold uppercase tracking-wider text-tertiary">
+                                                    {group.title}
+                                                </h3>
+                                                <div className="space-y-1">
+                                                    {group.items.map((item, itemIndex) => (
+                                                        <Link
+                                                            key={itemIndex}
+                                                            href={item.href}
+                                                            className="block px-4 py-3 rounded-lg hover:bg-secondary"
+                                                            onClick={() => {
+                                                                setMobileMenuOpen(false);
+                                                                setMobileSubmenu(null);
+                                                            }}
+                                                        >
+                                                            <span className="block text-base font-medium text-primary">
+                                                                {item.label}
+                                                            </span>
+                                                            <span className="block text-sm text-tertiary">
+                                                                {item.description}
+                                                            </span>
+                                                        </Link>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
                         </div>
                     </div>
                 )}
