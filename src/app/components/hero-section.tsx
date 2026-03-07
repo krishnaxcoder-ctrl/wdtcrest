@@ -173,7 +173,7 @@ export function HeroSection() {
                                                     className="h-7 w-7 rounded-full object-cover ring-2 ring-white"
                                                 />
                                                 {/* Floating Testimonial Card */}
-                                                <div className="pointer-events-none absolute bottom-full left-1/2 mb-3 -translate-x-1/2 opacity-0 transition-all duration-300 ease-out group-hover/avatar:pointer-events-auto group-hover/avatar:opacity-100">
+                                                <div className="pointer-events-none absolute bottom-full left-1/2 z-50 mb-3 -translate-x-1/2 opacity-0 transition-all duration-300 ease-out group-hover/avatar:pointer-events-auto group-hover/avatar:opacity-100">
                                                     <div className="w-64 rounded-xl border border-gray-100 bg-white p-4 shadow-xl">
                                                         <div className="flex items-center gap-3">
                                                             <img src={person.src} alt={person.name} className="size-10 rounded-full object-cover" />
