@@ -77,8 +77,8 @@ const MarqueeRow = ({ items, direction = "left" }: { items: string[]; direction?
 );
 
 const FeatureBlock = ({ feature }: { feature: typeof features[0] }) => (
-    <div className="border-b border-secondary bg-gray-50">
-        <div className="mx-auto max-w-7xl border-x border-secondary px-6 py-0 lg:px-12">
+    <div className="border-b border-secondary bg-white">
+        <div className="mx-auto max-w-7xl border-x border-secondary pl-6 py-0 lg:pl-12">
             <div className={`grid items-center gap-12 lg:grid-cols-2 lg:gap-16 ${feature.reverse ? "" : ""}`}>
                 {/* Content */}
                 <div className={`${feature.reverse ? "lg:order-2" : ""}`}>
