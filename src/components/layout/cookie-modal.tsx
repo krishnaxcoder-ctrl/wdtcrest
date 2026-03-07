@@ -4,12 +4,18 @@ import { useState, useEffect } from "react";
 
 export const CookieModal = () => {
     const [isVisible, setIsVisible] = useState(false);
+    const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
+        setMounted(true);
         // Check if user has already made a cookie choice
         const cookieChoice = localStorage.getItem("cookieConsent");
         if (!cookieChoice) {
-            setIsVisible(true);
+            // Small delay for better UX
+            const timer = setTimeout(() => {
+                setIsVisible(true);
+            }, 1000);
+            return () => clearTimeout(timer);
         }
     }, []);
 
@@ -28,7 +34,7 @@ export const CookieModal = () => {
         console.log("Customize preferences");
     };
 
-    if (!isVisible) return null;
+    if (!mounted || !isVisible) return null;
 
     return (
         <div className="fixed inset-0 z-50 flex items-end justify-center p-4 sm:items-center">
