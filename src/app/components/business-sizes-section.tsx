@@ -223,15 +223,8 @@ export const BusinessSizesSection = () => {
                                         desc: "Our technicians are fully licensed and certified for septic inspections and installations in North Carolina.",
                                         link: { text: "View certifications", href: "/services" },
                                         icon: (
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true">
-                                                <path fill="url(#cert-gradient)" d="M5 9a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2zm8.5 0a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-3a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2zM2 10.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zm8.5 0a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zM12.25 0a.75.75 0 0 1 .75.75V3h2.25a.75.75 0 0 1 0 1.5H13V7a.75.75 0 0 1-1.5 0V4.5H9A.75.75 0 0 1 9 3h2.5V.75a.75.75 0 0 1 .75-.75M5 .5a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2zM2 2a.5.5 0 0 0-.5.5v3A.5.5 0 0 0 2 6h3a.5.5 0 0 0 .5-.5v-3A.5.5 0 0 0 5 2z" />
-                                                <defs>
-                                                    <linearGradient id="cert-gradient" x1="10" y1="-5.21" x2="1.343" y2="20.492" gradientUnits="userSpaceOnUse">
-                                                        <stop stopColor="#11efa4" />
-                                                        <stop offset="0.5" stopColor="#18b5c1" />
-                                                        <stop offset="1" stopColor="#6772e5" />
-                                                    </linearGradient>
-                                                </defs>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true" className="text-brand-600">
+                                                <path fill="currentColor" d="M5 9a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2zm8.5 0a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-3a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2zM2 10.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zm8.5 0a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zM12.25 0a.75.75 0 0 1 .75.75V3h2.25a.75.75 0 0 1 0 1.5H13V7a.75.75 0 0 1-1.5 0V4.5H9A.75.75 0 0 1 9 3h2.5V.75a.75.75 0 0 1 .75-.75M5 .5a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2zM2 2a.5.5 0 0 0-.5.5v3A.5.5 0 0 0 2 6h3a.5.5 0 0 0 .5-.5v-3A.5.5 0 0 0 5 2z" />
                                             </svg>
                                         ),
                                     },
@@ -240,15 +233,8 @@ export const BusinessSizesSection = () => {
                                         desc: "Septic emergencies don't wait for business hours. Our team is available around the clock for urgent situations.",
                                         link: { text: "Call emergency line", href: "tel:8282541920" },
                                         icon: (
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                                                <path fill="url(#support-gradient)" fillRule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-1.5 0a6.472 6.472 0 0 1-1.404 4.035l-1.07-1.07a5.032 5.032 0 0 1-1.06 1.061l1.07 1.07A6.472 6.472 0 0 1 8 14.5a6.472 6.472 0 0 1-4.035-1.404l1.07-1.07A4.98 4.98 0 0 0 8 13a5 5 0 0 0 4.026-7.965l1.07-1.07A6.472 6.472 0 0 1 14.5 8m-2.465-5.096A6.472 6.472 0 0 0 8 1.5a6.472 6.472 0 0 0-4.035 1.404l1.07 1.07A4.978 4.978 0 0 1 8 3c1.11 0 2.136.362 2.966.974zm-8.061 8.062A4.977 4.977 0 0 1 3 8c0-1.11.362-2.136.974-2.965l-1.07-1.07A6.472 6.472 0 0 0 1.5 8c0 1.525.525 2.927 1.404 4.035zM11.5 8a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0" clipRule="evenodd" />
-                                                <defs>
-                                                    <linearGradient id="support-gradient" x1="10" x2="1.343" y1="-5.21" y2="20.492" gradientUnits="userSpaceOnUse">
-                                                        <stop stopColor="#11efa4" />
-                                                        <stop offset="0.5" stopColor="#18b5c1" />
-                                                        <stop offset="1" stopColor="#6772e5" />
-                                                    </linearGradient>
-                                                </defs>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" className="text-brand-600">
+                                                <path fill="currentColor" fillRule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-1.5 0a6.472 6.472 0 0 1-1.404 4.035l-1.07-1.07a5.032 5.032 0 0 1-1.06 1.061l1.07 1.07A6.472 6.472 0 0 1 8 14.5a6.472 6.472 0 0 1-4.035-1.404l1.07-1.07A4.98 4.98 0 0 0 8 13a5 5 0 0 0 4.026-7.965l1.07-1.07A6.472 6.472 0 0 1 14.5 8m-2.465-5.096A6.472 6.472 0 0 0 8 1.5a6.472 6.472 0 0 0-4.035 1.404l1.07 1.07A4.978 4.978 0 0 1 8 3c1.11 0 2.136.362 2.966.974zm-8.061 8.062A4.977 4.977 0 0 1 3 8c0-1.11.362-2.136.974-2.965l-1.07-1.07A6.472 6.472 0 0 0 1.5 8c0 1.525.525 2.927 1.404 4.035zM11.5 8a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0" clipRule="evenodd" />
                                             </svg>
                                         ),
                                     },
@@ -257,24 +243,17 @@ export const BusinessSizesSection = () => {
                                         desc: "Family-owned and operated since 1994. We know Western NC septic systems inside and out.",
                                         link: { text: "Learn about us", href: "/about" },
                                         icon: (
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                                                <path fill="url(#team-gradient)" fillRule="evenodd" d="M8 3.25A2.748 2.748 0 0 1 10.75.5c1.528 0 2.75 1.238 2.75 2.75S12.278 6 10.75 6A2.748 2.748 0 0 1 8 3.25M10.75 2c-.694 0-1.25.561-1.25 1.25 0 .694.561 1.25 1.25 1.25.694 0 1.25-.561 1.25-1.25S11.444 2 10.75 2" clipRule="evenodd" />
-                                                <path fill="url(#team-gradient)" fillRule="evenodd" d="M5 3.5a2.748 2.748 0 0 0-2.75 2.75A2.748 2.748 0 0 0 5 9a2.748 2.748 0 0 0 2.75-2.75A2.742 2.742 0 0 0 5 3.5M3.75 6.25C3.75 5.561 4.306 5 5 5c.697 0 1.25.553 1.25 1.25 0 .689-.556 1.25-1.25 1.25-.689 0-1.25-.556-1.25-1.25" clipRule="evenodd" />
-                                                <path fill="url(#team-gradient)" fillRule="evenodd" d="M3.776 10C1.686 10 0 11.703 0 13.795c0 .937.757 1.705 1.7 1.705h7.09c.933 0 1.71-.758 1.71-1.705C10.5 11.703 8.814 10 6.724 10zM1.5 13.795A2.286 2.286 0 0 1 3.776 11.5h2.948A2.286 2.286 0 0 1 9 13.795a.211.211 0 0 1-.21.205H1.7a.203.203 0 0 1-.2-.205" clipRule="evenodd" />
-                                                <path fill="url(#team-gradient)" d="M9.25 7a.75.75 0 0 0 0 1.5h2.87c.483 0 1.094.227 1.585.662.48.425.795 1.002.795 1.668 0 .303.016.61-.008.912a8.52 8.52 0 0 1-.492.008h-2a.75.75 0 0 0 0 1.5h2.026c.468 0 .983.02 1.39-.251.502-.335.584-.943.584-1.499v-.67c0-1.173-.56-2.136-1.3-2.791C13.97 7.394 13.017 7 12.12 7z" />
-                                                <defs>
-                                                    <linearGradient id="team-gradient" x1="10" x2="2.296" y1="-4.384" y2="20.012" gradientUnits="userSpaceOnUse">
-                                                        <stop stopColor="#11efa4" />
-                                                        <stop offset="0.5" stopColor="#18b5c1" />
-                                                        <stop offset="1" stopColor="#6772e5" />
-                                                    </linearGradient>
-                                                </defs>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" className="text-brand-600">
+                                                <path fill="currentColor" fillRule="evenodd" d="M8 3.25A2.748 2.748 0 0 1 10.75.5c1.528 0 2.75 1.238 2.75 2.75S12.278 6 10.75 6A2.748 2.748 0 0 1 8 3.25M10.75 2c-.694 0-1.25.561-1.25 1.25 0 .694.561 1.25 1.25 1.25.694 0 1.25-.561 1.25-1.25S11.444 2 10.75 2" clipRule="evenodd" />
+                                                <path fill="currentColor" fillRule="evenodd" d="M5 3.5a2.748 2.748 0 0 0-2.75 2.75A2.748 2.748 0 0 0 5 9a2.748 2.748 0 0 0 2.75-2.75A2.742 2.742 0 0 0 5 3.5M3.75 6.25C3.75 5.561 4.306 5 5 5c.697 0 1.25.553 1.25 1.25 0 .689-.556 1.25-1.25 1.25-.689 0-1.25-.556-1.25-1.25" clipRule="evenodd" />
+                                                <path fill="currentColor" fillRule="evenodd" d="M3.776 10C1.686 10 0 11.703 0 13.795c0 .937.757 1.705 1.7 1.705h7.09c.933 0 1.71-.758 1.71-1.705C10.5 11.703 8.814 10 6.724 10zM1.5 13.795A2.286 2.286 0 0 1 3.776 11.5h2.948A2.286 2.286 0 0 1 9 13.795a.211.211 0 0 1-.21.205H1.7a.203.203 0 0 1-.2-.205" clipRule="evenodd" />
+                                                <path fill="currentColor" d="M9.25 7a.75.75 0 0 0 0 1.5h2.87c.483 0 1.094.227 1.585.662.48.425.795 1.002.795 1.668 0 .303.016.61-.008.912a8.52 8.52 0 0 1-.492.008h-2a.75.75 0 0 0 0 1.5h2.026c.468 0 .983.02 1.39-.251.502-.335.584-.943.584-1.499v-.67c0-1.173-.56-2.136-1.3-2.791C13.97 7.394 13.017 7 12.12 7z" />
                                             </svg>
                                         ),
                                     },
                                 ].map((feature, i) => (
                                     <div key={i} className="flex flex-col gap-4">
-                                        <div className="w-10 h-10 flex items-center justify-center border border-gray-300 rounded p-2">
+                                        <div className="w-10 h-10 flex items-center justify-center border border-brand-200 bg-white rounded p-2">
                                             {feature.icon}
                                         </div>
                                         <div className="flex-1">
