@@ -16,7 +16,7 @@ const features = [
             role: "Homeowner, Asheville",
             avatar: "https://www.untitledui.com/images/avatars/olivia-rhye?w=144&h=144&q=75&fm=webp",
         },
-        image: "/heroimage1.avif",
+        image: "https://cdn.prod.website-files.com/67ffd68333438435025f18b3/68063097ce24264b5ea52d28_image-3.avif",
         imageAlt: "Septic system inspection",
         link: "/reliable-septic-services",
         linkText: "See how it works",
