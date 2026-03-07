@@ -331,7 +331,7 @@ export default function Home() {
                                         <p className="text-2xl text-white leading-relaxed">
                                             Honest pricing with no hidden fees. We explain everything before we start.
                                         </p>
-                                        <div className="grid grid-cols-2 gap-3">
+                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                             {[
                                                 { title: "Free estimates", desc: "No-obligation quotes" },
                                                 { title: "Transparent pricing", desc: "No hidden fees" },
@@ -341,17 +341,17 @@ export default function Home() {
                                                 { title: "30+ years", desc: "Trusted experience" },
                                             ].map((item, i) => (
                                                 <div key={i} className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/15 to-white/5 p-[1px] transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-white/10">
-                                                    <div className="relative flex items-start gap-4 rounded-2xl bg-gradient-to-br from-white/10 to-transparent p-5 backdrop-blur-md">
-                                                        <div className="relative flex size-12 shrink-0 items-center justify-center">
+                                                    <div className="relative flex items-start gap-3 sm:gap-4 rounded-2xl bg-gradient-to-br from-white/10 to-transparent p-4 sm:p-5 backdrop-blur-md">
+                                                        <div className="relative flex size-10 sm:size-12 shrink-0 items-center justify-center">
                                                             <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-emerald-400 to-green-600 opacity-90" />
                                                             <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-white/30 to-transparent" />
-                                                            <svg className="relative size-6 text-white drop-shadow-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                                                            <svg className="relative size-5 sm:size-6 text-white drop-shadow-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                                                                 <path d="M20 6L9 17l-5-5" />
                                                             </svg>
                                                         </div>
                                                         <div className="flex flex-col gap-1">
-                                                            <p className="text-base font-semibold text-white leading-tight">{item.title}</p>
-                                                            <p className="text-sm text-white/70">{item.desc}</p>
+                                                            <p className="text-sm sm:text-base font-semibold text-white leading-tight">{item.title}</p>
+                                                            <p className="text-xs sm:text-sm text-white/70">{item.desc}</p>
                                                         </div>
                                                     </div>
                                                 </div>

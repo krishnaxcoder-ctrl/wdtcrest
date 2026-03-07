@@ -17,7 +17,7 @@ const DiagonalArrowIcon = () => (
 export function HeroSection() {
     return (
         <section className="mx-auto max-w-7xl border-x border-secondary">
-            <div className="grid h-[700px] grid-cols-1 lg:grid-cols-2 py-6">
+            <div className="grid min-h-[600px] lg:h-[700px] grid-cols-1 lg:grid-cols-2 py-6">
                 {/* Left Content */}
                 <div className="flex flex-col justify-end px-6 pb-12 lg:px-12 lg:pb-16">
                     <div className="max-w-xl">
@@ -122,7 +122,7 @@ export function HeroSection() {
                             </div>
 
                             {/* Services Grid */}
-                            <div className="grid grid-cols-3 gap-px bg-gray-100 p-px">
+                            <div className="grid grid-cols-2 sm:grid-cols-3 gap-px bg-gray-100 p-px">
                                 {[
                                     { icon: "M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z", label: "Pumping", desc: "Septic & grease trap" },
                                     { icon: "M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11", label: "Inspections", desc: "NC-certified checks" },
@@ -131,15 +131,15 @@ export function HeroSection() {
                                     { icon: "M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z", label: "Repairs", desc: "Fast & reliable fixes" },
                                     { icon: "M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0016.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 002 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z", label: "Maintenance", desc: "Regular care plans" },
                                 ].map((service, i) => (
-                                    <div key={i} className="flex items-start gap-3 bg-white p-4 transition-colors hover:bg-gray-50">
-                                        <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-brand-50 ring-1 ring-brand-100">
-                                            <svg className="size-5 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <div key={i} className="flex items-start gap-2 sm:gap-3 bg-white p-3 sm:p-4 transition-colors hover:bg-gray-50">
+                                        <div className="flex size-8 sm:size-10 shrink-0 items-center justify-center rounded-lg bg-brand-50 ring-1 ring-brand-100">
+                                            <svg className="size-4 sm:size-5 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                                 <path d={service.icon}></path>
                                             </svg>
                                         </div>
                                         <div>
-                                            <h4 className="text-sm font-semibold text-gray-900">{service.label}</h4>
-                                            <p className="mt-0.5 text-xs text-gray-500">{service.desc}</p>
+                                            <h4 className="text-xs sm:text-sm font-semibold text-gray-900">{service.label}</h4>
+                                            <p className="mt-0.5 text-[10px] sm:text-xs text-gray-500 hidden sm:block">{service.desc}</p>
                                         </div>
                                     </div>
                                 ))}

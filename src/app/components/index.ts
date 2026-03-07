@@ -1,4 +1,3 @@
-export { Header } from "./header";
 export { HeroSection } from "./hero-section";
 export { ServicesSection } from "./services-section";
 export { TrustSection } from "./trust-section";
