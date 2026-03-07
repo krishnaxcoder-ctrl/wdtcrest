@@ -53,17 +53,26 @@ export function WhatsIncluded() {
                 </div>
 
                 {/* Features Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
                     {features.map((feature, index) => (
-                        <div key={index} className="flex flex-col gap-4">
-                            <h3 className="text-lg font-semibold text-primary">
+                        <div
+                            key={index}
+                            className={`flex flex-col justify-center gap-4 ${
+                                index < features.length - 1
+                                    ? "border-b sm:border-b-0 sm:border-r border-secondary"
+                                    : ""
+                            } ${index === 1 ? "sm:border-r-0 lg:border-r" : ""} ${
+                                index === 2 ? "sm:border-r border-secondary" : ""
+                            }`}
+                        >
+                            <h3 className="border-l border-brand pl-4 text-xl mt-4 font-semibold tracking-tight text-brand-600 lg:text-2xl">
                                 {feature.title}
                             </h3>
-                            <ul className="flex flex-col gap-2">
+                            <ul className="flex flex-col gap-1 m-4 mt-0">
                                 {feature.items.map((item, itemIndex) => (
                                     <li
                                         key={itemIndex}
-                                        className="text-sm text-tertiary"
+                                        className="text-base leading-relaxed text-tertiary"
                                     >
                                         {item}
                                     </li>
