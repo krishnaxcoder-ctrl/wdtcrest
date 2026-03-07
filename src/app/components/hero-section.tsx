@@ -11,9 +11,9 @@ const ArrowIcon = () => (
 export function HeroSection() {
     return (
         <section className="mx-auto max-w-7xl border-x border-secondary">
-            <div className="grid min-h-screen grid-cols-1 lg:grid-cols-2">
+            <div className="grid h-[700px] grid-cols-1 lg:grid-cols-2">
                 {/* Left Content */}
-                <div className="flex flex-col justify-center px-6 py-16 lg:px-12 lg:py-24">
+                <div className="flex flex-col justify-center px-6 pb-16 lg:px-12 lg:pb-24">
                     <div className="max-w-xl">
                         {/* Badge */}
                         <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-brand-200 bg-brand-50 px-4 py-1.5">
@@ -69,7 +69,7 @@ export function HeroSection() {
                 </div>
 
                 {/* Right Image */}
-                <div className="relative min-h-[400px] lg:min-h-screen">
+                <div className="relative min-h-[400px] lg:h-full">
                     <img
                         src="/heroimage1.avif"
                         alt="Professional septic service truck"
