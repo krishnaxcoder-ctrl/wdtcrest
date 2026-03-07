@@ -145,14 +145,10 @@ export function HeroSection() {
                             {/* Footer */}
                             <div className="flex items-center justify-between bg-gradient-to-r from-gray-50 to-gray-100/50 px-5 py-3">
                                 <div className="flex items-center gap-3">
-                                    <div className="flex -space-x-2">
-                                        {[
-                                            'https://www.untitledui.com/images/avatars/alec-whitten?w=144&h=144&q=75&fm=webp',
-                                            'https://www.untitledui.com/images/avatars/olivia-rhye?w=144&h=144&q=75&fm=webp',
-                                            'https://www.untitledui.com/images/avatars/phoenix-baker?w=144&h=144&q=75&fm=webp'
-                                        ].map((avatar, i) => (
-                                            <img key={i} src={avatar} alt="Customer" className="size-7 rounded-full object-cover ring-2 ring-white" />
-                                        ))}
+                                    <div className="group flex items-center">
+                                        <img src="https://www.untitledui.com/images/avatars/alec-whitten?w=144&h=144&q=75&fm=webp" alt="Customer" className="size-7 rounded-full object-cover ring-2 ring-white" />
+                                        <img src="https://www.untitledui.com/images/avatars/olivia-rhye?w=144&h=144&q=75&fm=webp" alt="Customer" className="-ml-2 size-7 rounded-full object-cover ring-2 ring-white transition-all duration-300 ease-out group-hover:ml-1" />
+                                        <img src="https://www.untitledui.com/images/avatars/phoenix-baker?w=144&h=144&q=75&fm=webp" alt="Customer" className="-ml-2 size-7 rounded-full object-cover ring-2 ring-white transition-all duration-300 ease-out group-hover:ml-1" />
                                     </div>
                                     <div className="flex items-center gap-1">
                                         <div className="flex gap-0.5">
