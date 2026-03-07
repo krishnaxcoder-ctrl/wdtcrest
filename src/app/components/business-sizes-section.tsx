@@ -18,6 +18,13 @@ const PlusIcon = () => (
     </svg>
 );
 
+// Chevron Right Icon
+const ChevronRightIcon = () => (
+    <svg className="shrink-0 transition-transform duration-150 group-hover:translate-x-0.5" width="6" height="10" viewBox="0 0 6 10" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path d="M1 1l4 4-4 4" />
+    </svg>
+);
+
 
 // Customer Story Data
 const enterpriseCustomers = [
@@ -292,7 +299,7 @@ export const BusinessSizesSection = () => {
                                     },
                                 ].map((feature, i) => (
                                     <div key={i} className="flex flex-col gap-4">
-                                        <div className="w-8 h-8 flex items-center justify-center">
+                                        <div className="w-10 h-10 flex items-center justify-center border border-gray-300 rounded p-2">
                                             {feature.icon}
                                         </div>
                                         <div className="flex-1">
@@ -301,11 +308,11 @@ export const BusinessSizesSection = () => {
                                         </div>
                                         <div>
                                             <Link
-                                                className="group inline-flex items-center text-[15px] font-medium text-primary hover:text-brand-600 transition-colors duration-150"
+                                                className="group inline-flex items-center gap-1.5 text-[15px] font-medium text-sky-600 hover:text-sky-700 transition-colors duration-150"
                                                 href={feature.link.href}
                                             >
                                                 {feature.link.text}
-                                                <span className="whitespace-nowrap">&nbsp;<ArrowIcon /></span>
+                                                <ChevronRightIcon />
                                             </Link>
                                         </div>
                                     </div>
