@@ -78,7 +78,7 @@ const MarqueeRow = ({ items, direction = "left" }: { items: string[]; direction?
 
 const FeatureBlock = ({ feature }: { feature: typeof features[0] }) => (
     <div className="border-b border-secondary bg-gray-50">
-        <div className="mx-auto max-w-7xl px-6 py-16 lg:px-12 lg:py-24">
+        <div className="mx-auto max-w-7xl border-x border-secondary px-6 py-16 lg:px-12 lg:py-24">
             <div className={`grid items-center gap-12 lg:grid-cols-2 lg:gap-16 ${feature.reverse ? "" : ""}`}>
                 {/* Content */}
                 <div className={`${feature.reverse ? "lg:order-2" : ""}`}>
@@ -137,14 +137,16 @@ const FeatureBlock = ({ feature }: { feature: typeof features[0] }) => (
     </div>
 );
 
-const DotDivider = () => (
+const DotGridDivider = () => (
     <div className="bg-gray-50">
-        <div className="mx-auto max-w-7xl px-6 lg:px-12">
-            <div className="flex h-8 items-center justify-center gap-2">
-                {[...Array(5)].map((_, i) => (
-                    <div key={i} className="size-1.5 rounded-full bg-gray-300"></div>
-                ))}
-            </div>
+        <div className="mx-auto max-w-7xl border-x border-secondary">
+            <div
+                className="h-24 w-full opacity-60"
+                style={{
+                    backgroundImage: 'radial-gradient(circle, #9ca3af 1px, transparent 1px)',
+                    backgroundSize: '16px 16px',
+                }}
+            ></div>
         </div>
     </div>
 );
@@ -154,7 +156,7 @@ export function FeaturesSection() {
         <section>
             {/* Section Header */}
             <div className="border-b border-secondary bg-white">
-                <div className="mx-auto max-w-7xl px-6 py-16 text-center lg:px-12 lg:py-24">
+                <div className="mx-auto max-w-7xl border-x border-secondary px-6 py-16 text-center lg:px-12 lg:py-24">
                     <h2 className="mx-auto max-w-4xl text-3xl font-semibold tracking-tight text-primary lg:text-4xl xl:text-5xl">
                         Professional septic management, <em className="text-brand-600">done properly</em> — without the hassle
                     </h2>
@@ -165,7 +167,7 @@ export function FeaturesSection() {
             {features.map((feature, index) => (
                 <div key={index}>
                     <FeatureBlock feature={feature} />
-                    {index < features.length - 1 && <DotDivider />}
+                    {index < features.length - 1 && <DotGridDivider />}
                 </div>
             ))}
         </section>
