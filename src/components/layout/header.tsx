@@ -6,7 +6,7 @@ import Link from "next/link";
 // Logo Component
 const Logo = () => (
     <svg fill="none" height="48" viewBox="0 0 203 48" width="203" xmlns="http://www.w3.org/2000/svg" className="h-9 w-auto transition-opacity duration-200 hover:opacity-80">
-        <path d="m14.25 5c0 7.8701-6.37994 14.25-14.25 14.25v9.5h14.25v14.25h9.5c0-7.8701 6.3799-14.25 14.25-14.25v-9.5h-14.25v-14.25z" fill="#16b364"/>
+        <path d="m14.25 5c0 7.8701-6.37994 14.25-14.25 14.25v9.5h14.25v14.25h9.5c0-7.8701 6.3799-14.25 14.25-14.25v-9.5h-14.25v-14.25z" fill="#E31B54"/>
         <g fill="#0a0d12">
             <path d="m56.2 33.3599c-2.12 0-3.94-.45-5.46-1.35-1.52-.92-2.69-2.19-3.51-3.81-.82-1.64-1.23-3.53-1.23-5.67s.41-4.03 1.23-5.67 1.99-2.92 3.51-3.84 3.34-1.38 5.46-1.38c2.52 0 4.58.63 6.18 1.89 1.62 1.24 2.63 2.99 3.03 5.25h-4.23c-.26-1.14-.82-2.03-1.68-2.67-.84-.66-1.96-.99-3.36-.99-1.94 0-3.46.66-4.56 1.98s-1.65 3.13-1.65 5.43.55 4.11 1.65 5.43c1.1 1.3 2.62 1.95 4.56 1.95 1.4 0 2.52-.3 3.36-.9.86-.62 1.42-1.47 1.68-2.55h4.23c-.4 2.16-1.41 3.85-3.03 5.07-1.6 1.22-3.66 1.83-6.18 1.83z"/>
             <path d="m66.9191 32.9999v-21.6h3.84v21.6z"/>
@@ -71,17 +71,17 @@ export const Header = () => {
                     <div className="flex items-center justify-between py-2 text-xs">
                         <div className="flex items-center gap-6">
                             <div className="flex items-center gap-2">
-                                <span className="size-2 rounded-full animate-pulse" style={{ backgroundColor: '#33e6d1' }} />
+                                <span className="size-2 rounded-full animate-pulse bg-brand-500" />
                                 <span>24/7 Emergency Service Available</span>
                             </div>
                             <span className="text-white/40">|</span>
                             <span>Serving Asheville & Western NC</span>
                         </div>
                         <div className="flex items-center gap-6">
-                            <a href="mailto:info@ableseptic.com" className="hover:text-success-primary transition-colors">
+                            <a href="mailto:info@ableseptic.com" className="hover:text-brand-400 transition-colors">
                                 info@ableseptic.com
                             </a>
-                            <a href="tel:8282541920" className="flex items-center gap-2 font-semibold transition-colors hover:text-[#33e6d1]">
+                            <a href="tel:8282541920" className="flex items-center gap-2 font-semibold transition-colors hover:text-brand-400">
                                 <PhoneIcon />
                                 (828) 254-1920
                             </a>
@@ -105,7 +105,7 @@ export const Header = () => {
                                 <Link
                                     key={link.label}
                                     href={link.href}
-                                    className="px-4 py-2 text-sm font-medium text-primary rounded-lg transition-colors hover:bg-secondary hover:text-success-primary"
+                                    className="px-4 py-2 text-sm font-medium text-primary rounded-lg transition-colors hover:bg-secondary hover:text-brand-600"
                                 >
                                     {link.label}
                                 </Link>
@@ -116,14 +116,14 @@ export const Header = () => {
                         <div className="hidden lg:flex items-center gap-3">
                             <a
                                 href="tel:8282541920"
-                                className="flex items-center gap-2 px-4 py-2.5 text-sm font-medium text-tertiary border border-tertiary rounded-lg transition-all hover:border-success-primary hover:text-success-primary"
+                                className="flex items-center gap-2 px-4 py-2.5 text-sm font-medium text-tertiary border border-tertiary rounded-lg transition-all hover:border-brand-600 hover:text-brand-600"
                             >
                                 <PhoneIcon />
                                 (828) 254-1920
                             </a>
                             <Link
                                 href="/contact"
-                                className="px-5 py-2.5 text-sm font-medium bg-[#32e2cf] text-white rounded-lg transition-all hover:bg-black"
+                                className="px-5 py-2.5 text-sm font-medium bg-brand-600 text-white rounded-lg transition-all hover:bg-brand-700"
                             >
                                 Get Free Quote
                             </Link>
@@ -163,7 +163,7 @@ export const Header = () => {
                                 </a>
                                 <Link
                                     href="/contact"
-                                    className="block w-full px-4 py-3 text-base font-medium text-center bg-success-solid text-white rounded-lg"
+                                    className="block w-full px-4 py-3 text-base font-medium text-center bg-brand-600 text-white rounded-lg"
                                     onClick={() => setMobileMenuOpen(false)}
                                 >
                                     Get Free Quote
