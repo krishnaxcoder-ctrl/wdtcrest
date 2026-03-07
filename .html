@@ -1,820 +1,376 @@
-<header class="hds-mode navigation section section--white hds-mode--light">
-    <div class="section-container navigation__layout">
-        <nav class="hds-navigation-menu navigation-menu" id="navigation-menu"><a
-                class="hds-link navigation-menu-home-link" href="/" data-analytics-label="Stripe Logo"
-                aria-label="Stripe homepage"><svg xmlns="http://www.w3.org/2000/svg" width="60" height="25"
-                    fill="#031323" viewBox="0 0 60 25" aria-label="Stripe logo">
-                    <path fill="var(--hds-color-text-solid)" fill-rule="evenodd"
-                        d="M59.6444 14.2813h-8.062c.1843 1.9296 1.5983 2.5476 3.2032 2.5476 1.6352 0 2.9534-.3656 4.0453-.9506v3.3179c-1.1186.7115-2.5964 1.1068-4.5645 1.1068-4.011 0-6.8218-2.5122-6.8218-7.4783 0-4.19441 2.3837-7.52509 6.3017-7.52509 3.912 0 5.9537 3.28038 5.9537 7.49819 0 .3982-.0372 1.261-.0556 1.4835Zm-5.9241-5.62407c-1.0294 0-2.1739.72812-2.1739 2.58387h4.2573c0-1.85362-1.0721-2.58387-2.0834-2.58387ZM40.9547 20.303c-1.4411 0-2.322-.6087-2.9133-1.0417l-.0088 4.6271-4.1181.8755-.0014-19.19053h3.7543l.0864 1.01784c.6035-.52914 1.6114-1.29157 3.2256-1.29162 2.8925 0 5.6162 2.6052 5.6162 7.39971 0 5.2327-2.6948 7.6037-5.6409 7.6037Zm-.959-11.35573c-.9453 0-1.5376.34559-1.9669.81586l.0245 6.11967c.3997.433.9763.7813 1.9424.7813 1.5231 0 2.5437-1.6575 2.5437-3.8745 0-2.1544-1.037-3.84233-2.5437-3.84233Zm-11.7602-3.3739h4.1341V20.0088h-4.1341V5.57337Zm0-4.694699L32.3696 0v3.35821l-4.1341.87868V.878671ZM23.9198 10.2223v9.7861h-4.1156V5.57296h3.6867l.1317 1.21751c1.0035-1.7722 3.0722-1.41321 3.6209-1.21594v3.78524c-.5242-.16908-2.2894-.42779-3.3237.86253Zm-8.5525 4.7221c0 2.4275 2.5988 1.6719 3.1263 1.4609v3.3522c-.5492.3013-1.5437.5458-2.8901.5458-2.4441 0-4.2773-1.7999-4.2773-4.2379l.0173-13.17658 4.0206-.85464.0032 3.5395h3.1278V9.0857h-3.1278v5.8588-.0001Zm-4.9069.7026c0 2.9645-2.31051 4.6562-5.73464 4.6562-1.41958 0-2.92289-.2761-4.453935-.9347v-3.9319c1.382085.7516 3.093705 1.315 4.457755 1.315.91864 0 1.53106-.2459 1.53106-1.0069C6.26064 13.7786 0 14.5192 0 9.95995 0 7.04457 2.27622 5.2998 5.61655 5.2998c1.36404 0 2.72806.20934 4.09208.75351V9.9317c-1.25265-.67618-2.84332-1.05979-4.09588-1.05979-.86296 0-1.44753.24965-1.44753.8924.0001 1.85329 6.29518.97249 6.29518 5.88279v-.0001Z"
-                        clip-rule="evenodd"></path>
-                </svg></a>
-            <div class="hds-navigation-menu__content navigation-menu-content" data-status="unmounted">
-                <ul class="hds-navigation-menu__list navigation-menu-list hds-navigation-menu__list--horizontal">
-                    <li class="hds-navigation-menu__item navigation-item" value="products"
-                        data-testid="header-products-nav-item"><button type="button"
-                            class="hds-button hds-navigation-menu__trigger hds-button--transparent"
-                            aria-expanded="false" tabindex="0" data-active="">Products<svg
-                                class="hds-icon navigation__chevron-down-icon" width="16" height="16"
-                                viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <path class="navigation__chevron-down-icon__left" d="M4.67065 6L9.3 10.6"
-                                    stroke="currentColor" stroke-width="1.75"></path>
-                                <path class="navigation__chevron-down-icon__right" d="M12.6707 6L8.67065 10"
-                                    stroke="currentColor" stroke-width="1.75"></path>
-                            </svg></button></li>
-                    <li class="hds-navigation-menu__item navigation-item" value="solutions"
-                        data-testid="header-solutions-nav-item"><button type="button"
-                            class="hds-button hds-navigation-menu__trigger hds-button--transparent"
-                            aria-expanded="false" tabindex="-1">Solutions<svg
-                                class="hds-icon navigation__chevron-down-icon" width="16" height="16"
-                                viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <path class="navigation__chevron-down-icon__left" d="M4.67065 6L9.3 10.6"
-                                    stroke="currentColor" stroke-width="1.75"></path>
-                                <path class="navigation__chevron-down-icon__right" d="M12.6707 6L8.67065 10"
-                                    stroke="currentColor" stroke-width="1.75"></path>
-                            </svg></button></li>
-                    <li class="hds-navigation-menu__item navigation-item" value="developers"
-                        data-testid="header-developers-nav-item"><button type="button"
-                            class="hds-button hds-navigation-menu__trigger hds-button--transparent"
-                            aria-expanded="false" tabindex="-1">Developers<svg
-                                class="hds-icon navigation__chevron-down-icon" width="16" height="16"
-                                viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <path class="navigation__chevron-down-icon__left" d="M4.67065 6L9.3 10.6"
-                                    stroke="currentColor" stroke-width="1.75"></path>
-                                <path class="navigation__chevron-down-icon__right" d="M12.6707 6L8.67065 10"
-                                    stroke="currentColor" stroke-width="1.75"></path>
-                            </svg></button></li>
-                    <li class="hds-navigation-menu__item navigation-item" value="resources"
-                        data-testid="header-resources-nav-item"><button type="button"
-                            class="hds-button hds-navigation-menu__trigger hds-button--transparent"
-                            aria-expanded="false" tabindex="-1">Resources<svg
-                                class="hds-icon navigation__chevron-down-icon" width="16" height="16"
-                                viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <path class="navigation__chevron-down-icon__left" d="M4.67065 6L9.3 10.6"
-                                    stroke="currentColor" stroke-width="1.75"></path>
-                                <path class="navigation__chevron-down-icon__right" d="M12.6707 6L8.67065 10"
-                                    stroke="currentColor" stroke-width="1.75"></path>
-                            </svg></button></li>
-                    <li class="hds-navigation-menu__item navigation-item"><a
-                            class="hds-button hds-navigation-menu__trigger hds-button--transparent"
-                            href="/en-at/pricing" data-analytics-label="global_nav__pricing" tabindex="-1">Pricing</a>
-                    </li>
-                    <li class="hds-navigation-menu__item navigation-item navigation-item__sign-in--mobile"><a
-                            class="hds-button hds-navigation-menu__trigger hds-button--transparent"
-                            href="https://dashboard.stripe.com/login" tabindex="-1"
-                            data-analytics-label="global_nav__sign_in">Sign in</a></li>
-                </ul>
+<section class="section_features">
+    <div data-wf--section-title--variant="centre-aligned" class="section-with-divider">
+        <div class="padding-global">
+            <div class="container-large">
+                <div class="inset-layout-section-title">
+                    <div class="padding-section-large padding-top">
+                        <div class="section_title-wrapper w-variant-fb199a52-2f9d-af08-2d32-11eaed640c8d">
+                            <h2 class="heading-style-h2">Pain-free global privacy management, <em>done properly</em> —
+                                without the pressure to expand your team</h2>
+                        </div>
+                        <div class="spacer-xlarge"></div>
+                    </div>
+                </div>
             </div>
-            <div class="navigation-menu-overflow" data-status="unmounted">
-                <section class="navigation-menu-footer">
-                    <div class="hds-button-group"><a class="hds-button hds-button--primary"
-                            href="https://dashboard.stripe.com/register"
-                            data-analytics-label="global_nav__start_now">Start now<svg
-                                class="hds-icon hds-icon-hover-arrow" width="10" height="10" fill="none"
-                                stroke="currentColor" stroke-width="2">
-                                <path d="M0.5 5.5h7"></path>
-                                <path d="M1.5 1.5l4 4-4 4"></path>
-                            </svg></a><a class="hds-button hds-button--secondary-on-quiet" href="/en-at/contact/sales"
-                            data-analytics-label="global_nav__contact_sales">Contact sales</a></div>
-                </section>
-                <section class="navigation-menu-header"><button type="button"
-                        class="hds-button navigation-back-button hds-button--transparent" command="close"
-                        commandfor="navigation-menu"><svg class="navigation__chevron-left-icon"
-                            xmlns="http://www.w3.org/2000/svg" width="6" height="10" fill="none" viewBox="0 0 6 10">
-                            <path fill="currentColor"
-                                d="M.618 5.238 0 4.62.618 4l4-4 1.238 1.238-3.38 3.381L5.856 8 4.618 9.238z"></path>
-                        </svg>Back</button></section>
-            </div><a class="hds-link navigation-item__contact-sales-mobile" href="/en-at/contact/sales"
-                data-analytics-label="global_nav__contact_sales_mobile"
-                data-testid="header-contact-sales-cta-button">Contact sales</a><button type="button"
-                class="hds-ui-button hds-navigation-menu__trigger navigation-hamburger-button hds-ui-button--quiet"
-                aria-label="Toggle navigation menu" aria-expanded="false"><svg width="40" height="40"
-                    viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <rect class="navigation-hamburger__line line-1" width="40" height="5" x="30" y="38"></rect>
-                    <rect class="navigation-hamburger__line line-2" width="40" height="5" x="30" y="48"></rect>
-                    <rect class="navigation-hamburger__line line-3" width="40" height="5" x="30" y="48"></rect>
-                    <rect class="navigation-hamburger__line line-4" width="40" height="5" x="30" y="58"></rect>
-                </svg></button>
-            <ul class="navigation-buttons">
-                <li class="hds-navigation-menu__item navigation-item"><a
-                        class="hds-button navigation-cta-button navigation-item__sign-in hds-button--secondary-on-quiet"
-                        href="https://dashboard.stripe.com/login" tabindex="-1" aria-label="Sign in"
-                        data-analytics-label="global_nav__sign_in" data-testid="header-login-cta-button"><svg
-                            class="navigation-item__sign-in__mask">
-                            <defs>
-                                <mask id="cutoutMask">
-                                    <rect x="0" y="0" width="100%" height="100%" fill="white"></rect><text x="50%"
-                                        y="50%" dy="-0.5" dominant-baseline="central" text-anchor="middle"
-                                        font-size="1em" fill="black">Sign in</text>
-                                </mask>
-                            </defs>
-                            <rect x="0" y="0" width="100%" height="100%" fill="var(--hds-color-text-solid)"
-                                opacity="0.10"></rect>
-                            <rect x="0" y="0" width="100%" height="100%" fill="var(--hds-color-surface-bg-quiet)"
-                                mask="url(#cutoutMask)"></rect>
-                        </svg><span class="navigation-button-measure">Sign in</span></a></li>
-                <li class="hds-navigation-menu__item navigation-item"><a
-                        class="hds-button navigation-cta-button navigation-item__contact-sales hds-button--primary"
-                        href="/en-at/contact/sales" data-analytics-label="global_nav__contact_sales"
-                        tabindex="-1">Contact sales<svg class="hds-icon hds-icon-hover-arrow" width="10" height="10"
-                            fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M0.5 5.5h7"></path>
-                            <path d="M1.5 1.5l4 4-4 4"></path>
-                        </svg></a></li>
-            </ul>
-        </nav>
-        <div class="navigation-menu__background"></div>
-        <div class="navigation-menu__background-static--mobile"></div>
+        </div>
     </div>
-</header>
+    <div class="section-with-divider background-very-light-grey">
+        <div class="padding-global">
+            <div class="container-large">
+                <div class="layout-1_wrapper">
+                    <div class="w-layout-grid layout-1_component">
+                        <div class="layout-1_content">
+                            <div class="inset-layout">
+                                <h3 class="heading-style-h3">Confidently and <span
+                                        class="text-style-emphasis-new">continuously</span> comply</h3>
+                                <div class="text-rich-text w-richtext">
+                                    <p>Stay ahead of external changes like new regulations — and internal changes like
+                                        your new suppliers, products, territories, and marketing activities. With Trust
+                                        Keith, data compliance becomes continuous across your business.</p>
+                                </div>
+                            </div>
+                            <div class="inset-layout is-marquee-wrapper">
+                                <div class="marquee-outter-wrapper">
+                                    <div class="banner_component-2 is-marquee">
+                                        <div class="banner_marquee-2">
+                                            <div class="marquee-chip">
+                                                <div class="marquee-text">Continuous Data Discovery</div>
+                                            </div>
+                                            <div class="marquee-chip">
+                                                <div class="marquee-text">Human-verified Audits</div>
+                                            </div>
+                                            <div class="marquee-chip">
+                                                <div class="marquee-text">Intelligent Workflows</div>
+                                            </div>
+                                            <div class="marquee-chip">
+                                                <div class="marquee-text">Continuous Data Discovery</div>
+                                            </div>
+                                            <div class="marquee-chip">
+                                                <div class="marquee-text">Human-verified Audits</div>
+                                            </div>
+                                            <div class="marquee-chip">
+                                                <div class="marquee-text">Intelligent Workflows</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="marquee-outter-wrapper is-right">
+                                    <div class="banner_component-3 is-marquee-ltr">
+                                        <div class="banner_marquee-3">
+                                            <div class="marquee-chip">
+                                                <div class="marquee-text">A dedicated Registered DPO embedded in your
+                                                    team</div>
+                                            </div>
+                                            <div class="marquee-chip">
+                                                <div class="marquee-text">24/7 Breach support</div>
+                                            </div>
+                                            <div class="marquee-chip">
+                                                <div class="marquee-text">A dedicated Registered DPO embedded in your
+                                                    team</div>
+                                            </div>
+                                            <div class="marquee-chip">
+                                                <div class="marquee-text">24/7 Breach support</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="marquee-overflow-gradient is-right"></div>
+                                <div class="marquee-overflow-gradient"></div>
+                            </div>
+                            <div class="inset-layout">
+                                <div class="testimonial-variation_client top-align">
+                                    <div class="horizontal-wrapper">
+                                        <div class="testimonial-variation_client-image-wrapper-copy"><img
+                                                src="https://cdn.prod.website-files.com/5f462e8160aa877216f7d4b7/6914812470eddd64ae5f36f4_mandy-trickle.avif"
+                                                loading="lazy"
+                                                alt="Smiling woman with long hair wearing a white blouse standing outdoors with a cityscape and hills in the background."
+                                                class="testimonial-variation_customer-image"></div>
+                                        <div class="testimonial-variation_client-logo-wrapper"><img
+                                                src="https://cdn.prod.website-files.com/5f462e8160aa877216f7d4b7/6914805fd18d7642dba6a71c_trickle_data_insights_logo.avif"
+                                                loading="lazy" alt="Trickle logo"
+                                                class="testimonial-variation_customer-image"></div>
+                                    </div>
+                                    <div class="testimonial-small-text-wrapper">
+                                        <div class="text-size-small text-weight-medium overhang-quote">“There’s a lot we
+                                            don’t have to think about now. The platform keeps us on track, and our
+                                            dedicated Trust Keith expert picks up anything we miss”</div>
+                                        <p class="text-size-small">Mandy, COO, Trickle</p>
+                                    </div>
+                                </div>
+                            </div><a href="/how-it-works" class="layout-1_layout-action w-inline-block">
+                                <div class="text-size-large text-weight-medium">See how it works</div>
+                                <div class="text-size-large text-weight-medium">→</div>
+                            </a>
+                        </div>
+                        <div id="w-node-e32e109b-fd43-6444-6726-93594062c30e-f0deae4c"
+                            class="layout-1_image-wrapper-full-bleed"><img
+                                src="https://cdn.prod.website-files.com/5f462e8160aa877216f7d4b7/691d78cb872426a8ef49d39d_3b1483de867336cf62e82e8a97677329_trust-keith-illustration-1.avif"
+                                loading="lazy"
+                                alt="Interface showing scanning process with alerts for new suppliers and regulation changes, plus DPIA drafting status marked complete."
+                                class="width-100"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header data-wf--section-divider--variant="base" class="section-with-divider background-very-light-grey">
+        <div class="padding-global">
+            <div class="container-large">
+                <div class="layout_dot-grid">
+                    <div class="dot-grid"></div>
+                </div>
+            </div>
+            <div class="dot-grid is-absolute"></div>
+        </div>
+    </header>
+    <div class="section-with-divider background-very-light-grey">
+        <div class="padding-global">
+            <div class="container-large">
+                <div class="layout-1_wrapper">
+                    <div class="w-layout-grid layout-1_component">
+                        <div class="layout-1_image-wrapper-full-bleed is-bg-2"><img
+                                src="https://cdn.prod.website-files.com/5f462e8160aa877216f7d4b7/691d79c8ef35b8aefc8b9713_1c48371dfbb1a5285666a1ee73e6b790_trust-keith-illustration-2.avif"
+                                loading="lazy" sizes="100vw"
+                                srcset="https://cdn.prod.website-files.com/5f462e8160aa877216f7d4b7/691d79c8ef35b8aefc8b9713_1c48371dfbb1a5285666a1ee73e6b790_trust-keith-illustration-2-p-500.avif 500w, https://cdn.prod.website-files.com/5f462e8160aa877216f7d4b7/691d79c8ef35b8aefc8b9713_1c48371dfbb1a5285666a1ee73e6b790_trust-keith-illustration-2-p-800.avif 800w, https://cdn.prod.website-files.com/5f462e8160aa877216f7d4b7/691d79c8ef35b8aefc8b9713_1c48371dfbb1a5285666a1ee73e6b790_trust-keith-illustration-2.avif 1450w"
+                                alt="Interface showing a video call with a smiling man labeled Robert, alongside panels for Policies, Training, and Smart tooling with related options and actions."
+                                class="width-100"></div>
+                        <div class="layout-1_content is-right-side">
+                            <div class="inset-layout">
+                                <h3 class="heading-style-h3"><span class="text-style-emphasis-new">Operationalise</span>
+                                    privacy at scale</h3>
+                                <div class="text-rich-text w-richtext">
+                                    <p>You don’t need to grow a privacy team to keep pace with your business. Trust
+                                        Keith embeds compliance into your daily operations and team culture, so it
+                                        scales seamlessly as you do.</p>
+                                </div>
+                            </div>
+                            <div class="inset-layout is-marquee-wrapper">
+                                <div class="marquee-outter-wrapper">
+                                    <div class="banner_component-2 is-marquee">
+                                        <div class="banner_marquee-2">
+                                            <div class="marquee-chip">
+                                                <div class="marquee-text">Tailored Policies</div>
+                                            </div>
+                                            <div class="marquee-chip">
+                                                <div class="marquee-text">Smart Policy Management</div>
+                                            </div>
+                                            <div class="marquee-chip">
+                                                <div class="marquee-text">Jargon-free Training</div>
+                                            </div>
+                                            <div class="marquee-chip">
+                                                <div class="marquee-text">Vendor Risk Management</div>
+                                            </div>
+                                            <div class="marquee-chip">
+                                                <div class="marquee-text">Tailored Policies</div>
+                                            </div>
+                                            <div class="marquee-chip">
+                                                <div class="marquee-text">Smart Policy Management</div>
+                                            </div>
+                                            <div class="marquee-chip">
+                                                <div class="marquee-text">Jargon-free Training</div>
+                                            </div>
+                                            <div class="marquee-chip">
+                                                <div class="marquee-text">Vendor Risk Management</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="marquee-outter-wrapper is-right">
+                                    <div class="banner_component-3 is-marquee-ltr">
+                                        <div class="banner_marquee-3">
+                                            <div class="marquee-chip">
+                                                <div class="marquee-text">DSAR Management</div>
+                                            </div>
+                                            <div class="marquee-chip">
+                                                <div class="marquee-text">Incident Management</div>
+                                            </div>
+                                            <div class="marquee-chip">
+                                                <div class="marquee-text">Intelligent Privacy Assessments</div>
+                                            </div>
+                                            <div class="marquee-chip">
+                                                <div class="marquee-text">Real-time Data Register</div>
+                                            </div>
+                                            <div class="marquee-chip">
+                                                <div class="marquee-text">DSAR Management</div>
+                                            </div>
+                                            <div class="marquee-chip">
+                                                <div class="marquee-text">Incident Management</div>
+                                            </div>
+                                            <div class="marquee-chip">
+                                                <div class="marquee-text">Intelligent Privacy Assessments</div>
+                                            </div>
+                                            <div class="marquee-chip">
+                                                <div class="marquee-text">Real-time Data Register</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="marquee-overflow-gradient is-right"></div>
+                                <div class="marquee-overflow-gradient"></div>
+                            </div>
+                            <div class="inset-layout">
+                                <div class="testimonial-variation_client top-align">
+                                    <div class="horizontal-wrapper">
+                                        <div class="testimonial-variation_client-image-wrapper-copy"><img
+                                                src="https://cdn.prod.website-files.com/5f462e8160aa877216f7d4b7/69046a240ae030ba3e90cb23_1738676105322.avif"
+                                                loading="lazy"
+                                                alt="Smiling woman with long wavy hair wearing a black top and a necklace against a plain background."
+                                                class="testimonial-variation_customer-image"></div>
+                                        <div class="testimonial-variation_client-logo-wrapper"><img
+                                                src="https://cdn.prod.website-files.com/5f462e8160aa877216f7d4b7/6914818d6c5bb7f202b7fdb4_codat_limited_logo.avif"
+                                                loading="lazy" alt="Codat logo"
+                                                class="testimonial-variation_customer-image"></div>
+                                    </div>
+                                    <div class="testimonial-small-text-wrapper">
+                                        <div class="text-size-small text-weight-medium overhang-quote">“It’s been a
+                                            massive time-saver. Our Trust Keith expert, Sarah, leads on the high-risk
+                                            work, and the platform keeps us moving forward.”</div>
+                                        <p class="text-size-small">Josephine, Information Security Director, Codat</p>
+                                    </div>
+                                </div>
+                            </div><a href="/how-it-works" class="layout-1_layout-action w-inline-block">
+                                <div class="text-size-large text-weight-medium">See how it works</div>
+                                <div class="text-size-large text-weight-medium">→</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header data-wf--section-divider--variant="base" class="section-with-divider background-very-light-grey">
+        <div class="padding-global">
+            <div class="container-large">
+                <div class="layout_dot-grid">
+                    <div class="dot-grid"></div>
+                </div>
+            </div>
+            <div class="dot-grid is-absolute"></div>
+        </div>
+    </header>
+    <div class="section-with-divider background-very-light-grey">
+        <div class="padding-global">
+            <div class="container-large">
+                <div class="layout-1_wrapper">
+                    <div class="w-layout-grid layout-1_component">
+                        <div class="layout-1_content">
+                            <div class="inset-layout">
+                                <h3 class="heading-style-h3"><span class="text-style-emphasis-new">Actually</span>
+                                    reduce risk and prove it</h3>
+                                <div class="text-rich-text w-richtext">
+                                    <p>Go beyond box-ticking. With Trust Keith, you reduce real risks and generate
+                                        clear, defensible evidence — ready to share with regulators, customers,
+                                        investors, and your board - at any time.</p>
+                                </div>
+                            </div>
+                            <div class="inset-layout is-marquee-wrapper">
+                                <div class="marquee-outter-wrapper">
+                                    <div class="banner_component-2 is-marquee">
+                                        <div class="banner_marquee-2">
+                                            <div class="marquee-chip">
+                                                <div class="marquee-text">Continuous Evidence Monitoring</div>
+                                            </div>
+                                            <div class="marquee-chip">
+                                                <div class="marquee-text">Audit-ready Logs</div>
+                                            </div>
+                                            <div class="marquee-chip">
+                                                <div class="marquee-text">Continuous Evidence Monitoring</div>
+                                            </div>
+                                            <div class="marquee-chip">
+                                                <div class="marquee-text">Audit-ready Logs</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="marquee-outter-wrapper is-right">
+                                    <div class="banner_component-3 is-marquee-ltr">
+                                        <div class="banner_marquee-3">
+                                            <div class="marquee-chip">
+                                                <div class="marquee-text">Actionable Reports for internal &amp; external
+                                                    stakeholders</div>
+                                            </div>
+                                            <div class="marquee-chip">
+                                                <div class="marquee-text">3rd-party attested Privacy Reports</div>
+                                            </div>
+                                            <div class="marquee-chip">
+                                                <div class="marquee-text">Actionable Reports for internal &amp; external
+                                                    stakeholders</div>
+                                            </div>
+                                            <div class="marquee-chip">
+                                                <div class="marquee-text">3rd-party attested Privacy Reports</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="marquee-overflow-gradient is-right"></div>
+                                <div class="marquee-overflow-gradient"></div>
+                            </div>
+                            <div class="inset-layout">
+                                <div class="testimonial-variation_client top-align">
+                                    <div class="horizontal-wrapper">
+                                        <div class="testimonial-variation_client-image-wrapper-copy"><img
+                                                src="https://cdn.prod.website-files.com/5f462e8160aa877216f7d4b7/69046a24511e1ba2188e204e_1600281582449.avif"
+                                                loading="lazy"
+                                                alt="Smiling woman with long dark hair wearing a floral top in a bright indoor setting."
+                                                class="testimonial-variation_customer-image"></div>
+                                        <div class="testimonial-variation_client-logo-wrapper"><img
+                                                src="https://cdn.prod.website-files.com/5f462e8160aa877216f7d4b7/691485ed718e5595f79f0b5f_thortful_logo.avif"
+                                                loading="lazy"
+                                                alt="White speech bubble containing the word 'thortful' in orange lowercase letters on an orange background."
+                                                class="testimonial-variation_customer-image"></div>
+                                    </div>
+                                    <div class="testimonial-small-text-wrapper">
+                                        <div class="text-size-small text-weight-medium overhang-quote">“Our key business
+                                            outcome is risk reduction, Trust Keith makes sure we're reducing risk across
+                                            the business”</div>
+                                        <p class="text-size-small">Alisa Padhiar, Finance Director, Thortful</p>
+                                    </div>
+                                </div>
+                            </div><a href="/how-it-works" class="layout-1_layout-action w-inline-block">
+                                <div class="text-size-large text-weight-medium">See how it works</div>
+                                <div class="text-size-large text-weight-medium">→</div>
+                            </a>
+                        </div>
+                        <div id="w-node-_09e8f660-a8c7-e665-f08a-f8dc466c6114-f0deae4c"
+                            class="layout-1_image-wrapper-full-bleed is-bg-3"><img
+                                src="https://cdn.prod.website-files.com/5f462e8160aa877216f7d4b7/691d79c832757c8aa00bbddc_6abb3498e0ff4ab386c0fe6dcf29c09a_trust-keith-illustration-3.avif"
+                                loading="lazy"
+                                alt="Risk summary bar chart for Jan, Feb, and Mar with a table showing risk factors: Product 89 risks down by 12, Marketing 72 risks down by 9, Company 34 risks down by 5."
+                                class="width-100"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
+-webkit-text-size-adjust: 100%;
+--white: white;
+--dark-gray: #222525;
+--gray: #4f5057;
+--black: black;
+--bright-blue-darkest: #093173;
+--bright-blue: #4285f4;
+--cream: #ebddd0;
+--black-8: #00000014;
+--keith-blue: #235875;
+--lightest-grey-new: #fafafa;
+--light-grey-new: #ebebeb;
+--bright-blue-light: #e0eeff;
+--keith-dark-blue: #194359;
+--light-cream: #fffaf4;
+--dark-cream: #c3b6aa;
+--white-75: #fffc;
+--light-blue-new: #93c2ff;
+--bright-blue-dark: #2459b3;
+--light-grey: #f6f2ed;
+color: var(--dark-gray);
+font-family: Inter,Arial,sans-serif;
+font-size: 1rem;
+font-weight: 400;
+line-height: 1.45;
 -webkit-font-smoothing: antialiased;
-text-rendering: optimizeLegibility;
-text-size-adjust: 100%;
-tab-size: 4;
-font-family: var(--hds-font-family);
-font-feature-settings: "ss01" on;
---navigation-height: 76px;
---navigation-easing: cubic-bezier(0.45,0.05,0.55,0.95);
---navigation-padding-outer: var(--hds-space-core-100);
---navigation-inline-start: var(--hds-space-layout-content-margin);
---navigation-inline-end: var(--hds-space-layout-content-margin);
---navigation-duration: 0s;
---navigation-duration-slow: 0s;
---navigation-hamburger-duration: 0s;
---navigation-border-radius: var(--hds-space-core-radius-md);
---hero-font-lang-min: 2.125rem;
---hero-font-lang-large: 3rem;
---hero-font-lang-medium: 2.75rem;
---hero-font-lang-small: 2.5rem;
---hds-font-heading-xxs-letterSpacing: 0em;
---hds-font-heading-xxs-lineHeight: 1.2;
---hds-font-heading-xxs-size: 0.875rem;
---hds-font-heading-xxs-weight: 400;
---hds-font-heading-xs-letterSpacing: 0em;
---hds-font-heading-xs-lineHeight: 1.2;
---hds-font-heading-xs-size: 1rem;
---hds-font-heading-xs-weight: 400;
---hds-font-heading-sm-letterSpacing: -0.01em;
---hds-font-heading-sm-lineHeight: 1.1;
---hds-font-heading-sm-size: 1.375rem;
---hds-font-heading-sm-weight: 300;
---hds-font-heading-md-letterSpacing: -0.01em;
---hds-font-heading-md-lineHeight: 1.12;
---hds-font-heading-md-size: 1.625rem;
---hds-font-heading-md-weight: 300;
---hds-font-heading-lg-letterSpacing: -0.02em;
---hds-font-heading-lg-lineHeight: 1.1;
---hds-font-heading-lg-size: 2rem;
---hds-font-heading-lg-weight: 300;
---hds-font-heading-xl-letterSpacing: -0.02em;
---hds-font-heading-xl-lineHeight: 1.03;
---hds-font-heading-xl-size: 3rem;
---hds-font-heading-xl-weight: 300;
---hds-font-heading-xxl-letterSpacing: -0.025em;
---hds-font-heading-xxl-lineHeight: 1.03;
---hds-font-heading-xxl-size: 3.5rem;
---hds-font-heading-xxl-weight: 300;
---hds-font-heading-hero-sm-letterSpacing: -0.02em;
---hds-font-heading-hero-sm-lineHeight: 1.05;
---hds-font-heading-hero-sm-size: 2.25rem;
---hds-font-heading-hero-sm-weight: 300;
---hds-font-heading-hero-lg-letterSpacing: -0.02em;
---hds-font-heading-hero-lg-lineHeight: 1.15;
---hds-font-heading-hero-lg-size: 3rem;
---hds-font-heading-hero-lg-weight: 300;
---hds-font-quote-md-letterSpacing: -0.01em;
---hds-font-quote-md-lineHeight: 1.12;
---hds-font-quote-md-size: 1.625rem;
---hds-font-quote-md-weight: 300;
---hds-font-quoteAttribution-md-letterSpacing: 0em;
---hds-font-quoteAttribution-md-lineHeight: 1.4;
---hds-font-quoteAttribution-md-size: 1.125rem;
---hds-font-quoteAttribution-md-weight: 300;
---hds-font-text-xxs-letterSpacing: 0em;
---hds-font-text-xxs-lineHeight: 1.45;
---hds-font-text-xxs-size: 0.75rem;
---hds-font-text-xxs-weight: 300;
---hds-font-text-xs-letterSpacing: 0em;
---hds-font-text-xs-lineHeight: 1.4;
---hds-font-text-xs-size: 0.875rem;
---hds-font-text-xs-weight: 300;
---hds-font-text-sm-letterSpacing: 0em;
---hds-font-text-sm-lineHeight: 1.4;
---hds-font-text-sm-size: 0.875rem;
---hds-font-text-sm-weight: 300;
---hds-font-text-md-letterSpacing: 0em;
---hds-font-text-md-lineHeight: 1.4;
---hds-font-text-md-size: 1rem;
---hds-font-text-md-weight: 300;
---hds-font-text-lg-letterSpacing: 0em;
---hds-font-text-lg-lineHeight: 1.4;
---hds-font-text-lg-size: 1.125rem;
---hds-font-text-lg-weight: 300;
---hds-font-text-xl-letterSpacing: -0.01em;
---hds-font-text-xl-lineHeight: 1.4;
---hds-font-text-xl-size: 1.25rem;
---hds-font-text-xl-weight: 300;
---hds-font-text-xxl-letterSpacing: -0.02em;
---hds-font-text-xxl-lineHeight: 1;
---hds-font-text-xxl-size: 3rem;
---hds-font-text-xxl-weight: 300;
---hds-space-block-column-gap: var(--hds-space-layout-gap);
---hds-space-block-stack-gap-md: var(--hds-space-layout-gap);
---hds-space-block-stack-gap-lg: var(--hds-space-core-600);
---hds-space-block-stack-gap-xl: var(--hds-space-core-800);
---hds-space-customerCard-logo-height: 60px;
---hds-space-input-layered-gap: 24px;
---hds-space-input-layered-input-maxWidth: 360px;
---hds-space-input-layered-input-minWidth: 300px;
---hds-space-input-layered-label-maxWidth: 196px;
---hds-space-input-layered-label-minWidth: 120px;
---hds-space-input-popover-width: 240px;
---hds-space-layout-columns: 12;
---hds-space-layout-content-margin: var(--hds-space-core-200);
---hds-space-layout-gap: var(--hds-space-core-200);
---hds-space-layout-page-margin: var(--hds-space-core-200);
---hds-space-section-gap-bottom: var(--hds-space-core-1200);
---hds-space-section-gap-top: var(--hds-space-core-1200);
---hds-color-core-brand-25: #f5f5ff;
---hds-color-core-brand-50: #e8e9ff;
---hds-color-core-brand-75: #e2e4ff;
---hds-color-core-brand-100: #d6d9fc;
---hds-color-core-brand-200: #b9b9f9;
---hds-color-core-brand-300: #9a9afe;
---hds-color-core-brand-400: #7f7dfc;
---hds-color-core-brand-500: #665efd;
---hds-color-core-brand-600: #533afd;
---hds-color-core-brand-700: #4032c8;
---hds-color-core-brand-800: #2e2b8c;
---hds-color-core-brand-900: #1c1e54;
---hds-color-core-brand-925: #1c1e54;
---hds-color-core-brand-950: #161741;
---hds-color-core-brand-975: #0f1137;
---hds-color-core-brandDark-25: #f6f7ff;
---hds-color-core-brandDark-50: #e4eaff;
---hds-color-core-brandDark-75: #ccdaff;
---hds-color-core-brandDark-100: #c3d3ff;
---hds-color-core-brandDark-200: #a8bfff;
---hds-color-core-brandDark-300: #92adff;
---hds-color-core-brandDark-400: #7389ff;
---hds-color-core-brandDark-500: #5d64fe;
---hds-color-core-brandDark-600: #533afd;
---hds-color-core-brandDark-600-a70: #533afdb2;
---hds-color-core-brandDark-700: #362baa;
---hds-color-core-brandDark-800: #2c2484;
---hds-color-core-brandDark-900: #222069;
---hds-color-core-brandDark-925: #1c1b5a;
---hds-color-core-brandDark-950: #191a51;
---hds-color-core-brandDark-975: #171055;
---hds-color-core-error-100: #feb9ac;
---hds-color-core-error-400: #f3432a;
---hds-color-core-error-500: #d8351e;
---hds-color-core-error-600: #a01400;
---hds-color-core-global-transparent: #ffffff00;
---hds-color-core-lemon-25: #fff2d8;
---hds-color-core-lemon-100: #ffe1a3;
---hds-color-core-lemon-200: #f9b900;
---hds-color-core-lemon-300: #e8a30b;
---hds-color-core-lemon-500: #9b6829;
---hds-color-core-lemon-800: #483414;
---hds-color-core-magenta-50: #ffe6f5;
---hds-color-core-magenta-100: #ffd7ef;
---hds-color-core-magenta-350: #f44bcc;
---hds-color-core-magenta-600: #a51d85;
---hds-color-core-magenta-800: #4f2055;
---hds-color-core-neutral-0: #fff;
---hds-color-core-neutral-25: #f8fafd;
---hds-color-core-neutral-50: #e5edf5;
---hds-color-core-neutral-100: #d4dee9;
---hds-color-core-neutral-200: #bac8da;
---hds-color-core-neutral-300: #95a4ba;
---hds-color-core-neutral-400: #7d8ba4;
---hds-color-core-neutral-500: #64748d;
---hds-color-core-neutral-600: #50617a;
---hds-color-core-neutral-700: #3c4f69;
---hds-color-core-neutral-800: #273951;
---hds-color-core-neutral-900: #1a2c44;
---hds-color-core-neutral-950: #11273e;
---hds-color-core-neutral-975: #0d253d;
---hds-color-core-neutral-990: #061b31;
---hds-color-core-neutralDark-25: #f2f7fe;
---hds-color-core-neutralDark-50: #e3ecf7;
---hds-color-core-neutralDark-100: #d4deef;
---hds-color-core-neutralDark-200: #c0cee6;
---hds-color-core-neutralDark-300: #a3b5d6;
---hds-color-core-neutralDark-400: #839bc8;
---hds-color-core-neutralDark-500: #6480b2;
---hds-color-core-neutralDark-600: #45639d;
---hds-color-core-neutralDark-700: #273f73;
---hds-color-core-neutralDark-800: #23356e;
---hds-color-core-neutralDark-900: #182659;
---hds-color-core-neutralDark-950: #122054;
---hds-color-core-neutralDark-975: #101d4e;
---hds-color-core-neutralDark-990: #0d1738;
---hds-color-core-orange-50: #ffe5da;
---hds-color-core-orange-100: #ffd8c6;
---hds-color-core-orange-350: #ff6118;
---hds-color-core-orange-600: #ab3500;
---hds-color-core-orange-800: #56281b;
---hds-color-core-ruby-50: #fee8eb;
---hds-color-core-ruby-100: #fed9de;
---hds-color-core-ruby-400: #ea2261;
---hds-color-core-ruby-600: #b51145;
---hds-color-core-ruby-800: #5d1c3c;
---hds-color-core-success-100: #b6f2c7;
---hds-color-core-success-400: #00b261;
---hds-color-core-success-600: #006f3a;
---hds-space-button-border: 1px;
---hds-space-button-radius-sm: var(--hds-space-core-radius-xs);
---hds-space-button-radius-lg: var(--hds-space-core-radius-sm);
---hds-space-core-0: 0px;
---hds-space-core-1: 1px;
---hds-space-core-25: 2px;
---hds-space-core-50: 4px;
---hds-space-core-75: 6px;
---hds-space-core-100: 8px;
---hds-space-core-150: 12px;
---hds-space-core-200: 16px;
---hds-space-core-250: 20px;
---hds-space-core-300: 24px;
---hds-space-core-350: 28px;
---hds-space-core-400: 32px;
---hds-space-core-450: 36px;
---hds-space-core-500: 40px;
---hds-space-core-550: 44px;
---hds-space-core-600: 48px;
---hds-space-core-700: 56px;
---hds-space-core-800: 64px;
---hds-space-core-900: 72px;
---hds-space-core-1000: 80px;
---hds-space-core-1100: 88px;
---hds-space-core-1200: 96px;
---hds-space-core-1300: 104px;
---hds-space-core-1400: 112px;
---hds-space-core-1500: 120px;
---hds-space-core-1600: 128px;
---hds-space-core-1700: 136px;
---hds-space-core-1800: 144px;
---hds-space-core-1900: 152px;
---hds-space-core-2000: 160px;
---hds-space-core-2100: 168px;
---hds-space-core-2200: 176px;
---hds-space-core-2300: 184px;
---hds-space-core-2400: 192px;
---hds-space-core-2500: 200px;
---hds-space-core-border-sm: 1px;
---hds-space-core-border-md: 1.25px;
---hds-space-core-border-lg: 2px;
---hds-space-core-border-none: 0px;
---hds-space-core-radius-xs: 2px;
---hds-space-core-radius-sm: 4px;
---hds-space-core-radius-md: 6px;
---hds-space-core-radius-lg: 16px;
---hds-space-core-radius-xl: 32px;
---hds-space-core-radius-none: 0px;
---hds-space-core-radius-round: 99999px;
---hds-space-input-border-default: 1.25px;
---hds-space-input-focus-outline-offset: 1px;
---hds-space-input-focus-shadowOuter: 4px;
---hds-space-input-focus-shadowSingle: 2px;
---hds-space-input-gap-errorMessage: var(--hds-space-core-50);
---hds-space-input-gap-labelVertical: var(--hds-space-core-75);
---hds-space-input-text-paddingX-sm: 10px;
---hds-space-input-text-paddingX-md: 13px;
---hds-space-input-text-paddingX-lg: 16px;
---hds-space-input-text-paddingX-listbox: 10px;
---hds-space-input-text-paddingY-sm: 8px;
---hds-space-input-text-paddingY-md: 10px;
---hds-space-input-text-paddingY-lg: 12px;
---hds-space-input-text-paddingY-listbox: 6px;
---hds-space-layout-content-maxWidth: 1264px;
---hds-font-family: "sohne-var","SF Pro Display",sans-serif;
---hds-font-weight-normal: 300;
---hds-font-weight-bold: 400;
---hds-font-family-code: "SourceCodePro","SFMono-Regular",monospace;
---hds-shadow-xs: var(--hds-shadow-xs-top-offset-X,0) var(--hds-shadow-xs-top-offset-Y,2px) var(--hds-shadow-xs-top-blur,10px) var(--hds-shadow-xs-top-spread,0) var(--hds-color-shadow-xs-top,rgba(0,55,112,.06)),var(--hds-shadow-xs-bottom-offset-X,0) var(--hds-shadow-xs-bottom-offset-Y,1px) var(--hds-shadow-xs-bottom-blur,4px) var(--hds-shadow-xs-bottom-spread,0) var(---hds-color-shadow-xs-bottom,rgba(0,59,137,.04));
---hds-shadow-sm: var(--hds-shadow-sm-top-offset-X,0) var(--hds-shadow-sm-top-offset-Y,5px) var(--hds-shadow-sm-top-blur,14px) var(--hds-shadow-sm-top-spread,0) var(--hds-color-shadow-sm-top,rgba(0,55,112,.08)),var(--hds-shadow-sm-bottom-offset-X,0) var(--hds-shadow-sm-bottom-offset-Y,2px) var(--hds-shadow-sm-bottom-blur,8px) var(--hds-shadow-sm-bottom-spread,0) var(--hds-color-shadow-sm-bottom,rgba(0,59,137,.05));
---hds-shadow-md: var(--hds-shadow-md-top-offset-X,0) var(--hds-shadow-md-top-offset-Y,6px) var(--hds-shadow-md-top-blur,22px) var(--hds-shadow-md-top-spread,0) var(--hds-color-shadow-md-top,rgba(0,55,112,.1)),var(--hds-shadow-md-bottom-offset-X,0) var(--hds-shadow-md-bottom-offset-Y,4px) var(--hds-shadow-md-bottom-blur,8px) var(--hds-shadow-md-bottom-spread,0) var(--hds-color-shadow-md-bottom,rgba(0,59,137,.02));
---hds-shadow-lg: var(--hds-shadow-lg-top-offset-X,0) var(--hds-shadow-lg-top-offset-Y,15px) var(--hds-shadow-lg-top-blur,40px) var(--hds-shadow-lg-top-spread,-2px) var(--hds-color-shadow-lg-top,rgba(0,55,112,.1)),var(--hds-shadow-lg-bottom-offset-X,0) var(--hds-shadow-lg-bottom-offset-Y,5px) var(--hds-shadow-lg-bottom-blur,20px) var(--hds-shadow-lg-bottom-spread,-2px) var(--hds-color-shadow-lg-bottom,rgba(0,59,137,.04));
---hds-shadow-xl: var(--hds-shadow-xl-top-offset-X,0) var(--hds-shadow-xl-top-offset-Y,20px) var(--hds-shadow-xl-top-blur,80px) var(--hds-shadow-xl-top-spread,-16px) var(--hds-color-shadow-xl-top,rgba(0,55,112,.14)),var(--hds-shadow-xl-bottom-offset-X,0) var(--hds-shadow-xl-bottom-offset-Y,10px) var(--hds-shadow-xl-bottom-blur,60px) var(--hds-shadow-xl-bottom-spread,-16px) var(--hds-color-shadow-xl-bottom,rgba(0,59,137,.06));
---hds-canary-dashed-border: 1px dashed var(--hds-color-surface-border-quiet);
---hds-canary-ui-stroke: color-mix(in srgb,var(--hds-color-util-neutral-50) 50%,transparent);
---hds-canary-ui-mini-stroke: var(--hds-color-util-neutral-50);
---hds-canary-ui-shadow: 0px 16px 32px rgba(50,50,93,.12);
---hds-canary-layout-content-maxWidth-borders: calc(var(--hds-space-layout-content-maxWidth) + 2px);
---accent-gradient-color-stop-1: #bdb4ff;
---accent-gradient-color-stop-2: #643afd;
---accent-gradient-color-stop-3: #533afd;
---hds-canary-color-border-focus: #635bff;
---hds-canary-grid-span-full: span 12;
---hds-canary-grid-span-half: span 6;
---hds-canary-grid-span-quarter: span 3;
---scrollbarWidth: 15px;
 box-sizing: border-box;
-margin: 0;
-position: relative;
-width: 100%;
-padding-inline: var(--hds-space-layout-page-margin);
---section-container-border-inline: none;
---section-container-padding-inline: 0;
---section-container-pbs: 0;
---section-container-pbe: 0;
-overflow: visible;
-z-index: 2;
-padding: 0;
-background-color: transparent;
---hds-color-accent-connect-border-quiet: var(--hds-color-core-ruby-100);
---hds-color-accent-connect-icon-gradientEnd: #f03ca4;
---hds-color-accent-connect-icon-gradientMiddle: #ea2261;
---hds-color-accent-connect-icon-gradientStart: #f84c31;
---hds-color-accent-connect-icon-solid: var(--hds-color-core-ruby-400);
---hds-color-accent-connect-icon-solidAlt: var(--hds-color-core-ruby-400);
---hds-color-accent-connect-surface-subdued: var(--hds-color-core-ruby-100);
---hds-color-accent-connect-surface-subduedAlt: var(--hds-color-core-ruby-100);
---hds-color-accent-default-icon-gradientEnd: #564dfe;
---hds-color-accent-default-icon-gradientMiddle: #5e4cfe;
---hds-color-accent-default-icon-gradientStart: #864cff;
---hds-color-accent-default-icon-solidAlt: var(--hds-color-action-icon-solid);
---hds-color-accent-default-surface-subduedAlt: var(
---hds-color-action-bg-subdued
-);
---hds-color-accent-management-border-quiet: var(--hds-color-core-orange-100);
---hds-color-accent-management-icon-gradientEnd: #fd5d7c;
---hds-color-accent-management-icon-gradientMiddle: #fd6252;
---hds-color-accent-management-icon-gradientStart: #fe8c2d;
---hds-color-accent-management-icon-solid: var(--hds-color-core-orange-350);
---hds-color-accent-management-icon-solidAlt: var(--hds-color-core-orange-350);
---hds-color-accent-management-surface-subdued: var(
---hds-color-core-orange-50
-);
---hds-color-accent-management-surface-subduedAlt: var(
---hds-color-core-orange-50
-);
---hds-color-accent-payments-border-quiet: var(--hds-color-core-magenta-100);
---hds-color-accent-payments-icon-gradientEnd: #b262f9;
---hds-color-accent-payments-icon-gradientMiddle: #f96bee;
---hds-color-accent-payments-icon-gradientStart: #f98bf9;
---hds-color-accent-payments-icon-solid: var(--hds-color-core-magenta-350);
---hds-color-accent-payments-icon-solidAlt: var(--hds-color-core-magenta-350);
---hds-color-accent-payments-surface-subdued: var(--hds-color-core-magenta-50);
---hds-color-accent-payments-surface-subduedAlt: var(
---hds-color-core-magenta-50
-);
---hds-color-accent-revenue-border-quiet: var(--hds-color-core-lemon-100);
---hds-color-accent-revenue-icon-gradientEnd: #ff9014;
---hds-color-accent-revenue-icon-gradientMiddle: #ffaf2d;
---hds-color-accent-revenue-icon-gradientStart: #ffd552;
---hds-color-accent-revenue-icon-solid: var(--hds-color-core-lemon-300);
---hds-color-accent-revenue-icon-solidAlt: var(--hds-color-core-lemon-300);
---hds-color-accent-revenue-surface-subdued: var(--hds-color-core-lemon-25);
---hds-color-accent-revenue-surface-subduedAlt: var(--hds-color-core-lemon-25);
---hds-color-action-bg-disabled: var(--hds-color-core-neutral-50);
---hds-color-action-bg-quiet: var(--hds-color-core-brand-50);
---hds-color-action-bg-quietHover: var(--hds-color-core-brand-100);
---hds-color-action-bg-solid: var(--hds-color-core-brand-600);
---hds-color-action-bg-solidHover: var(--hds-color-core-brand-700);
---hds-color-action-bg-subdued: var(--hds-color-core-brand-75);
---hds-color-action-bg-subduedHover: var(--hds-color-core-brand-200);
---hds-color-action-bg-translucent: #ffffffa6;
---hds-color-action-bg-transparent: #ffffff00;
---hds-color-action-border-disabled: var(--hds-color-core-neutral-100);
---hds-color-action-border-quiet: var(--hds-color-core-brand-100);
---hds-color-action-border-solid: var(--hds-color-util-action-fg-solid);
---hds-color-action-border-solidHover: var(--hds-color-core-brand-700);
---hds-color-action-border-subdued: var(--hds-color-core-brand-200);
---hds-color-action-focus-inner-quiet: var(--hds-color-surface-bg-quiet);
---hds-color-action-focus-inner-subdued: var(--hds-color-surface-bg-subdued);
---hds-color-action-focus-outer: var(--hds-color-core-brand-300);
---hds-color-action-focus-surface: #ffffff00;
---hds-color-action-icon-disabled: var(--hds-color-util-text-inactive);
---hds-color-action-icon-navigation-soft: var(--hds-color-util-text-soft);
---hds-color-action-icon-navigation-solid: var(--hds-color-util-text-solid);
---hds-color-action-icon-navigation-subdued: var(
---hds-color-util-text-subdued
-);
---hds-color-action-icon-onQuiet: var(--hds-color-util-action-fg-onAlpha);
---hds-color-action-icon-onSolid: var(--hds-color-util-white);
---hds-color-action-icon-onSubdued: var(--hds-color-util-action-fg-onAlpha);
---hds-color-action-icon-onTranslucent: var(
---hds-color-util-action-fg-onAlpha
-);
---hds-color-action-icon-onTransparent: var(--hds-color-util-action-fg-solid);
---hds-color-action-icon-solid: var(--hds-color-util-action-fg-solid);
---hds-color-action-icon-solidAlternate: var(--hds-color-util-action-fg-solid);
---hds-color-action-icon-solidAlternateHover: var(
---hds-color-util-action-fg-solidAlternateHover
-);
---hds-color-action-icon-solidHover: var(
---hds-color-util-action-fg-solidHover
-);
---hds-color-action-text-disabled: var(--hds-color-util-text-inactive);
---hds-color-action-text-onQuiet: var(--hds-color-util-action-fg-onAlpha);
---hds-color-action-text-onSolid: var(--hds-color-util-white);
---hds-color-action-text-onSubdued: var(--hds-color-util-action-fg-onAlpha);
---hds-color-action-text-onTranslucent: var(
---hds-color-util-action-fg-onAlpha
-);
---hds-color-action-text-onTransparent: var(--hds-color-util-action-fg-solid);
---hds-color-action-text-secondary: var(--hds-color-util-black);
---hds-color-action-text-solid: var(--hds-color-util-action-fg-solid);
---hds-color-action-text-solidAlternate: var(--hds-color-util-action-fg-solid);
---hds-color-action-text-solidAlternateHover: var(
---hds-color-util-action-fg-solidAlternateHover
-);
---hds-color-action-text-solidHover: var(
---hds-color-util-action-fg-solidHover
-);
---hds-color-button-primary-bg: var(--hds-color-action-bg-solid);
---hds-color-button-primary-bgDisabled: var(--hds-color-action-bg-disabled);
---hds-color-button-primary-bgHover: var(--hds-color-action-bg-solidHover);
---hds-color-button-primary-icon: var(--hds-color-util-white);
---hds-color-button-primary-iconDisabled: var(
---hds-color-action-icon-disabled
-);
---hds-color-button-primary-iconHover: var(--hds-color-util-white);
---hds-color-button-primary-text: var(--hds-color-action-text-onSolid);
---hds-color-button-primary-textDisabled: var(
---hds-color-action-text-disabled
-);
---hds-color-button-primary-textHover: var(--hds-color-action-text-onSolid);
---hds-color-button-secondary-bg: var(--hds-color-core-global-transparent);
---hds-color-button-secondary-bgHover: var(
---hds-color-core-global-transparent
-);
---hds-color-button-secondary-border: var(--hds-color-action-border-quiet);
---hds-color-button-secondary-borderDisabled: var(
---hds-color-action-border-disabled
-);
---hds-color-button-secondary-borderHover: var(
---hds-color-action-border-solidHover
-);
---hds-color-button-secondary-borderOnSubdued: var(
---hds-color-action-border-subdued
-);
---hds-color-button-secondary-icon: var(--hds-color-action-icon-solid);
---hds-color-button-secondary-iconHover: var(
---hds-color-action-icon-solidHover
-);
---hds-color-button-secondary-text: var(
---hds-color-action-text-solidAlternate
-);
---hds-color-button-secondary-textDisabled: var(
---hds-color-action-text-disabled
-);
---hds-color-button-secondary-textHover: var(
---hds-color-action-text-solidHover
-);
---hds-color-button-ui-bg: var(--hds-color-action-bg-quiet);
---hds-color-button-ui-bgHover: var(--hds-color-action-bg-quietHover);
---hds-color-button-ui-bgOnSubdued: var(--hds-color-action-bg-subdued);
---hds-color-button-ui-bgOnSubduedHover: var(
---hds-color-action-bg-subduedHover
-);
---hds-color-button-ui-borderDisabled: var(--hds-color-action-border-disabled);
---hds-color-button-ui-icon: var(--hds-color-action-icon-solid);
---hds-color-button-ui-iconDisabled: var(--hds-color-action-icon-disabled);
---hds-color-button-ui-iconHover: var(--hds-color-action-icon-solidHover);
---hds-color-heading-solid: var(--hds-color-core-neutral-990);
---hds-color-heading-subdued: var(--hds-color-core-neutral-500);
---hds-color-icon-emphasized: var(--hds-color-util-black);
---hds-color-icon-error: var(--hds-color-core-error-500);
---hds-color-icon-solid: var(--hds-color-core-neutral-800);
---hds-color-icon-subdued: var(--hds-color-core-neutral-500);
---hds-color-icon-success: var(--hds-color-core-success-400);
---hds-color-icon-surface: var(--hds-color-core-neutral-200);
---hds-color-input-bg-accent: var(--hds-color-action-bg-solid);
---hds-color-input-bg-accentOnSubdued: var(--hds-color-action-bg-solid);
---hds-color-input-bg-active: #ffffff80;
---hds-color-input-bg-disabled: var(--hds-color-action-bg-disabled);
---hds-color-input-bg-hover: var(--hds-color-core-brand-25);
---hds-color-input-bg-inactive: #ffffff40;
---hds-color-input-bg-popover: var(--hds-color-util-white);
---hds-color-input-bg-popoverTransparent: #ffffff00;
---hds-color-input-bg-quiet: var(--hds-color-core-neutral-100);
---hds-color-input-bg-selectorActive: var(--hds-color-core-brand-400);
---hds-color-input-bg-solid: var(--hds-color-core-neutral-0);
---hds-color-input-border-accent: var(--hds-color-action-bg-solid);
---hds-color-input-border-accentOnSubdued: var(
---hds-color-input-border-accent
-);
---hds-color-input-border-active: #d4dee9bf;
---hds-color-input-border-default: var(--hds-color-action-border-solid);
---hds-color-input-border-disabled: var(--hds-color-action-border-disabled);
---hds-color-input-border-error: var(--hds-color-core-error-500);
---hds-color-input-border-inactive: #d4dee9bf;
---hds-color-input-border-selected: var(--hds-color-core-brand-200);
---hds-color-input-icon-disabled: var(--hds-color-core-neutral-100);
---hds-color-input-icon-onSolid: var(--hds-color-util-white);
---hds-color-input-icon-solid: var(--hds-color-util-action-fg-solid);
---hds-color-input-icon-solidAlternate: var(--hds-color-util-action-fg-solid);
---hds-color-input-popover-border: var(--hds-color-core-global-transparent);
---hds-color-input-popover-divider: #d4dee9bf;
---hds-color-input-selector-bg-available: var(
---hds-color-core-global-transparent
-);
---hds-color-input-selector-bg-availableHover: var(--hds-color-core-brand-100);
---hds-color-input-selector-bg-disabled: var(--hds-color-input-bg-disabled);
---hds-color-input-selector-bg-range: var(--hds-color-core-brand-50);
---hds-color-input-selector-bg-selected: var(--hds-color-action-bg-solid);
---hds-color-input-selector-bg-selectedHover: var(
---hds-color-action-bg-solidHover
-);
---hds-color-input-selector-icon-disabledOnSolid: var(
---hds-color-action-icon-disabled
-);
---hds-color-input-selector-text-available: var(--hds-color-input-text-solid);
---hds-color-input-selector-text-availableHover: var(
---hds-color-core-brand-700
-);
---hds-color-input-selector-text-current: var(--hds-color-util-black);
---hds-color-input-selector-text-disabled: var(
---hds-color-input-text-disabled
-);
---hds-color-input-selector-text-range: var(--hds-color-core-brand-500);
---hds-color-input-selector-text-rangeDisabled: var(
---hds-color-core-brand-200
-);
---hds-color-input-selector-text-rangeHover: var(--hds-color-core-brand-700);
---hds-color-input-selector-text-selected: var(
---hds-color-action-text-onSolid
-);
---hds-color-input-selector-text-selectedDisabled: var(
---hds-color-core-neutral-800
-);
---hds-color-input-text-disabled: var(--hds-color-util-text-inactive);
---hds-color-input-text-error: var(--hds-color-core-error-500);
---hds-color-input-text-label: var(--hds-color-core-neutral-800);
---hds-color-input-text-placeholder: var(--hds-color-core-neutral-400);
---hds-color-input-text-popover: var(--hds-color-core-neutral-800);
---hds-color-input-text-selected: var(--hds-color-core-neutral-800);
---hds-color-input-text-solid: var(--hds-color-core-neutral-800);
---hds-color-shadow-xs-bottom: #003b890a;
---hds-color-shadow-xs-top: #0037700f;
---hds-color-shadow-sm-bottom: #003b890d;
---hds-color-shadow-sm-top: #00377014;
---hds-color-shadow-md-bottom: #003b8905;
---hds-color-shadow-md-top: #0037701a;
---hds-color-shadow-lg-bottom: #003b890a;
---hds-color-shadow-lg-top: #0037701a;
---hds-color-shadow-xl-bottom: #003b890f;
---hds-color-shadow-xl-top: #00377024;
---hds-color-shadow-popoverBottom: #061b311f;
---hds-color-shadow-popoverTop: #27395114;
---hds-color-surface-bg-quiet: var(--hds-color-util-white);
---hds-color-surface-bg-quietTranslucent: #ffffff8c;
---hds-color-surface-bg-subdued: var(--hds-color-core-neutral-25);
---hds-color-surface-bg-subduedTranslucent: #f8fafd8c;
---hds-color-surface-border-quiet: var(--hds-color-core-neutral-50);
---hds-color-text-quiet: var(--hds-color-core-neutral-400);
---hds-color-text-soft: var(--hds-color-core-neutral-600);
---hds-color-text-solid: var(--hds-color-core-neutral-990);
---hds-color-text-subdued: var(--hds-color-core-neutral-500);
---hds-color-util-accent-lemon-50: var(--hds-color-core-lemon-25);
---hds-color-util-accent-lemon-100: var(--hds-color-core-lemon-100);
---hds-color-util-accent-lemon-200: var(--hds-color-core-lemon-200);
---hds-color-util-accent-lemon-300: var(--hds-color-core-lemon-300);
---hds-color-util-accent-lemon-500: var(--hds-color-core-lemon-500);
---hds-color-util-accent-lemon-800: var(--hds-color-core-lemon-800);
---hds-color-util-accent-magenta-50: var(--hds-color-core-magenta-50);
---hds-color-util-accent-magenta-100: var(--hds-color-core-magenta-100);
---hds-color-util-accent-magenta-350: var(--hds-color-core-magenta-350);
---hds-color-util-accent-magenta-600: var(--hds-color-core-magenta-600);
---hds-color-util-accent-magenta-800: var(--hds-color-core-magenta-800);
---hds-color-util-accent-orange-50: var(--hds-color-core-orange-50);
---hds-color-util-accent-orange-100: var(--hds-color-core-orange-100);
---hds-color-util-accent-orange-350: var(--hds-color-core-orange-350);
---hds-color-util-accent-orange-600: var(--hds-color-core-orange-600);
---hds-color-util-accent-orange-800: var(--hds-color-core-orange-800);
---hds-color-util-accent-ruby-50: var(--hds-color-core-ruby-50);
---hds-color-util-accent-ruby-100: var(--hds-color-core-ruby-100);
---hds-color-util-accent-ruby-400: var(--hds-color-core-ruby-400);
---hds-color-util-accent-ruby-600: var(--hds-color-core-ruby-600);
---hds-color-util-accent-ruby-800: var(--hds-color-core-ruby-800);
---hds-color-util-action-bg-emphasized: var(--hds-color-core-brand-700);
---hds-color-util-action-bg-max: var(--hds-color-core-brand-800);
---hds-color-util-action-bg-min: #9a9afe1f;
---hds-color-util-action-bg-quiet: #b9b9f94d;
---hds-color-util-action-bg-soft: var(--hds-color-core-brand-500);
---hds-color-util-action-bg-solid: var(--hds-color-core-brand-600);
---hds-color-util-action-bg-subdued: #b9b9f999;
---hds-color-util-action-border-emphasized: var(--hds-color-core-brand-700);
---hds-color-util-action-border-max: var(--hds-color-core-brand-800);
---hds-color-util-action-border-quiet: var(--hds-color-core-brand-200);
---hds-color-util-action-border-solid: var(--hds-color-core-brand-600);
---hds-color-util-action-border-subdued: var(--hds-color-core-brand-400);
---hds-color-util-action-fg-onAlpha: var(--hds-color-util-action-fg-solid);
---hds-color-util-action-fg-onSolid: var(--hds-color-core-neutral-0);
---hds-color-util-action-fg-solid: var(--hds-color-core-brand-600);
---hds-color-util-action-fg-solidAlternate: var(
---hds-color-util-action-fg-solid
-);
---hds-color-util-action-fg-solidAlternateHover: var(
---hds-color-core-brand-800
-);
---hds-color-util-action-fg-solidHover: var(--hds-color-core-brand-800);
---hds-color-util-action-icon-emphasized: var(--hds-color-core-brand-700);
---hds-color-util-action-icon-max: var(--hds-color-core-brand-800);
---hds-color-util-action-icon-min: var(--hds-color-core-neutral-0);
---hds-color-util-action-icon-quiet: var(--hds-color-core-brand-100);
---hds-color-util-action-icon-soft: var(--hds-color-core-brand-500);
---hds-color-util-action-icon-solid: var(--hds-color-core-brand-600);
---hds-color-util-action-icon-subdued: var(--hds-color-core-brand-200);
---hds-color-util-action-text-emphasized: var(--hds-color-core-brand-700);
---hds-color-util-action-text-max: var(--hds-color-core-brand-800);
---hds-color-util-action-text-min: var(--hds-color-core-neutral-0);
---hds-color-util-action-text-soft: var(--hds-color-core-brand-500);
---hds-color-util-action-text-solid: var(--hds-color-core-brand-600);
---hds-color-util-bg-min: var(--hds-color-core-neutral-0);
---hds-color-util-bg-quiet: var(--hds-color-core-neutral-25);
---hds-color-util-bg-soft: var(--hds-color-core-neutral-100);
---hds-color-util-bg-subdued: var(--hds-color-core-neutral-50);
---hds-color-util-black: var(--hds-color-core-neutral-990);
---hds-color-util-border-emphasized: var(--hds-color-util-black);
---hds-color-util-border-quiet: var(--hds-color-core-neutral-50);
---hds-color-util-border-soft: var(--hds-color-core-neutral-600);
---hds-color-util-border-solid: var(--hds-color-core-neutral-800);
---hds-color-util-border-subdued: var(--hds-color-core-neutral-100);
---hds-color-util-brand-25: var(--hds-color-core-brand-25);
---hds-color-util-brand-50: var(--hds-color-core-brand-50);
---hds-color-util-brand-75: var(--hds-color-core-brand-75);
---hds-color-util-brand-100: var(--hds-color-core-brand-100);
---hds-color-util-brand-200: var(--hds-color-core-brand-200);
---hds-color-util-brand-300: var(--hds-color-core-brand-300);
---hds-color-util-brand-400: var(--hds-color-core-brand-400);
---hds-color-util-brand-500: var(--hds-color-core-brand-500);
---hds-color-util-brand-600: var(--hds-color-core-brand-600);
---hds-color-util-brand-700: var(--hds-color-core-brand-700);
---hds-color-util-brand-800: var(--hds-color-core-brand-800);
---hds-color-util-brand-900: var(--hds-color-core-brand-900);
---hds-color-util-brand-925: var(--hds-color-core-brand-925);
---hds-color-util-brand-950: var(--hds-color-core-brand-950);
---hds-color-util-brand-975: var(--hds-color-core-brand-975);
---hds-color-util-error-100: var(--hds-color-core-error-100);
---hds-color-util-error-400: var(--hds-color-core-error-400);
---hds-color-util-error-500: var(--hds-color-core-error-500);
---hds-color-util-error-600: var(--hds-color-core-error-600);
---hds-color-util-neutral-0: var(--hds-color-core-neutral-0);
---hds-color-util-neutral-25: var(--hds-color-core-neutral-25);
---hds-color-util-neutral-50: var(--hds-color-core-neutral-50);
---hds-color-util-neutral-100: var(--hds-color-core-neutral-100);
---hds-color-util-neutral-200: var(--hds-color-core-neutral-200);
---hds-color-util-neutral-300: var(--hds-color-core-neutral-300);
---hds-color-util-neutral-400: var(--hds-color-core-neutral-400);
---hds-color-util-neutral-500: var(--hds-color-core-neutral-500);
---hds-color-util-neutral-600: var(--hds-color-core-neutral-600);
---hds-color-util-neutral-700: var(--hds-color-core-neutral-700);
---hds-color-util-neutral-800: var(--hds-color-core-neutral-800);
---hds-color-util-neutral-900: var(--hds-color-core-neutral-900);
---hds-color-util-neutral-950: var(--hds-color-core-neutral-950);
---hds-color-util-neutral-975: var(--hds-color-core-neutral-975);
---hds-color-util-neutral-990: var(--hds-color-core-neutral-990);
---hds-color-util-success-100: var(--hds-color-core-success-100);
---hds-color-util-success-400: var(--hds-color-core-success-400);
---hds-color-util-success-600: var(--hds-color-core-success-600);
---hds-color-util-text-inactive: var(--hds-color-core-neutral-300);
---hds-color-util-text-quiet: var(--hds-color-core-neutral-400);
---hds-color-util-text-soft: var(--hds-color-core-neutral-600);
---hds-color-util-text-solid: var(--hds-color-core-neutral-990);
---hds-color-util-text-subdued: var(--hds-color-core-neutral-500);
---hds-color-util-white: var(--hds-color-core-neutral-0);
---hds-shadow-xs-bottom-blur: 4px;
---hds-shadow-xs-bottom-offset-x: 0px;
---hds-shadow-xs-bottom-offset-y: 1px;
---hds-shadow-xs-bottom-spread: 0px;
---hds-shadow-xs-top-blur: 10px;
---hds-shadow-xs-top-offset-x: 0px;
---hds-shadow-xs-top-offset-y: 2px;
---hds-shadow-xs-top-spread: 0px;
---hds-shadow-sm-bottom-blur: 8px;
---hds-shadow-sm-bottom-offset-x: 0px;
---hds-shadow-sm-bottom-offset-y: 2px;
---hds-shadow-sm-bottom-spread: 0px;
---hds-shadow-sm-top-blur: 14px;
---hds-shadow-sm-top-offset-x: 0px;
---hds-shadow-sm-top-offset-y: 5px;
---hds-shadow-sm-top-spread: 0px;
---hds-shadow-md-bottom-blur: 8px;
---hds-shadow-md-bottom-offset-x: 0px;
---hds-shadow-md-bottom-offset-y: 4px;
---hds-shadow-md-bottom-spread: 0px;
---hds-shadow-md-top-blur: 22px;
---hds-shadow-md-top-offset-x: 0px;
---hds-shadow-md-top-offset-y: 6px;
---hds-shadow-md-top-spread: 0px;
---hds-shadow-lg-bottom-blur: 20px;
---hds-shadow-lg-bottom-offset-x: 0px;
---hds-shadow-lg-bottom-offset-y: 5px;
---hds-shadow-lg-bottom-spread: -2px;
---hds-shadow-lg-top-blur: 40px;
---hds-shadow-lg-top-offset-x: 0px;
---hds-shadow-lg-top-offset-y: 15px;
---hds-shadow-lg-top-spread: -2px;
---hds-shadow-xl-bottom-blur: 60px;
---hds-shadow-xl-bottom-offset-x: 0px;
---hds-shadow-xl-bottom-offset-y: 10px;
---hds-shadow-xl-bottom-spread: -16px;
---hds-shadow-xl-top-blur: 80px;
---hds-shadow-xl-top-offset-x: 0px;
---hds-shadow-xl-top-offset-y: 20px;
---hds-shadow-xl-top-spread: -16px;
---hds-size-input-popover-border-width: 0px;
+text-wrap: pretty;
+display: block;
+background-color: var(--white);

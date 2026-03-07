@@ -8,6 +8,7 @@ import { FinalCta } from "@/components/marketing/final-cta";
 import { ProcessSection } from "./components/process-section";
 import { BusinessSizesSection } from "./components/business-sizes-section";
 import { HeroSection } from "./components/hero-section";
+import { FeaturesSection } from "./components/features-section";
 
 // Arrow Icon
 const ArrowIcon = () => (
@@ -271,6 +272,9 @@ export default function Home() {
             <main>
                 {/* Hero Section */}
                 <HeroSection />
+
+                {/* Features Section */}
+                <FeaturesSection />
 
                 {/* Logo Section - Full Width */}
                 <section className="w-full py-12 bg-secondary">
@@ -625,6 +629,14 @@ export default function Home() {
                     0% { transform: translateY(0); }
                     100% { transform: translateY(-50%); }
                 }
+                @keyframes marquee {
+                    0% { transform: translateX(0); }
+                    100% { transform: translateX(-50%); }
+                }
+                @keyframes marquee-reverse {
+                    0% { transform: translateX(-50%); }
+                    100% { transform: translateX(0); }
+                }
                 .animate-fade-in {
                     animation: fade-in 0.5s ease;
                 }
@@ -633,6 +645,12 @@ export default function Home() {
                 }
                 .animate-ticker {
                     animation: ticker 20s linear infinite;
+                }
+                .animate-marquee {
+                    animation: marquee 20s linear infinite;
+                }
+                .animate-marquee-reverse {
+                    animation: marquee-reverse 20s linear infinite;
                 }
             `}</style>
         </div>
