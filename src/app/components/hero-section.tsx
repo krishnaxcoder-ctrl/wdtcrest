@@ -94,7 +94,7 @@ export function HeroSection() {
                     />
                     {/* Bottom Card */}
                     <div className="absolute inset-x-0 bottom-0 z-20 p-4 lg:p-6">
-                        <div className="overflow-hidden rounded-xl border border-white/20 bg-gradient-to-br from-white/95 to-white/80 shadow-2xl backdrop-blur-xl">
+                        <div className="rounded-xl border border-white/20 bg-gradient-to-br from-white/95 to-white/80 shadow-2xl backdrop-blur-xl">
                             {/* Header */}
                             <div className="flex items-center justify-between border-b border-gray-100 px-5 py-4">
                                 <div className="flex items-center gap-3">
@@ -143,9 +143,9 @@ export function HeroSection() {
                             </div>
 
                             {/* Footer */}
-                            <div className="flex items-center justify-between bg-gradient-to-r from-gray-50 to-gray-100/50 px-5 py-3">
+                            <div className="relative flex items-center justify-between overflow-visible bg-gradient-to-r from-gray-50 to-gray-100/50 px-5 py-3">
                                 <div className="flex items-center gap-3">
-                                    <div className="group/avatars flex items-center">
+                                    <div className="group/avatars relative z-[100] flex items-center">
                                         {[
                                             {
                                                 src: 'https://www.untitledui.com/images/avatars/alec-whitten?w=144&h=144&q=75&fm=webp',
@@ -173,7 +173,7 @@ export function HeroSection() {
                                                     className="h-7 w-7 rounded-full object-cover ring-2 ring-white"
                                                 />
                                                 {/* Floating Testimonial Card */}
-                                                <div className="pointer-events-none absolute bottom-full left-1/2 z-50 mb-3 -translate-x-1/2 opacity-0 transition-all duration-300 ease-out group-hover/avatar:pointer-events-auto group-hover/avatar:opacity-100">
+                                                <div className="pointer-events-none absolute bottom-full left-1/2 z-[200] mb-3 -translate-x-1/2 opacity-0 transition-all duration-300 ease-out group-hover/avatar:pointer-events-auto group-hover/avatar:opacity-100">
                                                     <div className="w-64 rounded-xl border border-gray-100 bg-white p-4 shadow-xl">
                                                         <div className="flex items-center gap-3">
                                                             <img src={person.src} alt={person.name} className="size-10 rounded-full object-cover" />
