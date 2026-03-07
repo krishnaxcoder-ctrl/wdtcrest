@@ -79,7 +79,7 @@ export const Header = () => {
                                     <Link
                                         key={link.label}
                                         href={link.href}
-                                        className="flex items-center gap-1 px-3 py-2 text-[15px] font-medium tracking-[-0.01em] text-secondary antialiased transition-colors hover:text-brand-600"
+                                        className="flex items-center gap-1 px-3 py-2 text-sm font-medium tracking-[-0.01em] text-secondary antialiased transition-colors hover:text-brand-600"
                                     >
                                         {link.label}
                                         <ChevronDownIcon />
