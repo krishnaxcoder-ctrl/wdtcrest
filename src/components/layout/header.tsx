@@ -171,10 +171,7 @@ const MegaMenuDropdown = ({
                         <div key={groupIndex} className={`group/col py-2 px-6 ${groupIndex < menu.groups.length - 1 ? "border-r border-secondary" : ""}`}>
                             <h3 className="relative mb-4 pb-2 text-xs font-semibold uppercase tracking-wider text-tertiary">
                                 {group.title}
-                                <span
-                                    className="absolute bottom-0 left-0 h-0.5 w-full origin-left scale-x-0 transition-transform duration-200 group-hover/col:scale-x-100"
-                                    style={{ background: "linear-gradient(90deg, #ff6118, #fb76fa, #533afd)" }}
-                                />
+                                <span className="absolute bottom-0 left-0 h-0.5 w-full origin-left scale-x-0 bg-gradient-to-r from-brand-400 via-brand-500 to-brand-600 transition-transform duration-200 group-hover/col:scale-x-100" />
                             </h3>
                             <ul className="-ml-2">
                                 {group.items.map((item, itemIndex) => (
