@@ -147,6 +147,9 @@ export function FeaturesSection() {
                 </div>
             </div>
 
+            {/* Dot Grid Divider */}
+            <DotGridDividerComponent />
+
             {/* Feature Blocks */}
             {features.map((feature, index) => (
                 <div key={index}>
@@ -154,9 +157,6 @@ export function FeaturesSection() {
                     {index < features.length - 1 && <DotGridDivider />}
                 </div>
             ))}
-
-            {/* Dot Grid Divider */}
-            <DotGridDividerComponent />
         </section>
     );
 }
