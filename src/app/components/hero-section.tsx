@@ -49,20 +49,20 @@ export function HeroSection() {
                         </div>
 
                         {/* Trust Indicators */}
-                        <div className="mt-12 flex flex-wrap items-center gap-6 border-t border-secondary pt-8">
-                            <div className="flex items-center gap-2">
-                                <span className="text-2xl font-bold text-primary">30+</span>
-                                <span className="text-sm text-tertiary">Years Experience</span>
+                        <div className="mt-12 flex flex-wrap items-center gap-5 border-t border-secondary pt-8">
+                            <div className="flex items-center gap-1.5">
+                                <span className="text-base font-semibold text-primary">30+</span>
+                                <span className="text-xs text-tertiary">Years Experience</span>
                             </div>
-                            <div className="h-8 w-px bg-secondary"></div>
-                            <div className="flex items-center gap-2">
-                                <span className="text-2xl font-bold text-primary">5,000+</span>
-                                <span className="text-sm text-tertiary">Happy Customers</span>
+                            <div className="h-6 w-px bg-secondary"></div>
+                            <div className="flex items-center gap-1.5">
+                                <span className="text-base font-semibold text-primary">5,000+</span>
+                                <span className="text-xs text-tertiary">Happy Customers</span>
                             </div>
-                            <div className="h-8 w-px bg-secondary"></div>
-                            <div className="flex items-center gap-2">
-                                <span className="text-2xl font-bold text-primary">24/7</span>
-                                <span className="text-sm text-tertiary">Emergency Service</span>
+                            <div className="h-6 w-px bg-secondary"></div>
+                            <div className="flex items-center gap-1.5">
+                                <span className="text-base font-semibold text-primary">24/7</span>
+                                <span className="text-xs text-tertiary">Emergency Service</span>
                             </div>
                         </div>
                     </div>
