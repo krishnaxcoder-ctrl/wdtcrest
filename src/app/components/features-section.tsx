@@ -104,11 +104,11 @@ const FeatureBlock = ({ feature }: { feature: typeof features[0] }) => (
                 </div>
 
                 {/* Image */}
-                <div className={`relative ${feature.reverse ? "lg:order-1" : ""}`}>
+                <div className={`relative h-full ${feature.reverse ? "lg:order-1" : ""}`}>
                     <img
                         src={feature.image}
                         alt={feature.imageAlt}
-                        className="w-full object-cover"
+                        className="h-full w-full object-cover"
                     />
                 </div>
             </div>
