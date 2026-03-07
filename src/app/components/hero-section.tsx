@@ -192,7 +192,7 @@ export function HeroSection() {
                                                         </div>
                                                     </div>
                                                     {/* Arrow */}
-                                                    <div className="absolute left-1/2 -bottom-2 -translate-x-1/2">
+                                                    <div className="absolute -bottom-2 left-1/2 -translate-x-1/2">
                                                         <div className="size-4 rotate-45 border-b border-r border-gray-100 bg-white"></div>
                                                     </div>
                                                 </div>
