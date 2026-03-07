@@ -10,7 +10,7 @@ const ArrowIcon = () => (
 
 export function HeroSection() {
     return (
-        <section className="min-h-screen border-x border-secondary">
+        <section className="mx-auto max-w-7xl border-x border-secondary">
             <div className="grid min-h-screen grid-cols-1 lg:grid-cols-2">
                 {/* Left Content */}
                 <div className="flex flex-col justify-center px-6 py-16 lg:px-12 lg:py-24">
@@ -73,10 +73,8 @@ export function HeroSection() {
                     <img
                         src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80"
                         alt="Professional septic service truck"
-                        className="absolute inset-0 h-full w-full object-cover"
+                        className="h-full w-full object-cover"
                     />
-                    {/* Overlay gradient */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent lg:from-white/10" />
                 </div>
             </div>
         </section>
