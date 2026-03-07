@@ -65,31 +65,6 @@ export const Header = () => {
 
     return (
         <header className="bg-primary border-b border-tertiary">
-            {/* Top Bar */}
-            <div className="hidden lg:block bg-primary-solid text-white">
-                <div className="max-w-[1440px] mx-auto px-6 lg:px-10">
-                    <div className="flex items-center justify-between py-2 text-xs">
-                        <div className="flex items-center gap-6">
-                            <div className="flex items-center gap-2">
-                                <span className="size-2 rounded-full animate-pulse bg-brand-500" />
-                                <span>24/7 Emergency Service Available</span>
-                            </div>
-                            <span className="text-white/40">|</span>
-                            <span>Serving Asheville & Western NC</span>
-                        </div>
-                        <div className="flex items-center gap-6">
-                            <a href="mailto:info@ableseptic.com" className="hover:text-brand-400 transition-colors">
-                                info@ableseptic.com
-                            </a>
-                            <a href="tel:8282541920" className="flex items-center gap-2 font-semibold transition-colors hover:text-brand-400">
-                                <PhoneIcon />
-                                (828) 254-1920
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             {/* Main Navigation */}
             <nav className="bg-primary">
                 <div className="max-w-[1440px] mx-auto px-6 lg:px-10">
