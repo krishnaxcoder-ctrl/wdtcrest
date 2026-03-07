@@ -97,7 +97,7 @@ export function HeroSection() {
                     <img
                         src="/heroimage1.avif"
                         alt="Professional septic service truck"
-                        className="h-full w-full object-cover"
+                        className="h-full w-full rounded-lg object-cover"
                     />
                     {/* Bottom Card */}
                     <div className="absolute inset-x-0 bottom-0 z-20 p-4 lg:p-6">
