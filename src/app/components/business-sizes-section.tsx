@@ -30,13 +30,6 @@ const ChevronRightIcon = () => (
 const enterpriseCustomers = [
     {
         id: "residential",
-        logo: (
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 40 40">
-                <rect width="40" height="40" fill="#16b364" rx="6" />
-                <path fill="#fff" d="M20 11l9 7v11a1 1 0 01-1 1h-5v-6h-6v6h-5a1 1 0 01-1-1V18l9-7z" />
-                <path fill="#16b364" d="M17 24h6v6h-6z" />
-            </svg>
-        ),
         title: "Smith family protects their home with regular septic maintenance.",
         description: "Regular pumping every 3 years has kept this family's system running perfectly for over a decade.",
         image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1200&q=80",
@@ -48,13 +41,6 @@ const enterpriseCustomers = [
     },
     {
         id: "commercial",
-        logo: (
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 40 40">
-                <rect width="40" height="40" fill="#3981FF" rx="6" />
-                <path fill="#fff" d="M12 14h16v2H12v-2zm-1 4h18v12H11V18zm3 3v2h4v-2h-4zm6 0v2h4v-2h-4zm-6 4v2h4v-2h-4zm6 0v2h4v-2h-4z" />
-                <circle cx="20" cy="11" r="2" fill="#fff" />
-            </svg>
-        ),
         title: "Mountain View Restaurant relies on WDT Crest for grease trap service.",
         description: "Monthly grease trap cleaning keeps this busy Asheville restaurant compliant and operational.",
         image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=80",
@@ -66,12 +52,6 @@ const enterpriseCustomers = [
     },
     {
         id: "construction",
-        logo: (
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 40 40">
-                <rect width="40" height="40" fill="#FF930F" rx="6" />
-                <path fill="#fff" d="M15 12h10l2 4H13l2-4zm-3 6h16v2H12v-2zm2 4h12v8H14v-8zm2 2v4h3v-4h-3zm5 0v4h3v-4h-3z" />
-            </svg>
-        ),
         title: "Henderson Builders partners with WDT Crest on new construction.",
         description: "We've installed septic systems for 50+ new homes with 100% first-inspection pass rate.",
         image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80",
@@ -83,13 +63,6 @@ const enterpriseCustomers = [
     },
     {
         id: "property-mgmt",
-        logo: (
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 40 40">
-                <rect width="40" height="40" fill="#7f56d9" rx="6" />
-                <path fill="#fff" d="M10 16h8v14h-8V16zm1.5 2v2h2v-2h-2zm3 0v2h2v-2h-2zm-3 4v2h2v-2h-2zm3 0v2h2v-2h-2zm-3 4v2h2v-2h-2zm3 0v2h2v-2h-2z" />
-                <path fill="#fff" d="M22 12h8v18h-8V12zm1.5 2v2h2v-2h-2zm3 0v2h2v-2h-2zm-3 4v2h2v-2h-2zm3 0v2h2v-2h-2zm-3 4v2h2v-2h-2zm3 0v2h2v-2h-2zm-3 4v2h2v-2h-2zm3 0v2h2v-2h-2z" />
-            </svg>
-        ),
         title: "Blue Ridge HOA manages 200+ units with our maintenance plans.",
         description: "Quarterly inspections and priority emergency response for their entire community.",
         image: "https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=1200&q=80",
@@ -109,11 +82,11 @@ export const BusinessSizesSection = () => {
         <section className="bg-white py-20 sm:py-24 lg:py-28 border-x border-gray-200 max-w-7xl mx-auto">
             <div className="mx-auto max-w-[1280px] px-2 sm:px-4 flex flex-col gap-5 sm:gap-6 lg:gap-8">
                 {/* Main Header */}
-                <div className="max-w-[800px]">
-                    <h2 className="inline text-[28px] sm:text-[40px] font-medium leading-[1.1] tracking-[-0.02em] text-primary antialiased">
+                <div className="max-w-[940px]">
+                    <h2 className="inline text-[28px] sm:text-[36px] font-medium leading-[1.1] tracking-[-0.02em] text-primary antialiased">
                         Serving properties of all sizes.
-                    </h2>
-                    <p className="inline text-[28px] sm:text-[40px] font-light leading-[1.1] tracking-[-0.02em] text-tertiary antialiased">
+                    </h2><hr/>
+                    <p className="inline text-[28px] sm:text-[36px] font-medium leading-[1.1] tracking-[-0.02em] text-primary antialiased">
                         {" "}Professional septic services that grow with your needs.
                     </p>
                 </div>
@@ -123,7 +96,7 @@ export const BusinessSizesSection = () => {
                     {/* Enterprise/Residential Section */}
                     <section className="flex flex-col gap-3 sm:gap-4 lg:gap-6">
                         <header className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
-                            <div className="flex flex-col gap-3">
+                            <div className="flex flex-col gap-6">
                                 <h3 className="text-xl sm:text-2xl font-medium leading-[1.25] tracking-[-0.02em] text-primary">
                                     Trusted by homeowners and businesses across Western NC
                                 </h3>
@@ -152,7 +125,7 @@ export const BusinessSizesSection = () => {
                         </header>
 
                         {/* Customer Stories Accordion */}
-                        <div className="flex flex-col border border-gray-200 rounded-xl overflow-hidden">
+                        <div className="flex flex-col border border-gray-200 rounded-sm overflow-hidden">
                             {enterpriseCustomers.map((customer, index) => (
                                 <div key={customer.id} className="border-b border-gray-200 last:border-b-0">
                                     <div
@@ -168,7 +141,6 @@ export const BusinessSizesSection = () => {
                                         }}
                                         aria-expanded={openCustomer === index}
                                     >
-                                        <div className="shrink-0">{customer.logo}</div>
                                         <div className="flex-1 text-left">
                                             <h3 className="text-[17px] font-medium leading-[1.4] text-primary m-0 transition-colors duration-150 group-hover:text-red-600">
                                                 {customer.title}
