@@ -15,7 +15,7 @@ export function HeroSection() {
                 {/* Left Content */}
                 <div className="relative flex flex-col justify-end px-6 pb-12 lg:px-12 lg:pb-16">
                     {/* Background image with hue filter */}
-                    <div className="absolute inset-0" style={{ backgroundImage: "url('/eligibility-bg.jpg')", backgroundSize: "cover", backgroundPosition: "center", filter: "hue-rotate(90deg)" }}></div>
+                    <div className="absolute inset-0" style={{ backgroundImage: "url('/eligibility-bg.jpg')", backgroundSize: "cover", backgroundPosition: "top", filter: "hue-rotate(90deg)" }}></div>
                     {/* Overlay for opacity */}
                     <div className="absolute inset-0 bg-white/70"></div>
                     <div className="relative z-10 max-w-xl">
@@ -52,21 +52,34 @@ export function HeroSection() {
                             </Link>
                         </div>
 
-                        {/* Trust Indicators */}
-                        <div className="mt-12 flex flex-wrap items-center gap-5 border-t border-secondary pt-8">
-                            <div className="flex items-center gap-1.5">
-                                <span className="text-base font-semibold text-primary">30+</span>
-                                <span className="text-xs text-tertiary">Years Experience</span>
+                        {/* Additional Info */}
+                        <div className="mt-6 grid w-full grid-cols-3 gap-3 border-t border-secondary pt-5 sm:mt-10 sm:flex sm:w-auto sm:flex-wrap sm:gap-6 sm:pt-8">
+                            <div className="flex flex-col items-center gap-1 sm:flex-row sm:items-center sm:gap-3">
+                                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="text-fg-brand-primary size-4 sm:size-5">
+                                    <path d="M12 6v6l4 2m6-2c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2s10 4.477 10 10Z"></path>
+                                </svg>
+                                <div className="text-center sm:text-left">
+                                    <p className="text-primary text-xs font-semibold sm:text-sm">3-4 Hours</p>
+                                    <p className="text-tertiary text-[10px] sm:text-xs">Duration</p>
+                                </div>
                             </div>
-                            <div className="h-6 w-px bg-secondary"></div>
-                            <div className="flex items-center gap-1.5">
-                                <span className="text-base font-semibold text-primary">5,000+</span>
-                                <span className="text-xs text-tertiary">Happy Customers</span>
+                            <div className="flex flex-col items-center gap-1 sm:flex-row sm:items-center sm:gap-3">
+                                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="text-fg-brand-primary size-4 sm:size-5">
+                                    <path d="M22 21v-2a4.002 4.002 0 0 0-3-3.874M15.5 3.291a4.001 4.001 0 0 1 0 7.418M17 21c0-1.864 0-2.796-.305-3.53a4 4 0 0 0-2.164-2.165C13.796 15 12.864 15 11 15H8c-1.864 0-2.796 0-3.53.305a4 4 0 0 0-2.166 2.164C2 18.204 2 19.136 2 21M13.5 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"></path>
+                                </svg>
+                                <div className="text-center sm:text-left">
+                                    <p className="text-primary text-xs font-semibold sm:text-sm">1:1 Training</p>
+                                    <p className="text-tertiary text-[10px] sm:text-xs">Teaching</p>
+                                </div>
                             </div>
-                            <div className="h-6 w-px bg-secondary"></div>
-                            <div className="flex items-center gap-1.5">
-                                <span className="text-base font-semibold text-primary">24/7</span>
-                                <span className="text-xs text-tertiary">Emergency Service</span>
+                            <div className="flex flex-col items-center gap-1 sm:flex-row sm:items-center sm:gap-3">
+                                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="text-fg-brand-primary size-4 sm:size-5">
+                                    <path d="M7.967 14.722 7 22l4.588-2.753c.15-.09.225-.135.305-.152a.5.5 0 0 1 .214 0c.08.017.155.062.305.152L17 22l-.966-7.279M19 9A7 7 0 1 1 5 9a7 7 0 0 1 14 0Z"></path>
+                                </svg>
+                                <div className="text-center sm:text-left">
+                                    <p className="text-primary text-xs font-semibold sm:text-sm">International</p>
+                                    <p className="text-tertiary text-[10px] sm:text-xs">Certification</p>
+                                </div>
                             </div>
                         </div>
                     </div>
