@@ -60,7 +60,7 @@ const MarqueeRow = ({ items, direction = "left" }: { items: string[]; direction?
 const FeatureBlock = ({ feature }: { feature: typeof features[0] }) => (
     <div className="border-b border-secondary bg-white">
         <div className="mx-auto max-w-7xl border-x border-secondary pl-6 py-0 lg:pl-12">
-            <div className={`grid items-stretch lg:grid-cols-2 ${feature.reverse ? "" : ""}`}>
+            <div className={`grid items-center lg:grid-cols-2 ${feature.reverse ? "" : ""}`}>
                 {/* Content */}
                 <div className={`flex flex-col justify-center py-16 pr-12 ${feature.reverse ? "lg:order-2 lg:pl-12 lg:pr-0" : ""}`}>
                     <h3 className="text-3xl font-semibold tracking-tight text-primary lg:text-4xl">
@@ -104,11 +104,11 @@ const FeatureBlock = ({ feature }: { feature: typeof features[0] }) => (
                 </div>
 
                 {/* Image */}
-                <div className={`${feature.reverse ? "lg:order-1" : ""}`}>
+                <div className={`relative ${feature.reverse ? "lg:order-1" : ""}`}>
                     <img
                         src={feature.image}
                         alt={feature.imageAlt}
-                        className="h-full w-full object-cover"
+                        className="w-full object-cover"
                     />
                 </div>
             </div>
