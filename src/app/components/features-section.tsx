@@ -41,26 +41,7 @@ const features = [
         linkText: "See how it works",
         reverse: true,
     },
-    {
-        title: "Trusted",
-        titleHighlight: "Actually",
-        heading: "Actually reduce risk and prove it",
-        description: "Go beyond basic maintenance. With our services, you reduce real risks and generate clear documentation — ready to share with inspectors, buyers, and your peace of mind.",
-        marqueeTop: ["Continuous Monitoring", "Inspection-ready Logs", "Continuous Monitoring", "Inspection-ready Logs"],
-        marqueeBottom: ["Detailed Reports for property records", "NC-certified Inspections", "Detailed Reports for property records", "NC-certified Inspections"],
-        testimonial: {
-            quote: "Our key outcome is peace of mind. They make sure we're maintaining our system properly across the entire property.",
-            name: "Jennifer L.",
-            role: "Homeowner, Hendersonville",
-            avatar: "https://www.untitledui.com/images/avatars/amelie-laurent?w=144&h=144&q=75&fm=webp",
-        },
-        image: "/heroimage1.avif",
-        imageAlt: "Risk reduction documentation",
-        link: "/reliable-septic-services",
-        linkText: "See how it works",
-        reverse: false,
-    },
-];
+    ];
 
 const MarqueeRow = ({ items, direction = "left" }: { items: string[]; direction?: "left" | "right" }) => (
     <div className="relative overflow-hidden">
