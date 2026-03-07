@@ -7,6 +7,7 @@ import { Header, Footer } from "@/components/layout";
 import { FinalCta } from "@/components/marketing/final-cta";
 import { ProcessSection } from "./components/process-section";
 import { BusinessSizesSection } from "./components/business-sizes-section";
+import { HeroSection } from "./components/hero-section";
 
 // Arrow Icon
 const ArrowIcon = () => (
@@ -269,59 +270,7 @@ export default function Home() {
 
             <main>
                 {/* Hero Section */}
-                <section className="">
-                    <div className="w-full max-w-7xl mx-auto border-l border-r border-tertiary lg:pl-10 relative overflow-hidden">
-                        <BackgroundPattern pattern="grid-check" size="md" className="absolute inset-0 w-full h-full" />
-                        <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[600px] overflow-hidden relative z-10">
-                            {/* Left Column - Content */}
-                            <div className="flex flex-col justify-center px-8 py-16 lg:px-12 lg:py-20">
-                                <div className="flex flex-col gap-6">
-                                    {/* Badge */}
-                                    <div>
-                                        <div className="inline-flex flex-wrap items-center gap-3 rounded-full border border-secondary bg-primary px-6 py-3 shadow-sm">
-                                            <div className="flex size-5 items-center justify-center rounded-full bg-success-solid">
-                                                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="size-3 text-white">
-                                                    <path d="m9 12 2 2 4.5-4.5m2.401-4.501a2.03 2.03 0 0 0 1.1 1.1l1.744.723a2.033 2.033 0 0 1 1.1 2.656l-.722 1.744a2.03 2.03 0 0 0 0 1.556l.722 1.744a2.033 2.033 0 0 1-1.1 2.656L19 17.901A2.033 2.033 0 0 0 17.9 19l-.723 1.745a2.032 2.032 0 0 1-2.656 1.1l-1.744-.722a2.032 2.032 0 0 0-1.555 0l-1.745.723a2.033 2.033 0 0 1-2.654-1.1L6.1 19.001A2.033 2.033 0 0 0 5 17.9l-1.744-.723a2.033 2.033 0 0 1-1.1-2.654l.721-1.744a2.033 2.033 0 0 0 0-1.556l-.722-1.746a2.033 2.033 0 0 1 1.1-2.657L5 6.098A2.03 2.03 0 0 0 6.1 5l.723-1.745a2.033 2.033 0 0 1 2.656-1.1l1.744.722a2.033 2.033 0 0 0 1.555-.001l1.746-.72a2.032 2.032 0 0 1 2.655 1.1l.723 1.746v-.003Z"></path>
-                                                </svg>
-                                            </div>
-                                            <span className="text-secondary text-sm font-semibold">Serving Asheville & Surrounding Areas</span>
-                                            <span className="bg-success-secondary text-success-primary rounded-full border-l border-success-primary px-3 py-1 text-xs font-medium">30+ Years</span>
-                                        </div>
-                                    </div>
-
-                                    {/* Heading */}
-                                    <RotatingText />
-
-                                    {/* Description */}
-                                    <div className="max-w-md">
-                                        <p className="text-lg text-tertiary leading-relaxed">
-                                            Trusted septic system maintenance, inspections, and repairs. Over 30 years of experience serving Western North Carolina.
-                                        </p>
-                                    </div>
-
-                                    {/* Buttons */}
-                                    <div className="flex flex-wrap gap-3">
-                                        <Link href="tel:8282541920" className="inline-flex items-center gap-2 px-6 py-4 text-sm font-medium bg-success-solid text-primary-solid transition-all hover:bg-success-primary group">
-                                            <span>Call Now: (828) 254-1920</span>
-                                            <div className="size-8 flex items-center justify-center transition-transform group-hover:-rotate-90 group-hover:bg-success-primary rounded">
-                                                <ArrowIcon />
-                                            </div>
-                                        </Link>
-                                        <Link href="/services" className="inline-flex items-center px-6 py-4 text-sm text-tertiary border border-dashed border-tertiary transition-colors hover:text-primary">
-                                            View Services
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Right Column - Image */}
-                            <div
-                                className="hidden lg:block min-h-[600px] mr-6 lg:mr-10 rounded-2xl bg-cover"
-                                style={{ backgroundImage: 'url(/herobg.jpg)', backgroundSize: '210%', backgroundPosition: 'left 70% center' }}
-                            />
-                        </div>
-                    </div>
-                </section>
+                <HeroSection />
 
                 {/* Logo Section - Full Width */}
                 <section className="w-full py-12 bg-secondary">
