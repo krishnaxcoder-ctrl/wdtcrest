@@ -56,8 +56,6 @@ const navLinks = [
     { label: "Pumping", href: "/reliable-septic-pumping-solutions" },
     { label: "Inspections", href: "/septic-inspection-solutions" },
     { label: "Products", href: "/trustable-septic-products" },
-    { label: "Our Legacy", href: "/our-septic-pumping-legacy" },
-    { label: "Reviews", href: "/reviews-on-septic-services" },
 ];
 
 export const Header = () => {
@@ -81,7 +79,7 @@ export const Header = () => {
                                     <Link
                                         key={link.label}
                                         href={link.href}
-                                        className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-tertiary transition-colors hover:text-brand-600"
+                                        className="flex items-center gap-1 px-3 py-2 text-[15px] font-medium tracking-[-0.01em] text-secondary antialiased transition-colors hover:text-brand-600"
                                     >
                                         {link.label}
                                         <ChevronDownIcon />
