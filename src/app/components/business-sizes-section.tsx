@@ -213,7 +213,7 @@ export const BusinessSizesSection = () => {
 
                         {/* Feature Detail Grid */}
                         <div className="flex flex-col gap-3 sm:gap-4 lg:gap-5">
-                            <span className="text-xl sm:text-2xl font-medium text-primary pb-4">
+                            <span className="text-xl sm:text-2xl font-medium text-primary pt-6 pb-4">
                                 Why customers choose WDT Crest
                             </span>
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
