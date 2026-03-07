@@ -145,10 +145,59 @@ export function HeroSection() {
                             {/* Footer */}
                             <div className="flex items-center justify-between bg-gradient-to-r from-gray-50 to-gray-100/50 px-5 py-3">
                                 <div className="flex items-center gap-3">
-                                    <div className="group flex items-center">
-                                        <img src="https://www.untitledui.com/images/avatars/alec-whitten?w=144&h=144&q=75&fm=webp" alt="Customer" className="size-7 rounded-full object-cover ring-2 ring-white" />
-                                        <img src="https://www.untitledui.com/images/avatars/olivia-rhye?w=144&h=144&q=75&fm=webp" alt="Customer" className="-ml-2 size-7 rounded-full object-cover ring-2 ring-white transition-all duration-300 ease-out group-hover:ml-1" />
-                                        <img src="https://www.untitledui.com/images/avatars/phoenix-baker?w=144&h=144&q=75&fm=webp" alt="Customer" className="-ml-2 size-7 rounded-full object-cover ring-2 ring-white transition-all duration-300 ease-out group-hover:ml-1" />
+                                    <div className="group/avatars flex items-center">
+                                        {[
+                                            {
+                                                src: 'https://www.untitledui.com/images/avatars/alec-whitten?w=144&h=144&q=75&fm=webp',
+                                                name: 'Alec Whitten',
+                                                location: 'Asheville, NC',
+                                                quote: 'Best septic service in WNC! Fast, professional, and fair pricing.',
+                                            },
+                                            {
+                                                src: 'https://www.untitledui.com/images/avatars/olivia-rhye?w=144&h=144&q=75&fm=webp',
+                                                name: 'Olivia Rhye',
+                                                location: 'Black Mountain, NC',
+                                                quote: 'They came out same day for our emergency. Highly recommend!',
+                                            },
+                                            {
+                                                src: 'https://www.untitledui.com/images/avatars/phoenix-baker?w=144&h=144&q=75&fm=webp',
+                                                name: 'Phoenix Baker',
+                                                location: 'Hendersonville, NC',
+                                                quote: 'Professional team, great communication. 5 stars!',
+                                            },
+                                        ].map((person, i) => (
+                                            <div key={i} className="group/avatar relative">
+                                                <img
+                                                    src={person.src}
+                                                    alt={person.name}
+                                                    className={`size-7 rounded-full object-cover ring-2 ring-white transition-all duration-300 ease-out ${i > 0 ? '-ml-2 group-hover/avatars:ml-1' : ''}`}
+                                                />
+                                                {/* Floating Testimonial Card */}
+                                                <div className="pointer-events-none absolute bottom-full left-1/2 mb-3 -translate-x-1/2 opacity-0 transition-all duration-300 ease-out group-hover/avatar:pointer-events-auto group-hover/avatar:opacity-100">
+                                                    <div className="w-64 rounded-xl border border-gray-100 bg-white p-4 shadow-xl">
+                                                        <div className="flex items-center gap-3">
+                                                            <img src={person.src} alt={person.name} className="size-10 rounded-full object-cover" />
+                                                            <div>
+                                                                <p className="text-sm font-semibold text-gray-900">{person.name}</p>
+                                                                <p className="text-xs text-gray-500">{person.location}</p>
+                                                            </div>
+                                                        </div>
+                                                        <p className="mt-3 text-sm leading-relaxed text-gray-600">"{person.quote}"</p>
+                                                        <div className="mt-3 flex gap-0.5">
+                                                            {[...Array(5)].map((_, j) => (
+                                                                <svg key={j} className="size-4 fill-amber-400" viewBox="0 0 20 20">
+                                                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                                                </svg>
+                                                            ))}
+                                                        </div>
+                                                    </div>
+                                                    {/* Arrow */}
+                                                    <div className="absolute left-1/2 -bottom-2 -translate-x-1/2">
+                                                        <div className="size-4 rotate-45 border-b border-r border-gray-100 bg-white"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        ))}
                                     </div>
                                     <div className="flex items-center gap-1">
                                         <div className="flex gap-0.5">
