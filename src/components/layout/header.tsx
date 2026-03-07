@@ -76,14 +76,15 @@ export const Header = () => {
                             </Link>
 
                             {/* Desktop Navigation */}
-                            <div className="hidden lg:flex items-center gap-1">
+                            <div className="hidden lg:flex items-center">
                                 {navLinks.map((link) => (
                                     <Link
                                         key={link.label}
                                         href={link.href}
-                                        className="px-4 py-2 text-sm font-medium text-primary rounded-lg transition-colors hover:bg-secondary hover:text-brand-600"
+                                        className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-primary rounded-lg transition-colors hover:bg-secondary hover:text-brand-600"
                                     >
                                         {link.label}
+                                        <ChevronDownIcon />
                                     </Link>
                                 ))}
                             </div>
