@@ -21,20 +21,20 @@ const stats = [
 
 export function StatsNew() {
     return (
-        <section className="border-b border-secondary bg-white">
+        <section className="border border-secondary bg-white ">
             <div className="mx-auto max-w-7xl border-x border-secondary">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
                     {stats.map((stat, index) => (
                         <div
                             key={index}
-                            className={`flex flex-col justify-center gap-4 p-8 lg:p-10 ${
+                            className={`flex flex-col justify-center gap-4 ${
                                 index < stats.length - 1 ? "border-b sm:border-b-0 sm:border-r border-secondary" : ""
                             } ${index === 1 ? "sm:border-r-0 lg:border-r" : ""} ${index === 2 ? "sm:border-r border-secondary" : ""}`}
                         >
-                            <h2 className="text-xl font-semibold tracking-tight text-brand-600 lg:text-2xl">
+                            <h2 className="border-l border-brand pl-4 text-xl mt-4 font-semibold tracking-tight text-brand-600 lg:text-2xl">
                                 {stat.value}
                             </h2>
-                            <p className="text-base leading-relaxed text-tertiary">
+                            <p className="text-base leading-relaxed m-4 mt-0 text-tertiary">
                                 {stat.description}
                             </p>
                         </div>
