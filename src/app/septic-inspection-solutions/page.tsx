@@ -3,7 +3,7 @@
 import { CheckCircle, Phone, FileCheck02, Home02, Building07, SearchRefraction, ClipboardCheck, Award01 } from "@untitledui/icons";
 import { Button } from "@/components/base/buttons/button";
 import { FeaturedIcon } from "@/components/foundations/featured-icon/featured-icon";
-import { Header } from "../components/header";
+import { Header } from "@/components/layout";
 import { Footer } from "../components/footer";
 
 const inspectionTypes = [

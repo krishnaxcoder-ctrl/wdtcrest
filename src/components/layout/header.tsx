@@ -67,7 +67,7 @@ export const Header = () => {
         <header className="bg-primary border-b border-tertiary">
             {/* Main Navigation */}
             <nav className="bg-primary">
-                <div className="max-w-[1440px] mx-auto px-6 lg:px-10">
+                <div className="max-w-7xl mx-auto px-6 lg:px-10">
                     <div className="flex items-center justify-between h-16 lg:h-16">
                         {/* Logo */}
                         <Link href="/" className="flex items-center shrink-0">

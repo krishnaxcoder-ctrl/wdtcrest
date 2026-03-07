@@ -5,7 +5,7 @@ import { Button } from "@/components/base/buttons/button";
 import { FeaturedIcon } from "@/components/foundations/featured-icon/featured-icon";
 import { Avatar } from "@/components/base/avatar/avatar";
 import { Badge } from "@/components/base/badges/badges";
-import { Header } from "../components/header";
+import { Header } from "@/components/layout";
 import { Footer } from "../components/footer";
 
 const reviews = [

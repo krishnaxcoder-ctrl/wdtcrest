@@ -4,7 +4,7 @@ import { Phone, Users01, Award01, Heart, Target05, Clock, Shield01, Truck01 } fr
 import { Button } from "@/components/base/buttons/button";
 import { FeaturedIcon } from "@/components/foundations/featured-icon/featured-icon";
 import { Avatar } from "@/components/base/avatar/avatar";
-import { Header } from "../components/header";
+import { Header } from "@/components/layout";
 import { Footer } from "../components/footer";
 
 const milestones = [
