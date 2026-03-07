@@ -164,7 +164,7 @@ const MegaMenuDropdown = ({
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
         >
-            <div className={`mx-auto max-w-7xl border-x border-b border-secondary py-8 ${slideClass}`}>
+            <div className={`mx-auto max-w-7xl border-x border-y border-secondary py-8 ${slideClass}`}>
                 <div className="grid lg:grid-cols-4">
                     {/* Menu Groups */}
                     {menu.groups.map((group, groupIndex) => (
