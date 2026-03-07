@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState } from "react";
 import Link from "next/link";
 
 // Arrow Icon
@@ -18,19 +18,6 @@ const PlusIcon = () => (
     </svg>
 );
 
-// Left Arrow
-const LeftArrow = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor">
-        <path d="M9.613 2.62 5.107 7.124h9.137v1.75H5.107l4.506 4.506-1.238 1.238-6-6L1.756 8l.619-.62 6-6 1.238 1.24Z" />
-    </svg>
-);
-
-// Right Arrow
-const RightArrow = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor">
-        <path d="m6.387 2.62 4.506 4.505H1.756v1.75h9.137l-4.506 4.506 1.238 1.238 6-6L14.245 8l-.618-.62-6-6-1.239 1.24Z" />
-    </svg>
-);
 
 // Customer Story Data
 const enterpriseCustomers = [
@@ -104,81 +91,13 @@ const enterpriseCustomers = [
     },
 ];
 
-// Case Study Data
-const caseStudies = [
-    {
-        title: "Emergency service saved our vacation rental during peak season.",
-        logo: "Vacation Rentals",
-        image: "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=600&q=80",
-    },
-    {
-        title: "Real estate inspection helped negotiate $5,000 off the sale price.",
-        logo: "Home Buyers",
-        image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80",
-    },
-    {
-        title: "Annual maintenance keeps our bed & breakfast running smoothly.",
-        logo: "B&B Owners",
-        image: "https://images.unsplash.com/photo-1587381420270-3e1a5b9e6904?w=600&q=80",
-    },
-    {
-        title: "Drain field restoration extended our system life by 15+ years.",
-        logo: "Property Owners",
-        image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80",
-    },
-    {
-        title: "New construction septic installation completed ahead of schedule.",
-        logo: "Home Builders",
-        image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&q=80",
-    },
-    {
-        title: "Commercial grease trap service keeps our kitchen compliant.",
-        logo: "Restaurant Owners",
-        image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80",
-    },
-];
-
-// Testimonials
-const testimonials = [
-    {
-        name: "Sarah Mitchell",
-        role: "Homeowner, Asheville",
-        quote: "WDT Crest has been maintaining our septic system for over 8 years. Their technicians are professional, punctual, and always explain everything clearly. We've never had an emergency because they catch issues early.",
-    },
-    {
-        name: "James Robertson",
-        role: "Property Manager, Blue Ridge HOA",
-        quote: "Managing 200+ properties means I need a reliable partner. WDT Crest's maintenance plans and priority response have been invaluable. They make my job so much easier.",
-    },
-    {
-        name: "Maria Chen",
-        role: "Owner, Mountain Bistro",
-        quote: "Our restaurant depends on regular grease trap service. WDT Crest works around our schedule, arriving early before we open. They've helped us maintain a perfect health inspection record.",
-    },
-    {
-        name: "David Thompson",
-        role: "General Contractor",
-        quote: "We've partnered with WDT Crest on over 50 new construction projects. Their installations pass inspection the first time, every time. That reliability is invaluable in our business.",
-    },
-];
 
 export const BusinessSizesSection = () => {
     const [openCustomer, setOpenCustomer] = useState(0);
-    const carouselRef = useRef<HTMLUListElement>(null);
-
-    const scrollCarousel = (direction: "left" | "right") => {
-        if (carouselRef.current) {
-            const scrollAmount = 348;
-            carouselRef.current.scrollBy({
-                left: direction === "left" ? -scrollAmount : scrollAmount,
-                behavior: "smooth",
-            });
-        }
-    };
 
     return (
-        <section className="bg-white py-20 sm:py-24 lg:py-28 border-x-2 border-gray-200">
-            <div className="mx-auto max-w-[1280px] px-4 sm:px-8 flex flex-col gap-5 sm:gap-6 lg:gap-8">
+        <section className="bg-white py-20 sm:py-24 lg:py-28 border-x border-gray-200 max-w-7xl mx-auto">
+            <div className="mx-auto max-w-[1280px] px-2 sm:px-4 flex flex-col gap-5 sm:gap-6 lg:gap-8">
                 {/* Main Header */}
                 <div className="max-w-[800px]">
                     <h2 className="inline text-[28px] sm:text-[40px] font-medium leading-[1.1] tracking-[-0.02em] text-primary antialiased">
@@ -194,10 +113,21 @@ export const BusinessSizesSection = () => {
                     {/* Enterprise/Residential Section */}
                     <section className="flex flex-col gap-3 sm:gap-4 lg:gap-6">
                         <header className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
-                            <h3 className="text-xl sm:text-2xl font-medium leading-[1.25] tracking-[-0.02em] text-primary lg:col-span-1">
-                                Trusted by homeowners and businesses across Western NC
-                            </h3>
-                            <p className="text-base sm:text-lg leading-relaxed text-secondary max-w-[520px]">
+                            <div className="flex flex-col gap-3">
+                                <h3 className="text-xl sm:text-2xl font-medium leading-[1.25] tracking-[-0.02em] text-primary">
+                                    Trusted by homeowners and businesses across Western NC
+                                </h3>
+                                <div>
+                                    <Link
+                                        className="group inline-flex items-center gap-1.5 px-6 py-3.5 text-[15px] font-medium rounded-sm bg-brand-600 text-white hover:bg-brand-700 transition-all duration-150"
+                                        href="/services"
+                                    >
+                                        WDT Crest for enterprises
+                                        <ArrowIcon />
+                                    </Link>
+                                </div>
+                            </div>
+                            <p className="text-base sm:text-lg leading-relaxed text-secondary max-w-[520px] text-left lg:justify-self-end">
                                 Over 5,000 customers rely on WDT Crest for routine maintenance, emergency repairs, and NC-certified inspections. 30+ years of experience serving the community.
                             </p>
                             <div className="flex gap-3 flex-wrap mt-2">
@@ -216,25 +146,29 @@ export const BusinessSizesSection = () => {
                             {enterpriseCustomers.map((customer, index) => (
                                 <div key={customer.id} className="border-b border-gray-200 last:border-b-0">
                                     <div
-                                        className={`flex items-center gap-4 p-4 sm:px-5 cursor-pointer transition-colors duration-150 ${
-                                            openCustomer === index ? "bg-gray-50" : "hover:bg-gray-50"
-                                        }`}
+                                        className="group flex items-center gap-4 p-4 sm:px-5 cursor-pointer transition-colors duration-150 bg-white"
+                                        onClick={() => setOpenCustomer(openCustomer === index ? -1 : index)}
+                                        role="button"
+                                        tabIndex={0}
+                                        onKeyDown={(e) => {
+                                            if (e.key === 'Enter' || e.key === ' ') {
+                                                e.preventDefault();
+                                                setOpenCustomer(openCustomer === index ? -1 : index);
+                                            }
+                                        }}
+                                        aria-expanded={openCustomer === index}
                                     >
                                         <div className="shrink-0">{customer.logo}</div>
-                                        <button
-                                            type="button"
-                                            className="flex-1 bg-transparent border-none text-left cursor-pointer p-0"
-                                            aria-expanded={openCustomer === index}
-                                            onClick={() => setOpenCustomer(openCustomer === index ? -1 : index)}
-                                        >
-                                            <h3 className="text-[17px] font-medium leading-[1.4] text-primary m-0">
+                                        <div className="flex-1 text-left">
+                                            <h3 className="text-[17px] font-medium leading-[1.4] text-primary m-0 transition-colors duration-150 group-hover:text-red-600">
                                                 {customer.title}
                                             </h3>
-                                        </button>
+                                        </div>
                                         <div className="shrink-0">
                                             <Link
-                                                className="group inline-flex items-center justify-center px-3 py-1.5 text-sm font-medium rounded-full border border-gray-200 bg-transparent hover:bg-gray-50 transition-all duration-300 overflow-hidden"
+                                                className="inline-flex items-center justify-center px-3 py-1.5 text-sm font-medium rounded-none border-none bg-brand-100 hover:bg-brand-200 transition-all duration-300 overflow-hidden text-brand-600"
                                                 href="tel:8282541920"
+                                                onClick={(e) => e.stopPropagation()}
                                                 style={{ width: openCustomer === index ? "140px" : "40px" }}
                                             >
                                                 <div
@@ -259,7 +193,7 @@ export const BusinessSizesSection = () => {
                                         </div>
                                     </div>
                                     <div
-                                        className="overflow-hidden transition-all duration-400 ease-[cubic-bezier(0.4,0,0.2,1)]"
+                                        className="overflow-hidden transition-[max-height] duration-300 ease-out"
                                         style={{ maxHeight: openCustomer === index ? "625px" : "0px" }}
                                     >
                                         <div className="w-full">
@@ -300,47 +234,74 @@ export const BusinessSizesSection = () => {
                             <span className="text-xl sm:text-2xl font-medium text-primary pb-4">
                                 Why customers choose WDT Crest
                             </span>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                                 {[
                                     {
                                         title: "NC-certified professionals.",
                                         desc: "Our technicians are fully licensed and certified for septic inspections and installations in North Carolina.",
                                         link: { text: "View certifications", href: "/services" },
-                                    },
-                                    {
-                                        title: "24/7 emergency service.",
-                                        desc: "Septic emergencies don't wait for business hours. Our team is available around the clock for urgent situations.",
-                                        link: { text: "Call emergency line", href: "tel:8282541920" },
-                                    },
-                                    {
-                                        title: "30+ years experience.",
-                                        desc: "Family-owned and operated since 1994. We know Western NC septic systems inside and out.",
-                                        link: { text: "Learn about us", href: "/about" },
-                                    },
-                                ].map((feature, i) => (
-                                    <div key={i} className="flex flex-col gap-3 p-6 bg-gray-50 rounded-xl transition-colors duration-200 hover:bg-gray-100">
-                                        <div className="w-8 h-8 flex items-center justify-center rounded-lg bg-gradient-to-br from-emerald-400/15 via-cyan-500/10 to-indigo-500/15">
-                                            <svg className="w-4 h-4" fill="none" viewBox="0 0 16 16">
-                                                <path
-                                                    fill="url(#gradFeature)"
-                                                    d="M8 1a7 7 0 100 14A7 7 0 008 1zm3.5 5.5l-4 4-2-2 1-1 1 1 3-3 1 1z"
-                                                />
+                                        icon: (
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true">
+                                                <path fill="url(#cert-gradient)" d="M5 9a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2zm8.5 0a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-3a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2zM2 10.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zm8.5 0a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zM12.25 0a.75.75 0 0 1 .75.75V3h2.25a.75.75 0 0 1 0 1.5H13V7a.75.75 0 0 1-1.5 0V4.5H9A.75.75 0 0 1 9 3h2.5V.75a.75.75 0 0 1 .75-.75M5 .5a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2zM2 2a.5.5 0 0 0-.5.5v3A.5.5 0 0 0 2 6h3a.5.5 0 0 0 .5-.5v-3A.5.5 0 0 0 5 2z" />
                                                 <defs>
-                                                    <linearGradient id="gradFeature" x1="0" y1="0" x2="16" y2="16">
+                                                    <linearGradient id="cert-gradient" x1="10" y1="-5.21" x2="1.343" y2="20.492" gradientUnits="userSpaceOnUse">
                                                         <stop stopColor="#11efa4" />
                                                         <stop offset="0.5" stopColor="#18b5c1" />
                                                         <stop offset="1" stopColor="#6772e5" />
                                                     </linearGradient>
                                                 </defs>
                                             </svg>
+                                        ),
+                                    },
+                                    {
+                                        title: "24/7 emergency service.",
+                                        desc: "Septic emergencies don't wait for business hours. Our team is available around the clock for urgent situations.",
+                                        link: { text: "Call emergency line", href: "tel:8282541920" },
+                                        icon: (
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                                                <path fill="url(#support-gradient)" fillRule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-1.5 0a6.472 6.472 0 0 1-1.404 4.035l-1.07-1.07a5.032 5.032 0 0 1-1.06 1.061l1.07 1.07A6.472 6.472 0 0 1 8 14.5a6.472 6.472 0 0 1-4.035-1.404l1.07-1.07A4.98 4.98 0 0 0 8 13a5 5 0 0 0 4.026-7.965l1.07-1.07A6.472 6.472 0 0 1 14.5 8m-2.465-5.096A6.472 6.472 0 0 0 8 1.5a6.472 6.472 0 0 0-4.035 1.404l1.07 1.07A4.978 4.978 0 0 1 8 3c1.11 0 2.136.362 2.966.974zm-8.061 8.062A4.977 4.977 0 0 1 3 8c0-1.11.362-2.136.974-2.965l-1.07-1.07A6.472 6.472 0 0 0 1.5 8c0 1.525.525 2.927 1.404 4.035zM11.5 8a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0" clipRule="evenodd" />
+                                                <defs>
+                                                    <linearGradient id="support-gradient" x1="10" x2="1.343" y1="-5.21" y2="20.492" gradientUnits="userSpaceOnUse">
+                                                        <stop stopColor="#11efa4" />
+                                                        <stop offset="0.5" stopColor="#18b5c1" />
+                                                        <stop offset="1" stopColor="#6772e5" />
+                                                    </linearGradient>
+                                                </defs>
+                                            </svg>
+                                        ),
+                                    },
+                                    {
+                                        title: "30+ years experience.",
+                                        desc: "Family-owned and operated since 1994. We know Western NC septic systems inside and out.",
+                                        link: { text: "Learn about us", href: "/about" },
+                                        icon: (
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                                                <path fill="url(#team-gradient)" fillRule="evenodd" d="M8 3.25A2.748 2.748 0 0 1 10.75.5c1.528 0 2.75 1.238 2.75 2.75S12.278 6 10.75 6A2.748 2.748 0 0 1 8 3.25M10.75 2c-.694 0-1.25.561-1.25 1.25 0 .694.561 1.25 1.25 1.25.694 0 1.25-.561 1.25-1.25S11.444 2 10.75 2" clipRule="evenodd" />
+                                                <path fill="url(#team-gradient)" fillRule="evenodd" d="M5 3.5a2.748 2.748 0 0 0-2.75 2.75A2.748 2.748 0 0 0 5 9a2.748 2.748 0 0 0 2.75-2.75A2.742 2.742 0 0 0 5 3.5M3.75 6.25C3.75 5.561 4.306 5 5 5c.697 0 1.25.553 1.25 1.25 0 .689-.556 1.25-1.25 1.25-.689 0-1.25-.556-1.25-1.25" clipRule="evenodd" />
+                                                <path fill="url(#team-gradient)" fillRule="evenodd" d="M3.776 10C1.686 10 0 11.703 0 13.795c0 .937.757 1.705 1.7 1.705h7.09c.933 0 1.71-.758 1.71-1.705C10.5 11.703 8.814 10 6.724 10zM1.5 13.795A2.286 2.286 0 0 1 3.776 11.5h2.948A2.286 2.286 0 0 1 9 13.795a.211.211 0 0 1-.21.205H1.7a.203.203 0 0 1-.2-.205" clipRule="evenodd" />
+                                                <path fill="url(#team-gradient)" d="M9.25 7a.75.75 0 0 0 0 1.5h2.87c.483 0 1.094.227 1.585.662.48.425.795 1.002.795 1.668 0 .303.016.61-.008.912a8.52 8.52 0 0 1-.492.008h-2a.75.75 0 0 0 0 1.5h2.026c.468 0 .983.02 1.39-.251.502-.335.584-.943.584-1.499v-.67c0-1.173-.56-2.136-1.3-2.791C13.97 7.394 13.017 7 12.12 7z" />
+                                                <defs>
+                                                    <linearGradient id="team-gradient" x1="10" x2="2.296" y1="-4.384" y2="20.012" gradientUnits="userSpaceOnUse">
+                                                        <stop stopColor="#11efa4" />
+                                                        <stop offset="0.5" stopColor="#18b5c1" />
+                                                        <stop offset="1" stopColor="#6772e5" />
+                                                    </linearGradient>
+                                                </defs>
+                                            </svg>
+                                        ),
+                                    },
+                                ].map((feature, i) => (
+                                    <div key={i} className="flex flex-col gap-4">
+                                        <div className="w-8 h-8 flex items-center justify-center">
+                                            {feature.icon}
                                         </div>
                                         <div className="flex-1">
                                             <h4 className="inline text-[15px] font-semibold text-primary">{feature.title}</h4>
                                             <p className="inline text-[15px] text-secondary"> {feature.desc}</p>
                                         </div>
-                                        <div className="mt-auto">
+                                        <div>
                                             <Link
-                                                className="group inline-flex items-center gap-1 text-[15px] font-medium text-primary hover:text-brand-600 hover:underline underline-offset-2 transition-colors duration-150"
+                                                className="group inline-flex items-center text-[15px] font-medium text-primary hover:text-brand-600 transition-colors duration-150"
                                                 href={feature.link.href}
                                             >
                                                 {feature.link.text}
@@ -353,262 +314,6 @@ export const BusinessSizesSection = () => {
                         </div>
                     </section>
 
-                    {/* Divider */}
-                    <div className="py-8">
-                        <div className="h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
-                    </div>
-
-                    {/* Startups/Small Business Section */}
-                    <section className="flex flex-col gap-6 sm:gap-4 lg:gap-8">
-                        <header className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
-                            <h3 className="text-xl sm:text-2xl font-medium leading-[1.25] tracking-[-0.02em] text-primary">
-                                Flexible solutions for every property type
-                            </h3>
-                            <p className="text-base sm:text-lg leading-relaxed text-secondary max-w-[520px]">
-                                From vacation rentals to restaurants, new construction to established homes — we have the expertise and equipment to handle any septic challenge.
-                            </p>
-                            <div className="flex gap-3 flex-wrap mt-2">
-                                <Link
-                                    className="group inline-flex items-center gap-1.5 px-4 py-2.5 text-[15px] font-medium rounded-full bg-primary text-white hover:bg-gray-800 transition-all duration-150"
-                                    href="/services"
-                                >
-                                    View all services
-                                    <ArrowIcon />
-                                </Link>
-                            </div>
-                        </header>
-
-                        {/* Case Study Carousel */}
-                        <section className="relative" aria-label="Customer stories">
-                            <div className="flex gap-2 mb-4 lg:absolute lg:right-0 lg:-top-14">
-                                <button
-                                    type="button"
-                                    className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-200 bg-transparent hover:bg-gray-50 hover:border-gray-300 cursor-pointer transition-all duration-150 disabled:opacity-40 disabled:cursor-not-allowed"
-                                    aria-label="Previous"
-                                    onClick={() => scrollCarousel("left")}
-                                >
-                                    <LeftArrow />
-                                </button>
-                                <button
-                                    type="button"
-                                    className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-200 bg-transparent hover:bg-gray-50 hover:border-gray-300 cursor-pointer transition-all duration-150 disabled:opacity-40 disabled:cursor-not-allowed"
-                                    aria-label="Next"
-                                    onClick={() => scrollCarousel("right")}
-                                >
-                                    <RightArrow />
-                                </button>
-                            </div>
-                            <div className="overflow-hidden">
-                                <ul
-                                    ref={carouselRef}
-                                    role="list"
-                                    className="flex gap-4 overflow-x-auto scroll-smooth scrollbar-none p-1 list-none m-0"
-                                    style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-                                >
-                                    {caseStudies.map((study, index) => (
-                                        <li key={index} className="shrink-0 w-[280px] sm:w-[332px]">
-                                            <Link
-                                                className="group flex flex-col h-full bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 no-underline"
-                                                href="tel:8282541920"
-                                            >
-                                                <div className="relative aspect-[9/10] overflow-hidden">
-                                                    <img
-                                                        loading="lazy"
-                                                        width="864"
-                                                        height="960"
-                                                        alt=""
-                                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                                        src={study.image}
-                                                    />
-                                                    <div className="absolute bottom-4 left-4 z-10">
-                                                        <span className="text-white text-lg font-semibold drop-shadow-md">
-                                                            {study.logo}
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <h4 className="px-4 pt-4 pb-2 text-[15px] leading-relaxed text-primary">
-                                                    {study.title}
-                                                </h4>
-                                                <div className="px-4 pb-4 text-[15px] font-medium text-primary group-hover:text-brand-600 inline-flex items-center gap-1">
-                                                    Get a free quote
-                                                    <span className="whitespace-nowrap">&nbsp;<ArrowIcon /></span>
-                                                </div>
-                                            </Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        </section>
-
-                        {/* Program Cards */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            {[
-                                {
-                                    title: "Maintenance Plans.",
-                                    desc: "Save money with scheduled service and priority emergency response. Perfect for homeowners and property managers.",
-                                    link: "Learn about plans",
-                                    graphic: (
-                                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
-                                            <rect width="80" height="80" rx="16" fill="#f6f9fc" />
-                                            <path d="M40 20v40M20 40h40" stroke="#16b364" strokeWidth="4" strokeLinecap="round" />
-                                            <circle cx="40" cy="40" r="16" stroke="#16b364" strokeWidth="4" fill="none" />
-                                        </svg>
-                                    ),
-                                },
-                                {
-                                    title: "New Construction.",
-                                    desc: "Work with NC-certified installers for new septic systems. We handle permits, design, and complete installation.",
-                                    link: "Start your project",
-                                    graphic: (
-                                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                                            <path d="M20 2l18 14v22H2V16L20 2z" fill="#FFB000" />
-                                            <path d="M20 2L2 16v22h18V2z" fill="url(#atlas-a)" />
-                                            <path d="M20 2l18 14L20 38V2z" fill="url(#atlas-b)" />
-                                            <defs>
-                                                <linearGradient id="atlas-a" x1="11" y1="16" x2="11" y2="38">
-                                                    <stop stopColor="#FFD748" />
-                                                    <stop offset="1" stopColor="#FFCB48" />
-                                                </linearGradient>
-                                                <linearGradient id="atlas-b" x1="20" y1="30" x2="20" y2="14">
-                                                    <stop stopColor="#FFAD00" />
-                                                    <stop offset="1" stopColor="#FF7600" />
-                                                </linearGradient>
-                                            </defs>
-                                        </svg>
-                                    ),
-                                },
-                            ].map((card, i) => (
-                                <Link
-                                    key={i}
-                                    className="group relative block rounded-xl overflow-hidden no-underline hover:-translate-y-0.5 transition-transform duration-200"
-                                    href="tel:8282541920"
-                                >
-                                    <div className="absolute inset-0 rounded-xl p-px bg-gradient-to-br from-gray-200/50 to-gray-200/20 [mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] [mask-composite:exclude]" />
-                                    <div className="absolute inset-0 rounded-xl p-px opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                        <div className="absolute inset-0 bg-gradient-to-br from-emerald-400 to-indigo-500" />
-                                    </div>
-                                    <div className="flex flex-col sm:flex-row h-full bg-white rounded-[11px]">
-                                        <div className="flex-1 p-6 flex flex-col gap-3">
-                                            <div className="flex-1">
-                                                <h4 className="inline text-[15px] font-semibold text-primary">{card.title}</h4>
-                                                <p className="inline text-[15px] text-secondary"> {card.desc}</p>
-                                            </div>
-                                            <div className="text-[15px] font-medium text-primary group-hover:text-brand-600 inline-flex items-center gap-1">
-                                                {card.link}
-                                                <span className="whitespace-nowrap">&nbsp;<ArrowIcon /></span>
-                                            </div>
-                                        </div>
-                                        <div className="shrink-0 p-6 flex items-center justify-center">
-                                            {card.graphic}
-                                        </div>
-                                    </div>
-                                </Link>
-                            ))}
-                        </div>
-                    </section>
-
-                    {/* Divider */}
-                    <div className="py-8" />
-
-                    {/* Platform/Commercial Section */}
-                    <section className="flex flex-col gap-8 sm:gap-10 lg:gap-16">
-                        <header className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
-                            <h3 className="text-xl sm:text-2xl font-medium leading-[1.25] tracking-[-0.02em] text-primary">
-                                Complete solutions for property managers and commercial properties
-                            </h3>
-                            <p className="text-base sm:text-lg leading-relaxed text-secondary max-w-[520px]">
-                                From HOAs to restaurants to vacation rental companies, we help businesses maintain multiple systems efficiently with volume pricing and priority scheduling.
-                            </p>
-                            <div className="flex gap-3 flex-wrap mt-2">
-                                <Link
-                                    className="group inline-flex items-center gap-1.5 px-4 py-2.5 text-[15px] font-medium rounded-full bg-primary text-white hover:bg-gray-800 transition-all duration-150"
-                                    href="tel:8282541920"
-                                >
-                                    Commercial services
-                                    <ArrowIcon />
-                                </Link>
-                            </div>
-                        </header>
-
-                        {/* Feature Grid */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
-                            {[
-                                {
-                                    title: "Volume pricing.",
-                                    desc: "Save up to 15% with multi-property contracts. Perfect for HOAs and property management companies.",
-                                    link: "Get a volume quote",
-                                },
-                                {
-                                    title: "Priority scheduling.",
-                                    desc: "Commercial customers receive 4-hour emergency response and flexible scheduling around business hours.",
-                                    link: "Learn more",
-                                },
-                                {
-                                    title: "Single point of contact.",
-                                    desc: "One dedicated account manager for all your properties. Simplified communication and billing.",
-                                    link: "Contact us",
-                                },
-                            ].map((feature, i) => (
-                                <div key={i} className="flex flex-col gap-3 p-6 bg-gray-50 rounded-xl transition-colors duration-200 hover:bg-gray-100">
-                                    <div className="w-8 h-8 flex items-center justify-center rounded-lg bg-gradient-to-br from-emerald-400/15 via-cyan-500/10 to-indigo-500/15">
-                                        <svg className="w-4 h-4" fill="none" viewBox="0 0 16 16">
-                                            <path
-                                                fill="url(#gradCommercial)"
-                                                d="M14 2H2v12h12V2zM8 12l-4-4 1.5-1.5L8 9l4.5-4.5L14 6l-6 6z"
-                                            />
-                                            <defs>
-                                                <linearGradient id="gradCommercial" x1="0" y1="0" x2="16" y2="16">
-                                                    <stop stopColor="#11efa4" />
-                                                    <stop offset="0.5" stopColor="#18b5c1" />
-                                                    <stop offset="1" stopColor="#6772e5" />
-                                                </linearGradient>
-                                            </defs>
-                                        </svg>
-                                    </div>
-                                    <div className="flex-1">
-                                        <h4 className="inline text-[15px] font-semibold text-primary">{feature.title}</h4>
-                                        <p className="inline text-[15px] text-secondary"> {feature.desc}</p>
-                                    </div>
-                                    <div className="mt-auto">
-                                        <Link
-                                            className="group inline-flex items-center gap-1 text-[15px] font-medium text-primary hover:text-brand-600 hover:underline underline-offset-2 transition-colors duration-150"
-                                            href="tel:8282541920"
-                                        >
-                                            {feature.link}
-                                            <span className="whitespace-nowrap">&nbsp;<ArrowIcon /></span>
-                                        </Link>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-
-                        {/* Testimonials */}
-                        <div className="mt-8">
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                                {testimonials.map((testimonial, index) => (
-                                    <div
-                                        key={index}
-                                        className="flex flex-col gap-4 p-6 bg-gray-50 rounded-xl transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md"
-                                    >
-                                        <q className="text-[15px] leading-relaxed text-secondary flex-1 not-italic">
-                                            {testimonial.quote}
-                                        </q>
-                                        <div className="text-sm font-semibold text-primary">
-                                            {testimonial.name},{" "}
-                                            <span className="font-normal text-secondary">{testimonial.role}</span>
-                                        </div>
-                                        <Link
-                                            className="group inline-flex items-center gap-1 text-[15px] font-medium text-primary hover:text-brand-600 hover:underline underline-offset-2 transition-colors duration-150"
-                                            href="tel:8282541920"
-                                        >
-                                            Get a quote
-                                            <span className="whitespace-nowrap">&nbsp;<ArrowIcon /></span>
-                                        </Link>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </section>
                 </div>
             </div>
         </section>
