@@ -8,6 +8,12 @@ const ArrowIcon = () => (
     </svg>
 );
 
+const DiagonalArrowIcon = () => (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M7 17L17 7M17 7H7M17 7V17" />
+    </svg>
+);
+
 export function HeroSection() {
     return (
         <section className="mx-auto max-w-7xl border-x border-secondary">
@@ -42,13 +48,14 @@ export function HeroSection() {
                                 className="inline-flex items-center gap-2 rounded-md bg-brand-600 px-6 py-3 text-base font-medium text-white transition-colors hover:bg-brand-700"
                             >
                                 Call (828) 254-1920
-                                <ArrowIcon />
+                                <DiagonalArrowIcon />
                             </Link>
                             <Link
                                 href="/reliable-septic-services"
                                 className="inline-flex items-center gap-2 rounded-md border border-secondary bg-white px-6 py-3 text-base font-medium text-primary transition-colors hover:bg-secondary"
                             >
                                 View Services
+                                <DiagonalArrowIcon />
                             </Link>
                         </div>
 
