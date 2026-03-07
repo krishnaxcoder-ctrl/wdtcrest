@@ -142,12 +142,14 @@ const megaMenuData = {
 const MegaMenuDropdown = ({
     menuKey,
     isOpen,
+    slideDirection,
     onMouseEnter,
     onMouseLeave,
     onClose
 }: {
     menuKey: keyof typeof megaMenuData;
     isOpen: boolean;
+    slideDirection: "left" | "right" | "none";
     onMouseEnter: () => void;
     onMouseLeave: () => void;
     onClose: () => void;
@@ -156,13 +158,19 @@ const MegaMenuDropdown = ({
 
     if (!isOpen) return null;
 
+    const slideClass = slideDirection === "left"
+        ? "animate-slide-in-left"
+        : slideDirection === "right"
+            ? "animate-slide-in-right"
+            : "animate-fade-in";
+
     return (
         <div
-            className="absolute left-0 right-0 top-full z-50 border-b border-secondary bg-primary shadow-lg"
+            className="absolute left-0 right-0 top-full z-50 border-b border-secondary bg-primary shadow-lg overflow-hidden"
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
         >
-            <div className="mx-auto max-w-7xl px-6 py-8 lg:px-10">
+            <div className={`mx-auto max-w-7xl px-6 py-8 lg:px-10 ${slideClass}`}>
                 <div className="grid gap-8 lg:grid-cols-4">
                     {/* Menu Groups */}
                     {menu.groups.map((group, groupIndex) => (
@@ -247,24 +255,41 @@ const NavItemWithDropdown = ({
     );
 };
 
+const menuKeys = Object.keys(megaMenuData) as Array<keyof typeof megaMenuData>;
+
 export const Header = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [activeMenu, setActiveMenu] = useState<string | null>(null);
+    const [slideDirection, setSlideDirection] = useState<"left" | "right" | "none">("none");
     const [mobileSubmenu, setMobileSubmenu] = useState<string | null>(null);
     const headerRef = useRef<HTMLElement>(null);
     const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+    const prevMenuRef = useRef<string | null>(null);
 
     const handleMenuEnter = (key: string) => {
         if (timeoutRef.current) {
             clearTimeout(timeoutRef.current);
             timeoutRef.current = null;
         }
+
+        // Determine slide direction based on menu position
+        if (prevMenuRef.current && prevMenuRef.current !== key) {
+            const prevIndex = menuKeys.indexOf(prevMenuRef.current as keyof typeof megaMenuData);
+            const newIndex = menuKeys.indexOf(key as keyof typeof megaMenuData);
+            setSlideDirection(newIndex > prevIndex ? "right" : "left");
+        } else if (!prevMenuRef.current) {
+            setSlideDirection("none");
+        }
+
+        prevMenuRef.current = key;
         setActiveMenu(key);
     };
 
     const handleMenuLeave = () => {
         timeoutRef.current = setTimeout(() => {
             setActiveMenu(null);
+            prevMenuRef.current = null;
+            setSlideDirection("none");
         }, 150);
     };
 
@@ -346,11 +371,12 @@ export const Header = () => {
                 </div>
 
                 {/* Desktop Mega Menu Dropdowns */}
-                {(Object.keys(megaMenuData) as Array<keyof typeof megaMenuData>).map((menuKey) => (
+                {menuKeys.map((menuKey) => (
                     <MegaMenuDropdown
                         key={menuKey}
                         menuKey={menuKey}
                         isOpen={activeMenu === menuKey}
+                        slideDirection={slideDirection}
                         onMouseEnter={handleDropdownEnter}
                         onMouseLeave={handleMenuLeave}
                         onClose={() => setActiveMenu(null)}
@@ -443,6 +469,49 @@ export const Header = () => {
                     </div>
                 )}
             </nav>
+
+            {/* Slide animations */}
+            <style jsx global>{`
+                @keyframes slideInLeft {
+                    from {
+                        opacity: 0;
+                        transform: translateX(30px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateX(0);
+                    }
+                }
+                @keyframes slideInRight {
+                    from {
+                        opacity: 0;
+                        transform: translateX(-30px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateX(0);
+                    }
+                }
+                @keyframes fadeIn {
+                    from {
+                        opacity: 0;
+                        transform: translateY(-10px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+                .animate-slide-in-left {
+                    animation: slideInLeft 0.25s ease-out forwards;
+                }
+                .animate-slide-in-right {
+                    animation: slideInRight 0.25s ease-out forwards;
+                }
+                .animate-fade-in {
+                    animation: fadeIn 0.2s ease-out forwards;
+                }
+            `}</style>
         </header>
     );
 };
