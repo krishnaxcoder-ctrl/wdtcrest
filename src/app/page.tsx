@@ -10,6 +10,7 @@ import { BusinessSizesSection } from "./components/business-sizes-section";
 import { HeroSection } from "./components/hero-section";
 import { FeaturesSection } from "./components/features-section";
 import { StatsNew } from "./components/stats-new";
+import { WhatsIncluded } from "./components/whats-included";
 
 // Arrow Icon
 const ArrowIcon = () => (
@@ -279,6 +280,9 @@ export default function Home() {
 
                 {/* Features Section */}
                 <FeaturesSection />
+
+                {/* What's Included Section */}
+                <WhatsIncluded />
 
                 {/* Logo Section - Full Width */}
                 <section className="w-full py-12 bg-secondary">
