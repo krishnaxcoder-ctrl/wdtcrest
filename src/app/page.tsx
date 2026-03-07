@@ -59,50 +59,6 @@ const RotatingText = () => {
     );
 };
 
-// Typewriter Component
-const TypewriterText = () => {
-    const phrases = [
-        "Septic tank pumping service",
-        "Emergency septic repairs",
-        "NC-certified inspections",
-        "Drain field installation",
-        "Grease trap cleaning",
-        "System maintenance plans",
-    ];
-    const [text, setText] = useState("");
-    const [phraseIndex, setPhraseIndex] = useState(0);
-    const [isDeleting, setIsDeleting] = useState(false);
-
-    useEffect(() => {
-        const currentPhrase = phrases[phraseIndex];
-        const timeout = setTimeout(() => {
-            if (!isDeleting) {
-                if (text.length < currentPhrase.length) {
-                    setText(currentPhrase.slice(0, text.length + 1));
-                } else {
-                    setTimeout(() => setIsDeleting(true), 1000);
-                }
-            } else {
-                if (text.length > 0) {
-                    setText(text.slice(0, -1));
-                } else {
-                    setIsDeleting(false);
-                    setPhraseIndex((prev) => (prev + 1) % phrases.length);
-                }
-            }
-        }, isDeleting ? 30 : 50);
-        return () => clearTimeout(timeout);
-    }, [text, isDeleting, phraseIndex, phrases]);
-
-    return (
-        <div className="flex items-center justify-center p-4">
-            <div className="text-xl text-tertiary">
-                <span className="after:content-['|'] after:animate-blink">{text}</span>
-            </div>
-        </div>
-    );
-};
-
 // FAQ Item Component
 const FaqItem = ({ question, answer }: { question: string; answer: string }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -283,22 +239,6 @@ export default function Home() {
                 {/* Business Sizes Section */}
                 <BusinessSizesSection />
 
-                {/* CTA Section */}
-                <section className="py-16">
-                    <div className="px-6 lg:px-10">
-                        <div className="max-w-[1440px] mx-auto">
-                            <div className="bg-secondary p-12 lg:p-20 flex flex-col items-center justify-center min-h-[430px]">
-                                <div className="flex flex-col gap-8 max-w-2xl items-center">
-                                    <h2 className="text-4xl font-semibold tracking-tight text-center text-primary">
-                                        What septic service do you need today?
-                                    </h2>
-                                    <TypewriterText />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
                 {/* Tabs Section */}
                 <section className="py-16">
                     <div className="px-6 lg:px-10">
@@ -468,10 +408,6 @@ export default function Home() {
                     from { opacity: 0; transform: translateY(10px); }
                     to { opacity: 1; transform: translateY(0); }
                 }
-                @keyframes blink {
-                    0%, 100% { opacity: 1; }
-                    50% { opacity: 0; }
-                }
                 @keyframes ticker {
                     0% { transform: translateY(0); }
                     100% { transform: translateY(-50%); }
@@ -486,9 +422,6 @@ export default function Home() {
                 }
                 .animate-fade-in {
                     animation: fade-in 0.5s ease;
-                }
-                .after\\:animate-blink::after {
-                    animation: blink 1s infinite;
                 }
                 .animate-ticker {
                     animation: ticker 20s linear infinite;
