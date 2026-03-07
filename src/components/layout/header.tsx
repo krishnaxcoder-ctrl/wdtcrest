@@ -64,7 +64,7 @@ export const Header = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     return (
-        <header className="bg-primary border-b border-tertiary">
+        <header className="bg-primary border-b border-secondary">
             {/* Main Navigation */}
             <nav className="bg-primary">
                 <div className="max-w-7xl mx-auto px-6 lg:px-10">
