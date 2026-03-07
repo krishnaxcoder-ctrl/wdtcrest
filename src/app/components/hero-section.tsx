@@ -166,11 +166,11 @@ export function HeroSection() {
                                                 quote: 'Professional team, great communication. 5 stars!',
                                             },
                                         ].map((person, i) => (
-                                            <div key={i} className="group/avatar relative">
+                                            <div key={i} className={`group/avatar relative flex-none transition-all duration-300 ease-out ${i > 0 ? '-ml-2 group-hover/avatars:ml-1' : ''}`}>
                                                 <img
                                                     src={person.src}
                                                     alt={person.name}
-                                                    className={`size-7 rounded-full object-cover ring-2 ring-white transition-all duration-300 ease-out ${i > 0 ? '-ml-2 group-hover/avatars:ml-1' : ''}`}
+                                                    className="h-7 w-7 rounded-full object-cover ring-2 ring-white"
                                                 />
                                                 {/* Floating Testimonial Card */}
                                                 <div className="pointer-events-none absolute bottom-full left-1/2 mb-3 -translate-x-1/2 opacity-0 transition-all duration-300 ease-out group-hover/avatar:pointer-events-auto group-hover/avatar:opacity-100">
