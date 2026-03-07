@@ -84,7 +84,7 @@ export const BusinessSizesSection = () => {
                 {/* Main Header */}
                 <div className="max-w-[940px]">
                     <h2 className="inline text-[28px] sm:text-[36px] font-medium leading-[1.1] tracking-[-0.02em] text-primary antialiased">
-                        Serving properties of all sizes.
+                        Serving properties of <span className="font-medium text-brand-600">all sizes.</span>
                     </h2><hr/>
                     <p className="inline text-[28px] sm:text-[36px] font-medium leading-[1.1] tracking-[-0.02em] text-primary antialiased">
                         {" "}Professional septic services that grow with your needs.
